@@ -1,0 +1,13 @@
+{
+  "name": "masterarbeit",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^2.0.8",
+    "terminate": "^2.1.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
