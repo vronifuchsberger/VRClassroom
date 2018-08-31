@@ -1,9 +1,17 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from 'antd/lib/button';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "antd/lib/button";
+const { ipcRenderer } = window.require("electron");
 
 class App extends Component {
+  componentDidMount() {
+    ipcRenderer.send("ready");
+    ipcRenderer.on("client", function(event, message) {
+      console.log("Message received: " + message);
+    });
+  }
+
   render() {
     return (
       <div className="App">

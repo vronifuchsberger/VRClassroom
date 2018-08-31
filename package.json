@@ -5,7 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "electron": "^2.0.8",
-    "terminate": "^2.1.0"
+    "terminate": "^2.1.0",
+    "ws": "^6.0.0"
   },
   "scripts": {
     "start": "electron ."
