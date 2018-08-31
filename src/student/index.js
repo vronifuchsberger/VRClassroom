@@ -6,7 +6,8 @@ export default class student extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 90
+      count: 90,
+      greeting: "Well hello there!"
     };
   }
 
@@ -23,6 +24,11 @@ export default class student extends React.Component {
     ws.onmessage = e => {
       // a message was received
       console.log(e.data);
+
+      if (e.data === "Button was clicked!") {
+        console.log("Blabladfgdfgdbla");
+        this.setState({ greeting: "Button was clicked!" });
+      }
     };
   }
 
@@ -30,7 +36,7 @@ export default class student extends React.Component {
     return (
       <View style={styles.panel}>
         <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>Well hello there!</Text>
+          <Text style={styles.greeting}>{this.state.greeting}</Text>
         </View>
       </View>
     );

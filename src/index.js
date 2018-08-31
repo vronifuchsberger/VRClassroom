@@ -3,9 +3,7 @@ const { app, BrowserWindow } = require("electron");
 const { spawn, exec } = require("child_process");
 const path = require("path");
 const terminate = require("terminate");
-const WebSocket = require("ws");
-const { ipcMain } = require("electron");
-let win, wss;
+let win;
 
 // create-react-app dev server starten
 const CRAprocess = spawn("yarn", ["start"], {
@@ -17,22 +15,6 @@ CRAprocess.stdout.on("data", data => {
   if (String(data).trim() === "Compiled successfully!") {
     win.loadURL("http://localhost:3000");
   }
-});
-
-// wait for tracker-app to load, before creating WebSocket server
-ipcMain.on("ready", () => {
-  wss = new WebSocket.Server({ port: 8888 });
-
-  wss.on("connection", function connection(ws) {
-    // new client connected to websocket
-    win.webContents.send("client", "connected");
-    ws.on("message", function incoming(message) {
-      win.webContents.send("client", message);
-      ws.send("Oh, yeah! I'm right here!");
-    });
-
-    ws.send("Ready!!");
-  });
 });
 
 app.on("ready", () => {
