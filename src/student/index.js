@@ -19,14 +19,6 @@ export default class student extends React.Component {
     Environment.setBackgroundImage('static_assets/360_world.jpg');
   }
 
-  componentDidMount() {
-    document.addEventListener(visibilityChange, _handleAppStateChange, false);
-  }
-
-  _handleAppStateChange = nextAppState => {
-    console.log(nextAppState);
-  };
-
   connectWS = hostname => {
     this.ws = new WebSocket(`ws://${hostname}:8888/`);
     this.ws.onopen = () => {
