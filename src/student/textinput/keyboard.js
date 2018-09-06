@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { View, VrButton, StyleSheet, Text } from "react-360";
-import KeyboardButton from "./keyboardButton";
+import React, { Component } from 'react';
+import { View, VrButton, StyleSheet, Text } from 'react-360';
+import KeyboardButton from './keyboardButton';
 
-import layout from "./layout";
+import layout from './layout';
 
 const styles = StyleSheet.create({
   container: {},
@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
   row3: {},
   bottom: {},
   row: {
-    flexDirection: "row"
-  }
+    flexDirection: 'row',
+  },
 });
 
 class Keyboard extends Component {
@@ -21,9 +21,9 @@ class Keyboard extends Component {
     super(props);
     this.state = {
       cursorPosition: 0,
-      textString: "",
+      textString: '',
       isShiftSelected: false,
-      isSymbolSelected: false
+      isSymbolSelected: false,
     };
   }
 
@@ -37,14 +37,14 @@ class Keyboard extends Component {
 
   handleShift() {
     this.setState({
-      isShiftSelected: !this.state.isShiftSelected
+      isShiftSelected: !this.state.isShiftSelected,
     });
   }
 
   handleSymbolSelector() {
     this.setState({
       isSymbolSelected: !this.state.isSymbolSelected,
-      isShiftSelected: false
+      isShiftSelected: false,
     });
   }
 
@@ -70,13 +70,13 @@ class Keyboard extends Component {
     if (!this.state.isShiftSelected) return layout.alphabet.layout;
 
     return layout.alphabet.layout.map(keyRow =>
-      keyRow.map(key => key.toUpperCase())
+      keyRow.map(key => key.toUpperCase()),
     );
   }
 
   render() {
     const layoutArray = this.getLayout();
-    numberArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+    numberArray = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
     return (
       <View>
         <View style={styles.row}>
@@ -157,14 +157,14 @@ class Keyboard extends Component {
           <KeyboardButton
             keyboardOnHover={this.props.keyboardOnHover}
             keyboardColor={this.props.keyboardColor}
-            value={"<-"}
+            value={'<-'}
             clickHandler={this.handleBack.bind(this)}
             isDisabled={false}
           />
           <KeyboardButton
             keyboardOnHover={this.props.keyboardOnHover}
             keyboardColor={this.props.keyboardColor}
-            value={"->"}
+            value={'->'}
             clickHandler={this.handleForward.bind(this)}
             isDisabled={false}
           />
@@ -172,7 +172,7 @@ class Keyboard extends Component {
             keyboardOnHover={this.props.keyboardOnHover}
             keyboardColor={this.props.keyboardColor}
             value="                                                         "
-            style={{ width: "28" }}
+            style={{ width: '28' }}
             clickHandler={this.handleAllValues.bind(this)}
             isDisabled={false}
           />

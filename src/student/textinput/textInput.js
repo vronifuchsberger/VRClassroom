@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { View, VrButton, StyleSheet, Text } from "react-360";
-import Keyboard from "./keyboard";
-import Scroll from "./scroll";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { View, VrButton, StyleSheet, Text } from 'react-360';
+import Keyboard from './keyboard';
+import Scroll from './scroll';
 
 class TextInput extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class TextInput extends Component {
       start: 0,
       end: this.props.rows - 1,
       displayArray: [`${props.defaultInput}|`],
-      text: "",
+      text: '',
       rows: this.props.rows || 4,
       columns: this.props.cols || 50,
       submitHandler: this.props.onSubmit || null,
@@ -21,14 +21,14 @@ class TextInput extends Component {
       focus: false,
       counter: 0,
       opacity: 0,
-      textColor: this.props.textColor || "white",
-      backgroundColor: this.props.backgroundColor || "grey"
+      textColor: this.props.textColor || 'white',
+      backgroundColor: this.props.backgroundColor || 'grey',
     };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      displayArray: [`${nextProps.defaultInput}|`]
+      displayArray: [`${nextProps.defaultInput}|`],
     });
   }
 
@@ -36,7 +36,7 @@ class TextInput extends Component {
     let index;
     const results = [];
     for (let i = s.length - 1; i >= 0; i--) {
-      if (s[i] === " ") {
+      if (s[i] === ' ') {
         index = i;
         if (s.slice(0, index + 1).length > this.state.columns + 1) {
           // 11 = cols + 1
@@ -64,7 +64,7 @@ class TextInput extends Component {
     const results = [];
 
     for (let i = 0; i < s.length; i++) {
-      if (s[i] === " ") {
+      if (s[i] === ' ') {
         index = i;
         break;
       }
@@ -84,7 +84,7 @@ class TextInput extends Component {
     const arr = this.state.displayArray;
     for (var i = 0; i < arr.length; i++) {
       if (arr[i]) {
-        if (arr[i].includes("|")) {
+        if (arr[i].includes('|')) {
           index = i;
           break;
         }
@@ -100,7 +100,7 @@ class TextInput extends Component {
         end++;
 
         for (i = start; i <= end; i++) {
-          if (arr[i].includes("|")) {
+          if (arr[i].includes('|')) {
             found = true;
             break;
           }
@@ -113,7 +113,7 @@ class TextInput extends Component {
         end--;
 
         for (i = start; i <= end; i++) {
-          if (arr[i].includes("|")) {
+          if (arr[i].includes('|')) {
             found = true;
             break;
           }
@@ -138,8 +138,8 @@ class TextInput extends Component {
   // ---------------
 
   handleAllLetters(val) {
-    if (val === "                                                         ") {
-      val = " ";
+    if (val === '                                                         ') {
+      val = ' ';
     }
     let start = this.state.start;
     let end = this.state.end;
@@ -152,7 +152,7 @@ class TextInput extends Component {
 
     let tempArray = this.findPosition(start, end);
 
-    console.log("item ", tempArray);
+    console.log('item ', tempArray);
 
     index = tempArray[0];
     start = tempArray[1];
@@ -160,7 +160,7 @@ class TextInput extends Component {
 
     // add the current character at position CP
 
-    const cp = arr[index].indexOf("|");
+    const cp = arr[index].indexOf('|');
     arr[index] = arr[index].slice(0, cp) + val + arr[index].slice(cp);
     console.log(arr);
 
@@ -181,10 +181,10 @@ class TextInput extends Component {
         if (list[1]) {
           if (arr[index]) {
             var s = list[1] + arr[index];
-            console.log("s ", s);
+            console.log('s ', s);
           } else {
             s = list[1];
-            console.log("s in else ", s);
+            console.log('s in else ', s);
           }
 
           arr.splice(index, 0, s);
@@ -205,20 +205,20 @@ class TextInput extends Component {
       {
         displayArray: arr,
         start,
-        end
+        end,
       },
       function() {
-        console.log("new value of start ", this.state.start);
-        console.log("new value of end ", this.state.end);
-      }
+        console.log('new value of start ', this.state.start);
+        console.log('new value of end ', this.state.end);
+      },
     );
   }
 
   // ------------
 
   handleDelete() {
-    console.log("this.state.displayArray");
-    if (this.state.displayArray[0][0] !== "|") {
+    console.log('this.state.displayArray');
+    if (this.state.displayArray[0][0] !== '|') {
       let arr = this.state.displayArray;
       let start = this.state.start;
       let end = this.state.end;
@@ -231,7 +231,7 @@ class TextInput extends Component {
 
       // find the appropriate string where the cursor is and move start and end accordingly
       // find the CP
-      let cp = arr[index].indexOf("|");
+      let cp = arr[index].indexOf('|');
 
       // if cp is the first character of the string, then move the cursor to the previous string
       if (cp === 0) {
@@ -255,7 +255,7 @@ class TextInput extends Component {
         let done = false;
         while (!done) {
           // if the cursor is in the last string of the array, then there is nothing to do
-          console.log("index, arr.length -1 ", index, arr.length - 1);
+          console.log('index, arr.length -1 ', index, arr.length - 1);
           if (!arr[index + 1]) {
             done = true;
             tempArray = this.findPosition(start, end);
@@ -292,7 +292,7 @@ class TextInput extends Component {
       this.setState({
         displayArray: arr,
         start,
-        end
+        end,
       });
     }
   }
@@ -300,7 +300,7 @@ class TextInput extends Component {
   // ------
 
   handleBack() {
-    if (this.state.displayArray[0][0] !== "|") {
+    if (this.state.displayArray[0][0] !== '|') {
       const arr = this.state.displayArray;
       let start = this.state.start;
       let end = this.state.end;
@@ -313,10 +313,10 @@ class TextInput extends Component {
       start = tempArray[1];
       end = tempArray[2];
 
-      const cp = arr[index].indexOf("|");
+      const cp = arr[index].indexOf('|');
 
       if (cp === 0) {
-        console.log("cp = 0 in handleBack");
+        console.log('cp = 0 in handleBack');
         arr[index] = arr[index].slice(1);
         arr[index - 1] = `${arr[index - 1]}|`;
         tempArray = this.findPosition(start, end);
@@ -332,7 +332,7 @@ class TextInput extends Component {
       this.setState({
         displayArray: arr,
         start,
-        end
+        end,
       });
     }
   }
@@ -343,8 +343,8 @@ class TextInput extends Component {
     if (
       this.state.displayArray[this.state.displayArray.length - 1][
         this.state.displayArray[this.state.displayArray.length - 1].length - 1
-      ] !== "|" &&
-      this.state.displayArray[this.state.end + 1] !== ""
+      ] !== '|' &&
+      this.state.displayArray[this.state.end + 1] !== ''
     ) {
       const arr = this.state.displayArray;
       let start = this.state.start;
@@ -358,13 +358,13 @@ class TextInput extends Component {
       start = tempArray[1];
       end = tempArray[2];
 
-      const cp = arr[index].indexOf("|");
+      const cp = arr[index].indexOf('|');
 
       if (cp === arr[index].length - 1) {
-        console.log("cp = length - 1 in handleForward");
+        console.log('cp = length - 1 in handleForward');
         arr[index] = arr[index].slice(0, arr[index].length - 1);
         arr[index + 1] = `|${arr[index + 1]}`;
-        console.log("array[index] ", arr[index]);
+        console.log('array[index] ', arr[index]);
         tempArray = this.findPosition(start, end);
         index = tempArray[0];
         start = tempArray[1];
@@ -378,7 +378,7 @@ class TextInput extends Component {
       this.setState({
         displayArray: arr,
         start,
-        end
+        end,
       });
     }
   }
@@ -389,24 +389,24 @@ class TextInput extends Component {
     const submitArray = this.state.displayArray;
     for (let i = 0; i < submitArray.length; i++) {
       submitArray[i] = submitArray[i]
-        .split("")
-        .filter(element => element !== "|")
-        .join("");
+        .split('')
+        .filter(element => element !== '|')
+        .join('');
     }
     this.setState({
       start: 0,
       end: this.props.rows - 1,
-      displayArray: ["|"],
-      text: "",
+      displayArray: ['|'],
+      text: '',
       submitHandler: this.props.onSubmit || null,
       showScroll: false,
       toggleCursor: true,
       pages: 0,
       focus: false,
       counter: 0,
-      opacity: 0
+      opacity: 0,
     });
-    this.props.onSubmit(submitArray.join(""));
+    this.props.onSubmit(submitArray.join(''));
   }
 
   // ------
@@ -415,7 +415,7 @@ class TextInput extends Component {
     if (this.state.start !== 0) {
       this.setState({
         start: this.state.start - 1,
-        end: this.state.end - 1
+        end: this.state.end - 1,
       });
     }
   }
@@ -426,7 +426,7 @@ class TextInput extends Component {
     if (this.state.end !== this.state.displayArray.length - 1) {
       this.setState({
         start: this.state.start + 1,
-        end: this.state.end + 1
+        end: this.state.end + 1,
       });
     }
   }
@@ -436,7 +436,7 @@ class TextInput extends Component {
   showScroll() {
     let total = 0;
     for (let i = 0; i < this.state.displayArray.length; i++) {
-      if (this.state.displayArray[i] != "") total++;
+      if (this.state.displayArray[i] != '') total++;
     }
 
     return total > this.state.rows ? 1 : this.state.opacity;
@@ -446,7 +446,7 @@ class TextInput extends Component {
     const arr = this.state.displayArray;
     const start = this.state.start;
     const end = this.state.end;
-    let displayString = "";
+    let displayString = '';
 
     for (let i = start; i <= end; i++) {
       if (arr[i]) {
@@ -461,13 +461,13 @@ class TextInput extends Component {
         style={{
           transform: [
             { rotateY: this.props.rotateY || 0 },
-            { rotateX: this.props.rotateX || 0 }
-          ]
+            { rotateX: this.props.rotateX || 0 },
+          ],
         }}
       >
         <Text
           style={{
-            textAlign: "center"
+            textAlign: 'center',
           }}
         >
           Please enter your name below:
@@ -475,12 +475,12 @@ class TextInput extends Component {
         <VrButton onClick={this.focus.bind(this)} style={{ margin: 40 }}>
           <Text
             style={{
-              textAlign: "center",
+              textAlign: 'center',
               color: this.state.textColor,
               width: this.state.columns * 20,
               opacity: 0.8,
               margin: 10,
-              fontSize: 16
+              fontSize: 16,
             }}
           >
             {displayString}
@@ -508,11 +508,11 @@ class TextInput extends Component {
 }
 
 TextInput.propTypes = {
-  defaultInput: PropTypes.string
+  defaultInput: PropTypes.string,
 };
 
 TextInput.defaultProps = {
-  defaultInput: ""
+  defaultInput: '',
 };
 
 export default TextInput;

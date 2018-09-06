@@ -1,40 +1,40 @@
-import React, { Component } from "react";
-import { View, VrButton, StyleSheet, Text, Animated } from "react-360";
+import React, { Component } from 'react';
+import { View, VrButton, StyleSheet, Text, Animated } from 'react-360';
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 8,
-    textAlign: "center",
-    color: "#ffffff",
+    textAlign: 'center',
+    color: '#ffffff',
     opacity: 3,
-    fontFamily: "HelveticaNeue-Light",
-    fontWeight: "normal"
+    fontFamily: 'HelveticaNeue-Light',
+    fontWeight: 'normal',
   },
   button: {
     height: 30,
     padding: 10,
     borderWidth: 1,
     flex: 1,
-    alignItems: "center"
-  }
+    alignItems: 'center',
+  },
 });
 class KeyboardButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      backgroundColor: this.props.keyboardColor || "#0d0d0d",
+      backgroundColor: this.props.keyboardColor || '#0d0d0d',
       opacity: 0.5,
       keyboardOnHover: this.props.keyboardOnHover,
-      keyboardColor: this.props.keyboardColor
+      keyboardColor: this.props.keyboardColor,
     };
   }
 
   handleTheClick() {
     this.setState(
-      { backgroundColor: "white" },
+      { backgroundColor: 'white' },
       (() => {
         setTimeout((() => this.test.bind(this))(), 1);
-      })()
+      })(),
     );
     if (this.props.isDisabled === false) {
       this.props.clickHandler(this.props.value);
@@ -42,7 +42,7 @@ class KeyboardButton extends Component {
   }
 
   test() {
-    this.setState({ backgroundColor: this.state.keyboardColor || "#0d0d0d" });
+    this.setState({ backgroundColor: this.state.keyboardColor || '#0d0d0d' });
   }
 
   render() {
@@ -55,18 +55,18 @@ class KeyboardButton extends Component {
             backgroundColor:
               this.props.isDisabled === false
                 ? this.state.backgroundColor
-                : "red"
+                : 'red',
           },
-          { opacity: this.state.opacity }
+          { opacity: this.state.opacity },
         ]}
         onEnter={() =>
           this.setState({
-            backgroundColor: this.state.keyboardOnHover || "green"
+            backgroundColor: this.state.keyboardOnHover || 'green',
           })
         }
         onExit={() =>
           this.setState({
-            backgroundColor: this.state.keyboardColor || "#0d0d0d"
+            backgroundColor: this.state.keyboardColor || '#0d0d0d',
           })
         }
       >

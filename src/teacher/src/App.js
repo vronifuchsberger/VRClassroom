@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Button from 'antd/lib/button';
@@ -15,7 +15,7 @@ class App extends Component {
 
   // wait for tracker-app to load, before creating WebSocket server
   setupWebsocketServer = () => {
-    this.wss = new WebSocketServer.Server({port: 8888});
+    this.wss = new WebSocketServer.Server({ port: 8888 });
 
     this.wss.on('connection', (ws, req) => {
       // new client connected to websocket
@@ -23,7 +23,7 @@ class App extends Component {
       this.setState({
         connectedClients: [
           ...this.state.connectedClients,
-          {client: ws, userAgent},
+          { client: ws, userAgent },
         ],
       });
 
@@ -36,7 +36,7 @@ class App extends Component {
         // remove client from connectedClients
         this.setState({
           connectedClients: this.state.connectedClients.filter(
-            ({client}) => client !== ws
+            ({ client }) => client !== ws,
           ),
         });
       });
@@ -44,7 +44,7 @@ class App extends Component {
   };
 
   broadcastToAllClients = message => {
-    this.state.connectedClients.forEach(({client}) => {
+    this.state.connectedClients.forEach(({ client }) => {
       if (client.readyState === WebSocketServer.OPEN) {
         client.send(message);
       }
@@ -77,7 +77,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <ul>
-          {this.state.connectedClients.map(({userAgent}, i) => (
+          {this.state.connectedClients.map(({ userAgent }, i) => (
             <li key={i}>{this.getDeviceName(userAgent)}</li>
           ))}
         </ul>

@@ -1,6 +1,6 @@
 // electron main process
-const {app, BrowserWindow} = require('electron');
-const {spawn, exec} = require('child_process');
+const { app, BrowserWindow } = require('electron');
+const { spawn, exec } = require('child_process');
 const path = require('path');
 const terminate = require('terminate');
 let win;
@@ -22,7 +22,7 @@ CRAprocess.stdout.on('data', data => {
   if (String(data).trim() === 'Compiled successfully!') {
     win.loadURL('http://localhost:3000');
     win2.loadURL(
-      `http://localhost:3000/qrCode.html?url=http://${getMyIP()}:8081/index.html`
+      `http://localhost:3000/qrCode.html?url=http://${getMyIP()}:8081/index.html`,
     );
   }
 });
@@ -39,8 +39,8 @@ function getMyIP() {
 }
 
 app.on('ready', () => {
-  win = new BrowserWindow({width: 800, height: 600});
-  win2 = new BrowserWindow({width: 320, height: 360});
+  win = new BrowserWindow({ width: 800, height: 600 });
+  win2 = new BrowserWindow({ width: 320, height: 360 });
 });
 
 app.on('before-quit', e => {
