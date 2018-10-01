@@ -6,6 +6,10 @@ const terminate = require('terminate');
 let win;
 let win2;
 const networkInterfaces = require('os').networkInterfaces();
+const { ipcMain } = require('electron');
+const express = require('express');
+const cors = require('cors');
+process.env.ip = getMyIP();
 
 // create-react-app dev server starten
 const CRAprocess = spawn('yarn', ['start'], {
@@ -16,6 +20,13 @@ const VRprocess = spawn('yarn', ['start'], {
   cwd: path.join(__dirname, 'student'),
 });
 
+const VRProduction = express();
+VRProduction.use(cors());
+VRProduction.use(express.static(path.join(__dirname, 'student', 'public')));
+VRProduction.listen(8082, () =>
+  console.log(`Example app listening on port ${8082}!`),
+);
+
 CRAprocess.stdout.on('data', data => {
   console.log(String(data));
   // when CRA has compiled everything, load URL in window
@@ -25,6 +36,11 @@ CRAprocess.stdout.on('data', data => {
       `http://localhost:3000/qrCode.html?url=http://${getMyIP()}:8081/index.html`,
     );
   }
+});
+
+ipcMain.on('upload', (event, pathname) => {
+  console.log(pathname);
+  event.sender.send('upload', 'putNewPathHere');
 });
 
 function getMyIP() {
@@ -39,7 +55,7 @@ function getMyIP() {
 }
 
 app.on('ready', () => {
-  win = new BrowserWindow({ width: 800, height: 600 });
+  win = new BrowserWindow({ width: 1280, height: 960 });
   win2 = new BrowserWindow({ width: 320, height: 360 });
 });
 

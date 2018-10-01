@@ -4,21 +4,31 @@ import {
   AppState,
   Environment,
   StyleSheet,
+  NativeModules,
   Text,
   View,
 } from 'react-360';
-import TextInput from './textinput/textInput.js';
-import Keyboard from './textinput/keyboard';
+import { registerKeyboard } from 'react-360-keyboard';
 
 export default class student extends React.Component {
   constructor(props) {
     super(props);
-    //this.connectWS(props.hostname);
+    this.connectWS(props.hostname);
     this.state = {
       count: 90,
       greeting: 'Well hello there!',
     };
     Environment.setBackgroundImage('static_assets/360_world.jpg');
+  }
+
+  componentDidMount() {
+    setTimeout(
+      () =>
+        NativeModules.Keyboard.startInput({
+          placeholder: 'Enter your name',
+        }).then(input => this.ws.send(JSON.stringify({ clientName: input }))),
+      100,
+    );
   }
 
   connectWS = hostname => {
@@ -27,15 +37,14 @@ export default class student extends React.Component {
       if (this.reconnecter) {
         clearInterval(this.reconnecter);
       }
-      // connection opened
-      //this.ws.send(String(this.props.vendor)); // send a message
     };
     this.ws.onmessage = e => {
       // a message was received
-      console.log(e.data);
+      const data = JSON.parse(e.data);
 
-      if (e.data === 'clicked') {
-        this.setState({ greeting: 'Button was clicked!' });
+      if (data.url != '' && data.mediatype === 'photo') {
+        this.setState({ greeting: data.url });
+        Environment.setBackgroundImage(data.url);
       }
     };
 
@@ -55,15 +64,6 @@ export default class student extends React.Component {
   render() {
     return (
       <View style={styles.panel}>
-        <TextInput
-          defaultInput="Test123"
-          onSubmit={null}
-          rows={1}
-          cols={20}
-          textColor={'white'}
-          backgroundColor={'grey'}
-          keyboardOnHover={'red'}
-        />
         <View style={styles.greetingBox}>
           <Text style={styles.greeting}>{this.state.greeting}</Text>
         </View>
@@ -93,3 +93,4 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('student', () => student);
+AppRegistry.registerComponent(...registerKeyboard);

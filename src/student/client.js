@@ -2,11 +2,13 @@
 // If you want to modify your application's content, start in "index.js"
 
 import { ReactInstance } from 'react-360-web';
+import KeyboardModule from 'react-360-keyboard/KeyboardModule';
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
     fullScreen: true,
+    nativeModules: [KeyboardModule.addModule],
     ...options,
   });
 
@@ -18,6 +20,7 @@ function init(bundle, parent, options = {}) {
     }),
     r360.getDefaultSurface(),
   );
+  KeyboardModule.setInstance(r360);
 }
 
 window.React360 = { init };

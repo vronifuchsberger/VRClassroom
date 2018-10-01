@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Button from 'antd/lib/button';
+import { Button, List, Layout } from 'antd';
+const { Sider, Content } = Layout;
 const WebSocketServer = window.require('ws');
+const { ipcRenderer } = window.require('electron');
 
 class App extends Component {
   state = {
@@ -30,6 +31,19 @@ class App extends Component {
       ws.on('message', message => {
         // message received from student
         console.log(message);
+        const data = JSON.parse(message);
+
+        if (data.clientName) {
+          const connectedClients = this.state.connectedClients.map(client => {
+            if (client.client === ws) {
+              return { ...client, clientName: data.clientName };
+            } else {
+              return client;
+            }
+          });
+
+          this.setState({ connectedClients });
+        }
       });
 
       ws.on('close', () => {
@@ -52,47 +66,58 @@ class App extends Component {
   };
 
   buttonClicked = () => {
-    this.broadcastToAllClients('clicked');
+    const url = `http://${window.process.env.ip}:8082/uploads/test.jpg`;
+    this.broadcastToAllClients(
+      JSON.stringify({ url: url, mediatype: 'photo' }),
+    );
   };
 
-  getDeviceName = userAgent => {
-    if (userAgent.indexOf('OculusBrowser') > -1) {
+  getDeviceName = client => {
+    if (client.clientName) {
+      return client.clientName;
+    } else if (client.userAgent.indexOf('OculusBrowser') > -1) {
       return 'Oculus Device';
-    } else if (userAgent.indexOf('iPhone') > -1) {
+    } else if (client.userAgent.indexOf('iPhone') > -1) {
       return 'iPhone';
-    } else if (userAgent.indexOf('Electron') > -1) {
+    } else if (client.userAgent.indexOf('Electron') > -1) {
       return 'Teacher App';
-    } else if (userAgent.indexOf('Chrome') > -1) {
+    } else if (client.userAgent.indexOf('Chrome') > -1) {
       return 'Chrome';
     } else {
       return 'Unknown device';
     }
   };
 
+  uploadMedia = path => {
+    ipcRenderer.send('upload', path);
+  };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <ul>
-          {this.state.connectedClients.map(({ userAgent }, i) => (
-            <li key={i}>{this.getDeviceName(userAgent)}</li>
-          ))}
-        </ul>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button type="primary" onClick={this.buttonClicked}>
-          Button
-        </Button>
-        <iframe
-          title="3Dworld"
-          src="http://localhost:8081/index.html"
-          width="400"
-          height="400"
-        />
+        <Layout>
+          <Sider theme="light">
+            <List
+              header="Connected Clients:"
+              dataSource={this.state.connectedClients}
+              size="small"
+              renderItem={(client, i) => (
+                <List.Item key={i}>{this.getDeviceName(client)}</List.Item>
+              )}
+            />
+          </Sider>
+          <Content>
+            <Button type="primary" onClick={this.buttonClicked}>
+              Button
+            </Button>
+            <iframe
+              title="3Dworld"
+              src="http://localhost:8081/index.html"
+              width="400"
+              height="400"
+            />
+          </Content>
+        </Layout>
       </div>
     );
   }
