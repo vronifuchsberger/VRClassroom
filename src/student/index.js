@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-360';
 import { registerKeyboard } from 'react-360-keyboard';
+const { VideoModule } = NativeModules;
 
 export default class student extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class student extends React.Component {
     this.connectWS(props.hostname);
     this.state = {
       count: 90,
-      greeting: 'Well hello there!',
+      greeting: 'Welcome to VRClassroom! Please enter your name!',
     };
     Environment.setBackgroundImage('static_assets/360_world.jpg');
   }
@@ -45,6 +46,13 @@ export default class student extends React.Component {
       if (data.url != '' && data.mediatype === 'photo') {
         this.setState({ greeting: data.url });
         Environment.setBackgroundImage(data.url);
+      } else if (data.url != '' && data.mediatype === 'video') {
+        this.setState({ greeting: data.url });
+        VideoModule.createPlayer('myplayer');
+        VideoModule.play('myplayer', {
+          source: { url: data.url }, // provide the path to the video
+        });
+        Environment.setBackgroundVideo('myplayer');
       }
     };
 
@@ -77,7 +85,7 @@ const styles = StyleSheet.create({
     // Fill the entire surface
     width: 1000,
     height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: 'rgba(255, 255, 255, 0)',
     justifyContent: 'center',
     alignItems: 'center',
   },

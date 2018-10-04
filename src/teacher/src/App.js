@@ -66,9 +66,9 @@ class App extends Component {
   };
 
   buttonClicked = () => {
-    const url = `http://${window.process.env.ip}:8082/uploads/test.jpg`;
+    const url = `http://${window.process.env.ip}:8082/uploads/video.MP4`;
     this.broadcastToAllClients(
-      JSON.stringify({ url: url, mediatype: 'photo' }),
+      JSON.stringify({ url: url, mediatype: 'video' }),
     );
   };
 
