@@ -3,7 +3,8 @@ import './App.css';
 import { Button, List, Layout } from 'antd';
 const { Sider, Content } = Layout;
 const WebSocketServer = window.require('ws');
-const { ipcRenderer } = window.require('electron');
+const remote = window.require('electron').remote;
+const { dialog } = remote;
 
 class App extends Component {
   state = {
@@ -72,6 +73,18 @@ class App extends Component {
     );
   };
 
+  mediaButtonClicked = () => {
+    console.log(
+      dialog.showOpenDialog({
+        filters: [
+          { name: 'Images', extensions: ['jpg', 'png', 'gif'] },
+          { name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
+        ],
+        properties: ['openFile'],
+      }),
+    );
+  };
+
   getDeviceName = client => {
     if (client.clientName) {
       return client.clientName;
@@ -86,10 +99,6 @@ class App extends Component {
     } else {
       return 'Unknown device';
     }
-  };
-
-  uploadMedia = path => {
-    ipcRenderer.send('upload', path);
   };
 
   render() {
@@ -109,6 +118,9 @@ class App extends Component {
           <Content>
             <Button type="primary" onClick={this.buttonClicked}>
               Button
+            </Button>
+            <Button type="primary" onClick={this.mediaButtonClicked}>
+              Upload media
             </Button>
             <iframe
               title="3Dworld"

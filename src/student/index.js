@@ -7,9 +7,12 @@ import {
   NativeModules,
   Text,
   View,
+  AsyncStorage,
 } from 'react-360';
 import { registerKeyboard } from 'react-360-keyboard';
 const { VideoModule } = NativeModules;
+
+console.log(AsyncStorage);
 
 export default class student extends React.Component {
   constructor(props) {
@@ -18,18 +21,43 @@ export default class student extends React.Component {
     this.state = {
       count: 90,
       greeting: 'Welcome to VRClassroom! Please enter your name!',
+      showContent: false,
     };
     Environment.setBackgroundImage('static_assets/360_world.jpg');
   }
 
   componentDidMount() {
-    setTimeout(
-      () =>
-        NativeModules.Keyboard.startInput({
-          placeholder: 'Enter your name',
-        }).then(input => this.ws.send(JSON.stringify({ clientName: input }))),
-      100,
-    );
+    this.sendClientName();
+  }
+
+  async sendClientName() {
+    let value;
+
+    try {
+      value = await AsyncStorage.getItem('username');
+    } catch (error) {
+      console.log(error);
+    }
+
+    if (value) {
+      this.ws.send(JSON.stringify({ clientName: value }));
+    } else {
+      setTimeout(() => this.askClientName(), 100);
+    }
+  }
+
+  async askClientName() {
+    const input = await NativeModules.Keyboard.startInput({
+      placeholder: 'Enter your name',
+    });
+
+    try {
+      await AsyncStorage.setItem('username', input);
+    } catch (error) {
+      console.log(error);
+    }
+
+    this.ws.send(JSON.stringify({ clientName: input }));
   }
 
   connectWS = hostname => {
@@ -46,13 +74,16 @@ export default class student extends React.Component {
       if (data.url != '' && data.mediatype === 'photo') {
         this.setState({ greeting: data.url });
         Environment.setBackgroundImage(data.url);
+        this.setState({ showContent: true });
       } else if (data.url != '' && data.mediatype === 'video') {
-        this.setState({ greeting: data.url });
+        this.setState({ showContent: true });
         VideoModule.createPlayer('myplayer');
         VideoModule.play('myplayer', {
           source: { url: data.url }, // provide the path to the video
         });
         Environment.setBackgroundVideo('myplayer');
+      } else {
+        this.setState({ showContent: false });
       }
     };
 
@@ -72,9 +103,11 @@ export default class student extends React.Component {
   render() {
     return (
       <View style={styles.panel}>
-        <View style={styles.greetingBox}>
-          <Text style={styles.greeting}>{this.state.greeting}</Text>
-        </View>
+        {!this.state.showContent ? (
+          <View style={styles.greetingBox}>
+            <Text style={styles.greeting}>{this.state.greeting}</Text>
+          </View>
+        ) : null}
       </View>
     );
   }
