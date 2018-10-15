@@ -8,11 +8,11 @@ import {
   Text,
   View,
   AsyncStorage,
+  asset,
 } from 'react-360';
-import { registerKeyboard } from 'react-360-keyboard';
-const { VideoModule } = NativeModules;
-
-console.log(AsyncStorage);
+import Entity from 'Entity';
+import {registerKeyboard} from 'react-360-keyboard';
+const {VideoModule} = NativeModules;
 
 export default class student extends React.Component {
   constructor(props) {
@@ -26,26 +26,6 @@ export default class student extends React.Component {
     Environment.setBackgroundImage('static_assets/360_world.jpg');
   }
 
-  componentDidMount() {
-    this.sendClientName();
-  }
-
-  async sendClientName() {
-    let value;
-
-    try {
-      value = await AsyncStorage.getItem('username');
-    } catch (error) {
-      console.log(error);
-    }
-
-    if (value) {
-      this.ws.send(JSON.stringify({ clientName: value }));
-    } else {
-      setTimeout(() => this.askClientName(), 100);
-    }
-  }
-
   async askClientName() {
     const input = await NativeModules.Keyboard.startInput({
       placeholder: 'Enter your name',
@@ -57,12 +37,28 @@ export default class student extends React.Component {
       console.log(error);
     }
 
-    this.ws.send(JSON.stringify({ clientName: input }));
+    this.sendClientInfo();
   }
+
+  sendClientInfo = async () => {
+    const clientName = await AsyncStorage.getItem('username');
+    let id = await AsyncStorage.getItem('id');
+
+    if (!id) {
+      id = Math.random().toString(36);
+      AsyncStorage.setItem('id', id);
+    }
+    // generate ID if not exisitent
+    this.ws.send(JSON.stringify({clientName: clientName, id: id}));
+    if (!clientName) {
+      setTimeout(() => this.askClientName(), 100);
+    }
+  };
 
   connectWS = hostname => {
     this.ws = new WebSocket(`ws://${hostname}:8888/`);
     this.ws.onopen = () => {
+      this.sendClientInfo();
       if (this.reconnecter) {
         clearInterval(this.reconnecter);
       }
@@ -72,18 +68,18 @@ export default class student extends React.Component {
       const data = JSON.parse(e.data);
 
       if (data.url != '' && data.mediatype === 'photo') {
-        this.setState({ greeting: data.url });
+        this.setState({greeting: data.url});
         Environment.setBackgroundImage(data.url);
-        this.setState({ showContent: true });
+        this.setState({showContent: true});
       } else if (data.url != '' && data.mediatype === 'video') {
-        this.setState({ showContent: true });
+        this.setState({showContent: true});
         VideoModule.createPlayer('myplayer');
         VideoModule.play('myplayer', {
-          source: { url: data.url }, // provide the path to the video
+          source: {url: data.url}, // provide the path to the video
         });
         Environment.setBackgroundVideo('myplayer');
       } else {
-        this.setState({ showContent: false });
+        this.setState({showContent: false});
       }
     };
 
@@ -103,6 +99,12 @@ export default class student extends React.Component {
   render() {
     return (
       <View style={styles.panel}>
+        <Entity
+          source={{
+            obj: asset('Only_Spider_with_Animations_Export.obj'),
+            mtl: asset('Only_Spider_with_Animations_Export.mtl'),
+          }}
+        />
         {!this.state.showContent ? (
           <View style={styles.greetingBox}>
             <Text style={styles.greeting}>{this.state.greeting}</Text>

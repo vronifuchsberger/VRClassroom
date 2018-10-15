@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, List, Layout } from 'antd';
+import { Button, List, Layout, Badge } from 'antd';
 const { Sider, Content } = Layout;
 const WebSocketServer = window.require('ws');
 const remote = window.require('electron').remote;
@@ -8,7 +8,7 @@ const { dialog } = remote;
 
 class App extends Component {
   state = {
-    connectedClients: [],
+    connectedClients: {},
   };
 
   componentDidMount() {
@@ -20,46 +20,48 @@ class App extends Component {
     this.wss = new WebSocketServer.Server({ port: 8888 });
 
     this.wss.on('connection', (ws, req) => {
-      // new client connected to websocket
-      const userAgent = req.headers['user-agent'];
-      this.setState({
-        connectedClients: [
-          ...this.state.connectedClients,
-          { client: ws, userAgent },
-        ],
-      });
-
       ws.on('message', message => {
         // message received from student
-        console.log(message);
         const data = JSON.parse(message);
 
-        if (data.clientName) {
-          const connectedClients = this.state.connectedClients.map(client => {
-            if (client.client === ws) {
-              return { ...client, clientName: data.clientName };
-            } else {
-              return client;
-            }
-          });
-
-          this.setState({ connectedClients });
-        }
+        // new client connected to websocket
+        const userAgent = req.headers['user-agent'];
+        this.setState({
+          connectedClients: {
+            ...this.state.connectedClients,
+            [data.id]: {
+              client: ws,
+              userAgent: userAgent,
+              clientName: data.clientName,
+            },
+          },
+        });
       });
 
       ws.on('close', () => {
-        // remove client from connectedClients
-        this.setState({
-          connectedClients: this.state.connectedClients.filter(
-            ({ client }) => client !== ws,
-          ),
-        });
+        const disconnectedID = Object.keys(this.state.connectedClients).find(
+          id => {
+            return this.state.connectedClients[id].client === ws;
+          },
+        );
+
+        if (disconnectedID) {
+          this.setState({
+            connectedClients: {
+              ...this.state.connectedClients,
+              [disconnectedID]: {
+                ...this.state.connectedClients[disconnectedID],
+                client: null,
+              },
+            },
+          });
+        }
       });
     });
   };
 
   broadcastToAllClients = message => {
-    this.state.connectedClients.forEach(({ client }) => {
+    Object.values(this.state.connectedClients).forEach(({ client }) => {
       if (client.readyState === WebSocketServer.OPEN) {
         client.send(message);
       }
@@ -74,15 +76,13 @@ class App extends Component {
   };
 
   mediaButtonClicked = () => {
-    console.log(
-      dialog.showOpenDialog({
-        filters: [
-          { name: 'Images', extensions: ['jpg', 'png', 'gif'] },
-          { name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
-        ],
-        properties: ['openFile'],
-      }),
-    );
+    dialog.showOpenDialog({
+      filters: [
+        { name: 'Images', extensions: ['jpg', 'png', 'gif'] },
+        { name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
+      ],
+      properties: ['openFile'],
+    });
   };
 
   getDeviceName = client => {
@@ -108,10 +108,13 @@ class App extends Component {
           <Sider theme="light">
             <List
               header="Connected Clients:"
-              dataSource={this.state.connectedClients}
+              dataSource={Object.values(this.state.connectedClients)}
               size="small"
               renderItem={(client, i) => (
-                <List.Item key={i}>{this.getDeviceName(client)}</List.Item>
+                <List.Item key={i}>
+                  <Badge status={client.client ? 'success' : 'error'} />
+                  {this.getDeviceName(client)}
+                </List.Item>
               )}
             />
           </Sider>
