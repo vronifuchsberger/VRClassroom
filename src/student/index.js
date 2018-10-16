@@ -91,18 +91,18 @@ export default class student extends React.Component {
     };
   };
 
-  handleData(data) {
-    let result = JSON.parse(data);
-    console.log('result: ' + result);
-  }
-
   render() {
     return (
       <View style={styles.panel}>
         <Entity
           source={{
-            obj: asset('Only_Spider_with_Animations_Export.obj'),
-            mtl: asset('Only_Spider_with_Animations_Export.mtl'),
+            obj:
+              'http://localhost:8082/uploads/spider/Only_Spider_with_Animations_Export.obj',
+            mtl:
+              'http://localhost:8082/uploads/spider/Only_Spider_with_Animations_Export.mtl',
+          }}
+          style={{
+            transform: [{rotateX: 90}, {rotateY: 90}],
           }}
         />
         {!this.state.showContent ? (
