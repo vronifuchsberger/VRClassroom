@@ -10,12 +10,17 @@
 
 <body>
 
-	<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+	<div id="qrcode" style="width:400px; height:400px; margin-top:15px; margin-left: 10px;"></div>
+	<div id="url" style="font-family: Helvetica, Arial, sans-serif; margin-top: 25px; font-size: 25px;"></div>
+	<script type="text/javascript">
+		var text = document.createTextNode(location.search.substring(5));
+		document.getElementById("url").appendChild(text);
+	</script>
 
 	<script type="text/javascript">
 		var qrcode = new QRCode(document.getElementById("qrcode"), {
-			width: 300,
-			height: 300
+			width: 400,
+			height: 400
 		});
 
 		qrcode.makeCode(location.search.substring(5));

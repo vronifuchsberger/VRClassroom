@@ -1,12 +1,12 @@
 // electron main process
-const { app, BrowserWindow } = require('electron');
-const { spawn, exec } = require('child_process');
+const {app, BrowserWindow} = require('electron');
+const {spawn, exec} = require('child_process');
 const path = require('path');
 const terminate = require('terminate');
 let win;
 let win2;
 const networkInterfaces = require('os').networkInterfaces();
-const { ipcMain } = require('electron');
+const {ipcMain} = require('electron');
 const express = require('express');
 const cors = require('cors');
 process.env.ip = getMyIP();
@@ -55,8 +55,8 @@ function getMyIP() {
 }
 
 app.on('ready', () => {
-  win = new BrowserWindow({ width: 1280, height: 960 });
-  win2 = new BrowserWindow({ width: 320, height: 360 });
+  win = new BrowserWindow({width: 1280, height: 960});
+  win2 = new BrowserWindow({width: 440, height: 500});
 });
 
 app.on('before-quit', e => {

@@ -6,7 +6,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "electron": "^2.0.8",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "terminate": "^2.1.0",
     "ws": "^6.0.0"
   },
