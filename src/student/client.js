@@ -1,8 +1,10 @@
 // This file contains the boilerplate to execute your React app.
 // If you want to modify your application's content, start in "index.js"
 
-import { ReactInstance } from 'react-360-web';
+import {ReactInstance} from 'react-360-web';
 import KeyboardModule from 'react-360-keyboard/KeyboardModule';
+import WebVRPolyfill from 'webvr-polyfill';
+const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
@@ -23,4 +25,4 @@ function init(bundle, parent, options = {}) {
   KeyboardModule.setInstance(r360);
 }
 
-window.React360 = { init };
+window.React360 = {init};

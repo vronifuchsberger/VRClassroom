@@ -1171,6 +1171,14 @@ capture-stack-trace@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
 
+cardboard-vr-display@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/cardboard-vr-display/-/cardboard-vr-display-1.0.14.tgz#0c7259d65f3daa54241bd8e5640c4684be336965"
+  dependencies:
+    gl-preserve-state "^1.0.0"
+    nosleep.js "^0.7.0"
+    webvr-polyfill-dpdb "^1.0.9"
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -2118,6 +2126,10 @@ getpass@^0.1.1:
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+gl-preserve-state@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gl-preserve-state/-/gl-preserve-state-1.0.0.tgz#4ef710d62873f1470ed015c6546c37dacddd4198"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -3500,6 +3512,10 @@ normalize-path@^2.0.0, normalize-path@^2.0.1, normalize-path@^2.1.1:
   dependencies:
     remove-trailing-separator "^1.0.1"
 
+nosleep.js@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/nosleep.js/-/nosleep.js-0.7.0.tgz#cfd919c25523ca0d0f4a69fb3305c083adaee289"
+
 npm-bundled@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.5.tgz#3c1732b7ba936b3a10325aef616467c0ccbcc979"
@@ -3956,6 +3972,12 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-360-keyboard@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-360-keyboard/-/react-360-keyboard-1.0.0.tgz#8acc729f1ad10c687d1b672b22e5c8dd91e58693"
+  dependencies:
+    prop-types "^15.6.2"
 
 react-360-web@~1.0.0:
   version "1.0.2"
@@ -5096,6 +5118,16 @@ webidl-conversions@^3.0.0:
 webidl-conversions@^4.0.0:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
+
+webvr-polyfill-dpdb@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/webvr-polyfill-dpdb/-/webvr-polyfill-dpdb-1.0.9.tgz#d6b19624ba476cc341e7a4649cf3b1968cb27b25"
+
+webvr-polyfill@^0.10.7:
+  version "0.10.7"
+  resolved "https://registry.yarnpkg.com/webvr-polyfill/-/webvr-polyfill-0.10.7.tgz#de7fd2d99f6f74d919e1d4b67bb016427d9b8e31"
+  dependencies:
+    cardboard-vr-display "^1.0.14"
 
 whatwg-encoding@^1.0.1:
   version "1.0.4"
