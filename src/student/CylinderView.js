@@ -10,7 +10,7 @@ import {
 } from 'react-360';
 import Entity from 'Entity';
 const {VideoModule} = NativeModules;
-import {connect} from './store';
+import {connect} from './Store';
 
 class CylinderView extends React.Component {
   constructor(props) {
@@ -20,6 +20,20 @@ class CylinderView extends React.Component {
       greeting: 'Welcome to VRClassroom! Please enter your name!',
       showContent: false,
     };
+  }
+
+  componentDidUpdate() {
+    console.log(this.props);
+
+    if (this.props.mediatype === 'video' && this.props.url) {
+      VideoModule.createPlayer('myplayer');
+      VideoModule.play('myplayer', {
+        source: {url: this.props.url}, // provide the path to the video
+      });
+      Environment.setBackgroundVideo('myplayer');
+    } else if (this.props.mediatype === 'photo' && this.props.url) {
+      Environment.setBackgroundImage(this.props.url);
+    }
   }
 
   render() {

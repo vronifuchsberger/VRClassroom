@@ -1,9 +1,6 @@
 import * as React from 'react';
 
-const State = {
-  posts: undefined,
-  current: -1,
-};
+const Store = {};
 
 const listeners = new Set();
 
@@ -12,23 +9,17 @@ function updateComponents() {
     cb();
   }
 }
-export function setCurrent(value) {
-  State.current = value;
+export function updateStore(data) {
+  Store = {...Store, ...data};
   updateComponents();
 }
 
 export function connect(Component) {
   return class Wrapper extends React.Component {
-    state = {
-      posts: State.posts,
-      current: State.current,
-    };
+    state = Store;
 
     _listener = () => {
-      this.setState({
-        posts: State.posts,
-        current: State.current,
-      });
+      this.setState(Store);
     };
 
     componentDidMount() {
@@ -40,13 +31,7 @@ export function connect(Component) {
     }
 
     render() {
-      return (
-        <Component
-          {...this.props}
-          posts={this.state.posts}
-          current={this.state.current}
-        />
-      );
+      return <Component {...this.props} {...this.state} />;
     }
   };
 }

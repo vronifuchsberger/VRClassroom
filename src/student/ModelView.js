@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-360';
 import Entity from 'Entity';
-import {connect} from './store';
+import {connect} from './Store';
 
 class ModelView extends React.Component {
   constructor(props) {

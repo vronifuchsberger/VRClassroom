@@ -1,4 +1,5 @@
 import {AsyncStorage, NativeModules, Environment} from 'react-360';
+import {updateStore} from './Store';
 
 export default class Connection {
   constructor(props) {
@@ -32,21 +33,7 @@ export default class Connection {
     this.ws.onmessage = e => {
       // a message was received
       const data = JSON.parse(e.data);
-
-      /*if (data.url != '' && data.mediatype === 'photo') {
-        this.setState({greeting: data.url});
-        Environment.setBackgroundImage(data.url);
-        this.setState({showContent: true});
-      } else if (data.url != '' && data.mediatype === 'video') {
-        this.setState({showContent: true});
-        VideoModule.createPlayer('myplayer');
-        VideoModule.play('myplayer', {
-          source: {url: data.url}, // provide the path to the video
-        });
-        Environment.setBackgroundVideo('myplayer');
-      } else {
-        this.setState({showContent: false});
-      } */
+      updateStore(data);
     };
 
     this.ws.onclose = () => {
