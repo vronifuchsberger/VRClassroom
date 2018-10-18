@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import { Button, List, Layout, Badge } from 'antd';
-const { Sider, Content } = Layout;
+import {Button, List, Layout, Badge, Icon, Slider} from 'antd';
+const {Sider, Content} = Layout;
 const WebSocketServer = window.require('ws');
 const remote = window.require('electron').remote;
-const { dialog } = remote;
+const {dialog} = remote;
 
 class App extends Component {
   state = {
@@ -17,7 +17,7 @@ class App extends Component {
 
   // wait for tracker-app to load, before creating WebSocket server
   setupWebsocketServer = () => {
-    this.wss = new WebSocketServer.Server({ port: 8888 });
+    this.wss = new WebSocketServer.Server({port: 8888});
 
     this.wss.on('connection', (ws, req) => {
       ws.on('message', message => {
@@ -61,7 +61,7 @@ class App extends Component {
   };
 
   broadcastToAllClients = message => {
-    Object.values(this.state.connectedClients).forEach(({ client }) => {
+    Object.values(this.state.connectedClients).forEach(({client}) => {
       if (client.readyState === WebSocketServer.OPEN) {
         client.send(message);
       }
@@ -70,19 +70,24 @@ class App extends Component {
 
   buttonClicked = () => {
     const url = `http://${window.process.env.ip}:8082/uploads/video.MP4`;
-    this.broadcastToAllClients(
-      JSON.stringify({ url: url, mediatype: 'video' }),
-    );
+    this.broadcastToAllClients(JSON.stringify({url: url, mediatype: 'video'}));
   };
 
   mediaButtonClicked = () => {
     dialog.showOpenDialog({
       filters: [
-        { name: 'Images', extensions: ['jpg', 'png', 'gif'] },
-        { name: 'Movies', extensions: ['mkv', 'avi', 'mp4'] },
+        {name: 'Images', extensions: ['jpg', 'png', 'gif']},
+        {name: 'Movies', extensions: ['mkv', 'avi', 'mp4']},
+        {name: '3D models', extensions: ['obj', 'gltf2']},
       ],
       properties: ['openFile'],
     });
+  };
+
+  onSliderChange = value => {
+    this.broadcastToAllClients(
+      JSON.stringify({url: 'test', mediatype: 'model', rotation: value}),
+    );
   };
 
   getDeviceName = client => {
@@ -119,18 +124,27 @@ class App extends Component {
             />
           </Sider>
           <Content>
-            <Button type="primary" onClick={this.buttonClicked}>
-              Button
-            </Button>
-            <Button type="primary" onClick={this.mediaButtonClicked}>
-              Upload media
-            </Button>
             <iframe
               title="3Dworld"
               src="http://localhost:8081/index.html"
-              width="400"
-              height="400"
+              width="1000"
+              height="800"
             />
+            <div>
+              <div style={{width: '800px'}}>
+                <Slider width={300} max={360} onChange={this.onSliderChange} />
+              </div>
+
+              <Button type="primary" onClick={this.buttonClicked}>
+                Button
+              </Button>
+              <Button type="primary" onClick={this.mediaButtonClicked}>
+                Upload media
+              </Button>
+              <Button type="primary" onClick={this.markerMode}>
+                <Icon type="edit" theme="outlined" />
+              </Button>
+            </div>
           </Content>
         </Layout>
       </div>
