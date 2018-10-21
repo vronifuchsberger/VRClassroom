@@ -14,9 +14,31 @@ class App extends Component {
   componentDidMount() {
     this.setupWebsocketServer();
     ipcRenderer.on('open', (event, file) => {
-      if (file.toLowerCase().endsWith('.jpg')) {
+      if (
+        file.toLowerCase().endsWith('.jpg') ||
+        file.toLowerCase().endsWith('.png') ||
+        file.toLowerCase().endsWith('.gif')
+      ) {
         this.broadcastToAllClients({
           mediatype: 'photo',
+          url: this.getUrl(file),
+        });
+      } else if (
+        file.toLowerCase().endsWith('.mkv') ||
+        file.toLowerCase().endsWith('.mp4') ||
+        file.toLowerCase().endsWith('.avi')
+      ) {
+        this.broadcastToAllClients({
+          mediatype: 'video',
+          url: this.getUrl(file),
+        });
+      } else if (
+        file.toLowerCase().endsWith('.obj') ||
+        file.toLowerCase().endsWith('.gltf') ||
+        file.toLowerCase().endsWith('.gltf2')
+      ) {
+        this.broadcastToAllClients({
+          mediatype: 'model',
           url: this.getUrl(file),
         });
       }

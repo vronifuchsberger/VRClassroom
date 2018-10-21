@@ -8,8 +8,8 @@ const defaultMenu = require('electron-default-menu');
 
 const menu = defaultMenu(app, shell);
 
-module.exports = win => {
-  // Add custom menu
+function getMenu(win) {
+  const menu = defaultMenu(app, shell);
   menu.splice(1, 0, {
     label: 'File',
     submenu: [
@@ -18,6 +18,7 @@ module.exports = win => {
         accelerator: 'CmdOrCtrl+O',
         click: (item, focusedWindow) => {
           dialog.showOpenDialog(
+            win,
             {
               filters: [
                 {name: 'Images', extensions: ['jpg', 'png', 'gif']},
@@ -37,17 +38,39 @@ module.exports = win => {
                 'uploads',
                 fileName,
               );
+
               fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, a => {
                 console.log(a);
+                // update menu
+                Menu.setApplicationMenu(getMenu(win));
+
                 win.webContents.send('open', fileName);
               });
             },
           );
         },
       },
+      {
+        label: 'Recent Media',
+        submenu: fs
+          .readdirSync(
+            path.join(app.getAppPath(), 'src', 'student', 'public', 'uploads'),
+          )
+          .filter(file => !file.startsWith('.'))
+          .map(file => ({
+            label: file,
+            click: () => {
+              win.webContents.send('open', file);
+            },
+          })),
+      },
     ],
   });
 
+  return Menu.buildFromTemplate(menu);
+}
+
+module.exports = win => {
   // Set top-level application menu, using modified template
-  Menu.setApplicationMenu(Menu.buildFromTemplate(menu));
+  Menu.setApplicationMenu(getMenu(win));
 };
