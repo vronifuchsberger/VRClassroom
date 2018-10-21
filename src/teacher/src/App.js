@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Button, List, Layout, Badge, Icon, Slider} from 'antd';
-const {Sider, Content} = Layout;
+import {Button, Layout, Icon, Slider} from 'antd';
+import Sidebar from './Sidebar';
+const {Content} = Layout;
 const WebSocketServer = window.require('ws');
-const remote = window.require('electron').remote;
-const {dialog} = remote;
+const {ipcRenderer} = window.require('electron');
 
 class App extends Component {
   state = {
@@ -13,6 +13,18 @@ class App extends Component {
 
   componentDidMount() {
     this.setupWebsocketServer();
+    ipcRenderer.on('open', (event, file) => {
+      if (file.toLowerCase().endsWith('.jpg')) {
+        this.broadcastToAllClients({
+          mediatype: 'photo',
+          url: this.getUrl(file),
+        });
+      }
+    });
+  }
+
+  getUrl(fileName) {
+    return `http://${window.process.env.ip}:8082/uploads/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server
@@ -63,66 +75,31 @@ class App extends Component {
   broadcastToAllClients = message => {
     Object.values(this.state.connectedClients).forEach(({client}) => {
       if (client.readyState === WebSocketServer.OPEN) {
-        client.send(message);
+        client.send(JSON.stringify(message));
       }
     });
   };
 
   buttonClicked = () => {
     const url = `http://${window.process.env.ip}:8082/uploads/video.MP4`;
-    this.broadcastToAllClients(JSON.stringify({url: url, mediatype: 'video'}));
+    this.broadcastToAllClients({url: url, mediatype: 'video'});
   };
 
-  mediaButtonClicked = () => {
-    dialog.showOpenDialog({
-      filters: [
-        {name: 'Images', extensions: ['jpg', 'png', 'gif']},
-        {name: 'Movies', extensions: ['mkv', 'avi', 'mp4']},
-        {name: '3D models', extensions: ['obj', 'gltf2']},
-      ],
-      properties: ['openFile'],
-    });
-  };
+  mediaButtonClicked = () => {};
 
   onSliderChange = value => {
-    this.broadcastToAllClients(
-      JSON.stringify({url: 'test', mediatype: 'model', rotation: value}),
-    );
-  };
-
-  getDeviceName = client => {
-    if (client.clientName) {
-      return client.clientName;
-    } else if (client.userAgent.indexOf('OculusBrowser') > -1) {
-      return 'Oculus Device';
-    } else if (client.userAgent.indexOf('iPhone') > -1) {
-      return 'iPhone';
-    } else if (client.userAgent.indexOf('Electron') > -1) {
-      return 'Teacher App';
-    } else if (client.userAgent.indexOf('Chrome') > -1) {
-      return 'Chrome';
-    } else {
-      return 'Unknown device';
-    }
+    this.broadcastToAllClients({
+      url: 'test',
+      mediatype: 'model',
+      rotation: value,
+    });
   };
 
   render() {
     return (
       <div className="App">
         <Layout>
-          <Sider theme="light">
-            <List
-              header="Connected Clients:"
-              dataSource={Object.values(this.state.connectedClients)}
-              size="small"
-              renderItem={(client, i) => (
-                <List.Item key={i}>
-                  <Badge status={client.client ? 'success' : 'error'} />
-                  {this.getDeviceName(client)}
-                </List.Item>
-              )}
-            />
-          </Sider>
+          <Sidebar connectedClients={this.state.connectedClients} />
           <Content>
             <iframe
               title="3Dworld"

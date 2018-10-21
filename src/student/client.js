@@ -7,9 +7,10 @@ import HostnameModule from './HostnameModule';
 import WebVRPolyfill from 'webvr-polyfill';
 const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 import {Location, Surface} from 'react-360-web';
+import SimpleRaycaster from './SimpleRaycaster';
 
 // Create a location two meters in front of the user, and one meter down
-const location = new Location([0, -1, -2]);
+const location = new Location([100, 100, 10]);
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
@@ -18,6 +19,9 @@ function init(bundle, parent, options = {}) {
     nativeModules: [KeyboardModule.addModule, new HostnameModule()],
     ...options,
   });
+  /*r360.controls.addRaycaster(
+    new SimpleRaycaster(document.querySelector('#container')),
+  ); */
 
   // Render your app content to the default cylinder surface
   r360.renderToSurface(

@@ -3,6 +3,7 @@ import {updateStore} from './Store';
 
 export default class Connection {
   constructor(props) {
+    this.props = props;
     this.connectWS(props.hostname);
     Environment.setBackgroundImage('static_assets/360_world.jpg');
   }

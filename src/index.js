@@ -10,6 +10,7 @@ const {ipcMain} = require('electron');
 const express = require('express');
 const cors = require('cors');
 process.env.ip = getMyIP();
+const Menubar = require('./Menubar');
 
 // create-react-app dev server starten
 const CRAprocess = spawn('yarn', ['start'], {
@@ -30,7 +31,11 @@ VRProduction.listen(8082, () =>
 CRAprocess.stdout.on('data', data => {
   console.log(String(data));
   // when CRA has compiled everything, load URL in window
-  if (String(data).trim() === 'Compiled successfully!') {
+  if (
+    String(data)
+      .trim()
+      .startsWith('Compiled')
+  ) {
     win.loadURL('http://localhost:3000');
     win2.loadURL(
       `http://localhost:3000/qrCode.html?url=http://${getMyIP()}:8081/index.html`,
@@ -57,6 +62,7 @@ function getMyIP() {
 app.on('ready', () => {
   win = new BrowserWindow({width: 1280, height: 960});
   win2 = new BrowserWindow({width: 440, height: 500});
+  Menubar(win);
 });
 
 app.on('before-quit', e => {

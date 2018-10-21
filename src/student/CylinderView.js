@@ -38,7 +38,7 @@ class CylinderView extends React.Component {
 
   render() {
     return (
-      <View>
+      <View onInput={console.log}>
         <View style={styles.panel}>
           {!this.state.showContent ? (
             <View style={styles.greetingBox}>
