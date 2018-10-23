@@ -5,10 +5,19 @@ import Sidebar from './Sidebar';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
 const {ipcRenderer} = window.require('electron');
+const initialContent = {
+  mediatype: null,
+  url: null,
+  markers: [],
+  playing: false,
+  playbackPosition: -1,
+  rotation: 0,
+};
 
 class App extends Component {
   state = {
     connectedClients: {},
+    initialContent,
   };
 
   componentDidMount() {
@@ -19,28 +28,37 @@ class App extends Component {
         file.toLowerCase().endsWith('.png') ||
         file.toLowerCase().endsWith('.gif')
       ) {
-        this.broadcastToAllClients({
-          mediatype: 'photo',
-          url: this.getUrl(file),
-        });
+        this.broadcastToAllClients(
+          {
+            mediatype: 'photo',
+            url: this.getUrl(file),
+          },
+          true,
+        );
       } else if (
         file.toLowerCase().endsWith('.mkv') ||
         file.toLowerCase().endsWith('.mp4') ||
         file.toLowerCase().endsWith('.avi')
       ) {
-        this.broadcastToAllClients({
-          mediatype: 'video',
-          url: this.getUrl(file),
-        });
+        this.broadcastToAllClients(
+          {
+            mediatype: 'video',
+            url: this.getUrl(file),
+          },
+          true,
+        );
       } else if (
         file.toLowerCase().endsWith('.obj') ||
         file.toLowerCase().endsWith('.gltf') ||
         file.toLowerCase().endsWith('.gltf2')
       ) {
-        this.broadcastToAllClients({
-          mediatype: 'model',
-          url: this.getUrl(file),
-        });
+        this.broadcastToAllClients(
+          {
+            mediatype: 'model',
+            url: this.getUrl(file),
+          },
+          true,
+        );
       }
     });
   }
@@ -94,7 +112,15 @@ class App extends Component {
     });
   };
 
-  broadcastToAllClients = message => {
+  broadcastToAllClients = (message, reset) => {
+    if (reset) {
+      this.setState({currentContent: {...initialContent, ...message}});
+    } else {
+      this.setState({
+        currentContent: {...this.state.currentContent, ...message},
+      });
+    }
+
     Object.values(this.state.connectedClients).forEach(({client}) => {
       if (client.readyState === WebSocketServer.OPEN) {
         client.send(JSON.stringify(message));
@@ -103,8 +129,7 @@ class App extends Component {
   };
 
   buttonClicked = () => {
-    const url = `http://${window.process.env.ip}:8082/uploads/video.MP4`;
-    this.broadcastToAllClients({url: url, mediatype: 'video'});
+    this.broadcastToAllClients({markers: [[20, 20, 0], [-40, -40, 0]]});
   };
 
   mediaButtonClicked = () => {};
@@ -120,16 +145,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Layout>
+        <Layout className="AppLayout">
           <Sidebar connectedClients={this.state.connectedClients} />
-          <Content>
-            <iframe
-              title="3Dworld"
-              src="http://localhost:8081/index.html"
-              width="1000"
-              height="800"
-            />
-            <div>
+          <Content className="AppContent">
+            <iframe title="3Dworld" src="http://localhost:8081/index.html" />
+            <div className="Controls">
               <div style={{width: '800px'}}>
                 <Slider width={300} max={360} onChange={this.onSliderChange} />
               </div>

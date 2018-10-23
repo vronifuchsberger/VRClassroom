@@ -11,6 +11,7 @@ import {
 import Entity from 'Entity';
 const {VideoModule} = NativeModules;
 import {connect} from './Store';
+import Marker from './Marker';
 
 class CylinderView extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class CylinderView extends React.Component {
 
   render() {
     return (
-      <View onInput={console.log}>
+      <View>
         <View style={styles.panel}>
           {!this.state.showContent ? (
             <View style={styles.greetingBox}>
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
     // Fill the entire surface
     width: 1000,
     height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0)',
+    backgroundColor: 'rgba(255, 255, 255, 0.3)',
     justifyContent: 'center',
     alignItems: 'center',
   },

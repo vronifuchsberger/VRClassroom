@@ -29,6 +29,10 @@ function init(bundle, parent, options = {}) {
     r360.getDefaultSurface(),
   );
   r360.renderToLocation(r360.createRoot('ModelView', {}), location);
+  r360.renderToLocation(
+    r360.createRoot('MarkerView', {}),
+    new Location([0, 0, 0]),
+  );
 
   KeyboardModule.setInstance(r360);
   r360.compositor.setBackground('./static_assets/360_world.jpg');
