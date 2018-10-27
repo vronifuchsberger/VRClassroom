@@ -5,6 +5,7 @@ const path = require('path');
 const terminate = require('terminate');
 let win;
 let win2;
+let windowsLoaded = false;
 const networkInterfaces = require('os').networkInterfaces();
 const {ipcMain} = require('electron');
 const express = require('express');
@@ -34,12 +35,14 @@ CRAprocess.stdout.on('data', data => {
   if (
     String(data)
       .trim()
-      .startsWith('Compiled')
+      .startsWith('Compiled') &&
+    !windowsLoaded
   ) {
     win.loadURL('http://localhost:3000');
     win2.loadURL(
       `http://localhost:3000/qrCode.html?url=http://${getMyIP()}:8081/index.html`,
     );
+    windowsLoaded = true;
   }
 });
 
@@ -62,6 +65,7 @@ function getMyIP() {
 app.on('ready', () => {
   win = new BrowserWindow({width: 1280, height: 960});
   win2 = new BrowserWindow({width: 440, height: 500});
+
   Menubar(win);
 });
 

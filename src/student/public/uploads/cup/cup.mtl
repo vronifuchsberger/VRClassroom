@@ -1,7 +1,7 @@
-# Blender MTL File: 'Plastic cup.blend'
+# Blender MTL File: 'cup.blend'
 # Material Count: 1
 
-newmtl Plastic_Cup
+newmtl cup
 Ns 200.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
@@ -10,6 +10,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd ..\Low-Poly_Plastic cup_nmap.png
-map_Bump ..\\Low-Poly_Plastic cup_nmap.png
-map_Ks ..\\Low-Poly_Plastic cup_color.png
+map_Kd \cup_nmap.png
+map_Bump \cup_nmap.png
+map_Ks \cup_color.png

@@ -29,19 +29,26 @@ export default class Connection {
       this.sendClientInfo();
       if (this.reconnecter) {
         clearInterval(this.reconnecter);
+        this.reconnecter = null;
       }
     };
     this.ws.onmessage = e => {
       // a message was received
-      const data = JSON.parse(e.data);
-      updateStore(data);
+      try {
+        const data = JSON.parse(e.data || '{}');
+        updateStore(data);
+      } catch (error) {
+        console.error(e, error);
+      }
     };
 
     this.ws.onclose = () => {
-      this.reconnecter = setInterval(
-        () => this.connectWS(this.props.hostname),
-        1000,
-      );
+      if (!this.reconnecter) {
+        this.reconnecter = setInterval(
+          () => this.connectWS(this.props.hostname),
+          1000,
+        );
+      }
     };
   };
 
@@ -53,7 +60,7 @@ export default class Connection {
     try {
       await AsyncStorage.setItem('username', input);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
 
     this.sendClientInfo();

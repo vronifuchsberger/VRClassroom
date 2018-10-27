@@ -17,7 +17,7 @@ const initialContent = {
 class App extends Component {
   state = {
     connectedClients: {},
-    initialContent,
+    currentContent: initialContent,
   };
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class App extends Component {
       } else if (
         file.toLowerCase().endsWith('.obj') ||
         file.toLowerCase().endsWith('.gltf') ||
-        file.toLowerCase().endsWith('.gltf2')
+        file.toLowerCase().endsWith('.glb')
       ) {
         this.broadcastToAllClients(
           {
@@ -72,6 +72,8 @@ class App extends Component {
     this.wss = new WebSocketServer.Server({port: 8888});
 
     this.wss.on('connection', (ws, req) => {
+      ws.send(JSON.stringify(this.state.currentContent));
+      console.log('bbb');
       ws.on('message', message => {
         // message received from student
         const data = JSON.parse(message);

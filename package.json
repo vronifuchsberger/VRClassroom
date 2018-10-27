@@ -8,6 +8,7 @@
     "electron": "^2.0.8",
     "electron-default-menu": "^1.0.1",
     "express": "^4.16.4",
+    "fs-extra": "^7.0.0",
     "terminate": "^2.1.0",
     "ws": "^6.0.0"
   },

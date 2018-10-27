@@ -1,7 +1,7 @@
-# Blender v2.79 (sub 0) OBJ File: 'Plastic cup.blend'
+# Blender v2.79 (sub 0) OBJ File: 'cup.blend'
 # www.blender.org
-mtllib Plastic_Cup-(Wavefront OBJ).mtl
-o Plastic_Cup_plastic_cup_Lowpoly
+mtllib cup.mtl
+o cup
 v -0.495290 -0.005832 -0.064176
 v -0.599538 -0.013712 -0.018399
 v -0.584428 -0.013712 -0.135010
