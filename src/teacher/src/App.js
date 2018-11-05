@@ -73,10 +73,15 @@ class App extends Component {
 
     this.wss.on('connection', (ws, req) => {
       ws.send(JSON.stringify(this.state.currentContent));
-      console.log('bbb');
       ws.on('message', message => {
         // message received from student
         const data = JSON.parse(message);
+        console.log(data);
+
+        if (data.markerAdded) {
+          this.broadcastToAllClients({markers: [data.markerAdded]});
+          return;
+        }
 
         // new client connected to websocket
         const userAgent = req.headers['user-agent'];

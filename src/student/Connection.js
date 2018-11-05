@@ -1,11 +1,18 @@
 import {AsyncStorage, NativeModules, Environment} from 'react-360';
 import {updateStore} from './Store';
+import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 export default class Connection {
   constructor(props) {
     this.props = props;
     this.connectWS(props.hostname);
     Environment.setBackgroundImage('static_assets/360_world.jpg');
+
+    RCTDeviceEventEmitter.addListener('markerAdded', e => {
+      if (this.ws) {
+        this.ws.send(JSON.stringify({markerAdded: e}));
+      }
+    });
   }
 
   sendClientInfo = async () => {

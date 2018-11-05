@@ -4,10 +4,10 @@
 import {ReactInstance} from 'react-360-web';
 import KeyboardModule from 'react-360-keyboard/KeyboardModule';
 import HostnameModule from './HostnameModule';
+import MouseModule from './MouseModule';
 import WebVRPolyfill from 'webvr-polyfill';
 const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 import {Location, Surface} from 'react-360-web';
-import SimpleRaycaster from './SimpleRaycaster';
 
 // Create a location two meters in front of the user, and one meter down
 const location = new Location([100, 100, 10]);
@@ -16,7 +16,11 @@ function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
     fullScreen: true,
-    nativeModules: [KeyboardModule.addModule, new HostnameModule()],
+    nativeModules: [
+      KeyboardModule.addModule,
+      new HostnameModule(),
+      MouseModule.addModule,
+    ],
     ...options,
   });
   /*r360.controls.addRaycaster(
@@ -35,6 +39,7 @@ function init(bundle, parent, options = {}) {
   );
 
   KeyboardModule.setInstance(r360);
+  MouseModule.setInstance(r360);
   r360.compositor.setBackground('./static_assets/360_world.jpg');
 }
 
