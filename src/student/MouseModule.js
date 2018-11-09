@@ -1,9 +1,5 @@
 import {Module} from 'react-360-web';
 
-import {Math as GLMath} from 'webgl-ui';
-
-const {rotateByQuaternion} = GLMath;
-
 class MouseModule extends Module {
   constructor(ctx) {
     super('MouseModule');
@@ -28,7 +24,7 @@ class MouseModule extends Module {
     direction[1] = y / mag;
     direction[2] = -1 / mag;
 
-    rotateByQuaternion(direction, this._instance._cameraQuat);
+    this.rotateByQuaternion(direction, this._instance._cameraQuat);
 
     this._ctx.callFunction('RCTDeviceEventEmitter', 'emit', [
       'markerAdded',
@@ -38,6 +34,35 @@ class MouseModule extends Module {
 
   _setInstance(instance: ReactInstance) {
     this._instance = instance;
+  }
+
+  rotateByQuaternion(v: Vec3, q: Quaternion) {
+    // Optimized implementation of Hamiltonian product, similar to Unity's
+    // internal implementation
+    const qx = q[0];
+    const qy = q[1];
+    const qz = q[2];
+    const qw = q[3];
+    const vx = v[0];
+    const vy = v[1];
+    const vz = v[2];
+    const qx2 = qx + qx;
+    const qy2 = qy + qy;
+    const qz2 = qz + qz;
+
+    const xx2 = qx * qx2;
+    const yy2 = qy * qy2;
+    const zz2 = qz * qz2;
+    const xy2 = qx * qy2;
+    const xz2 = qx * qz2;
+    const yz2 = qy * qz2;
+    const wx2 = qw * qx2;
+    const wy2 = qw * qy2;
+    const wz2 = qw * qz2;
+
+    v[0] = (1 - yy2 - zz2) * vx + (xy2 - wz2) * vy + (xz2 + wy2) * vz;
+    v[1] = (xy2 + wz2) * vx + (1 - xx2 - zz2) * vy + (yz2 - wx2) * vz;
+    v[2] = (xz2 - wy2) * vx + (yz2 + wx2) * vy + (1 - xx2 - yy2) * vz;
   }
 }
 

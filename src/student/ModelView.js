@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, NativeModules} from 'react-360';
+import {View} from 'react-360';
 import Entity from 'Entity';
 import {connect} from './Store';
 
@@ -15,7 +15,6 @@ class ModelView extends React.Component {
     if (!this.props.url || this.props.mediatype != 'model') {
       return null;
     }
-    const hostname = NativeModules.HostnameModule.hostname;
     const source = {};
     if (this.props.url.endsWith('.obj')) {
       source.obj = this.props.url;

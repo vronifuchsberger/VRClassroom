@@ -79,7 +79,9 @@ class App extends Component {
         console.log(data);
 
         if (data.markerAdded) {
-          this.broadcastToAllClients({markers: [data.markerAdded]});
+          this.broadcastToAllClients({
+            markers: [...this.state.currentContent.markers, data.markerAdded],
+          });
           return;
         }
 
