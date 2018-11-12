@@ -10,7 +10,11 @@ export default class Connection {
 
     RCTDeviceEventEmitter.addListener('markerAdded', e => {
       if (this.ws) {
-        this.ws.send(JSON.stringify({markerAdded: e}));
+        this.ws.send(
+          JSON.stringify({
+            markerAdded: e,
+          }),
+        );
       }
     });
   }
@@ -24,7 +28,12 @@ export default class Connection {
       AsyncStorage.setItem('id', id);
     }
     // generate ID if not exisitent
-    this.ws.send(JSON.stringify({clientName: clientName, id: id}));
+    this.ws.send(
+      JSON.stringify({
+        clientName: clientName,
+        id: id,
+      }),
+    );
     if (!clientName) {
       setTimeout(() => this.askClientName(), 100);
     }

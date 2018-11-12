@@ -23,30 +23,30 @@ class CylinderView extends React.Component {
     };
   }
 
-  componentDidUpdate() {
-    console.log(this.props);
-
-    if (this.props.mediatype === 'video' && this.props.url) {
-      VideoModule.createPlayer('myplayer');
-      VideoModule.play('myplayer', {
-        source: {url: this.props.url}, // provide the path to the video
-      });
-      Environment.setBackgroundVideo('myplayer');
-    } else if (this.props.mediatype === 'photo' && this.props.url) {
-      Environment.setBackgroundImage(this.props.url);
+  componentDidUpdate(prevProps) {
+    if (prevProps.url != this.props.url) {
+      if (this.props.mediatype === 'video' && this.props.url) {
+        VideoModule.createPlayer('myplayer');
+        VideoModule.play('myplayer', {
+          source: {
+            url: this.props.url,
+          }, // path to the video
+        });
+        Environment.setBackgroundVideo('myplayer');
+      } else if (this.props.mediatype === 'photo' && this.props.url) {
+        Environment.setBackgroundImage(this.props.url);
+      }
     }
   }
 
   render() {
     return (
-      <View>
-        <View style={styles.panel}>
-          {!this.state.showContent ? (
-            <View style={styles.greetingBox}>
-              <Text style={styles.greeting}>{this.state.greeting}</Text>
-            </View>
-          ) : null}
-        </View>
+      <View style={styles.panel}>
+        {!this.state.showContent ? (
+          <View style={styles.greetingBox}>
+            <Text style={styles.greeting}>{this.state.greeting}</Text>
+          </View>
+        ) : null}
       </View>
     );
   }

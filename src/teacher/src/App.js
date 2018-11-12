@@ -5,19 +5,19 @@ import Sidebar from './Sidebar';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
 const {ipcRenderer} = window.require('electron');
-const initialContent = {
+const initialContent = () => ({
   mediatype: null,
   url: null,
   markers: [],
   playing: false,
   playbackPosition: -1,
   rotation: 0,
-};
+});
 
 class App extends Component {
   state = {
     connectedClients: {},
-    currentContent: initialContent,
+    currentContent: initialContent(),
   };
 
   componentDidMount() {
@@ -63,20 +63,31 @@ class App extends Component {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.currentContent !== this.state.currentContent) {
+      Object.values(this.state.connectedClients).forEach(({client}) => {
+        if (client.readyState === WebSocketServer.OPEN) {
+          client.send(JSON.stringify(this.state.currentContent));
+        }
+      });
+    }
+  }
+
   getUrl(fileName) {
     return `http://${window.process.env.ip}:8082/uploads/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server
   setupWebsocketServer = () => {
-    this.wss = new WebSocketServer.Server({port: 8888});
+    this.wss = new WebSocketServer.Server({
+      port: 8888,
+    });
 
     this.wss.on('connection', (ws, req) => {
       ws.send(JSON.stringify(this.state.currentContent));
       ws.on('message', message => {
         // message received from student
         const data = JSON.parse(message);
-        console.log(data);
 
         if (data.markerAdded) {
           this.broadcastToAllClients({
@@ -123,30 +134,30 @@ class App extends Component {
 
   broadcastToAllClients = (message, reset) => {
     if (reset) {
-      this.setState({currentContent: {...initialContent, ...message}});
+      this.setState({
+        currentContent: {
+          ...initialContent(),
+          ...message,
+        },
+      });
     } else {
       this.setState({
-        currentContent: {...this.state.currentContent, ...message},
+        currentContent: {
+          ...this.state.currentContent,
+          ...message,
+        },
       });
     }
+  };
 
-    Object.values(this.state.connectedClients).forEach(({client}) => {
-      if (client.readyState === WebSocketServer.OPEN) {
-        client.send(JSON.stringify(message));
-      }
+  resetMarkers = () => {
+    this.broadcastToAllClients({
+      markers: [],
     });
   };
 
-  buttonClicked = () => {
-    this.broadcastToAllClients({markers: [[20, 20, 0], [-40, -40, 0]]});
-  };
-
-  mediaButtonClicked = () => {};
-
   onSliderChange = value => {
     this.broadcastToAllClients({
-      url: 'test',
-      mediatype: 'model',
       rotation: value,
     });
   };
@@ -159,18 +170,15 @@ class App extends Component {
           <Content className="AppContent">
             <iframe title="3Dworld" src="http://localhost:8081/index.html" />
             <div className="Controls">
-              <div style={{width: '800px'}}>
+              <div
+                style={{
+                  width: '800px',
+                }}
+              >
                 <Slider width={300} max={360} onChange={this.onSliderChange} />
               </div>
-
-              <Button type="primary" onClick={this.buttonClicked}>
-                Button
-              </Button>
-              <Button type="primary" onClick={this.mediaButtonClicked}>
-                Upload media
-              </Button>
-              <Button type="primary" onClick={this.markerMode}>
-                <Icon type="edit" theme="outlined" />
+              <Button type="primary" onClick={this.resetMarkers}>
+                Marker zurücksetzen
               </Button>
             </div>
           </Content>
