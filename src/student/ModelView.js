@@ -26,6 +26,8 @@ class ModelView extends React.Component {
       source.gltf2 = this.props.url;
     }
 
+    const scaleFactor = this.props.scaleFactor || 1;
+
     return (
       <View>
         <AmbientLight intensity={1.0} color={'#ffffff'} />
@@ -35,11 +37,12 @@ class ModelView extends React.Component {
         />
         <Entity
           source={source}
-          style={
-            {
-              //transform: [{scale: [10, 10, 10]}],
-            }
-          }
+          style={{
+            transform: [
+              {scale: [scaleFactor, scaleFactor, scaleFactor]},
+              {rotateY: this.props.rotation || 0},
+            ],
+          }}
         />
       </View>
     );

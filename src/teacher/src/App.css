@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+
 .AppLayout {
   height: 100vh;
 }
@@ -20,4 +21,10 @@
 .AppContent {
   display: flex;
   flex-direction: column;
+}
+
+.Controls .Slider {
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
 }

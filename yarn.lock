@@ -252,6 +252,13 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+doc-ready@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/doc-ready/-/doc-ready-1.0.4.tgz#37f5391969cff994303fdfef2e5d50357f8164d3"
+  integrity sha1-N/U5GWnP+ZQwP9/vLl1QNX+BZNM=
+  dependencies:
+    eventie "^1"
+
 duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -289,6 +296,13 @@ electron-download@^3.0.1:
     rc "^1.1.2"
     semver "^5.3.0"
     sumchecker "^1.2.0"
+
+electron-prompt@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/electron-prompt/-/electron-prompt-1.2.0.tgz#e1d330ca8791a28799194066d1217bb8d9a062db"
+  integrity sha512-yshBIOjUb2UrBDd6WTS76wXRkYtTIdRUiSYlH4wCpamtSJqwwUoQZyBb1CLD4cR9LQTtvju1b9A0yh5Y3JLF6A==
+  dependencies:
+    doc-ready "^1.0.4"
 
 electron@^2.0.8:
   version "2.0.8"
@@ -338,6 +352,11 @@ event-stream@~3.3.0:
     split "0.3"
     stream-combiner "~0.0.4"
     through "~2.3.1"
+
+eventie@^1:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/eventie/-/eventie-1.0.6.tgz#d4ffc8b0c2b5e493c2aa1b22cbe918d3aee74437"
+  integrity sha1-1P/IsMK15JPCqhsiy+kY067nRDc=
 
 express@^4.16.4:
   version "4.16.4"

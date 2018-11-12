@@ -23,9 +23,6 @@ function init(bundle, parent, options = {}) {
     ],
     ...options,
   });
-  /*r360.controls.addRaycaster(
-    new SimpleRaycaster(document.querySelector('#container')),
-  ); */
 
   // Render your app content to the default cylinder surface
   r360.renderToSurface(

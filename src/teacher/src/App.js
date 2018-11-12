@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Button, Layout, Icon, Slider} from 'antd';
+import {Button, Layout, Icon, Slider, Radio} from 'antd';
 import Sidebar from './Sidebar';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
@@ -12,12 +12,14 @@ const initialContent = () => ({
   playing: false,
   playbackPosition: -1,
   rotation: 0,
+  scaleFactor: 1,
 });
 
 class App extends Component {
   state = {
     connectedClients: {},
     currentContent: initialContent(),
+    sliderMode: 'rotation',
   };
 
   componentDidMount() {
@@ -60,6 +62,15 @@ class App extends Component {
           true,
         );
       }
+    });
+    ipcRenderer.on('streetview', (event, url) => {
+      this.broadcastToAllClients(
+        {
+          mediatype: 'photo',
+          url: url,
+        },
+        true,
+      );
     });
   }
 
@@ -158,11 +169,20 @@ class App extends Component {
 
   onSliderChange = value => {
     this.broadcastToAllClients({
-      rotation: value,
+      [this.state.sliderMode]: value,
+    });
+  };
+
+  changeSliderMode = e => {
+    this.setState({
+      sliderMode: e.target.value,
     });
   };
 
   render() {
+    const sliderMax = this.state.sliderMode === 'rotation' ? 360 : 10;
+    const sliderValue = this.state.currentContent[this.state.sliderMode];
+
     return (
       <div className="App">
         <Layout className="AppLayout">
@@ -170,12 +190,23 @@ class App extends Component {
           <Content className="AppContent">
             <iframe title="3Dworld" src="http://localhost:8081/index.html" />
             <div className="Controls">
-              <div
-                style={{
-                  width: '800px',
-                }}
+              <Radio.Group
+                value={this.state.sliderMode}
+                onChange={this.changeSliderMode}
+                buttonStyle="solid"
               >
-                <Slider width={300} max={360} onChange={this.onSliderChange} />
+                <Radio.Button value="rotation">Drehen</Radio.Button>
+                <Radio.Button value="scaleFactor">Skalieren</Radio.Button>
+              </Radio.Group>
+              <div className="Slider">
+                <Slider
+                  width={200}
+                  max={sliderMax}
+                  value={sliderValue}
+                  onChange={this.onSliderChange}
+                  step={0.01}
+                  tipFormatter={null}
+                />
               </div>
               <Button type="primary" onClick={this.resetMarkers}>
                 Marker zurücksetzen

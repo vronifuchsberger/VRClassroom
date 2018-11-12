@@ -2,6 +2,7 @@ const {Menu, app, shell, dialog} = require('electron');
 
 const fs = require('fs-extra');
 const path = require('path');
+const prompt = require('./prompt');
 
 const {COPYFILE_EXCL} = fs.constants;
 const defaultMenu = require('electron-default-menu');
@@ -27,7 +28,7 @@ function getMenu(win) {
     label: 'File',
     submenu: [
       {
-        label: 'Open',
+        label: 'Open...',
         accelerator: 'CmdOrCtrl+O',
         click: (item, focusedWindow) => {
           dialog.showOpenDialog(
@@ -131,6 +132,12 @@ function getMenu(win) {
               win.webContents.send('open', file);
             },
           })),
+      },
+      {
+        label: 'Open StreetView...',
+        click: () => {
+          prompt(win);
+        },
       },
     ],
   });
