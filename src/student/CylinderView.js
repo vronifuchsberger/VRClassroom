@@ -18,22 +18,26 @@ class CylinderView extends React.Component {
     super(props);
     this.state = {
       count: 90,
-      greeting: 'Welcome to VRClassroom! Please enter your name!',
+      greeting: 'Welcome to VRClassroom!',
       showContent: false,
     };
   }
 
   componentDidUpdate(prevProps) {
+    if (!this.state.showContent && this.props.url) {
+      this.setState({showContent: true});
+    }
+
     if (prevProps.url != this.props.url) {
-      if (this.props.mediatype === 'video' && this.props.url) {
+      if (this.props.mediatype === 'video') {
         VideoModule.createPlayer('myplayer');
         VideoModule.play('myplayer', {
           source: {
             url: this.props.url,
-          }, // path to the video
+          },
         });
         Environment.setBackgroundVideo('myplayer');
-      } else if (this.props.mediatype === 'photo' && this.props.url) {
+      } else if (this.props.mediatype === 'photo') {
         Environment.setBackgroundImage(this.props.url);
       }
     }
@@ -41,10 +45,12 @@ class CylinderView extends React.Component {
 
   render() {
     return (
-      <View style={styles.panel}>
+      <View>
         {!this.state.showContent ? (
-          <View style={styles.greetingBox}>
-            <Text style={styles.greeting}>{this.state.greeting}</Text>
+          <View style={{transform: [{translate: [300, -200]}]}}>
+            <View style={styles.greetingBox}>
+              <Text style={styles.greeting}>{this.state.greeting}</Text>
+            </View>
           </View>
         ) : null}
       </View>
@@ -55,9 +61,9 @@ class CylinderView extends React.Component {
 const styles = StyleSheet.create({
   panel: {
     // Fill the entire surface
-    width: 1000,
-    height: 600,
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    width: 100,
+    height: 60,
+    backgroundColor: 'rgba(255, 255, 255, 0)',
     justifyContent: 'center',
     alignItems: 'center',
   },

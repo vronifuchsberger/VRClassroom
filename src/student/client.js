@@ -9,8 +9,7 @@ import WebVRPolyfill from 'webvr-polyfill';
 const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 import {Location, Surface} from 'react-360-web';
 
-// Create a location two meters in front of the user, and one meter down
-const location = new Location([100, 100, 10]);
+const location = new Location([0, -70, -150]);
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
