@@ -3,7 +3,10 @@ import {Module} from 'react-360-web';
 class MouseModule extends Module {
   constructor(ctx) {
     super('MouseModule');
-    document.addEventListener('mouseup', this.mouseup);
+    if (location.search === '?teacher') {
+      document.addEventListener('mouseup', this.mouseup);
+    }
+
     this._ctx = ctx;
   }
 

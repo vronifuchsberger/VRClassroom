@@ -3973,9 +3973,10 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-360-keyboard@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-360-keyboard/-/react-360-keyboard-1.0.0.tgz#8acc729f1ad10c687d1b672b22e5c8dd91e58693"
+react-360-keyboard@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-360-keyboard/-/react-360-keyboard-1.0.1.tgz#c003eecbba0a40367dc5b60f625ea54c4966475b"
+  integrity sha512-3oogoNOjVOEI9uzCm2c0oMXYSkmY4Js9PBO6ZFafAluMJu2x6q9Ri6Dx2kOmrFIb8CcKxyM61tIbJPLhFihSvQ==
   dependencies:
     prop-types "^15.6.2"
 

@@ -23,6 +23,10 @@ class CylinderView extends React.Component {
     };
   }
 
+  componentDidMount() {
+    VideoModule.createPlayer('myplayer');
+  }
+
   componentDidUpdate(prevProps) {
     if (!this.state.showContent && this.props.url) {
       this.setState({showContent: true});
@@ -30,15 +34,25 @@ class CylinderView extends React.Component {
 
     if (prevProps.url != this.props.url) {
       if (this.props.mediatype === 'video') {
-        VideoModule.createPlayer('myplayer');
         VideoModule.play('myplayer', {
           source: {
             url: this.props.url,
           },
         });
+        if (!this.props.playing) {
+          VideoModule.pause('myplayer');
+        }
         Environment.setBackgroundVideo('myplayer');
       } else if (this.props.mediatype === 'photo') {
         Environment.setBackgroundImage(this.props.url);
+      }
+    }
+
+    if (prevProps.playing != this.props.playing) {
+      if (this.props.playing) {
+        VideoModule.resume('myplayer');
+      } else {
+        VideoModule.pause('myplayer');
       }
     }
   }

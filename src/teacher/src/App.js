@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import {Button, Layout, Icon, Slider, Radio} from 'antd';
+import {Layout} from 'antd';
 import Sidebar from './Sidebar';
+import PhotoControls from './PhotoControls';
+import VideoControls from './VideoControls';
+import ModelControls from './ModelControls';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
 const {ipcRenderer} = window.require('electron');
@@ -19,7 +22,7 @@ class App extends Component {
   state = {
     connectedClients: {},
     currentContent: initialContent(),
-    sliderMode: 'rotation',
+    allowAddingMarker: false,
   };
 
   componentDidMount() {
@@ -101,9 +104,14 @@ class App extends Component {
         const data = JSON.parse(message);
 
         if (data.markerAdded) {
-          this.broadcastToAllClients({
-            markers: [...this.state.currentContent.markers, data.markerAdded],
-          });
+          if (this.state.allowAddingMarker) {
+            this.setState({
+              allowAddingMarker: false,
+            });
+            this.broadcastToAllClients({
+              markers: [...this.state.currentContent.markers, data.markerAdded],
+            });
+          }
           return;
         }
 
@@ -161,57 +169,42 @@ class App extends Component {
     }
   };
 
-  resetMarkers = () => {
-    this.broadcastToAllClients({
-      markers: [],
-    });
-  };
-
-  onSliderChange = value => {
-    this.broadcastToAllClients({
-      [this.state.sliderMode]: value,
-    });
-  };
-
-  changeSliderMode = e => {
+  toggleAddingMarker = () => {
     this.setState({
-      sliderMode: e.target.value,
+      allowAddingMarker: !this.state.allowAddingMarker,
     });
   };
 
   render() {
-    const sliderMax = this.state.sliderMode === 'rotation' ? 360 : 10;
-    const sliderValue = this.state.currentContent[this.state.sliderMode];
-
     return (
       <div className="App">
         <Layout className="AppLayout">
           <Sidebar connectedClients={this.state.connectedClients} />
           <Content className="AppContent">
-            <iframe title="3Dworld" src="http://localhost:8081/index.html" />
-            <div className="Controls">
-              <Radio.Group
-                value={this.state.sliderMode}
-                onChange={this.changeSliderMode}
-                buttonStyle="solid"
-              >
-                <Radio.Button value="rotation">Drehen</Radio.Button>
-                <Radio.Button value="scaleFactor">Skalieren</Radio.Button>
-              </Radio.Group>
-              <div className="Slider">
-                <Slider
-                  width={200}
-                  max={sliderMax}
-                  value={sliderValue}
-                  onChange={this.onSliderChange}
-                  step={0.01}
-                  tipFormatter={null}
-                />
-              </div>
-              <Button type="primary" onClick={this.resetMarkers}>
-                Marker zurücksetzen
-              </Button>
-            </div>
+            <iframe
+              title="3Dworld"
+              src="http://localhost:8081/index.html?teacher"
+            />
+            {this.state.currentContent.mediatype === 'model' && (
+              <ModelControls
+                broadcastToAllClients={this.broadcastToAllClients}
+                currentContent={this.state.currentContent}
+              />
+            )}
+            {this.state.currentContent.mediatype === 'photo' && (
+              <PhotoControls
+                broadcastToAllClients={this.broadcastToAllClients}
+                currentContent={this.state.currentContent}
+                allowAddingMarker={this.state.allowAddingMarker}
+                toggleAddingMarker={this.toggleAddingMarker}
+              />
+            )}
+            {this.state.currentContent.mediatype === 'video' && (
+              <VideoControls
+                broadcastToAllClients={this.broadcastToAllClients}
+                currentContent={this.state.currentContent}
+              />
+            )}
           </Content>
         </Layout>
       </div>

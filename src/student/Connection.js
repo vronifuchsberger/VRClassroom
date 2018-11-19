@@ -20,14 +20,16 @@ export default class Connection {
   }
 
   sendClientInfo = async () => {
-    const clientName = await AsyncStorage.getItem('username');
+    const clientName = NativeModules.HostnameModule.isTeacher
+      ? 'Teacher App'
+      : await AsyncStorage.getItem('username');
     let id = await AsyncStorage.getItem('id');
 
     if (!id) {
       id = Math.random().toString(36);
       AsyncStorage.setItem('id', id);
     }
-    // generate ID if not exisitent
+    // generate ID if not existent
     this.ws.send(
       JSON.stringify({
         clientName: clientName,
