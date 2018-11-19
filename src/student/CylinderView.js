@@ -38,10 +38,8 @@ class CylinderView extends React.Component {
           source: {
             url: this.props.url,
           },
+          autoPlay: false,
         });
-        if (!this.props.playing) {
-          VideoModule.pause('myplayer');
-        }
         Environment.setBackgroundVideo('myplayer');
       } else if (this.props.mediatype === 'photo') {
         Environment.setBackgroundImage(this.props.url);

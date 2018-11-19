@@ -203,6 +203,8 @@ class App extends Component {
               <VideoControls
                 broadcastToAllClients={this.broadcastToAllClients}
                 currentContent={this.state.currentContent}
+                allowAddingMarker={this.state.allowAddingMarker}
+                toggleAddingMarker={this.toggleAddingMarker}
               />
             )}
           </Content>
