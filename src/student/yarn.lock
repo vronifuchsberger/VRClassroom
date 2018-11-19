@@ -1459,6 +1459,7 @@ create-error-class@^3.0.0:
 create-react-class@^15.5.2, create-react-class@^15.6.0:
   version "15.6.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
+  integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
   dependencies:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
@@ -3980,15 +3981,16 @@ react-360-keyboard@^1.0.1:
   dependencies:
     prop-types "^15.6.2"
 
-react-360-web@~1.0.0:
+"react-360-web@https://github.com/vronifuchsberger/react-360.git":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-360-web/-/react-360-web-1.0.2.tgz#12b355e61d1ce83e59609c2d8df0cc4b57a33b3a"
+  resolved "https://github.com/vronifuchsberger/react-360.git#a1abec6fd3ce3ef8d5f7b535718cef831a4bbe01"
   dependencies:
     three-gltf2-loader "~1.2.0"
 
-react-360@~1.0.0:
+react-360@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-360/-/react-360-1.0.0.tgz#c6201f1dee101c5c9e6e5ed24121021de4222899"
+  integrity sha512-y0NZo/dbB1juEMQbQz5smqZdgCpQXQBbr4GWOVzBjuGbDm8fxJmUdOx4X99DPR5vg8zka++23Q4oy5LsPmvCvQ==
   dependencies:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
@@ -4814,6 +4816,7 @@ test-exclude@^4.2.1:
 three-gltf2-loader@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/three-gltf2-loader/-/three-gltf2-loader-1.2.0.tgz#1fffae0659b1490034e6d055c7aabc439ab5de21"
+  integrity sha512-CFB9wcKTBpADh6wVq32XYx81LyNS7j8e8edgdMEBLedz+Wle1Ytbh8h6qEa4XFLR4dFArVmwC244EQOyXUYfqA==
 
 three@^0.87.0:
   version "0.87.1"
