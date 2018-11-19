@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {List, Badge, Layout} from 'antd';
+import './Sidebar.css';
+
 const {Sider} = Layout;
 
 class Sidebar extends Component {
