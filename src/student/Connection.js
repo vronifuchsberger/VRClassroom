@@ -17,6 +17,18 @@ export default class Connection {
         );
       }
     });
+
+    if (NativeModules.HostnameModule.isTeacher) {
+      RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
+        if (this.ws) {
+          this.ws.send(
+            JSON.stringify({
+              videoStatus: e,
+            }),
+          );
+        }
+      });
+    }
   }
 
   sendClientInfo = async () => {

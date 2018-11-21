@@ -23,6 +23,7 @@ class App extends Component {
     connectedClients: {},
     currentContent: initialContent(),
     allowAddingMarker: false,
+    videoDuration: -1,
   };
 
   componentDidMount() {
@@ -113,21 +114,27 @@ class App extends Component {
               markers: [...this.state.currentContent.markers, data.markerAdded],
             });
           }
-          return;
-        }
-
-        // new client connected to websocket
-        const userAgent = req.headers['user-agent'];
-        this.setState({
-          connectedClients: {
-            ...this.state.connectedClients,
-            [data.id]: {
-              client: ws,
-              userAgent: userAgent,
-              clientName: data.clientName,
+        } else if (data.videoStatus) {
+          this.setState({
+            videoDuration: data.videoStatus.duration,
+          });
+          this.broadcastToAllClients({
+            playbackPosition: data.videoStatus.position,
+          });
+        } else {
+          // new client connected to websocket
+          const userAgent = req.headers['user-agent'];
+          this.setState({
+            connectedClients: {
+              ...this.state.connectedClients,
+              [data.id]: {
+                client: ws,
+                userAgent: userAgent,
+                clientName: data.clientName,
+              },
             },
-          },
-        });
+          });
+        }
       });
 
       ws.on('close', () => {
@@ -206,6 +213,7 @@ class App extends Component {
                 currentContent={this.state.currentContent}
                 allowAddingMarker={this.state.allowAddingMarker}
                 toggleAddingMarker={this.toggleAddingMarker}
+                videoDuration={this.state.videoDuration}
               />
             )}
           </Content>

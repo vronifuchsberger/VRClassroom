@@ -15,22 +15,20 @@ import Marker from './Marker';
 import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 class CylinderView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 90,
-      greeting: 'Welcome to VRClassroom!',
-      showContent: false,
-    };
-  }
-
-  player: VideoPlayerInstance;
+  state = {
+    count: 90,
+    greeting: 'Welcome to VRClassroom!',
+    showContent: false,
+    playbackPosition: -1,
+  };
 
   componentDidMount() {
-    this.player = VideoModule.createPlayer('myplayer');
+    VideoModule.createPlayer('myplayer');
 
-    this.player.addListener('onVideoStatusChanged', e => {
-      console.log('🤑', e);
+    RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
+      this.setState({
+        playbackPosition: e.position,
+      });
     });
   }
 
@@ -59,6 +57,12 @@ class CylinderView extends React.Component {
       } else {
         VideoModule.pause('myplayer');
       }
+    }
+
+    if (
+      Math.abs(this.state.playbackPosition - this.props.playbackPosition) >= 1
+    ) {
+      VideoModule.seek('myplayer', this.props.playbackPosition);
     }
   }
 

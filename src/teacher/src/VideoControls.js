@@ -2,20 +2,6 @@ import React, {Component} from 'react';
 import {Button, Slider} from 'antd';
 
 class VideoControls extends Component {
-  state = {
-    duration: -1,
-  };
-
-  componentDidMount() {
-    this.getVideoDuration();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.currentContent.url !== this.props.currentContent.url) {
-      this.getVideoDuration();
-    }
-  }
-
   resetMarkers = () => {
     this.props.broadcastToAllClients({
       markers: [],
@@ -35,19 +21,6 @@ class VideoControls extends Component {
     });
   };
 
-  getVideoDuration = () => {
-    const video = document.createElement('video');
-    video.autoplay = false;
-    video.addEventListener('durationchange', e => {
-      console.log(e);
-      this.setState({
-        duration: e.target.duration,
-      });
-    });
-    video.preload = 'metadata';
-    video.src = this.props.currentContent.url;
-  };
-
   render() {
     return (
       <div className="Controls">
@@ -58,11 +31,11 @@ class VideoControls extends Component {
         />
         <Slider
           onChange={this.onSliderChange}
-          max={this.state.duration}
+          max={this.props.videoDuration}
           value={this.props.currentContent.playbackPosition}
           step={0.01}
         />
-        {this.state.duration}
+        {this.props.videoDuration}
         {!this.props.currentContent.playing && [
           <Button
             type="primary"
