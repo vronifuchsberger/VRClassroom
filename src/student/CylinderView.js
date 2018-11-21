@@ -12,6 +12,7 @@ import Entity from 'Entity';
 const {VideoModule} = NativeModules;
 import {connect} from './Store';
 import Marker from './Marker';
+import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 class CylinderView extends React.Component {
   constructor(props) {
@@ -23,8 +24,14 @@ class CylinderView extends React.Component {
     };
   }
 
+  player: VideoPlayerInstance;
+
   componentDidMount() {
-    VideoModule.createPlayer('myplayer');
+    this.player = VideoModule.createPlayer('myplayer');
+
+    this.player.addListener('onVideoStatusChanged', e => {
+      console.log('🤑', e);
+    });
   }
 
   componentDidUpdate(prevProps) {

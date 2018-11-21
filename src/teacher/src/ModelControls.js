@@ -38,16 +38,13 @@ class ModelControls extends Component {
           <Radio.Button value="rotation">Drehen</Radio.Button>
           <Radio.Button value="scaleFactor">Skalieren</Radio.Button>
         </Radio.Group>
-        <div className="Slider">
-          <Slider
-            width={200}
-            max={sliderMax}
-            value={sliderValue}
-            onChange={this.onSliderChange}
-            step={0.01}
-            tipFormatter={null}
-          />
-        </div>
+        <Slider
+          max={sliderMax}
+          value={sliderValue}
+          onChange={this.onSliderChange}
+          step={0.01}
+          tipFormatter={null}
+        />
         <Button type="primary" onClick={this.resetMarkers}>
           Marker zurücksetzen
         </Button>

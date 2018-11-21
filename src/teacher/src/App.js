@@ -49,6 +49,7 @@ class App extends Component {
           {
             mediatype: 'video',
             url: this.getUrl(file),
+            playbackPosition: 0,
           },
           true,
         );
