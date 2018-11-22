@@ -7,7 +7,7 @@ import VideoControls from './VideoControls';
 import ModelControls from './ModelControls';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
-const {ipcRenderer} = window.require('electron');
+const {ipcRenderer, remote} = window.require('electron');
 const initialContent = () => ({
   mediatype: null,
   url: null,
@@ -23,6 +23,7 @@ class App extends Component {
     connectedClients: {},
     currentContent: initialContent(),
     allowAddingMarker: false,
+    videoDuration: -1,
   };
 
   componentDidMount() {
@@ -49,6 +50,7 @@ class App extends Component {
           {
             mediatype: 'video',
             url: this.getUrl(file),
+            playbackPosition: 0,
           },
           true,
         );
@@ -88,7 +90,9 @@ class App extends Component {
   }
 
   getUrl(fileName) {
-    return `http://${window.process.env.ip}:8082/uploads/${fileName}`;
+    return remote.app.isPackaged
+      ? `http://${window.process.env.ip}:8082/assets/${fileName}`
+      : `http://${window.process.env.ip}:8082/uploads/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server
@@ -112,21 +116,27 @@ class App extends Component {
               markers: [...this.state.currentContent.markers, data.markerAdded],
             });
           }
-          return;
-        }
-
-        // new client connected to websocket
-        const userAgent = req.headers['user-agent'];
-        this.setState({
-          connectedClients: {
-            ...this.state.connectedClients,
-            [data.id]: {
-              client: ws,
-              userAgent: userAgent,
-              clientName: data.clientName,
+        } else if (data.videoStatus) {
+          this.setState({
+            videoDuration: data.videoStatus.duration,
+          });
+          this.broadcastToAllClients({
+            playbackPosition: data.videoStatus.position,
+          });
+        } else {
+          // new client connected to websocket
+          const userAgent = req.headers['user-agent'];
+          this.setState({
+            connectedClients: {
+              ...this.state.connectedClients,
+              [data.id]: {
+                client: ws,
+                userAgent: userAgent,
+                clientName: data.clientName,
+              },
             },
-          },
-        });
+          });
+        }
       });
 
       ws.on('close', () => {
@@ -183,7 +193,11 @@ class App extends Component {
           <Content className="AppContent">
             <iframe
               title="3Dworld"
-              src="http://localhost:8081/index.html?teacher"
+              src={
+                remote.app.isPackaged
+                  ? 'http://localhost:8082/student/index.html?teacher'
+                  : 'http://localhost:8081/index.html?teacher'
+              }
             />
             {this.state.currentContent.mediatype === 'model' && (
               <ModelControls
@@ -205,6 +219,7 @@ class App extends Component {
                 currentContent={this.state.currentContent}
                 allowAddingMarker={this.state.allowAddingMarker}
                 toggleAddingMarker={this.toggleAddingMarker}
+                videoDuration={this.state.videoDuration}
               />
             )}
           </Content>

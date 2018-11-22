@@ -12,19 +12,24 @@ import Entity from 'Entity';
 const {VideoModule} = NativeModules;
 import {connect} from './Store';
 import Marker from './Marker';
+import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 class CylinderView extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 90,
-      greeting: 'Welcome to VRClassroom!',
-      showContent: false,
-    };
-  }
+  state = {
+    count: 90,
+    greeting: 'Welcome to VRClassroom!',
+    showContent: false,
+    playbackPosition: -1,
+  };
 
   componentDidMount() {
     VideoModule.createPlayer('myplayer');
+
+    RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
+      this.setState({
+        playbackPosition: e.position,
+      });
+    });
   }
 
   componentDidUpdate(prevProps) {
@@ -52,6 +57,12 @@ class CylinderView extends React.Component {
       } else {
         VideoModule.pause('myplayer');
       }
+    }
+
+    if (
+      Math.abs(this.state.playbackPosition - this.props.playbackPosition) >= 1
+    ) {
+      VideoModule.seek('myplayer', this.props.playbackPosition);
     }
   }
 

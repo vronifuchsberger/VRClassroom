@@ -1,4 +1,4 @@
-import {AppRegistry, NativeModules} from 'react-360';
+import {AppRegistry, NativeModules, Environment, asset} from 'react-360';
 import CylinderView from './CylinderView';
 import ModelView from './ModelView';
 import Marker from './Marker';
@@ -11,3 +11,4 @@ AppRegistry.registerComponent('MarkerView', () => Marker);
 AppRegistry.registerComponent(...registerKeyboard);
 
 new Connection({hostname: NativeModules.HostnameModule.hostname});
+Environment.setBackgroundImage(asset('360_world.jpg'));

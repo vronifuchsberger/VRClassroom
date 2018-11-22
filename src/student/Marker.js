@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, NativeModules, Animated} from 'react-360';
+import {View, NativeModules, Animated, asset} from 'react-360';
 import {connect} from './Store';
 import Entity from 'Entity';
 import AmbientLight from 'AmbientLight';
@@ -52,7 +52,7 @@ class Marker extends React.Component {
               },
             ]}
             source={{
-              gltf2: `http://${hostname}:8082/marker/marker1.glb`,
+              gltf2: asset('marker/marker1.glb'),
             }}
           />
         ))}

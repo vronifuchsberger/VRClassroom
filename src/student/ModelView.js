@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, NativeModules, Environment} from 'react-360';
+import {View, NativeModules, Environment, asset} from 'react-360';
 import Entity from 'Entity';
 import {connect} from './Store';
 
@@ -17,7 +17,7 @@ class ModelView extends React.Component {
       this.props.mediatype === 'model'
     ) {
       const hostname = NativeModules.HostnameModule.hostname;
-      Environment.setBackgroundImage(`http://${hostname}:8082/360_world.jpg`);
+      Environment.setBackgroundImage(asset('360_world.jpg'));
     }
   }
 

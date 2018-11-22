@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import {Button} from 'antd';
+import {Button, Slider} from 'antd';
 
 class VideoControls extends Component {
-  state = {};
-
   resetMarkers = () => {
     this.props.broadcastToAllClients({
       markers: [],
@@ -17,6 +15,12 @@ class VideoControls extends Component {
     });
   };
 
+  onSliderChange = value => {
+    this.props.broadcastToAllClients({
+      playbackPosition: value,
+    });
+  };
+
   render() {
     return (
       <div className="Controls">
@@ -25,6 +29,13 @@ class VideoControls extends Component {
           onClick={this.togglePlayback}
           icon={this.props.currentContent.playing ? 'pause' : 'caret-right'}
         />
+        <Slider
+          onChange={this.onSliderChange}
+          max={this.props.videoDuration}
+          value={this.props.currentContent.playbackPosition}
+          step={0.01}
+        />
+        {this.props.videoDuration}
         {!this.props.currentContent.playing && [
           <Button
             type="primary"
