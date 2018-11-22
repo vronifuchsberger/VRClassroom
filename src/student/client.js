@@ -36,7 +36,7 @@ function init(bundle, parent, options = {}) {
 
   KeyboardModule.setInstance(r360);
   MouseModule.setInstance(r360);
-  r360.compositor.setBackground('./static_assets/360_world.jpg');
+  //r360.compositor.setBackground('./static_assets/360_world.jpg');
 }
 
 window.React360 = {init};

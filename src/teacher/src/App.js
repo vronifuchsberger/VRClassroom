@@ -7,7 +7,7 @@ import VideoControls from './VideoControls';
 import ModelControls from './ModelControls';
 const {Content} = Layout;
 const WebSocketServer = window.require('ws');
-const {ipcRenderer} = window.require('electron');
+const {ipcRenderer, remote} = window.require('electron');
 const initialContent = () => ({
   mediatype: null,
   url: null,
@@ -90,7 +90,9 @@ class App extends Component {
   }
 
   getUrl(fileName) {
-    return `http://${window.process.env.ip}:8082/uploads/${fileName}`;
+    return remote.app.isPackaged
+      ? `http://${window.process.env.ip}:8082/assets/${fileName}`
+      : `http://${window.process.env.ip}:8082/uploads/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server
@@ -191,7 +193,11 @@ class App extends Component {
           <Content className="AppContent">
             <iframe
               title="3Dworld"
-              src="http://localhost:8081/index.html?teacher"
+              src={
+                remote.app.isPackaged
+                  ? 'http://localhost:8082/student/index.html?teacher'
+                  : 'http://localhost:8081/index.html?teacher'
+              }
             />
             {this.state.currentContent.mediatype === 'model' && (
               <ModelControls

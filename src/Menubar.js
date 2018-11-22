@@ -8,13 +8,6 @@ const {COPYFILE_EXCL} = fs.constants;
 const defaultMenu = require('electron-default-menu');
 
 const menu = defaultMenu(app, shell);
-const uploadFolder = path.join(
-  app.getAppPath(),
-  'src',
-  'student',
-  'public',
-  'uploads',
-);
 
 function containsObj(filePath) {
   return fs
@@ -22,7 +15,7 @@ function containsObj(filePath) {
     .find(file => file.toLowerCase().endsWith('.obj'));
 }
 
-function getMenu(win) {
+function getMenu(win, assetDir) {
   const menu = defaultMenu(app, shell);
   menu.splice(1, 0, {
     label: 'File',
@@ -54,16 +47,8 @@ function getMenu(win) {
               properties: ['openFile', 'openDirectory'],
             },
             filePaths => {
-              const basepath = app.getAppPath();
               const fileName = path.basename(filePaths[0]);
-              const newPath = path.join(
-                basepath,
-                'src',
-                'student',
-                'public',
-                'uploads',
-                fileName,
-              );
+              const newPath = path.join(assetDir, fileName);
               if (fs.lstatSync(filePaths[0]).isDirectory()) {
                 const objFile = containsObj(filePaths[0]);
                 if (objFile) {
@@ -71,7 +56,7 @@ function getMenu(win) {
                   fs.copy(filePaths[0], newPath, a => {
                     console.log(a);
                     // update menu
-                    Menu.setApplicationMenu(getMenu(win));
+                    Menu.setApplicationMenu(getMenu(win, assetDir));
 
                     win.webContents.send('open', path.join(fileName, objFile));
                   });
@@ -101,14 +86,14 @@ function getMenu(win) {
                 fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, a => {
                   console.log(a);
                   // update menu
-                  Menu.setApplicationMenu(getMenu(win));
+                  Menu.setApplicationMenu(getMenu(win, assetDir));
                   win.webContents.send('open', fileName);
                 });
               } else {
                 fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, a => {
                   console.log(a);
                   // update menu
-                  Menu.setApplicationMenu(getMenu(win));
+                  Menu.setApplicationMenu(getMenu(win, assetDir));
 
                   win.webContents.send('open', fileName);
                 });
@@ -120,13 +105,13 @@ function getMenu(win) {
       {
         label: 'Recent Media',
         submenu: fs
-          .readdirSync(uploadFolder)
+          .readdirSync(assetDir)
           .filter(file => !file.startsWith('.') && !file.endsWith('.bin'))
           .map(file => ({
             label: file,
             click: () => {
-              if (fs.lstatSync(path.join(uploadFolder, file)).isDirectory()) {
-                const objFile = containsObj(path.join(uploadFolder, file));
+              if (fs.lstatSync(path.join(assetDir, file)).isDirectory()) {
+                const objFile = containsObj(path.join(assetDir, file));
                 file = path.join(file, objFile);
               }
               win.webContents.send('open', file);
@@ -145,7 +130,7 @@ function getMenu(win) {
   return Menu.buildFromTemplate(menu);
 }
 
-module.exports = win => {
+module.exports = (win, assetDir) => {
   // Set top-level application menu, using modified template
-  Menu.setApplicationMenu(getMenu(win));
+  Menu.setApplicationMenu(getMenu(win, assetDir));
 };
