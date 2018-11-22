@@ -5,7 +5,6 @@ import {ReactInstance} from 'react-360-web';
 import KeyboardModule from 'react-360-keyboard/KeyboardModule';
 import HostnameModule from './HostnameModule';
 import MouseModule from './MouseModule';
-import WebVRPolyfill from 'webvr-polyfill';
 const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 import {Location, Surface} from 'react-360-web';
 
@@ -36,7 +35,6 @@ function init(bundle, parent, options = {}) {
 
   KeyboardModule.setInstance(r360);
   MouseModule.setInstance(r360);
-  //r360.compositor.setBackground('./static_assets/360_world.jpg');
 }
 
 window.React360 = {init};

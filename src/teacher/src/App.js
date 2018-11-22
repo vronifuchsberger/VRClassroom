@@ -82,7 +82,7 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.currentContent !== this.state.currentContent) {
       Object.values(this.state.connectedClients).forEach(({client}) => {
-        if (client.readyState === WebSocketServer.OPEN) {
+        if (client && client.readyState === WebSocketServer.OPEN) {
           client.send(JSON.stringify(this.state.currentContent));
         }
       });
@@ -90,9 +90,7 @@ class App extends Component {
   }
 
   getUrl(fileName) {
-    return remote.app.isPackaged
-      ? `http://${window.process.env.ip}:8082/assets/${fileName}`
-      : `http://${window.process.env.ip}:8082/uploads/${fileName}`;
+    return `http://${window.process.env.ip}:8082/assets/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server

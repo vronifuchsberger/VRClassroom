@@ -5,6 +5,7 @@ const path = require('path');
 const terminate = require('terminate');
 const os = require('os');
 const cors = require('cors');
+const nocache = require('nocache');
 const express = require('express');
 const fs = require('fs-extra');
 const Menubar = require('./Menubar');
@@ -37,6 +38,7 @@ if (!fs.existsSync(assetDir)) {
 
 const VRProduction = express();
 VRProduction.use(cors());
+VRProduction.use(nocache());
 VRProduction.use('/assets', express.static(assetDir));
 if (isProduction) {
   VRProduction.use('/teacher', express.static(path.join(__dirname, 'teacher')));
