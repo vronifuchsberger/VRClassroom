@@ -1,8 +1,5 @@
 \documentclass[11pt,a4paper,twoside]{article}
 
-% LaTeX-Umsetzung der "Richtlinien für Projekt- und Diplomarbeiten"
-% der LFE Medieninformatik, LMU München. (Autor: Richard Atterer, 27.9.2006, 23.10.2007), Bug-Fixing Mark Kaczkowski (23.6.2008)
-
 \usepackage[T1]{fontenc} % sonst geht \hyphenation nicht mit Umlauten
 \usepackage[latin1]{inputenc} % man kann schreiben äöüß, statt "a"o"u"s
 %\usepackage[utf8]{inputenc} % wie oben, aber UTF-8 als Encoding statt ISO-8859-1 (latin1)
@@ -74,9 +71,8 @@ Prof.\ Dr.\ Heinrich Hußmann
 \vfill
 
 \begin{tabular}{ll}
-Bearbeitungszeitraum: & 1. 6. 2008 bis 31. 12. 2008\\
+Bearbeitungszeitraum: & 01. 08. 2018 bis 30. 01. 2018\\
 Betreuer: & Christoph Krichenbauer\\
-%Externer Betreuer: & Manfred Manager\\
 Verantw. Hochschullehrer: & Prof. Heinrich Hußmann
 \end{tabular}
 %______________________________________________________________________
@@ -141,12 +137,29 @@ sowie alle benutzten Quellen und Hilfsmittel angegeben habe.
 % den "kleineren" Gliederungsbefehlen wie \subsection!
 \cleardoublepage % Neue rechte Seite anfangen
 \section{Hauptteil}
-\subsection{Age restrictions}
+\subsection{Nutzungsbeschränkungen}
+\subsubsection{Mindestalter}
+Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. 
+Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altergruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.''
+  ~\cite{FacebookTechnologiesLLC2018}
+
+Samsung geht dabei noch einen Schritt weiter und warnt vor einer Nutzung unter 13 Jahren, da sich jüngere Kinder in einer ``critical period in visual development''  ~\cite{SAMSUNG} befinden. Zudem sollen auch Kinder über 13 Jahren nur unter Aufsicht einer erwachsenen Person die Gear VR benutzen und dabei darauf achten regelmäßig Pausen zu machen. Eine lange Nutzung soll generell vermieden werden und die Kinder sollen während und nach der Nutzung beobachtet werden, ob sich ihre Fähigkeiten in der Hand-Augen-Koordination, Balance oder Multi-Tasking verschlechtern.
+Auperdem wird eine Liste an Symptomen aufgeführt bei deren Anzeichen eine Nutzung sofort unterbrochen werden soll. Dazu zählen: ``seizures, loss of awareness, eye strain, eye or muscle twitching, involuntary movements, altered, blurred, or double vision or other visual abnormalities, dizziness, disorientation, impaired balance, impaired hand-eye coordination, excessive sweating, increased salivation, nausea, lightheadedness, discomfort or pain in the head or eyes, drowsiness, fatigue, or any symptoms similar to motion sickness.''   ~\cite{SAMSUNG}
+
+\begin{table}[]
+\begin{tabular}{ll}
+VR-Gerät & Mindestalter \\
+Oculus & 13  \\
+Samsung Gear VR &  13 \\ 
+HTC Vive & keine Angabe, HTC Account ab 14 \\
+Playstation VR & 12 \\
+Google Daydream & 13 \\
+Google Cardboard & keine Angabe \\
+\end{tabular}
+\end{table}
 
 
 \begin{itemize}
-  \item Oculus devices: 13+ (https://www.oculus.com/legal/terms-of-service/)
-  \item Gear VR: 13+ (https://www.samsung.com/uk/support/mobile-devices/is-the-gear-vr-safe-for-children/)
   \item HTC Vive: 14 (für HTC Account, nichts zur generellen Nutzung) (%https://www.vive.com/us/support/viveport/category_howto/age-limit-for-htc-account-for-vive.html ); 
   \item HTC Vive: older children should be monitored (HTC VIVE safety guide)
   \item Playstation VR: 12+ (https://blog.us.playstation.com/2017/10/02/playstation-vr-the-ultimate-faq/)
@@ -209,24 +222,8 @@ sowie alle benutzten Quellen und Hilfsmittel angegeben habe.
 %______________________________________________________________________
 
 \cleardoublepage
-\begin{thebibliography}{99}
 
-\bibitem{Ivory01}
-
-  M.\ Y.\ Ivory, M.\ Hearts:
-  \href{http://www.ischool.washington.edu/myivory/thesis/thesis.pdf}{%
-    An Empirical Foundation for Automated Web Interface Evaluation}.
-  Ph.D. thesis, University of California at Berkeley, 2001
-
-
-\cleardoublepage
-\hspace{-\leftmargin}{\Large\bfseries Web-Referenzen} % Wüster Hack %-|
-
-\bibitem{NielsenAlertbox}
-
-  J.\ Nielsen: Alertbox: Current Issues in Web Usability
-  \url{http://useit.com/alertbox/}, accessed April~24, 2005.
-
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{literature}
 
 \end{document}
