@@ -45,7 +45,18 @@ class ModelControls extends Component {
           step={0.01}
           tipFormatter={null}
         />
-        <Button type="primary" onClick={this.resetMarkers}>
+        <Button
+          type="primary"
+          onClick={this.props.toggleAddingMarker}
+          ghost={!this.props.allowAddingMarker}
+        >
+          Marker setzen
+        </Button>
+        <Button
+          type="primary"
+          onClick={this.resetMarkers}
+          disabled={this.props.currentContent.markers.length === 0}
+        >
           Marker zurücksetzen
         </Button>
       </div>

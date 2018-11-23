@@ -2,6 +2,7 @@ import React from 'react';
 import {View, NativeModules, Environment, asset} from 'react-360';
 import Entity from 'Entity';
 import {connect} from './Store';
+import Marker from './Marker';
 
 import AmbientLight from 'AmbientLight';
 import PointLight from 'PointLight';
@@ -40,21 +41,21 @@ class ModelView extends React.Component {
     const scaleFactor = this.props.scaleFactor || 1;
 
     return (
-      <View>
+      <View
+        style={{
+          transform: [
+            {scale: [scaleFactor, scaleFactor, scaleFactor]},
+            {rotateY: this.props.rotation || 0},
+          ],
+        }}
+      >
+        <Marker {...this.props} isModel={true} />
         <AmbientLight intensity={1.0} color={'#ffffff'} />
         <PointLight
           intensity={0.4}
           style={{transform: [{translate: [0, 4, -1]}]}}
         />
-        <Entity
-          source={source}
-          style={{
-            transform: [
-              {scale: [scaleFactor, scaleFactor, scaleFactor]},
-              {rotateY: this.props.rotation || 0},
-            ],
-          }}
-        />
+        <Entity source={source} />
       </View>
     );
   }

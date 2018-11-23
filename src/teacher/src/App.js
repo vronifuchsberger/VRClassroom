@@ -106,12 +106,20 @@ class App extends Component {
         const data = JSON.parse(message);
 
         if (data.markerAdded) {
-          if (this.state.allowAddingMarker) {
+          if (
+            this.state.allowAddingMarker &&
+            ((this.state.currentContent.mediatype === 'model' &&
+              data.markerAdded.didHitModel) ||
+              this.state.currentContent.mediatype !== 'model')
+          ) {
             this.setState({
               allowAddingMarker: false,
             });
             this.broadcastToAllClients({
-              markers: [...this.state.currentContent.markers, data.markerAdded],
+              markers: [
+                ...this.state.currentContent.markers,
+                data.markerAdded.position,
+              ],
             });
           }
         } else if (data.videoStatus) {
@@ -201,6 +209,8 @@ class App extends Component {
               <ModelControls
                 broadcastToAllClients={this.broadcastToAllClients}
                 currentContent={this.state.currentContent}
+                allowAddingMarker={this.state.allowAddingMarker}
+                toggleAddingMarker={this.toggleAddingMarker}
               />
             )}
             {this.state.currentContent.mediatype === 'photo' && (

@@ -8,8 +8,6 @@ import MouseModule from './MouseModule';
 const polyfill = new WebVRPolyfill({BUFFER_SCALE: 1.0});
 import {Location, Surface} from 'react-360-web';
 
-const location = new Location([0, -70, -150]);
-
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
@@ -27,7 +25,10 @@ function init(bundle, parent, options = {}) {
     r360.createRoot('CylinderView', {}),
     r360.getDefaultSurface(),
   );
-  r360.renderToLocation(r360.createRoot('ModelView', {}), location);
+  r360.renderToLocation(
+    r360.createRoot('ModelView', {}),
+    new Location([0, -70, -150]),
+  );
   r360.renderToLocation(
     r360.createRoot('MarkerView', {}),
     new Location([0, 0, 0]),

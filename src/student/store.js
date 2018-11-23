@@ -14,6 +14,10 @@ export function updateStore(data) {
   updateComponents();
 }
 
+export function getState() {
+  return Store;
+}
+
 export function connect(Component) {
   return class Wrapper extends React.Component {
     state = Store;
