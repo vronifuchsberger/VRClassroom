@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Button, Slider, Radio} from 'antd';
+import {Slider, Radio} from 'antd';
+import MarkerControls from './MarkerControls';
 
 class ModelControls extends Component {
   state = {
@@ -15,12 +16,6 @@ class ModelControls extends Component {
   changeSliderMode = e => {
     this.setState({
       sliderMode: e.target.value,
-    });
-  };
-
-  resetMarkers = () => {
-    this.props.broadcastToAllClients({
-      markers: [],
     });
   };
 
@@ -45,20 +40,8 @@ class ModelControls extends Component {
           step={0.01}
           tipFormatter={null}
         />
-        <Button
-          type="primary"
-          onClick={this.props.toggleAddingMarker}
-          ghost={!this.props.allowAddingMarker}
-        >
-          Marker setzen
-        </Button>
-        <Button
-          type="primary"
-          onClick={this.resetMarkers}
-          disabled={this.props.currentContent.markers.length === 0}
-        >
-          Marker zurücksetzen
-        </Button>
+        <div className="spacer" />
+        <MarkerControls {...this.props} />
       </div>
     );
   }

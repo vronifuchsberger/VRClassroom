@@ -1,13 +1,18 @@
 import React, {Component} from 'react';
-import './App.css';
 import {Layout} from 'antd';
 import Sidebar from './Sidebar';
 import PhotoControls from './PhotoControls';
 import VideoControls from './VideoControls';
 import ModelControls from './ModelControls';
+
+import './App.css';
+import './Controls.css';
+
 const {Content} = Layout;
+
 const WebSocketServer = window.require('ws');
 const {ipcRenderer, remote} = window.require('electron');
+
 const initialContent = () => ({
   mediatype: null,
   url: null,

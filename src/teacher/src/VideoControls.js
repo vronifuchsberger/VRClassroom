@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
+import MarkerControls from './MarkerControls';
 import {Button, Slider} from 'antd';
 
 class VideoControls extends Component {
-  resetMarkers = () => {
-    this.props.broadcastToAllClients({
-      markers: [],
-    });
-  };
-
   togglePlayback = () => {
     this.props.broadcastToAllClients({
       playing: !this.props.currentContent.playing,
@@ -36,24 +31,12 @@ class VideoControls extends Component {
           step={0.01}
         />
         {this.props.videoDuration}
-        {!this.props.currentContent.playing && [
-          <Button
-            type="primary"
-            key="setMarker"
-            onClick={this.props.toggleAddingMarker}
-            ghost={!this.props.allowAddingMarker}
-          >
-            Marker setzen
-          </Button>,
-          <Button
-            type="primary"
-            key="resetMarkers"
-            onClick={this.resetMarkers}
-            disabled={this.props.currentContent.markers.length === 0}
-          >
-            Marker zurücksetzen
-          </Button>,
-        ]}
+
+        <div className="spacer" />
+
+        {!this.props.currentContent.playing && (
+          <MarkerControls {...this.props} />
+        )}
       </div>
     );
   }

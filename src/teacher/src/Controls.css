@@ -1,0 +1,85 @@
+.Controls {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  right: 60px;
+  height: 70px;
+  padding-left: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Controls .ant-slider {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.Controls button {
+  position: relative;
+  border: 0;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Controls button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Controls button[disabled] {
+  color: rgba(255, 255, 255, 0.4);
+  cursor: not-allowed;
+}
+
+.Controls button:hover::before {
+  top: 0;
+  bottom: 0;
+}
+
+.Controls button:hover + button::before {
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Controls button:focus {
+  outline: 0;
+}
+
+.Controls button.active,
+.Controls button:hover.active {
+  background-color: #3583df;
+}
+
+.Controls button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.MarkerControls {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.spacer {
+  flex-grow: 1;
+}
