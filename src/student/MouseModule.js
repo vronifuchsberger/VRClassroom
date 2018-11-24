@@ -1,4 +1,5 @@
 import {Module} from 'react-360-web';
+import * as THREE from 'three';
 
 class MouseModule extends Module {
   constructor(ctx) {
@@ -11,6 +12,8 @@ class MouseModule extends Module {
   }
 
   mouseup = event => {
+    window.instance = this._instance;
+
     const width = event.target.clientWidth;
     const height = event.target.clientHeight;
     const lastX = (event.offsetX / width) * 2 - 1;
@@ -22,16 +25,38 @@ class MouseModule extends Module {
     const x = aspect * tan * lastX;
     const y = tan * lastY;
     const mag = Math.sqrt(1 + x * x + y * y);
-    const direction = [];
+    let direction = [];
     direction[0] = x / mag;
     direction[1] = y / mag;
     direction[2] = -1 / mag;
 
     this.rotateByQuaternion(direction, this._instance._cameraQuat);
 
+    const r = new THREE.Raycaster(
+      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(direction[0], direction[1], direction[2]),
+      10,
+      950,
+    );
+
+    const intersections = r.intersectObjects(
+      this._instance.scene.children,
+      true,
+    );
+
+    let distance = 800;
+    let didHitModel = false;
+    if (intersections.length > 0) {
+      // reduce distance to be a little in front of the mesh
+      distance = intersections[0].distance;
+      didHitModel = true;
+    }
+
+    const position = direction.map(v => v * distance);
+
     this._ctx.callFunction('RCTDeviceEventEmitter', 'emit', [
       'markerAdded',
-      direction,
+      {position, didHitModel},
     ]);
   };
 

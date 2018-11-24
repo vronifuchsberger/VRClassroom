@@ -82,7 +82,7 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.currentContent !== this.state.currentContent) {
       Object.values(this.state.connectedClients).forEach(({client}) => {
-        if (client.readyState === WebSocketServer.OPEN) {
+        if (client && client.readyState === WebSocketServer.OPEN) {
           client.send(JSON.stringify(this.state.currentContent));
         }
       });
@@ -90,9 +90,7 @@ class App extends Component {
   }
 
   getUrl(fileName) {
-    return remote.app.isPackaged
-      ? `http://${window.process.env.ip}:8082/assets/${fileName}`
-      : `http://${window.process.env.ip}:8082/uploads/${fileName}`;
+    return `http://${window.process.env.ip}:8082/assets/${fileName}`;
   }
 
   // wait for tracker-app to load, before creating WebSocket server
@@ -108,12 +106,20 @@ class App extends Component {
         const data = JSON.parse(message);
 
         if (data.markerAdded) {
-          if (this.state.allowAddingMarker) {
+          if (
+            this.state.allowAddingMarker &&
+            ((this.state.currentContent.mediatype === 'model' &&
+              data.markerAdded.didHitModel) ||
+              this.state.currentContent.mediatype !== 'model')
+          ) {
             this.setState({
               allowAddingMarker: false,
             });
             this.broadcastToAllClients({
-              markers: [...this.state.currentContent.markers, data.markerAdded],
+              markers: [
+                ...this.state.currentContent.markers,
+                data.markerAdded.position,
+              ],
             });
           }
         } else if (data.videoStatus) {
@@ -203,6 +209,8 @@ class App extends Component {
               <ModelControls
                 broadcastToAllClients={this.broadcastToAllClients}
                 currentContent={this.state.currentContent}
+                allowAddingMarker={this.state.allowAddingMarker}
+                toggleAddingMarker={this.toggleAddingMarker}
               />
             )}
             {this.state.currentContent.mediatype === 'photo' && (

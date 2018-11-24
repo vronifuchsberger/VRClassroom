@@ -1,5 +1,5 @@
 import {AsyncStorage, NativeModules} from 'react-360';
-import {updateStore} from './Store';
+import {updateStore, getState} from './Store';
 import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 export default class Connection {
@@ -9,6 +9,27 @@ export default class Connection {
 
     RCTDeviceEventEmitter.addListener('markerAdded', e => {
       if (this.ws) {
+        if (e.didHitModel) {
+          const store = getState();
+          let [x, y, z] = e.position;
+
+          // location offset from Model's location set in client.js
+          y += 70;
+          z += 150;
+
+          // apply inverse scaling
+          x /= store.scaleFactor;
+          y /= store.scaleFactor;
+          z /= store.scaleFactor;
+
+          // rotate against current rotation
+          const t = store.rotation * (Math.PI / 180);
+          const newX = x * Math.cos(t) - z * Math.sin(t);
+          const newZ = x * Math.sin(t) + z * Math.cos(t);
+
+          e.position = [newX, y, newZ];
+        }
+
         this.ws.send(
           JSON.stringify({
             markerAdded: e,
