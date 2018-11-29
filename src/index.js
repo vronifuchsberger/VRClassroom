@@ -92,7 +92,13 @@ ipcMain.on('upload', (event, pathname) => {
 });
 
 app.on('ready', () => {
-  win = new BrowserWindow({width: 1280, height: 960});
+  win = new BrowserWindow({
+    width: 1280,
+    height: 960,
+    webPreferences: {
+      experimentalFeatures: true,
+    },
+  });
   win2 = new BrowserWindow({width: 440, height: 500});
 
   if (isProduction) {

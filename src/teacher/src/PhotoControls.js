@@ -5,8 +5,9 @@ class PhotoControls extends Component {
   render() {
     return (
       <div className="Controls">
-        <div>Photo</div>
-        <div className="spacer" />
+        <div className="spacing">
+          {this.props.currentContent.url.split('/').pop()}
+        </div>
         <MarkerControls {...this.props} />
       </div>
     );
