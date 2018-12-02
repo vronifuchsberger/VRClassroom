@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-360';
 import Entity from 'Entity';
-const {VideoModule} = NativeModules;
+const {VideoModule, HostnameModule} = NativeModules;
 import {connect} from './Store';
 import Marker from './Marker';
 import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
@@ -32,37 +32,50 @@ class CylinderView extends React.Component {
     });
   }
 
-  componentDidUpdate(prevProps) {
-    if (!this.state.showContent && this.props.url) {
+  componentWillReceiveProps(nextProps) {
+    if (!this.state.showContent && nextProps.url) {
       this.setState({showContent: true});
     }
 
-    if (prevProps.url != this.props.url) {
-      if (this.props.mediatype === 'video') {
+    if (this.props.url != nextProps.url) {
+      if (nextProps.mediatype === 'video') {
         VideoModule.play('myplayer', {
           source: {
-            url: this.props.url,
+            url: nextProps.url,
           },
           autoPlay: false,
         });
         Environment.setBackgroundVideo('myplayer');
-      } else if (this.props.mediatype === 'photo') {
-        Environment.setBackgroundImage(this.props.url);
+      } else if (nextProps.mediatype === 'photo') {
+        Environment.setBackgroundImage(nextProps.url);
       }
     }
 
-    if (prevProps.playing != this.props.playing) {
-      if (this.props.playing) {
+    if (this.props.playing != nextProps.playing) {
+      if (nextProps.playing) {
         VideoModule.resume('myplayer');
+        HostnameModule.userHasUnmutedVideo()
+          .then(() => {
+            VideoModule.setParams('myplayer', {muted: nextProps.muted});
+          })
+          .catch(() => {});
       } else {
         VideoModule.pause('myplayer');
       }
     }
 
+    if (this.props.muted != nextProps.muted) {
+      HostnameModule.userHasUnmutedVideo()
+        .then(() => {
+          VideoModule.setParams('myplayer', {muted: nextProps.muted});
+        })
+        .catch(() => {});
+    }
+
     if (
-      Math.abs(this.state.playbackPosition - this.props.playbackPosition) >= 1
+      Math.abs(this.state.playbackPosition - nextProps.playbackPosition) > 1
     ) {
-      VideoModule.seek('myplayer', this.props.playbackPosition);
+      VideoModule.seek('myplayer', nextProps.playbackPosition);
     }
   }
 

@@ -14,6 +14,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   backdrop-filter: blur(10px);
+  clip-path: inset(0 0 round 10px 10px);
 }
 
 .Controls .ant-slider {
