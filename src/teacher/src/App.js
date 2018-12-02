@@ -21,6 +21,7 @@ const initialContent = () => ({
   playbackPosition: -1,
   rotation: 0,
   scaleFactor: 1,
+  muted: true,
 });
 
 class App extends Component {
