@@ -34,4 +34,16 @@ SAMSUNG, ``{Samsungs FAQs - Is the Gear VR safe for children?}'' [Online].
   \url{https://www.samsung.com/uk/support/mobile-devices/is-the-gear-vr-safe-for-children/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Decker2017}
+\BIBentryALTinterwordspacing
+K.~Decker, ``{Auto-Play Policy Changes for macOS},'' 2017. [Online]. Available:
+  \url{https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{FacebookInc.2018}
+\BIBentryALTinterwordspacing
+{Facebook Inc.}, ``{React360 Runtime},'' 2018. [Online]. Available:
+  \url{https://facebook.github.io/react-360/docs/runtime.html}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

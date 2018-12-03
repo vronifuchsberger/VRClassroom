@@ -261,6 +261,17 @@ Um die
   \item läd die von Lehrer-App geschickten Inhalte und zeigt sie synchronisiert an
   \item Schüler können sich in Szene umschauen und Inhalte besser erfahren
 \end{itemize}
+
+\subsubsection{Abspielen von Videos mit Ton}
+Da die meisten Browser das automatische Abspielen von Videos mit Ton verbieten, werden 360°-Videos von React360 standardmäßig beim erstellen des Videoplayer-Komponenten ``muted'' auf ``true'' gesetzt. Die Hersteller wollen dadurch die Ablenkungen, die beim surfen auf den Nutzer zukommen, abmildern. Erst wenn der Nutzer ein ``user gesture click'' also einen Klick auf der Website gemacht hat, darf die Tonspur automatisiert abgespielt werden. Wird versucht ein Video mit Ton abzuspielen, ohne das ein Klick gemacht wurden, wird der Videoplayer blockiert und kann gar nicht mehr abspielen. \cite{Decker2017}
+
+Damit React360 in einer single-threaded Umgebung wie einem Webbrowser flüssig ablaufen kann und nicht durch ``blocking behavior'' irgendeiner Art das Rendern unterbrochen wird, ist eine React360-App in zwei Teile aufgeteilt: Die React-Applikation und den Code, der die React Komponenten in 3D Elemente auf dem Bildschirm umwandelt. Die App selbst läuft in einem Webworker, einem anderen Prozess als der des Hauptbrowserfensters. \cite{FacebookInc.2018}
+
+Das führt dazu, das die React360-Elemente nicht als html-Elemente gelten und ein Click-Event auf einem VRButton nicht als Interaktion zählt, um die Erlaubnis zu haben Ton abzuspielen.
+
+Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender Button über die React360-App gelegt, der bei einem Klick verschwindet, um die Erlaubnis vom Browser zu bekommen Ton abzuspielen. Wurde der Button am Schüler-Gerät geklickt wird ein flag gesetzt, dass die App Ton abspielen darf. Ob dann tatsächlich Ton beim Video abgespielt wird, kann der Lehrer aus der teacher-App einstellen. Auch dort ist das Abspielen von Ton an den Schüler-Geräten standardmäßig erst einmal abgestellt, damit der Lehrer entscheiden kann, ob er nur den Ton aus dem Rechner über Boxen für Alle abspielen möchte oder aus jedem Schüler-Gerät einzeln der Ton kommen soll.
+
+
 %______________________________________________________________________
 \cleardoublepage
 
