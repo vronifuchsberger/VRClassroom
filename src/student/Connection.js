@@ -6,6 +6,7 @@ export default class Connection {
   constructor(props) {
     this.props = props;
     this.connectWS(props.hostname);
+    this.doNotSendUntil = 0;
 
     RCTDeviceEventEmitter.addListener('markerAdded', e => {
       if (this.ws) {
@@ -40,7 +41,7 @@ export default class Connection {
 
     if (NativeModules.HostnameModule.isTeacher) {
       RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
-        if (this.ws) {
+        if (this.ws && new Date().getTime() > this.doNotSendUntil) {
           this.ws.send(
             JSON.stringify({
               videoStatus: e,
@@ -86,6 +87,10 @@ export default class Connection {
       // a message was received
       try {
         const data = JSON.parse(e.data || '{}');
+        if (Math.abs(data.playbackPosition - getState().playbackPosition) > 1) {
+          //skip detected, do not send event for a second
+          this.doNotSendUntil = new Date().getTime() + 1000;
+        }
         updateStore(data);
       } catch (error) {
         console.error(e, error);

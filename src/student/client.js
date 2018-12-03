@@ -14,7 +14,7 @@ function init(bundle, parent, options = {}) {
     fullScreen: true,
     nativeModules: [
       KeyboardModule.addModule,
-      new HostnameModule(),
+      ctx => new HostnameModule(ctx),
       MouseModule.addModule,
     ],
     ...options,

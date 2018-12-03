@@ -10,6 +10,12 @@ class VideoControls extends Component {
     });
   };
 
+  toggleMuted = () => {
+    this.props.broadcastToAllClients({
+      muted: !this.props.currentContent.muted,
+    });
+  };
+
   onSliderChange = value => {
     this.props.broadcastToAllClients({
       playbackPosition: value,
@@ -43,6 +49,12 @@ class VideoControls extends Component {
           tipFormatter={this.formatTime}
         />
         <div className="time">{this.formatTime(this.props.videoDuration)}</div>
+        <button
+          onClick={this.toggleMuted}
+          className={this.props.currentContent.muted ? '' : 'active'}
+        >
+          <Icon type="sound" />
+        </button>
 
         <MarkerControls
           {...this.props}

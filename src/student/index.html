@@ -1,10 +1,28 @@
 <html>
 
 <head>
-  <title>student</title>
+  <title>VRClassroom</title>
   <style>
     body {
       margin: 0;
+    }
+
+    .unmute {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      height: 100vh;
+      width: 100vw;
+      z-index: 2;
+      -webkit-appearance: none;
+      appearance: none;
+      display: block;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0;
+      color: transparent;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -13,6 +31,7 @@
 <body>
   <!-- Attachment point for your app -->
   <div id="container"></div>
+  <button class="unmute" onclick="unmuteVideo()">unmute</button>
   <script src='./static_assets/webvr-polyfill.js'></script>
   <script src="./client.bundle?platform=vr"></script>
   <script>
@@ -23,6 +42,17 @@
         assetRoot: 'static_assets/',
       }
     );
+
+    function unmuteVideo() {
+      const video = document.querySelector('video');
+      if (!video) {
+        return;
+      }
+      window.userUnmutedVideo = true;
+      video.muted = false;
+      document.body.removeChild(document.querySelector('.unmute'));
+      video.muted = true;
+    }
   </script>
 </body>
 
