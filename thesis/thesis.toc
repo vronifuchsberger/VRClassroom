@@ -9,4 +9,14 @@
 \contentsline {subsection}{\numberline {3.1}Nutzungsszenario und Anwendungsfokus}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Grundstruktur}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Lehrer-Applikation}{5}{subsection.3.3}
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {3.4}Sch\"uler-App}{6}{subsection.3.4}
+=======
+\contentsline {subsubsection}{\numberline {3.3.1}Verbundene Ger\"ate}{5}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {3.4}QR-Code Fenster}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Sch\"uler-App}{6}{subsection.3.5}
+\contentsline {section}{\numberline {4}Nutzerstudie und Evaluation}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ablauf der Studie}{7}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Fragebogen}{7}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Erkenntnisse}{7}{subsection.4.3}
+>>>>>>> b280995dc607eae4380ab3f5494ee9980756680a

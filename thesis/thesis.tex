@@ -6,6 +6,7 @@
 \usepackage[ngerman,english]{babel} % deutsche Trennregeln, "Inhaltsverzeichnis" etc.
 %\usepackage{ngerman} % Alternative zum Babel-Paket oben
 \usepackage{mathptmx} % Times-Roman-Schrift (auch für mathematische Formeln)
+\usepackage{framed}
 
 % Zum Setzen von URLs
 \usepackage{color}
@@ -147,14 +148,14 @@ Samsung geht dabei noch einen Schritt weiter und warnt vor einer Nutzung unter 1
 Auperdem wird eine Liste an Symptomen aufgeführt bei deren Anzeichen eine Nutzung sofort unterbrochen werden soll. Dazu zählen: ``seizures, loss of awareness, eye strain, eye or muscle twitching, involuntary movements, altered, blurred, or double vision or other visual abnormalities, dizziness, disorientation, impaired balance, impaired hand-eye coordination, excessive sweating, increased salivation, nausea, lightheadedness, discomfort or pain in the head or eyes, drowsiness, fatigue, or any symptoms similar to motion sickness.''   ~\cite{SAMSUNG}
 
 \begin{table}[]
-\begin{tabular}{ll}
-VR-Gerät & Mindestalter \\
-Oculus & 13  \\
-Samsung Gear VR &  13 \\ 
-HTC Vive & keine Angabe, HTC Account ab 14 \\
-Playstation VR & 12 \\
-Google Daydream & 13 \\
-Google Cardboard & keine Angabe \\
+\begin{tabular}{p{0.2\linewidth}|p{0.2\linewidth}|p{0.5\linewidth}}
+\textbf{VR-Gerät} & \textbf{Mindestalter} & \textbf{Weitere Angaben} \\ \hline
+Oculus Go / Quest / Rift & 13 Jahre & wurde gezielt für diese Altersgruppe und darüber entwickelt \\
+Samsung Gear VR &  13 Jahre & Nutzung nur unter Aufsicht eines Erwachsenen; warnen vor Problemen bei der Entwicklung der Augen und einigen anderen möglichen Problemen \\ 
+HTC Vive & keine Angabe &  HTC Account ab 14 Jahren; ältere Kinder sollten bei Nutzung beaufsichtigt werden \\
+Playstation VR & 12 Jahre &  keine\\
+Google Daydream & 13 Jahre & keine  \\
+Google Cardboard & keine Angabe & nicht ohne Aufsicht eines Erwachsenen
 \end{tabular}
 \end{table}
 
@@ -206,6 +207,31 @@ Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in B
 \end{itemize}
 
 \subsection{Lehrer-Applikation}
+Die Lehrer-Applikation besteht aus einer Electron-App, die in zwei logische Teile zerlegt ist. Das ist zum einen der main-Prozess, der es erlaubt Zugriffe auf das File-System des Rechners zu machen und für rechenaufwändige Hintergrundprozesse genutzt wird, und zum Anderen der render-Prozess. Der render-Prozess ist der Teil des Programms, das die Lehrkraft letztendlich auf ihrem Bildschirm sieht.
+
+Die Lehrer-App enthält genau genommen zwei render-Prozesse: Die teacher-App, in der die Lehrkraft alle verbundenen Geräte sehen kann und verschiedene Inhalte hineinladen kann, und die student-App, die als iFrame in die teacher-App eingebunden ist und auf den Geräten der Schülern läuft.
+
+Die teacher-App enthält außerdem noch den QR-Code Generator, der in einem zweiten Fenster geladen wird.
+
+Um eine Liste der verbundenen Geräte zu halten und Veränderungen der Inhalte auf die Schüler-Geräte zu synchronisieren, startet die teacher-App einen Websocket-Server, mit dem sich alle Schüler-Geräte verbinden. 
+
+\subsubsection{Verbundene Geräte}
+Wie in der Grafik zu sehen hält die teacher-App eine Liste mit allen verbundenen Geräte dieser Session. Sind die Geräte gerade aktiv, werden sie mit einem grünen Icon dargestellt, sind sie inaktiv, mit einem Roten.
+
+Das soll der Lehrkraft erleichtern zu überprüfen, ob die Schüler den gezeigten Stoff verfolgen oder sich anderweitig beschäftigen.
+
+Haben die Schüler bereits einen Namen eingegeben, wird dieser in der Liste angezeigt. Ist dies nicht der Fall wird aus dem user-agent versucht möglichst genau zu schließen, um welches Gerät es sich handelt, sodass der Lehrer zumindest einschränken kann, um welchen Schüler bzw welche Schülerin es sich handeln könnte. 
+
+\bigskip
+
+Ein User-Agent kann zum Beispiel wie folgt aussehen: 
+\begin{framed}
+Mozilla/5.0 (iPhone; CPU iPhone OS 5\_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9A334 Safari/7534.48.3
+\end{framed}
+
+Daraus lässt sich schließen, dass es sich um eine iPhone handelt, welches Safari benutzt, um die Schüler-App zu laden. Die Oculus Geräte hingegen geben in ihrem User-Agent an, den Oculus Browser zu verwenden und sind so auch gut von den anderen verbundenen Geräten zu unterscheiden. Da aber hier nicht ersichtlich wird welches Oculus-Gerät es genau ist wird nur ``Oculus device'' angegeben und nicht genauer spezifiziert, ob es sich dabei um eine Go, Quest oder Rift handelt.
+ %hier Grafik connected clients einfügen% 
+
 \begin{itemize}
   \item startet Websocket Server
   \item generiert QR-Code
@@ -218,12 +244,50 @@ Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in B
   \item hält history der zuvor gezeigten Inhalte, um sie vereinfacht wiederanzuzeigen 
  \end{itemize}
 
+\subsection{QR-Code Fenster}
+Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron App auf dem Lehrer-Computer gestartet wird. Es zeigt einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem auf die URL zu laden, auf der sie die Schüler-Applikation erreichen können. 
+
+Für Geräte, die keine Kamera haben oder wenn das Scannen des QR-Codes fehlschlägt, wird zudem unterhalb des QR-Codes die URL angezeigt, unter der die Schüler-Applikation zu erreichen ist. 
+
+Der QR-Code wird in diesem extra Fenster generiert und angezeigt, damit die Lehrkraft dieses Fenster auf einem Beamer anzeigen kann, um den SchülerInnen den Zugang zur Schüler-App ohne umständliches URL-Abtippen zu erleichtern.
+
+%% HIER SCREENSHOT QR-Code Fenster einfügen
+
 \subsection{Schüler-App}
+Um die 
+
 \begin{itemize}
   \item Schüler können Namen angeben, der in Lehrer-App angezeigt wird
   \item läd die von Lehrer-App geschickten Inhalte und zeigt sie synchronisiert an
   \item Schüler können sich in Szene umschauen und Inhalte besser erfahren
 \end{itemize}
+%______________________________________________________________________
+\cleardoublepage
+
+\section{Nutzerstudie und Evaluation}
+Da das System speziell für die Nutzung im Schulunterricht entwickelt wurde, wurde auch die Nutzerstudie in diesem Szenario durchgeführt. Dadurch wurde die eigentliche Durchführung der Studie deutlich erschwert, denn viele Lehrer konnten trotz Interesse keine Zeit für die Durchführung der Studie in ihren Unterrichtsstunden freimachen und zudem musste Inhalte gefunden werden, die sich für den Schulunterricht eignen und ein Thema für eine Schulstunde ergeben.
+
+Insgesamt haben sich XXX Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassroom System auszuprobieren und im Anschluss einen Fragebogen auszufüllen. 
+Außerdem wurde den SchülerInnen die Möglichkeit gegeben ebenfalls ihre Erfahrungen mit den System in einer kurzen Online-Umfrage zu teilen, was  XXX SchülerInnen aus den ingesamt XXX SchülerInnen, die das System ausprobiert haben, auch gemacht haben.
+
+\bigskip
+
+Für den Test wurde allen SchülerInnen ein Cardboard zur Verfügung gestellt, das die Kinder mir ihrem eigenen Smartphone als VR-Brille genutzt haben. 
+Der Rechner, auf dem das Programm installiert war, wurde den Lehrkräften bereitgestellt und den Lehrkräften im Vorfeld eine kurze Einführung in die Software gegeben. 
+
+Da einige Schulen aber teilweise getrennte Netzwerke für Lehrergeräte und Schülergeräte haben oder Websocket-Verbindungen zwischen den Geräten unterdrücken, wurde für die Studie ein extra Netzwerk genutzt, um diese Probleme zu umgehen.
+Dafür wurde im Klassenzimmer ein Router aufgestellt, der ein offenes WLAN eröffnete, mit dem sich alle Geräte verbanden. Dieses WLAN war nicht mit dem Internet verbunden und nur für den Zweck des reibungslosen Ablaufs der Studie verwendet. 
+
+\subsection{Ablauf der Studie}
+Für die Durchführung der Studie war ein Zeitrahmen von 15 bis 20 Minuten veranschlagt. In dieser Zeit sollte die Lehrkraft die App starten, sich alle Schüler-Geräte damit verbinden und die Lehrkraft die eigentlichen Inhalte präsentieren.
+
+Damit alle Studienteilnehmer, Lehrer und Schüler gleichermaßen, die gleichen Erlebnisse haben und sich zu allen Funktionen des Systems eine Meinung bilden können, hatte jede Lehrkraft ein vollständiges Set an Inhalten mit jeweils mindestens einem 360°-Fotos, einem 360°-Video und einem 3D-Modell.
+Da die Studie in dem WLAN ohne Internetverbindung durchgeführt wurde konnte die Funktion des Ladens von Google Streetview-Panoramas nicht getestet werden. Dies hätte allerdings nur auf der Lehrer einen Unterschied bedeutet, da es sich für die Schüler wie jedes andere 360°-Foto verhält.
+
+\subsection{Fragebogen}
+
+\subsection{Erkenntnisse}
+
 %______________________________________________________________________
 
 \cleardoublepage
