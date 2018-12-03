@@ -12,7 +12,8 @@
 \contentsline {subsubsection}{\numberline {3.3.1}Verbundene Ger\"ate}{5}{subsubsection.3.3.1}
 \contentsline {subsection}{\numberline {3.4}QR-Code Fenster}{6}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}Sch\"uler-App}{6}{subsection.3.5}
-\contentsline {section}{\numberline {4}Nutzerstudie und Evaluation}{7}{section.4}
-\contentsline {subsection}{\numberline {4.1}Ablauf der Studie}{7}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Fragebogen}{7}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Erkenntnisse}{7}{subsection.4.3}
+\contentsline {subsubsection}{\numberline {3.5.1}Abspielen von Videos mit Ton}{7}{subsubsection.3.5.1}
+\contentsline {section}{\numberline {4}Nutzerstudie und Evaluation}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Ablauf der Studie}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Fragebogen}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Erkenntnisse}{9}{subsection.4.3}
