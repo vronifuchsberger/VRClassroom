@@ -9,4 +9,4 @@
 \contentsline {subsection}{\numberline {3.1}Nutzungsszenario und Anwendungsfokus}{5}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Grundstruktur}{5}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Lehrer-Applikation}{5}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Sch\"uler-App}{5}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.4}Sch\"uler-App}{6}{subsection.3.4}
