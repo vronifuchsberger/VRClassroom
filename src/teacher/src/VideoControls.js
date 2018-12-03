@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MarkerControls from './MarkerControls';
-import {Button, Slider} from 'antd';
+import {Icon, Slider} from 'antd';
 
 class VideoControls extends Component {
   togglePlayback = () => {
@@ -16,27 +16,38 @@ class VideoControls extends Component {
     });
   };
 
+  formatTime(time) {
+    time = Math.round(time);
+    const seconds = '0' + (time % 60);
+    const minutes = Math.floor(time / 60);
+    return `${minutes}:${seconds.substr(-2)}`;
+  }
+
   render() {
     return (
       <div className="Controls">
-        <Button
-          type="primary"
-          onClick={this.togglePlayback}
-          icon={this.props.currentContent.playing ? 'pause' : 'caret-right'}
-        />
+        <button onClick={this.togglePlayback} className="left">
+          <Icon
+            type={this.props.currentContent.playing ? 'pause' : 'caret-right'}
+          />
+        </button>
+        <div className="time">
+          {this.formatTime(this.props.currentContent.playbackPosition)}
+        </div>
+
         <Slider
           onChange={this.onSliderChange}
           max={this.props.videoDuration}
           value={this.props.currentContent.playbackPosition}
           step={0.01}
+          tipFormatter={this.formatTime}
         />
-        {this.props.videoDuration}
+        <div className="time">{this.formatTime(this.props.videoDuration)}</div>
 
-        <div className="spacer" />
-
-        {!this.props.currentContent.playing && (
-          <MarkerControls {...this.props} />
-        )}
+        <MarkerControls
+          {...this.props}
+          disabled={this.props.currentContent.playing}
+        />
       </div>
     );
   }

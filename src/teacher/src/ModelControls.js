@@ -15,7 +15,7 @@ class ModelControls extends Component {
 
   changeSliderMode = e => {
     this.setState({
-      sliderMode: e.target.value,
+      sliderMode: e,
     });
   };
 
@@ -25,22 +25,32 @@ class ModelControls extends Component {
 
     return (
       <div className="Controls">
-        <Radio.Group
-          value={this.state.sliderMode}
-          onChange={this.changeSliderMode}
-          buttonStyle="solid"
+        <button
+          onClick={() => this.changeSliderMode('rotation')}
+          className={
+            this.state.sliderMode === 'rotation' ? 'active left' : 'left'
+          }
         >
-          <Radio.Button value="rotation">Drehen</Radio.Button>
-          <Radio.Button value="scaleFactor">Skalieren</Radio.Button>
-        </Radio.Group>
-        <Slider
-          max={sliderMax}
-          value={sliderValue}
-          onChange={this.onSliderChange}
-          step={0.01}
-          tipFormatter={null}
-        />
-        <div className="spacer" />
+          Drehen
+        </button>
+        <button
+          onClick={() => this.changeSliderMode('scaleFactor')}
+          className={
+            this.state.sliderMode === 'scaleFactor' ? 'active left' : 'left'
+          }
+        >
+          Skalieren
+        </button>
+        <div className="spacing">
+          <Slider
+            max={sliderMax}
+            value={sliderValue}
+            onChange={this.onSliderChange}
+            step={0.01}
+            tipFormatter={null}
+          />
+        </div>
+
         <MarkerControls {...this.props} />
       </div>
     );
