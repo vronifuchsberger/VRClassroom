@@ -137,6 +137,31 @@ sowie alle benutzten Quellen und Hilfsmittel angegeben habe.
 % Der Befehl \cleardoublepage erscheint nur vor \section, nicht vor
 % den "kleineren" Gliederungsbefehlen wie \subsection!
 \cleardoublepage % Neue rechte Seite anfangen
+\section{Existierende VR-Hardware-Systeme}
+Es gibt inzwischen eine große Zahl verschiedener VR-Hardware-Systeme, die sich in drei Gruppen mit unterschiedlichen Anwendungsszenarien unterteilen: 
+
+Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für extrem rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
+
+Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, Oculus Quest oder Google Daydream. Es handelt sich hierbei um vollumfängliche Systeme, die ohne weiteres Equipment auskommen und auch keinen Computer benötigen. Da sie mit einem Akku betrieben werden, ist die Betriebsdauer allerdings eingeschränkt und auch die Rechenleistung ist deutlich geringer als die der Computer-gestützten Systeme.
+
+Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone integriert wird, um die VR-Inhalte zu zeigen. Diese liegen preislich auf einem sehr niedrigen bis mittlerem Niveau und bilden so eine gute Möglichkeit für alle Leute in die Welt der VR-Systeme einzutauchen, ohne direkt mehrere Hundert Euro ausgeben zu müssen.
+
+\subsection{Computer-gestützte VR-Hardware}
+\subsubsection{Oculus Rift}
+\subsubsection{HTC Vive}
+\subsubsection{Playstation VR}
+\subsection{Stand-alone VR-Hardware}
+\subsubsection{Oculus Go}
+\subsubsection{Oculus Quest}
+\subsubsection{Google Daydream}
+\subsection{Smartphone gestützte VR-Hardware}
+\subsubsection{Google Cardboard}
+\subsubsection{Samsung Gear VR}
+
+\cleardoublepage % Neue rechte Seite anfangen
+\section{Existierende VR-Systeme im Bildungsbereich}
+
+\cleardoublepage % Neue rechte Seite anfangen
 \section{Hauptteil}
 \subsection{Nutzungsbeschränkungen}
 \subsubsection{Mindestalter}
@@ -243,6 +268,8 @@ Daraus lässt sich schließen, dass es sich um eine iPhone handelt, welches Safari
   \end{itemize}
   \item hält history der zuvor gezeigten Inhalte, um sie vereinfacht wiederanzuzeigen 
  \end{itemize}
+ 
+\subsection{Kommunikation zwischen Lehrer-App und Schüler-App}
 
 \subsection{QR-Code Fenster}
 Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron App auf dem Lehrer-Computer gestartet wird. Es zeigt einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem auf die URL zu laden, auf der sie die Schüler-Applikation erreichen können. 
@@ -262,6 +289,12 @@ Um die
   \item Schüler können sich in Szene umschauen und Inhalte besser erfahren
 \end{itemize}
 
+\subsubsection{Eingabe des Namens}
+\subsubsection{Anzeigen von 360°-Fotos}
+\subsubsection{Abspielen von 360°-Videos}
+\subsubsection{Anzeigen von 3D-Modellen}
+
+
 \subsubsection{Abspielen von Videos mit Ton}
 Da die meisten Browser das automatische Abspielen von Videos mit Ton verbieten, werden 360°-Videos von React360 standardmäßig beim erstellen des Videoplayer-Komponenten ``muted'' auf ``true'' gesetzt. Die Hersteller wollen dadurch die Ablenkungen, die beim surfen auf den Nutzer zukommen, abmildern. Erst wenn der Nutzer ein ``user gesture click'' also einen Klick auf der Website gemacht hat, darf die Tonspur automatisiert abgespielt werden. Wird versucht ein Video mit Ton abzuspielen, ohne das ein Klick gemacht wurden, wird der Videoplayer blockiert und kann gar nicht mehr abspielen. \cite{Decker2017}
 
@@ -271,6 +304,8 @@ Das führt dazu, das die React360-Elemente nicht als html-Elemente gelten und ein
 
 Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender Button über die React360-App gelegt, der bei einem Klick verschwindet, um die Erlaubnis vom Browser zu bekommen Ton abzuspielen. Wurde der Button am Schüler-Gerät geklickt wird ein flag gesetzt, dass die App Ton abspielen darf. Ob dann tatsächlich Ton beim Video abgespielt wird, kann der Lehrer aus der teacher-App einstellen. Auch dort ist das Abspielen von Ton an den Schüler-Geräten standardmäßig erst einmal abgestellt, damit der Lehrer entscheiden kann, ob er nur den Ton aus dem Rechner über Boxen für Alle abspielen möchte oder aus jedem Schüler-Gerät einzeln der Ton kommen soll.
 
+\subsubsection{WebVR Polyfill}
+% Let's talk about this!
 
 %______________________________________________________________________
 \cleardoublepage

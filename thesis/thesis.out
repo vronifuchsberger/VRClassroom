@@ -1,16 +1,35 @@
 \BOOKMARK [1][]{section.1}{Einleitung}{}% 1
-\BOOKMARK [1][]{section.2}{Hauptteil}{}% 2
-\BOOKMARK [2][]{subsection.2.1}{Nutzungsbeschr\344nkungen}{section.2}% 3
-\BOOKMARK [3][]{subsubsection.2.1.1}{Mindestalter}{subsection.2.1}% 4
-\BOOKMARK [1][]{section.3}{Software Projekt: VRClassroom}{}% 5
-\BOOKMARK [2][]{subsection.3.1}{Nutzungsszenario und Anwendungsfokus}{section.3}% 6
-\BOOKMARK [2][]{subsection.3.2}{Grundstruktur}{section.3}% 7
-\BOOKMARK [2][]{subsection.3.3}{Lehrer-Applikation}{section.3}% 8
-\BOOKMARK [3][]{subsubsection.3.3.1}{Verbundene Ger\344te}{subsection.3.3}% 9
-\BOOKMARK [2][]{subsection.3.4}{QR-Code Fenster}{section.3}% 10
-\BOOKMARK [2][]{subsection.3.5}{Sch\374ler-App}{section.3}% 11
-\BOOKMARK [3][]{subsubsection.3.5.1}{Abspielen von Videos mit Ton}{subsection.3.5}% 12
-\BOOKMARK [1][]{section.4}{Nutzerstudie und Evaluation}{}% 13
-\BOOKMARK [2][]{subsection.4.1}{Ablauf der Studie}{section.4}% 14
-\BOOKMARK [2][]{subsection.4.2}{Fragebogen}{section.4}% 15
-\BOOKMARK [2][]{subsection.4.3}{Erkenntnisse}{section.4}% 16
+\BOOKMARK [1][]{section.2}{Existierende VR-Hardware-Systeme}{}% 2
+\BOOKMARK [2][]{subsection.2.1}{Computer-gest\374tzte VR-Hardware}{section.2}% 3
+\BOOKMARK [3][]{subsubsection.2.1.1}{Oculus Rift}{subsection.2.1}% 4
+\BOOKMARK [3][]{subsubsection.2.1.2}{HTC Vive}{subsection.2.1}% 5
+\BOOKMARK [3][]{subsubsection.2.1.3}{Playstation VR}{subsection.2.1}% 6
+\BOOKMARK [2][]{subsection.2.2}{Stand-alone VR-Hardware}{section.2}% 7
+\BOOKMARK [3][]{subsubsection.2.2.1}{Oculus Go}{subsection.2.2}% 8
+\BOOKMARK [3][]{subsubsection.2.2.2}{Oculus Quest}{subsection.2.2}% 9
+\BOOKMARK [3][]{subsubsection.2.2.3}{Google Daydream}{subsection.2.2}% 10
+\BOOKMARK [2][]{subsection.2.3}{Smartphone gest\374tzte VR-Hardware}{section.2}% 11
+\BOOKMARK [3][]{subsubsection.2.3.1}{Google Cardboard}{subsection.2.3}% 12
+\BOOKMARK [3][]{subsubsection.2.3.2}{Samsung Gear VR}{subsection.2.3}% 13
+\BOOKMARK [1][]{section.3}{Existierende VR-Systeme im Bildungsbereich}{}% 14
+\BOOKMARK [1][]{section.4}{Hauptteil}{}% 15
+\BOOKMARK [2][]{subsection.4.1}{Nutzungsbeschr\344nkungen}{section.4}% 16
+\BOOKMARK [3][]{subsubsection.4.1.1}{Mindestalter}{subsection.4.1}% 17
+\BOOKMARK [1][]{section.5}{Software Projekt: VRClassroom}{}% 18
+\BOOKMARK [2][]{subsection.5.1}{Nutzungsszenario und Anwendungsfokus}{section.5}% 19
+\BOOKMARK [2][]{subsection.5.2}{Grundstruktur}{section.5}% 20
+\BOOKMARK [2][]{subsection.5.3}{Lehrer-Applikation}{section.5}% 21
+\BOOKMARK [3][]{subsubsection.5.3.1}{Verbundene Ger\344te}{subsection.5.3}% 22
+\BOOKMARK [2][]{subsection.5.4}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.5}% 23
+\BOOKMARK [2][]{subsection.5.5}{QR-Code Fenster}{section.5}% 24
+\BOOKMARK [2][]{subsection.5.6}{Sch\374ler-App}{section.5}% 25
+\BOOKMARK [3][]{subsubsection.5.6.1}{Eingabe des Namens}{subsection.5.6}% 26
+\BOOKMARK [3][]{subsubsection.5.6.2}{Anzeigen von 360\260-Fotos}{subsection.5.6}% 27
+\BOOKMARK [3][]{subsubsection.5.6.3}{Abspielen von 360\260-Videos}{subsection.5.6}% 28
+\BOOKMARK [3][]{subsubsection.5.6.4}{Anzeigen von 3D-Modellen}{subsection.5.6}% 29
+\BOOKMARK [3][]{subsubsection.5.6.5}{Abspielen von Videos mit Ton}{subsection.5.6}% 30
+\BOOKMARK [3][]{subsubsection.5.6.6}{WebVR Polyfill}{subsection.5.6}% 31
+\BOOKMARK [1][]{section.6}{Nutzerstudie und Evaluation}{}% 32
+\BOOKMARK [2][]{subsection.6.1}{Ablauf der Studie}{section.6}% 33
+\BOOKMARK [2][]{subsection.6.2}{Fragebogen}{section.6}% 34
+\BOOKMARK [2][]{subsection.6.3}{Erkenntnisse}{section.6}% 35
