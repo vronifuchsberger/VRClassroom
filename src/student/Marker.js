@@ -65,7 +65,7 @@ class Marker extends React.Component {
                 },
               ]}
               source={{
-                gltf2: asset('marker/marker1.glb'),
+                gltf2: asset('marker/marker.glb'),
               }}
             />
           );

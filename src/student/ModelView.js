@@ -50,7 +50,7 @@ class ModelView extends React.Component {
         }}
       >
         <Marker {...this.props} isModel={true} />
-        <AmbientLight intensity={1.0} color={'#ffffff'} />
+        <AmbientLight intensity={0.1} color={'#ffffff'} />
         <PointLight
           intensity={0.4}
           style={{transform: [{translate: [0, 4, -1]}]}}
