@@ -54,6 +54,20 @@ export default class Connection {
         );
       }
     });
+
+    RCTDeviceEventEmitter.addListener(
+      'onModelStatusChanged',
+      (url, isLoading) => {
+        const store = getState();
+        if (this.ws && url === store.url) {
+          this.ws.send(
+            JSON.stringify({
+              modelIsLoading: isLoading,
+            }),
+          );
+        }
+      },
+    );
   }
 
   sendClientInfo = async () => {

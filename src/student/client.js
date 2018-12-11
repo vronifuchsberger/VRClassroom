@@ -36,6 +36,23 @@ function init(bundle, parent, options = {}) {
 
   KeyboardModule.setInstance(r360);
   MouseModule.setInstance(r360);
+
+  let oldXHROpen = window.XMLHttpRequest.prototype.open;
+  window.XMLHttpRequest.prototype.open = function(method, url) {
+    const listener = isLoading => () => {
+      r360.runtime.context.callFunction('RCTDeviceEventEmitter', 'emit', [
+        'onModelStatusChanged',
+        url,
+        isLoading,
+      ]);
+    };
+
+    this.addEventListener('load', listener(false));
+
+    this.addEventListener('loadstart', listener(true));
+
+    return oldXHROpen.apply(this, arguments);
+  };
 }
 
 window.React360 = {init};

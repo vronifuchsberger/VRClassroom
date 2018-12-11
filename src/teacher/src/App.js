@@ -141,6 +141,9 @@ class App extends Component {
           this.broadcastToAllClients({
             playbackPosition: data.videoStatus.position,
           });
+        } else if (typeof data.modelIsLoading === 'boolean') {
+          ws.isLoading = data.modelIsLoading;
+          this.forceUpdate();
         } else {
           // new client connected to websocket
           const userAgent = req.headers['user-agent'];

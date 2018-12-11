@@ -27,7 +27,6 @@ class CylinderView extends React.Component {
       this.setState({
         playbackPosition: e.position,
       });
-      console.log(e.status);
     });
   }
 
