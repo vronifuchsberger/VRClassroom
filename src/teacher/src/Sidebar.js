@@ -31,7 +31,15 @@ class Sidebar extends Component {
           size="small"
           renderItem={(client, i) => (
             <List.Item key={i}>
-              <Badge status={client.client ? 'success' : 'error'} />
+              <Badge
+                status={
+                  client.client
+                    ? client.client.isLoading
+                      ? 'warning'
+                      : 'success'
+                    : 'error'
+                }
+              />
               {this.getDeviceName(client)}
             </List.Item>
           )}

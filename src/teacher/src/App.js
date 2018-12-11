@@ -128,6 +128,12 @@ class App extends Component {
               ],
             });
           }
+        } else if (data.videoStatus && data.videoStatus.status === 'ready') {
+          ws.isLoading = false;
+          this.forceUpdate();
+        } else if (data.videoStatus && data.videoStatus.status === 'closed') {
+          ws.isLoading = true;
+          this.forceUpdate();
         } else if (data.videoStatus) {
           this.setState({
             videoDuration: data.videoStatus.duration,

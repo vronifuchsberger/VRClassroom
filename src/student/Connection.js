@@ -39,17 +39,21 @@ export default class Connection {
       }
     });
 
-    if (NativeModules.HostnameModule.isTeacher) {
-      RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
-        if (this.ws && new Date().getTime() > this.doNotSendUntil) {
-          this.ws.send(
-            JSON.stringify({
-              videoStatus: e,
-            }),
-          );
-        }
-      });
-    }
+    RCTDeviceEventEmitter.addListener('onVideoStatusChanged', e => {
+      if (
+        (this.ws &&
+          (NativeModules.HostnameModule.isTeacher &&
+            new Date().getTime() > this.doNotSendUntil)) ||
+        e.status === 'closed' ||
+        e.status === 'ready'
+      ) {
+        this.ws.send(
+          JSON.stringify({
+            videoStatus: e,
+          }),
+        );
+      }
+    });
   }
 
   sendClientInfo = async () => {
