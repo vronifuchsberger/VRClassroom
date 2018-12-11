@@ -47,17 +47,18 @@ function getMenu(win, assetDir) {
               properties: ['openFile', 'openDirectory'],
             },
             filePaths => {
+              if (!filePaths || filePaths.length === 0) {
+                return;
+              }
               const fileName = path.basename(filePaths[0]);
               const newPath = path.join(assetDir, fileName);
               if (fs.lstatSync(filePaths[0]).isDirectory()) {
                 const objFile = containsObj(filePaths[0]);
                 if (objFile) {
                   // copy entire folder
-                  fs.copy(filePaths[0], newPath, a => {
-                    console.log(a);
+                  fs.copy(filePaths[0], newPath, () => {
                     // update menu
                     Menu.setApplicationMenu(getMenu(win, assetDir));
-
                     win.webContents.send('open', path.join(fileName, objFile));
                   });
                 } else {
@@ -83,18 +84,15 @@ function getMenu(win, assetDir) {
                   newPath.replace('.gltf', '.bin'),
                   COPYFILE_EXCL,
                 );
-                fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, a => {
-                  console.log(a);
+                fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, () => {
                   // update menu
                   Menu.setApplicationMenu(getMenu(win, assetDir));
                   win.webContents.send('open', fileName);
                 });
               } else {
-                fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, a => {
-                  console.log(a);
+                fs.copyFile(filePaths[0], newPath, COPYFILE_EXCL, () => {
                   // update menu
                   Menu.setApplicationMenu(getMenu(win, assetDir));
-
                   win.webContents.send('open', fileName);
                 });
               }
