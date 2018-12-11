@@ -38,7 +38,7 @@ if (!fs.existsSync(assetDir)) {
 
 const VRProduction = express();
 VRProduction.use(cors());
-VRProduction.use(nocache());
+//VRProduction.use(nocache());
 VRProduction.use('/assets', express.static(assetDir));
 if (isProduction) {
   VRProduction.use('/teacher', express.static(path.join(__dirname, 'teacher')));
