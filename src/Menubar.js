@@ -18,10 +18,10 @@ function containsObj(filePath) {
 function getMenu(win, assetDir) {
   const menu = defaultMenu(app, shell);
   menu.splice(1, 0, {
-    label: 'File',
+    label: process.platform === 'darwin' ? 'Ablage' : 'Datei',
     submenu: [
       {
-        label: 'Open...',
+        label: 'Öffnen...',
         accelerator: 'CmdOrCtrl+O',
         click: (item, focusedWindow) => {
           dialog.showOpenDialog(
@@ -103,7 +103,7 @@ function getMenu(win, assetDir) {
         },
       },
       {
-        label: 'Recent Media',
+        label: 'Zuletzt geöffnet',
         submenu: fs
           .readdirSync(assetDir)
           .filter(file => !file.startsWith('.') && !file.endsWith('.bin'))
@@ -119,7 +119,7 @@ function getMenu(win, assetDir) {
           })),
       },
       {
-        label: 'Open StreetView...',
+        label: 'StreetView...',
         click: () => {
           prompt(win);
         },

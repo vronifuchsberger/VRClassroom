@@ -16,8 +16,6 @@ import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
 
 class CylinderView extends React.Component {
   state = {
-    count: 90,
-    greeting: 'Welcome to VRClassroom!',
     showContent: false,
     playbackPosition: -1,
   };
@@ -29,6 +27,7 @@ class CylinderView extends React.Component {
       this.setState({
         playbackPosition: e.position,
       });
+      console.log(e.status);
     });
   }
 
@@ -85,7 +84,7 @@ class CylinderView extends React.Component {
         {!this.state.showContent ? (
           <View style={{transform: [{translate: [300, -200]}]}}>
             <View style={styles.greetingBox}>
-              <Text style={styles.greeting}>{this.state.greeting}</Text>
+              <Text style={styles.greeting}>Willkommen bei VRClassroom!</Text>
             </View>
           </View>
         ) : null}

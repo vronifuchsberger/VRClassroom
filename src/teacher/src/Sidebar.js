@@ -25,7 +25,8 @@ class Sidebar extends Component {
     return (
       <Sider theme="light">
         <List
-          header="Connected Clients:"
+          header="Verbundene Geräte:"
+          locale={{emptyText: 'keine verbundenen Geräte'}}
           dataSource={Object.values(this.props.connectedClients)}
           size="small"
           renderItem={(client, i) => (
