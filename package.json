@@ -25,10 +25,15 @@
     "appId": "com.vronifuchsberger.vrclassroom",
     "productName": "VRClassroom",
     "mac": {
-      "category": "public.app-category.education"
+      "category": "public.app-category.education",
+      "icon": "icons/mac/icon.icns"
     },
     "win": {
-      "target": "portable"
+      "target": "portable",
+      "icon": "icons/win/icon.ico"
+    },
+    "linux": {
+      "icon": "icons/png/"
     },
     "files": [
       "build/**/*"
