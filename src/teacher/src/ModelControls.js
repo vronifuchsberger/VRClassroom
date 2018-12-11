@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Slider, Radio} from 'antd';
+import {Slider} from 'antd';
 import MarkerControls from './MarkerControls';
 
 class ModelControls extends Component {
