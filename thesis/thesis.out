@@ -12,24 +12,41 @@
 \BOOKMARK [3][]{subsubsection.2.3.1}{Google Cardboard}{subsection.2.3}% 12
 \BOOKMARK [3][]{subsubsection.2.3.2}{Samsung Gear VR}{subsection.2.3}% 13
 \BOOKMARK [1][]{section.3}{Existierende VR-Systeme im Bildungsbereich}{}% 14
-\BOOKMARK [1][]{section.4}{Hauptteil}{}% 15
-\BOOKMARK [2][]{subsection.4.1}{Nutzungsbeschr\344nkungen}{section.4}% 16
-\BOOKMARK [3][]{subsubsection.4.1.1}{Mindestalter}{subsection.4.1}% 17
-\BOOKMARK [1][]{section.5}{Software Projekt: VRClassroom}{}% 18
-\BOOKMARK [2][]{subsection.5.1}{Nutzungsszenario und Anwendungsfokus}{section.5}% 19
-\BOOKMARK [2][]{subsection.5.2}{Grundstruktur}{section.5}% 20
-\BOOKMARK [2][]{subsection.5.3}{Lehrer-Applikation}{section.5}% 21
-\BOOKMARK [3][]{subsubsection.5.3.1}{Verbundene Ger\344te}{subsection.5.3}% 22
-\BOOKMARK [2][]{subsection.5.4}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.5}% 23
-\BOOKMARK [2][]{subsection.5.5}{QR-Code Fenster}{section.5}% 24
-\BOOKMARK [2][]{subsection.5.6}{Sch\374ler-App}{section.5}% 25
-\BOOKMARK [3][]{subsubsection.5.6.1}{Eingabe des Namens}{subsection.5.6}% 26
-\BOOKMARK [3][]{subsubsection.5.6.2}{Anzeigen von 360\260-Fotos}{subsection.5.6}% 27
-\BOOKMARK [3][]{subsubsection.5.6.3}{Abspielen von 360\260-Videos}{subsection.5.6}% 28
-\BOOKMARK [3][]{subsubsection.5.6.4}{Anzeigen von 3D-Modellen}{subsection.5.6}% 29
-\BOOKMARK [3][]{subsubsection.5.6.5}{Abspielen von Videos mit Ton}{subsection.5.6}% 30
-\BOOKMARK [3][]{subsubsection.5.6.6}{WebVR Polyfill}{subsection.5.6}% 31
-\BOOKMARK [1][]{section.6}{Nutzerstudie und Evaluation}{}% 32
-\BOOKMARK [2][]{subsection.6.1}{Ablauf der Studie}{section.6}% 33
-\BOOKMARK [2][]{subsection.6.2}{Fragebogen}{section.6}% 34
-\BOOKMARK [2][]{subsection.6.3}{Erkenntnisse}{section.6}% 35
+\BOOKMARK [1][]{section.4}{Aktuelle Einsatzgebiete von VR}{}% 15
+\BOOKMARK [1][]{section.5}{Aktuelle Challenges an VR-Systemen}{}% 16
+\BOOKMARK [2][]{subsection.5.1}{Motion Sickness}{section.5}% 17
+\BOOKMARK [3][]{subsubsection.5.1.1}{Mindestalter zur Nutzung von VR-Systemen}{subsection.5.1}% 18
+\BOOKMARK [1][]{section.6}{Eingabemethoden in VR}{}% 19
+\BOOKMARK [2][]{subsection.6.1}{3D in VR}{section.6}% 20
+\BOOKMARK [1][]{section.7}{360\260-Inhalte}{}% 21
+\BOOKMARK [2][]{subsection.7.1}{Erstellen von 360\260-Inhalten}{section.7}% 22
+\BOOKMARK [2][]{subsection.7.2}{Bearbeiten von 360\260-Inhalten}{section.7}% 23
+\BOOKMARK [2][]{subsection.7.3}{Quellen f\374r 360\260-Inhalte}{section.7}% 24
+\BOOKMARK [2][]{subsection.7.4}{Formate f\374r Inhalte in React360}{section.7}% 25
+\BOOKMARK [2][]{subsection.7.5}{360\260 Sound}{section.7}% 26
+\BOOKMARK [1][]{section.8}{Software Projekt: VRClassroom}{}% 27
+\BOOKMARK [2][]{subsection.8.1}{Nutzungsszenario und Anwendungsfokus}{section.8}% 28
+\BOOKMARK [2][]{subsection.8.2}{Grundstruktur}{section.8}% 29
+\BOOKMARK [2][]{subsection.8.3}{Lehrer-Applikation}{section.8}% 30
+\BOOKMARK [3][]{subsubsection.8.3.1}{Verbundene Ger\344te}{subsection.8.3}% 31
+\BOOKMARK [3][]{subsubsection.8.3.2}{Controls}{subsection.8.3}% 32
+\BOOKMARK [3][]{subsubsection.8.3.3}{Marker}{subsection.8.3}% 33
+\BOOKMARK [3][]{subsubsection.8.3.4}{Video Controls}{subsection.8.3}% 34
+\BOOKMARK [3][]{subsubsection.8.3.5}{Photo Controls}{subsection.8.3}% 35
+\BOOKMARK [3][]{subsubsection.8.3.6}{Model Controls}{subsection.8.3}% 36
+\BOOKMARK [2][]{subsection.8.4}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.8}% 37
+\BOOKMARK [2][]{subsection.8.5}{QR-Code Fenster}{section.8}% 38
+\BOOKMARK [2][]{subsection.8.6}{Sch\374ler-App}{section.8}% 39
+\BOOKMARK [3][]{subsubsection.8.6.1}{Eingabe des Namens}{subsection.8.6}% 40
+\BOOKMARK [3][]{subsubsection.8.6.2}{Anzeigen von 360\260-Fotos}{subsection.8.6}% 41
+\BOOKMARK [3][]{subsubsection.8.6.3}{Abspielen von 360\260-Videos}{subsection.8.6}% 42
+\BOOKMARK [3][]{subsubsection.8.6.4}{Anzeigen von 3D-Modellen}{subsection.8.6}% 43
+\BOOKMARK [3][]{subsubsection.8.6.5}{Abspielen von Videos mit Ton}{subsection.8.6}% 44
+\BOOKMARK [3][]{subsubsection.8.6.6}{WebVR Polyfill}{subsection.8.6}% 45
+\BOOKMARK [1][]{section.9}{Nutzerstudie und Evaluation}{}% 46
+\BOOKMARK [2][]{subsection.9.1}{Ablauf der Studie}{section.9}% 47
+\BOOKMARK [2][]{subsection.9.2}{Fragebogen}{section.9}% 48
+\BOOKMARK [2][]{subsection.9.3}{Erkenntnisse}{section.9}% 49
+\BOOKMARK [1][]{section.10}{Ausblick}{}% 50
+\BOOKMARK [2][]{subsection.10.1}{M\366gliche Weiterentwicklungen an VRClassroom}{section.10}% 51
+\BOOKMARK [3][]{subsubsection.10.1.1}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.10.1}% 52
