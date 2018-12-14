@@ -48,11 +48,38 @@ function init(bundle, parent, options = {}) {
     };
 
     this.addEventListener('load', listener(false));
-
     this.addEventListener('loadstart', listener(true));
 
     return oldXHROpen.apply(this, arguments);
   };
+
+  let hidden, state, visibilityChange;
+  if (typeof document.hidden !== 'undefined') {
+    hidden = 'hidden';
+    visibilityChange = 'visibilitychange';
+    state = 'visibilityState';
+  } else if (typeof document.mozHidden !== 'undefined') {
+    hidden = 'mozHidden';
+    visibilityChange = 'mozvisibilitychange';
+    state = 'mozVisibilityState';
+  } else if (typeof document.msHidden !== 'undefined') {
+    hidden = 'msHidden';
+    visibilityChange = 'msvisibilitychange';
+    state = 'msVisibilityState';
+  } else if (typeof document.webkitHidden !== 'undefined') {
+    hidden = 'webkitHidden';
+    visibilityChange = 'webkitvisibilitychange';
+    state = 'webkitVisibilityState';
+  }
+
+  document.addEventListener(visibilityChange, function() {
+    console.log(document[state]);
+    if (document[state] === 'hidden') {
+      r360.runtime.context.callFunction('RCTDeviceEventEmitter', 'emit', [
+        'onVisibilityStateHidden',
+      ]);
+    }
+  });
 }
 
 window.React360 = {init};
