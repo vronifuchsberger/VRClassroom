@@ -14,42 +14,52 @@
 \contentsline {subsection}{\numberline {2.3}Smartphone gest\"utzte VR-Hardware}{3}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Google Cardboard}{3}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Samsung Gear VR}{3}{subsubsection.2.3.2}
-\contentsline {section}{\numberline {3}Existierende VR-Systeme im Bildungsbereich}{5}{section.3}
-\contentsline {section}{\numberline {4}Aktuelle Einsatzgebiete von VR}{7}{section.4}
-\contentsline {section}{\numberline {5}Aktuelle Challenges an VR-Systemen}{9}{section.5}
-\contentsline {subsection}{\numberline {5.1}Motion Sickness}{9}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Mindestalter zur Nutzung von VR-Systemen}{9}{subsubsection.5.1.1}
-\contentsline {section}{\numberline {6}Eingabemethoden in VR}{11}{section.6}
-\contentsline {subsection}{\numberline {6.1}3D in VR}{11}{subsection.6.1}
-\contentsline {section}{\numberline {7}360\IeC {\textdegree }-Inhalte}{13}{section.7}
-\contentsline {subsection}{\numberline {7.1}Erstellen von 360\IeC {\textdegree }-Inhalten}{13}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Bearbeiten von 360\IeC {\textdegree }-Inhalten}{13}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Quellen f\"ur 360\IeC {\textdegree }-Inhalte}{13}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Formate f\"ur Inhalte in React360}{13}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}360\IeC {\textdegree } Sound}{13}{subsection.7.5}
-\contentsline {section}{\numberline {8}Software Projekt: VRClassroom}{15}{section.8}
-\contentsline {subsection}{\numberline {8.1}Nutzungsszenario und Anwendungsfokus}{15}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Grundstruktur}{15}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Lehrer-Applikation}{15}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Verbundene Ger\"ate}{16}{subsubsection.8.3.1}
-\contentsline {subsubsection}{\numberline {8.3.2}Controls}{17}{subsubsection.8.3.2}
-\contentsline {subsubsection}{\numberline {8.3.3}Marker}{17}{subsubsection.8.3.3}
-\contentsline {subsubsection}{\numberline {8.3.4}Video Controls}{17}{subsubsection.8.3.4}
-\contentsline {subsubsection}{\numberline {8.3.5}Photo Controls}{17}{subsubsection.8.3.5}
-\contentsline {subsubsection}{\numberline {8.3.6}Model Controls}{17}{subsubsection.8.3.6}
-\contentsline {subsection}{\numberline {8.4}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{17}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}QR-Code Fenster}{17}{subsection.8.5}
-\contentsline {subsection}{\numberline {8.6}Sch\"uler-App}{17}{subsection.8.6}
-\contentsline {subsubsection}{\numberline {8.6.1}Eingabe des Namens}{17}{subsubsection.8.6.1}
-\contentsline {subsubsection}{\numberline {8.6.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{17}{subsubsection.8.6.2}
-\contentsline {subsubsection}{\numberline {8.6.3}Abspielen von 360\IeC {\textdegree }-Videos}{17}{subsubsection.8.6.3}
-\contentsline {subsubsection}{\numberline {8.6.4}Anzeigen von 3D-Modellen}{17}{subsubsection.8.6.4}
-\contentsline {subsubsection}{\numberline {8.6.5}Abspielen von Videos mit Ton}{17}{subsubsection.8.6.5}
-\contentsline {subsubsection}{\numberline {8.6.6}WebVR Polyfill}{18}{subsubsection.8.6.6}
-\contentsline {section}{\numberline {9}Nutzerstudie und Evaluation}{19}{section.9}
-\contentsline {subsection}{\numberline {9.1}Ablauf der Studie}{19}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Fragebogen}{19}{subsection.9.2}
-\contentsline {subsection}{\numberline {9.3}Erkenntnisse}{19}{subsection.9.3}
-\contentsline {section}{\numberline {10}Ausblick}{21}{section.10}
-\contentsline {subsection}{\numberline {10.1}M\"ogliche Weiterentwicklungen an VRClassroom}{21}{subsection.10.1}
-\contentsline {subsubsection}{\numberline {10.1.1}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{21}{subsubsection.10.1.1}
+\contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}3D in VR}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Existierende VR-Systeme im Bildungsbereich}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Motion Sickness}{7}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1}Mindestalter zur Nutzung von VR-Systemen}{7}{subsubsection.4.1.1}
+\contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{9}{section.5}
+\contentsline {subsection}{\numberline {5.1}360\IeC {\textdegree }-Fotos}{9}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}360\IeC {\textdegree }-Videos}{9}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}3D-Modelle}{9}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}360\IeC {\textdegree } Sound}{9}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Quellen f\"ur 360\IeC {\textdegree }-Inhalte}{9}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{9}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Quellen f\"ur 360\IeC {\textdegree }-Video}{9}{subsubsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.3}Quellen f\"ur 360\IeC {\textdegree }-Sounds}{9}{subsubsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.4}Quellen f\"ur 3D-Modellen}{9}{subsubsection.5.5.4}
+\contentsline {subsection}{\numberline {5.6}Erstellen von 360\IeC {\textdegree }-Inhalten}{9}{subsection.5.6}
+\contentsline {subsection}{\numberline {5.7}Bearbeiten von 360\IeC {\textdegree }-Inhalten}{9}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}Formate f\"ur Inhalte in React360}{9}{subsection.5.8}
+\contentsline {section}{\numberline {6}Software Projekt: VRClassroom}{11}{section.6}
+\contentsline {subsection}{\numberline {6.1}Nutzungsszenario und Anwendungsfokus}{11}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Anwender}{11}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Grundstruktur}{11}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Lehrer-Applikation}{12}{subsection.6.4}
+\contentsline {subsubsection}{\numberline {6.4.1}Verbundene Ger\"ate}{12}{subsubsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.2}Hineinladen von Inhalten}{13}{subsubsection.6.4.2}
+\contentsline {subsubsection}{\numberline {6.4.3}Controls}{13}{subsubsection.6.4.3}
+\contentsline {paragraph}{Marker}{13}{section*.5}
+\contentsline {paragraph}{Video Controls}{13}{section*.6}
+\contentsline {paragraph}{Photo Controls}{13}{section*.7}
+\contentsline {paragraph}{Model Controls}{13}{section*.8}
+\contentsline {subsection}{\numberline {6.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{13}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}QR-Code Fenster}{13}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Sch\"uler-App}{13}{subsection.6.7}
+\contentsline {subsubsection}{\numberline {6.7.1}Eingabe des Namens}{14}{subsubsection.6.7.1}
+\contentsline {subsubsection}{\numberline {6.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{14}{subsubsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{14}{subsubsection.6.7.3}
+\contentsline {subsubsection}{\numberline {6.7.4}Anzeigen von 3D-Modellen}{14}{subsubsection.6.7.4}
+\contentsline {subsubsection}{\numberline {6.7.5}Abspielen von Videos mit Ton}{14}{subsubsection.6.7.5}
+\contentsline {subsubsection}{\numberline {6.7.6}WebVR Polyfill}{14}{subsubsection.6.7.6}
+\contentsline {section}{\numberline {7}Nutzerstudie und Evaluation}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}Ablauf der Studie}{15}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Fragebogen}{15}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Erkenntnisse}{15}{subsection.7.3}
+\contentsline {section}{\numberline {8}Ausblick}{17}{section.8}
+\contentsline {subsection}{\numberline {8.1}Weiterentwicklungen an VR-Ger\"aten}{17}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}M\"ogliche Weiterentwicklungen an VRClassroom}{17}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{17}{subsubsection.8.2.1}
