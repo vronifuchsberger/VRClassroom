@@ -68,6 +68,13 @@ export default class Connection {
         }
       },
     );
+
+    RCTDeviceEventEmitter.addListener('onVisibilityStateHidden', () => {
+      if (this.ws) {
+        this.ws.close();
+        console.log(this.ws.readyState);
+      }
+    });
   }
 
   sendClientInfo = async () => {
