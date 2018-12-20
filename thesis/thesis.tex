@@ -7,6 +7,9 @@
 %\usepackage{ngerman} % Alternative zum Babel-Paket oben
 \usepackage{mathptmx} % Times-Roman-Schrift (auch für mathematische Formeln)
 \usepackage{framed}
+\usepackage{longtable}
+\usepackage{tabu}
+
 
 % Zum Setzen von URLs
 \usepackage{color}
@@ -140,23 +143,104 @@ sowie alle benutzten Quellen und Hilfsmittel angegeben habe.
 \section{Existierende VR-Hardware-Systeme}
 Es gibt inzwischen eine große Zahl verschiedener VR-Hardware-Systeme, die sich in drei Gruppen mit unterschiedlichen Anwendungsszenarien unterteilen: Die Computer-gestützten VR-Systeme, die Stand-alone VR-Systeme und die Smartphone-gestützten VR-Systeme.
 
+\subsection{Qualitätsmerkmale von VR-Systemen}
+Um die verschiedenen VR-Hardware-Systeme einordnen zu können, gibt es einige Merkmale, auf die ein Käufer achten sollte. Denn die verschiedenen Headsets sind für unterschiedliche Anwendungsszenarien entwickelt worden, sodass ein potenzieller Käufer zuerst entscheiden sollte wie er das VR-Headset einsetzen möchte.
+
+Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Displaygröße und -auflösung, die Frequenz des Displays, Field of View, Rechenleistung und Gewicht des Headsets, die verwendete Trackingmethode, die mitgelieferten Controller beziehungsweise mögliche Inputmethoden, das Gewicht des Headsets und der Verkaufspreis.
+
+\subsubsection{Degrees of Freedom}
+3DoF/ 6DoF
+Was bedeutet DoF?
+
+\subsubsection{Display}
+Maße, Auflösung, 2 einzelne/ ein großes
+Vielleicht Display und Frequenz zu einerm Punkt verbinden?
+
+\subsubsection{Frequenz}
+
+\subsubsection{Field of View}
+
+\subsubsection{Rechenleistung}
+Welche Chips: CPU \& GPU ?
+
+
+\subsubsection{Inputmethoden}
+Wie in Kapitel XXX (hier Ref reinfügen) beschrieben, gibt es drei grundsätzliche Input-Methoden für VR-Headsets: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt, das Auslösen von Touch-Events auf dem Display und Voice-Input. 
+
+Gaze Input? (-> EyeVR)
+
+Bisher gibt es keine Geräte, die mit Voice-Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
+
+\subsubsection{Tracking}
+Trackingmethode: kein tracking/ inside out/ Sensoren im Raum
+
+
+\subsubsection{Gewicht}
+
+\subsubsection{Preis}
+Die Preise sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
+
+\begin{table}[]
+%\begin{tabular}{l|l|l|l|l|l}
+\begin{tabu} to \textwidth {XXXXXX}
+\textbf{VR-Headset} & HTC Vive & Oculus Rift & Playstation~VR & HTC Vive \newline Focus & Oculus Go \\
+\hline
+\textbf{DoF} & 3Dof? & gut &hoch & weit & hoch   \\
+\textbf{Display} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Frequenz} & 3Dof? & gut &hoch & weit & hoch   \\
+\textbf{Field~of~View} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Rechenleistung } & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Inputmethoden } & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Tracking} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Gewicht} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Preis} & 3Dof? & gut &hoch & weit & hoch  
+\end{tabu}
+%\end{tabular}
+
+\bigskip
+
+\begin{tabu} to \textwidth {XXXXXX}
+\textbf{VR-Headset} & Oculus Quest & Lenovo \newline Mirage Solo & Google \newline Cardboard & Samsung \newline Gear VR & Google \newline Daydream  \\
+\hline
+\textbf{DoF} & 3Dof? & gut &hoch & weit & sechs  \\
+\textbf{Display} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Frequenz} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Field~of~View} & 3Dof? & gut &hoch & weit & hoch   \\
+\textbf{Rechenleistung } & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Inputmethoden } & 3Dof? & gut &hoch & weit & hoch \\
+\textbf{Tracking} & 3Dof? & gut &hoch & weit & hoch   \\
+\textbf{Gewicht} & 3Dof? & gut &hoch & weit & hoch  \\
+\textbf{Preis} & 3Dof? & gut &hoch & weit & hoch  
+
+\end{tabu}
+  \caption{Übersicht  der Merkmale der verschiedenen VR-Headsets}~\label{tab:tableage}
+\end{table}
+
+
+
+
+
 \subsection{Computer-gestützte VR-Hardware}
 Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für extrem rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
 
 \subsubsection{Oculus Rift}
 \subsubsection{HTC Vive}
+\subsubsection{HTC Vive Pro}
 \subsubsection{Playstation VR}
 \subsection{Stand-alone VR-Hardware}
 Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, Oculus Quest oder Google Daydream. Es handelt sich hierbei um vollumfängliche Systeme, die ohne weiteres Equipment auskommen und auch keinen Computer benötigen. Da sie mit einem Akku betrieben werden, ist die Betriebsdauer allerdings eingeschränkt und auch die Rechenleistung ist deutlich geringer als die der Computer-gestützten Systeme.
 
 \subsubsection{Oculus Go}
 \subsubsection{Oculus Quest}
-\subsubsection{Google Daydream}
+\subsubsection{Lenovo Mirage Solo}
+\subsubsection{HTC Vive Focus}
+
 \subsection{Smartphone gestützte VR-Hardware}
 Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone integriert wird, um die VR-Inhalte zu zeigen. Diese liegen preislich auf einem sehr niedrigen bis mittlerem Niveau und bilden so eine gute Möglichkeit für alle Leute in die Welt der VR-Systeme einzutauchen, ohne direkt mehrere Hundert Euro ausgeben zu müssen.
 
 \subsubsection{Google Cardboard}
 \subsubsection{Samsung Gear VR}
+\subsubsection{Google Daydream View}
 
 \cleardoublepage % Neue rechte Seite anfangen
 
@@ -167,41 +251,54 @@ Dadurch muss die Szene doppelt gerendert werden.
 Wie entsteht 3d generell?
 Augenabstand
 \subsection{Eingabemethoden in VR}
+Controller
+Voice Controll
 
 \subsection{Existierende VR-Systeme im Bildungsbereich}
+Google Expeditions
 
 \cleardoublepage % Neue rechte Seite anfangen
 \section{Aktuelle Challenges an VR-Systemen}
 Hier wird gerade besonders daran geforscht oder das gibt es noch nicht, ist aber sehr gewünscht.
 \subsection{Motion Sickness}
 
-\subsubsection{Mindestalter zur Nutzung von VR-Systemen}
-Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. 
-Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altergruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.''
+\subsection{Mindestalter zur Nutzung von VR-Systemen}
+Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in ~\ref{tab:table1} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
+\bigskip
+
+Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altergruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben.
   ~\cite{FacebookTechnologiesLLC2018}
 
 Samsung geht dabei noch einen Schritt weiter und warnt vor einer Nutzung unter 13 Jahren, da sich jüngere Kinder in einer ``critical period in visual development''  ~\cite{SAMSUNG} befinden. Zudem sollen auch Kinder über 13 Jahren nur unter Aufsicht einer erwachsenen Person die Gear VR benutzen und dabei darauf achten regelmäßig Pausen zu machen. Eine lange Nutzung soll generell vermieden werden und die Kinder sollen während und nach der Nutzung beobachtet werden, ob sich ihre Fähigkeiten in der Hand-Augen-Koordination, Balance oder Multi-Tasking verschlechtern.
-Außerdem wird eine Liste an Symptomen aufgeführt bei deren Anzeichen eine Nutzung sofort unterbrochen werden soll. Dazu zählen: ``seizures, loss of awareness, eye strain, eye or muscle twitching, involuntary movements, altered, blurred, or double vision or other visual abnormalities, dizziness, disorientation, impaired balance, impaired hand-eye coordination, excessive sweating, increased salivation, nausea, lightheadedness, discomfort or pain in the head or eyes, drowsiness, fatigue, or any symptoms similar to motion sickness.''   ~\cite{SAMSUNG}
+
+Außerdem wird eine Liste an Symptomen aufgeführt bei deren Anzeichen eine Nutzung sofort unterbrochen werden soll. Das sind: ``seizures, loss of awareness, eye strain, eye or muscle twitching, involuntary movements, altered, blurred, or double vision or other visual abnormalities, dizziness, disorientation, impaired balance, impaired hand-eye coordination, excessive sweating, increased salivation, nausea, lightheadedness, discomfort or pain in the head or eyes, drowsiness, fatigue, or any symptoms similar to motion sickness'', also verschiedenste Probleme beim Sehen und an den Augen sowie Probleme der Konzentration, Koordination und Balance.   ~\cite{SAMSUNG}
+
+HTC dagegen gibt für die Nutzung der HTC Vive beziehungsweise Vive Solo kein genaues Mindestalter an. Sie geben allerdings an, dass das Gerät nicht dafür ausgelegt ist von kleinen Kindern genutzt zu werden. Sie warnen davor, dass Kinder Kleinteile verschlucken könnten oder sich und Andere auf anderem Wege damit verletzen können. Für ältere Kinder empfehlen sie die Aufsicht einer erwachsenen Person und dass die Nutzungszeit nicht zu lang ist. \cite{HTC2016}
+
+Zudem wird für die Nutzung der HTC Vive ein HTC Account benötigt, der laut HTC erst ab 14 Jahren erlaubt ist. \cite{HTCCorporation}
+
+
+In ihren FAQs gibt Sony an, dass man zur Nutzung ihrer Playstation VR Konsole mindestens zwölf Jahre oder älter sein sollte. Weitere Angaben oder Gründe dieses Mindestalter sind auch hier nicht zu finden. \cite{SonyEntertainmentLLC2017}
+\bigskip
+
+
+
 
 \begin{table}[]
 \begin{tabular}{p{0.2\linewidth}|p{0.2\linewidth}|p{0.5\linewidth}}
 \textbf{VR-Gerät} & \textbf{Mindestalter} & \textbf{Weitere Angaben} \\ \hline
-Oculus Go / Quest / Rift & 13 Jahre & wurde gezielt für diese Altersgruppe und darüber entwickelt \\
-Samsung Gear VR &  13 Jahre & Nutzung nur unter Aufsicht eines Erwachsenen; warnen vor Problemen bei der Entwicklung der Augen und einigen anderen möglichen Problemen \\ 
-HTC Vive & keine Angabe &  HTC Account ab 14 Jahren; ältere Kinder sollten bei Nutzung beaufsichtigt werden \\
-Playstation VR & 12 Jahre &  keine\\
+Oculus Rift \newline Oculus Go \newline  Oculus Quest & 13 Jahre & keine  \\
+HTC Vive \newline HTC Vive Solo & keine genaue Altersangabe & HTC Account erst ab 14 Jahren  \\
 Google Daydream & 13 Jahre & keine  \\
-Google Cardboard & keine Angabe & nicht ohne Aufsicht eines Erwachsenen
+Samsung Gear VR & 13 Jahre & nur unter Aufsicht eines Erwachsenen  \newline regelmäßig Pausen machen \newline Warnung vor einer Vielzahl an Symptomen aus dem Bereich Koordination, Balance und Sehen \\
+Playstation VR & 12 Jahre & keine  \\
+Google Cardboard & keine Angabe & nur unter Aufsicht eines Erwachsenen
 \end{tabular}
+  \caption{Übersicht der verschiedenen VR-Headsets mit ihren jeweiligen Nutzungsmindestaltern}~\label{tab:tableage}
 \end{table}
 
 
 \begin{itemize}
-  \item HTC Vive: 14 (für HTC Account, nichts zur generellen Nutzung) (%https://www.vive.com/us/support/viveport/category_howto/age-limit-for-htc-account-for-vive.html ); 
-  \item HTC Vive: older children should be monitored (HTC VIVE safety guide)
-  \item Playstation VR: 12+ (https://blog.us.playstation.com/2017/10/02/playstation-vr-the-ultimate-faq/)
-  \item Google Cardboard: not without adult supervision (https://vr.google.com/cardboard/product-safety/)
-  \item Google Daydream: 13 %(https://support.google.com/daydream/answer/7185037?visit_id=1-636162973848457164-2214380425&p=safetywarrantyreq&rd=1)
   \item Interview with Martin Banks, Professor of Optometry, Vision Science, Psychology, and Neuroscience at the University of California, Berkeley: Manufacturers say 12/13+, but not real problems found for younger children until now (23.04.26) (https://www.digitaltrends.com/virtual-reality/is-vr-safe-for-kids-we-asked-the-experts/)
 \end{itemize}
 
@@ -220,7 +317,7 @@ Google Cardboard & keine Angabe & nicht ohne Aufsicht eines Erwachsenen
 \subsubsection{Quellen für 3D-Modellen}
 \subsection{Erstellen von 360°-Inhalten}
 \subsection{Bearbeiten von 360°-Inhalten}
-\subsection{Formate für Inhalte in React360}
+\subsection{360°-Inhalte in React360}
 
 
 %\_____________________________________________________________________
