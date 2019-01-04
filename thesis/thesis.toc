@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{7}{section.3}
 \contentsline {subsection}{\numberline {3.1}3D in VR}{7}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Existierende VR-Systeme im Bildungsbereich}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}VR-Systeme im Bildungsbereich}{7}{subsection.3.3}
 \contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{9}{section.4}
 \contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{9}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{9}{subsection.4.2}
