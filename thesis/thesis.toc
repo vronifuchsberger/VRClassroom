@@ -49,10 +49,12 @@
 \contentsline {subsubsection}{\numberline {5.4.1}Quellen f\"ur 360\IeC {\textdegree }-Sounds}{11}{subsubsection.5.4.1}
 \contentsline {subsubsection}{\numberline {5.4.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Sounds}{11}{subsubsection.5.4.2}
 \contentsline {subsection}{\numberline {5.5}Virtual Reality Spiele und Anwendungen}{11}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}360\IeC {\textdegree }-Inhalte in React360}{11}{subsection.5.6}
+\contentsline {subsubsection}{\numberline {5.5.1}Quellen f\"ur Games}{11}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Erstellung und Bearbeitung von Spielen und Anwendungen}{12}{subsubsection.5.5.2}
+\contentsline {subsection}{\numberline {5.6}360\IeC {\textdegree }-Inhalte in React360}{12}{subsection.5.6}
 \contentsline {section}{\numberline {6}Software Entwicklung von VR-Systemen}{13}{section.6}
 \contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{13}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}VR im Browser}{13}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}WebVR + Mobile VR: VR im Browser}{13}{subsection.6.2}
 \contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{13}{subsubsection.6.2.1}
 \contentsline {subsubsection}{\numberline {6.2.2}React360}{13}{subsubsection.6.2.2}
 \contentsline {subsubsection}{\numberline {6.2.3}Three.js}{13}{subsubsection.6.2.3}

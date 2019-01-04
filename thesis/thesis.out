@@ -46,42 +46,44 @@
 \BOOKMARK [3][]{subsubsection.5.4.1}{Quellen f\374r 360\260-Sounds}{subsection.5.4}% 46
 \BOOKMARK [3][]{subsubsection.5.4.2}{Erstellung und Bearbeitung von 360\260-Sounds}{subsection.5.4}% 47
 \BOOKMARK [2][]{subsection.5.5}{Virtual Reality Spiele und Anwendungen}{section.5}% 48
-\BOOKMARK [2][]{subsection.5.6}{360\260-Inhalte in React360}{section.5}% 49
-\BOOKMARK [1][]{section.6}{Software Entwicklung von VR-Systemen}{}% 50
-\BOOKMARK [2][]{subsection.6.1}{Native VR-Applikationen}{section.6}% 51
-\BOOKMARK [2][]{subsection.6.2}{VR im Browser}{section.6}% 52
-\BOOKMARK [3][]{subsubsection.6.2.1}{A-Frame}{subsection.6.2}% 53
-\BOOKMARK [3][]{subsubsection.6.2.2}{React360}{subsection.6.2}% 54
-\BOOKMARK [3][]{subsubsection.6.2.3}{Three.js}{subsection.6.2}% 55
-\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 56
-\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 57
-\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 58
-\BOOKMARK [2][]{subsection.7.3}{Grundstruktur}{section.7}% 59
-\BOOKMARK [2][]{subsection.7.4}{Lehrer-Applikation}{section.7}% 60
-\BOOKMARK [3][]{subsubsection.7.4.1}{Verbundene Ger\344te}{subsection.7.4}% 61
-\BOOKMARK [3][]{subsubsection.7.4.2}{Hineinladen von Inhalten}{subsection.7.4}% 62
-\BOOKMARK [3][]{subsubsection.7.4.3}{Controls}{subsection.7.4}% 63
-\BOOKMARK [2][]{subsection.7.5}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 64
-\BOOKMARK [2][]{subsection.7.6}{QR-Code Fenster}{section.7}% 65
-\BOOKMARK [2][]{subsection.7.7}{Sch\374ler-App}{section.7}% 66
-\BOOKMARK [3][]{subsubsection.7.7.1}{Eingabe des Namens}{subsection.7.7}% 67
-\BOOKMARK [3][]{subsubsection.7.7.2}{Anzeigen von 360\260-Fotos}{subsection.7.7}% 68
-\BOOKMARK [3][]{subsubsection.7.7.3}{Abspielen von 360\260-Videos}{subsection.7.7}% 69
-\BOOKMARK [3][]{subsubsection.7.7.4}{Anzeigen von 3D-Modellen}{subsection.7.7}% 70
-\BOOKMARK [3][]{subsubsection.7.7.5}{Abspielen von Videos mit Ton}{subsection.7.7}% 71
-\BOOKMARK [3][]{subsubsection.7.7.6}{WebVR Polyfill}{subsection.7.7}% 72
-\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 73
-\BOOKMARK [2][]{subsection.8.1}{Urspr\374nglich geplanter Ablauf der Studie}{section.8}% 74
-\BOOKMARK [3][]{subsubsection.8.1.1}{Ablauf der Studie}{subsection.8.1}% 75
-\BOOKMARK [3][]{subsubsection.8.1.2}{Freigabe Kulturministerium}{subsection.8.1}% 76
-\BOOKMARK [2][]{subsection.8.2}{Qualitative Nutzerstudie}{section.8}% 77
-\BOOKMARK [3][]{subsubsection.8.2.1}{Fragebogen}{subsection.8.2}% 78
-\BOOKMARK [3][]{subsubsection.8.2.2}{Erkenntnisse}{subsection.8.2}% 79
-\BOOKMARK [2][]{subsection.8.3}{Online-Umfrage}{section.8}% 80
-\BOOKMARK [1][]{section.9}{Ausblick}{}% 81
-\BOOKMARK [2][]{subsection.9.1}{Weiterentwicklungen an VR-Ger\344ten}{section.9}% 82
-\BOOKMARK [2][]{subsection.9.2}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 83
-\BOOKMARK [3][]{subsubsection.9.2.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.2}% 84
-\BOOKMARK [3][]{subsubsection.9.2.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.2}% 85
-\BOOKMARK [3][]{subsubsection.9.2.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.2}% 86
-\BOOKMARK [3][]{subsubsection.9.2.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.2}% 87
+\BOOKMARK [3][]{subsubsection.5.5.1}{Quellen f\374r Games}{subsection.5.5}% 49
+\BOOKMARK [3][]{subsubsection.5.5.2}{Erstellung und Bearbeitung von Spielen und Anwendungen}{subsection.5.5}% 50
+\BOOKMARK [2][]{subsection.5.6}{360\260-Inhalte in React360}{section.5}% 51
+\BOOKMARK [1][]{section.6}{Software Entwicklung von VR-Systemen}{}% 52
+\BOOKMARK [2][]{subsection.6.1}{Native VR-Applikationen}{section.6}% 53
+\BOOKMARK [2][]{subsection.6.2}{WebVR + Mobile VR: VR im Browser}{section.6}% 54
+\BOOKMARK [3][]{subsubsection.6.2.1}{A-Frame}{subsection.6.2}% 55
+\BOOKMARK [3][]{subsubsection.6.2.2}{React360}{subsection.6.2}% 56
+\BOOKMARK [3][]{subsubsection.6.2.3}{Three.js}{subsection.6.2}% 57
+\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 58
+\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 59
+\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 60
+\BOOKMARK [2][]{subsection.7.3}{Grundstruktur}{section.7}% 61
+\BOOKMARK [2][]{subsection.7.4}{Lehrer-Applikation}{section.7}% 62
+\BOOKMARK [3][]{subsubsection.7.4.1}{Verbundene Ger\344te}{subsection.7.4}% 63
+\BOOKMARK [3][]{subsubsection.7.4.2}{Hineinladen von Inhalten}{subsection.7.4}% 64
+\BOOKMARK [3][]{subsubsection.7.4.3}{Controls}{subsection.7.4}% 65
+\BOOKMARK [2][]{subsection.7.5}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 66
+\BOOKMARK [2][]{subsection.7.6}{QR-Code Fenster}{section.7}% 67
+\BOOKMARK [2][]{subsection.7.7}{Sch\374ler-App}{section.7}% 68
+\BOOKMARK [3][]{subsubsection.7.7.1}{Eingabe des Namens}{subsection.7.7}% 69
+\BOOKMARK [3][]{subsubsection.7.7.2}{Anzeigen von 360\260-Fotos}{subsection.7.7}% 70
+\BOOKMARK [3][]{subsubsection.7.7.3}{Abspielen von 360\260-Videos}{subsection.7.7}% 71
+\BOOKMARK [3][]{subsubsection.7.7.4}{Anzeigen von 3D-Modellen}{subsection.7.7}% 72
+\BOOKMARK [3][]{subsubsection.7.7.5}{Abspielen von Videos mit Ton}{subsection.7.7}% 73
+\BOOKMARK [3][]{subsubsection.7.7.6}{WebVR Polyfill}{subsection.7.7}% 74
+\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 75
+\BOOKMARK [2][]{subsection.8.1}{Urspr\374nglich geplanter Ablauf der Studie}{section.8}% 76
+\BOOKMARK [3][]{subsubsection.8.1.1}{Ablauf der Studie}{subsection.8.1}% 77
+\BOOKMARK [3][]{subsubsection.8.1.2}{Freigabe Kulturministerium}{subsection.8.1}% 78
+\BOOKMARK [2][]{subsection.8.2}{Qualitative Nutzerstudie}{section.8}% 79
+\BOOKMARK [3][]{subsubsection.8.2.1}{Fragebogen}{subsection.8.2}% 80
+\BOOKMARK [3][]{subsubsection.8.2.2}{Erkenntnisse}{subsection.8.2}% 81
+\BOOKMARK [2][]{subsection.8.3}{Online-Umfrage}{section.8}% 82
+\BOOKMARK [1][]{section.9}{Ausblick}{}% 83
+\BOOKMARK [2][]{subsection.9.1}{Weiterentwicklungen an VR-Ger\344ten}{section.9}% 84
+\BOOKMARK [2][]{subsection.9.2}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 85
+\BOOKMARK [3][]{subsubsection.9.2.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.2}% 86
+\BOOKMARK [3][]{subsubsection.9.2.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.2}% 87
+\BOOKMARK [3][]{subsubsection.9.2.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.2}% 88
+\BOOKMARK [3][]{subsubsection.9.2.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.2}% 89
