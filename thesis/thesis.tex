@@ -83,8 +83,14 @@ Verantw. Hochschullehrer: & Prof. Heinrich Hußmann
 
 \clearpage
 \section*{Zusammenfassung}
+In der folgenden Arbeit wurden aktuelle VR-Headsets verglichen und nach Preissegmenten und Anwendungsfunktionen eingeordnet. Zudem wurde bisher existierende Software, die Virtual Reality für den Schulunterricht zugänglich macht diskutiert und bewertet und auf die Challenges eingegangen, die Virtual Reality-Systeme generell und im Bezug auf die Nutzung im Schulunterricht momentan haben.
+Weiterhin wurde in der Arbeit auf die verschiedenen Inhalte für VR-Systeme eingegangen, welche Quellen es für diese Inhalte gibt und wie sie bearbeitet und selbst erstellt werden können.
 
-Kurzzusammenfassung der Arbeit, maximal 250 Wörter.
+Anschließend wurde basierend auf den zuvor erörterten Anforderungen an eine Software, die Lehrkräfte im Unterricht nutzen können, um 360°-Inhalte zu zeigen, VRClassroom entwickelt. Ein zwei-teiliges System, mit dem der Lehrer in eine App auf seinem Computer Inhalte hineinladen kann, die dann in einer Web-App auf VR-Brillen gezeigt werden. Die Lehrkräfte führen dabei das komplette VR-Erlebnis für die Schüler und können 360°-Fotos und -Videos hineinladen, Markierungen setzen und das Video synchronisiert für alle abspielen und pausieren. Außerdem können auch 3D-Modelle in die App geladen werden, die die Lehrkraft dann je nach Bedarf skalieren und drehen kann und an interessanten Stellen Markierungen setzen kann. Um zu sehen, welche Geräte verbunden sind, wird in der Lehrer-App ein Liste mit allen Geräten mit einem Aktivitätsindikator angezeigt. 
+
+Anschließend wurde eine Online-Befragung mit Lehrkräften durchgeführt, bei der die Teilnehmer ein Video gezeigt wurde, das die Nutzung von VRClassroom erklärt, zu dem sie nachfolgend einige Fragen beantworteten. Die Mehrheit der Teilnehmer war dem System gegenüber sehr aufgeschlossen und konnte sich gut vorstellen VRClassroom zukünftig im Unterricht zu verwenden, um 360°-Inhalte zu zeigen.
+
+Abschließend wurde diskutiert wie Zukunft von Virtual Reality im Schulunterricht aussehen könnte und wie VRClassroom weiterentwickelt werden könnte, um die Bedürfnisse von Lehrkräfte noch besser zu erfüllen beziehungsweise welche weiteren Funktionen das System noch interessanter machen würden.
 
 \selectlanguage{english}
 \section*{Abstract}
@@ -93,9 +99,7 @@ Short abstract of the work, maximum of 250 words.
 
 \selectlanguage{ngerman}
 \clearpage
-\section*{Aufgabenstellung}
 
-Kopie der Original-Aufgabenstellung
 
 \vfill % Sorgt dafür, dass das Folgende an das Seitenende rutscht
 
@@ -143,10 +147,10 @@ sowie alle benutzten Quellen und Hilfsmittel angegeben habe.
 \section{Existierende VR-Hardware-Systeme}
 Es gibt inzwischen eine große Zahl verschiedener VR-Hardware-Systeme, die sich in drei Gruppen mit unterschiedlichen Anwendungsszenarien unterteilen: Die Computer-gestützten VR-Systeme, die Stand-alone VR-Systeme und die Smartphone-gestützten VR-Systeme.
 
-\subsection{Qualitätsmerkmale von VR-Systemen}
+\subsection{Merkmale von VR-Systemen}
 Um die verschiedenen VR-Hardware-Systeme einordnen zu können, gibt es einige Merkmale, auf die ein Käufer achten sollte. Denn die verschiedenen Headsets sind für unterschiedliche Anwendungsszenarien entwickelt worden, sodass ein potenzieller Käufer zuerst entscheiden sollte wie er das VR-Headset einsetzen möchte.
 
-Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Displaygröße und -auflösung, die Frequenz des Displays, Field of View, Rechenleistung und Gewicht des Headsets, die verwendete Trackingmethode, die mitgelieferten Controller beziehungsweise mögliche Inputmethoden, das Gewicht des Headsets und der Verkaufspreis.
+Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Displaygröße und -auflösung, die Frequenz des Displays, Field of View, Rechenleistung und Gewicht des Headsets, die verwendete Tracking-Methode, die mitgelieferten Controller beziehungsweise mögliche Input-Methoden, das Gewicht des Headsets und der Verkaufspreis.
 
 \subsubsection{Degrees of Freedom}
 3DoF/ 6DoF
@@ -165,10 +169,10 @@ Welche Chips: CPU \& GPU ?
 
 
 \subsubsection{Inputmethoden}
-Wie in Kapitel XXX (hier Ref reinfügen) beschrieben, gibt es drei grundsätzliche Input-Methoden für VR-Headsets: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt, das Auslösen von Touch-Events auf dem Display des VR-Headsets und Voice-Input. 
+Wie in Kapitel XXX (hier Ref einfügen) beschrieben, gibt es drei grundsätzliche Input-Methoden für VR-Headsets: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt, das Auslösen von Touch-Events auf dem Display des VR-Headsets und Voice-Input. 
 
-Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Toch-Event auf dem Display auszulösen.
-(Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Puznkt verbunden werden, um dem Nutzer sinvvolen Input zu erlauben.
+Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Touch-Event auf dem Display auszulösen.
+(Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Punkt verbunden werden, um dem Nutzer sinnvollen Input zu erlauben.
 
 Gaze Input? (-> EyeVR)
 
@@ -183,20 +187,58 @@ Trackingmethode: kein tracking/ inside out/ Sensoren im Raum
 \subsubsection{Preis}
 Die Preise sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
 
+
+\subsubsection{Liste Quellen etc}
+% HTC Vive: https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD_BwE#vive-spec
+Augenabstand:	Einstellung der Pupillendistanz und des Objektivabstands
+Sensoren:	SteamVR Tracking, G-Sensor, Gyroskop, Nähesensor
+Controller:	Multifunktions-Trackpad, Greifknöpfe, zweistufiger Abzug, Systemknopf, Menütaste
+Outside Tracking, Kamera in Headset
+% Preis: https://store.eu.vive.com/store?Action=DisplayPage&Locale=de_DE&SiteID=htcemea&id=ThreePgCheckoutShoppingCartPage
+
+Oculus Rift: https://www.vrbound.com/headsets/oculus/rift
+Preis: Oculus.com/rift
+
+Playstation VR: https://www.vrbound.com/headsets/sony/playstation-vr, https://www.playstation.com/de-de/explore/playstation-vr/tech-specs/
+
+HTC Vive Focus: https://www.vive.com/cn/product/vive-focus-en/
+
+Oculus Go: https://www.vrbound.com/headsets/oculus/go
+Sensoren: Orientational Tracking
+has no IPD adjustment
+
+
+Oculus Quest: https://uploadvr.com/oculus-quest-specs-price-release-date/
+has an IPD adjustment
+Oculus says Quest?s weight isn?t locked in just yet, but presently it?s about 100 grams heavier than the Rift, which would put it around 570 grams
+
+Mirage Solo: https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-mirage-solo/Mirage-Solo/p/ZZIRZRHVR01
+Preis 400\$
+General Usage: 2.5 hours
+Dimensions: 204 mm x 269.5 mm x 179.86 mm
+Sensoren: P-Sensor, Gyroscope, Accelerometer, Magnetometer
+Controller: 3DoF Daydream Motion Controller
+
+% Google Cardboard: https://store.google.com/product/google_cardboard
+
+% Samsung Gear VR: https://www.samsung.com/de/wearables/gear-vr-r324/SM-R324NZAADBT/?cid=de_ppc_google_im-wearables-gearvr-q3restructured_20180720_samsungvr-broad&tmcampid=7&tmad=c&tmplaceref=c_DE_IMECOM_Warm_Brand_GearVR_Broad&tmclickref=b_%2Bsamsung%20%2Bvr&gclid=EAIaIQobChMIpLnFnuvC3wIVCKQYCh0XVweYEAAYASAAEgLilfD_BwE
+
+% Google Daydream View: https://store.google.com/product/google_daydream_view_specs
+
+
 \begin{table}[]
 %\begin{tabular}{l|l|l|l|l|l}
 \begin{tabu} to \textwidth {XXXXXX}
 \textbf{VR-Headset} & HTC Vive & Oculus Rift & Playstation~VR & HTC Vive \newline Focus & Oculus Go \\
 \hline
-\textbf{DoF} & 3Dof? & gut &hoch & weit & hoch   \\
-\textbf{Display} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Frequenz} & 3Dof? & gut &hoch & weit & hoch   \\
-\textbf{Field~of~View} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Rechenleistung } & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Inputmethoden } & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Tracking} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Gewicht} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Preis} & 3Dof? & gut &hoch & weit & hoch  
+\textbf{DoF} & 3Dof? & gut &hoch & weit & 3DoF   \\
+\textbf{Display} & 1080 x 1200 Pixel pro Auge (2160 x 1200 Pixel zusammen), Dual AMOLED 3,6?? diagonal & 2160x1200, 3.5in, OLED  & 5.7in, OLED, 1920x1080 & weit & 2560x1440  \\
+\textbf{Frequenz} & 90 Hz & 90 hz & 120 hz & weit & 60-72Hz   \\
+\textbf{Field~of~View} & 110° & 100 ° & 100 ° & weit & 100°  \\
+\textbf{Inputmethoden } & 3Dof? & Oculus Touch, Xbox One Controller &hoch & weit & Oculus Go Controller  \\
+\textbf{Tracking} & 3Dof? & Accelerometer, Gyroscope, Magnetometer & Accelerometer, Gyroscope & weit & orientational  \\
+\textbf{Gewicht} & h & 380-470g & 610g & weit & 468g  \\
+\textbf{Preis} & 599 Euro & 449 Euro &hoch & weit & 199 Euro 
 \end{tabu}
 %\end{tabular}
 
@@ -205,15 +247,14 @@ Die Preise sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. 
 \begin{tabu} to \textwidth {XXXXXX}
 \textbf{VR-Headset} & Oculus Quest & Lenovo \newline Mirage Solo & Google \newline Cardboard & Samsung \newline Gear VR & Google \newline Daydream  \\
 \hline
-\textbf{DoF} & 3Dof? & gut &hoch & weit & sechs  \\
-\textbf{Display} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Frequenz} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Field~of~View} & 3Dof? & gut &hoch & weit & hoch   \\
-\textbf{Rechenleistung } & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Inputmethoden } & 3Dof? & gut &hoch & weit & hoch \\
-\textbf{Tracking} & 3Dof? & gut &hoch & weit & hoch   \\
-\textbf{Gewicht} & 3Dof? & gut &hoch & weit & hoch  \\
-\textbf{Preis} & 3Dof? & gut &hoch & weit & hoch  
+\textbf{DoF} & 6 DoF & 6DoF &hoch & weit & sechs  \\
+\textbf{Display} & 1600 x 1440 per eye, OLED  & gut & 4 bis 6 Zoll, hängt von genutztem Smartphone ab & hängt von genutztem Smartphone ab & hängt von genutztem Smartphone ab  \\
+\textbf{Frequenz} & 72Hz & gut & hängt von genutztem Smartphone ab & hängt von genutztem Smartphone ab & hängt von genutztem Smartphone ab  \\
+\textbf{Field~of~View} & 3Dof? & gut & abhängig von Smartphone & 101° & abhängig von Smartphone \\
+\textbf{Inputmethoden } & 3Dof? & gut & Touch-Taste an Cardboard & Gear VR Controller & Daydream Controller \\
+\textbf{Tracking} & 3Dof? & gut & abhängig von Smartphone & Beschleunigungssensor, Lagesensor, Annäherungssensor + abhängig von Smartphone & abhängig von Smartphone   \\
+\textbf{Gewicht} & 3Dof? & 645g & 96 g & 345g & 261 g  \\
+\textbf{Preis} & 399 Dollar& 400 Dollar  & 20 Euro & weit & hoch  
 
 \end{tabu}
   \caption{Übersicht  der Merkmale der verschiedenen VR-Headsets}~\label{tab:tableage}
@@ -230,6 +271,8 @@ Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit ein
 \subsubsection{HTC Vive}
 \subsubsection{HTC Vive Pro}
 \subsubsection{Playstation VR}
+
+
 \subsection{Stand-alone VR-Hardware}
 Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, Oculus Quest oder Google Daydream. Es handelt sich hierbei um vollumfängliche Systeme, die ohne weiteres Equipment auskommen und auch keinen Computer benötigen. Da sie mit einem Akku betrieben werden, ist die Betriebsdauer allerdings eingeschränkt und auch die Rechenleistung ist deutlich geringer als die der Computer-gestützten Systeme.
 
@@ -248,6 +291,11 @@ Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle S
 \cleardoublepage % Neue rechte Seite anfangen
 
 \section{Aktuelle Einsatzgebiete von VR}
+medizin
+Gaming
+Forschung
+verschiedene Therapien zB Antgsttherapien
+
 \subsection{3D in VR}
 WebVR macht das schon.
 Dadurch muss die Szene doppelt gerendert werden.
@@ -255,15 +303,21 @@ Wie entsteht 3d generell?
 Augenabstand
 \subsection{Eingabemethoden in VR}
 Controller
-Voice Controll
+Voice Control
 
 \subsection{Existierende VR-Systeme im Bildungsbereich}
 Google Expeditions
 
 \cleardoublepage % Neue rechte Seite anfangen
 \section{Aktuelle Challenges an VR-Systemen}
+5 Major Challenges in VR: https://channels.theinnovationenterprise.com/articles/5-major-challenges-of-vr-industry
+
 Hier wird gerade besonders daran geforscht oder das gibt es noch nicht, ist aber sehr gewünscht.
-\subsection{Motion Sickness}
+\subsection{Virtual Reality Sickness}
+Umfrage auf reddit: https://www.strawpoll.me/12015620/r
+Unterschied zu motion sickness
+Symptome
+Lösungen?
 
 \subsection{Mindestalter zur Nutzung von VR-Systemen}
 Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in ~\ref{tab:table1} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
@@ -284,7 +338,15 @@ Zudem wird für die Nutzung der HTC Vive ein HTC Account benötigt, der laut HTC e
 In ihren FAQs gibt Sony an, dass man zur Nutzung ihrer Playstation VR Konsole mindestens zwölf Jahre oder älter sein sollte. Weitere Angaben oder Gründe dieses Mindestalter sind auch hier nicht zu finden. \cite{SonyEntertainmentLLC2017}
 \bigskip
 
+Gegenüber all der Warnungen der Geräte-Hersteller gibt Martin Banks, Professor of Optometry, Vision Science, Psychologie, and Neuroscience an der University of California in Berkeley in einem Interview im Frühling 2016 an, dass er ``no concrete evidence that a child of a certain age was somehow adversely affected by wearing a VR headset,'' [keine konkreten Beweise, dass ein Kind in einem gewissen Alter durch das Tragen von VR-Brillen negativ beeinflusst wurde] gefunden hat. Er ist überzeugt, dass die Hersteller der VR-Headsets die Nutzung durch Kinder ausschließen, um sicher sein zu können, dass nicht später bekannt werdende Probleme bei Kindern, die VR-Headsets nutzen, ihnen angelastet werden können. 
 
+Weiter gibt er an, dass die Angst, dass die Entwicklung des Auges negativ beeinflusst wird im Gegensatz zur Nutzung von Büchern oder Smartphones viel unproblematischer ist, das durch die in die VR-Brillen eingebauten Optiken das Auge gar nicht auf eine so nahe Sache fokussiert, sondern auf weiter entfernte und somit keine Schäden der Augen nach sich zieht. 
+
+Banks sieht als Gefahren lediglich die gleichen, die auch für Erwachsene bestehen: Das sind hauptsächlich Virtual Reality Sickness, auch bekannt als Cybersickness, und die Gefahr mit Personen oder Gegenständen im Raum zu kollidieren, während das VR-Headset getragen wird.  Ansonsten bewertet er die Nutzung der VR-Brillen von Kindern unproblematisch. \cite{Hill2016}
+
+\bigskip
+
+Momentan gibt es keine veröffentlichten Forschungsarbeiten zu den Gefahren für Kinder bei der Nutzung von VR-Brillen, dagegen sind viele Arbeiten zu finden, die VR-Systeme in der Therapie von verhaltensauffälligen, lernverzögerten oder behinderten Kindern erfolgreich einsetzen. Es gibt beispielsweise Arbeiten, die .... (HIER NOCH GUTE BEISPIELE RAUSSUCHEN)
 
 
 \begin{table}[]
@@ -301,29 +363,43 @@ Google Cardboard & keine Angabe & nur unter Aufsicht eines Erwachsenen
 \end{table}
 
 
-\begin{itemize}
-  \item Interview with Martin Banks, Professor of Optometry, Vision Science, Psychology, and Neuroscience at the University of California, Berkeley: Manufacturers say 12/13+, but not real problems found for younger children until now (23.04.26) (https://www.digitaltrends.com/virtual-reality/is-vr-safe-for-kids-we-asked-the-experts/)
-\end{itemize}
-
-
 
 \cleardoublepage % Neue rechte Seite anfangen
 \section{360°-Inhalte}
+Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual Reality Erlebnis eine erhebliche Rolle. Nur wenn die gezeigten Inhalte richtig in der 360°-Umgebung dargestellt werden bringt die Darstellung Nutzung von VR-Headsets die gewünschte Immersion.
+
+Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
+
 \subsection{360°-Fotos}
-\subsection{360°-Videos}
-\subsection{3D-Modelle}
-\subsection{360° Sound}
-\subsection{Quellen für 360°-Inhalte}
 \subsubsection{Quellen für 360°-Fotos}
-\subsubsection{Quellen für 360°-Video}
-\subsubsection{Quellen für 360°-Sounds}
+\subsubsection{Erstellung und Bearbeitung von 360°-Fotos}
+\subsection{360°-Videos}
+\subsubsection{Quellen für 360°-Videos}
+\subsubsection{Erstellung und Bearbeitung von 360°-Videos}
+\subsection{3D-Modelle}
 \subsubsection{Quellen für 3D-Modellen}
-\subsection{Erstellen von 360°-Inhalten}
-\subsection{Bearbeiten von 360°-Inhalten}
+\subsubsection{Erstellung und Bearbeitung von 3D-Modellen}
+\subsection{360° Sound}
+\subsubsection{Quellen für 360°-Sounds}
+\subsubsection{Erstellung und Bearbeitung von 360°-Sounds}
+\subsection{Virtual Reality Spiele und Anwendungen}
 \subsection{360°-Inhalte in React360}
 
 
 %\_____________________________________________________________________
+
+\cleardoublepage
+\section{Software Entwicklung von VR-Systemen}
+\subsection{Native VR-Applikationen}
+C++
+\subsection{VR im Browser}
+\subsubsection{A-Frame}
+\subsubsection{React360}
+\subsubsection{Three.js}
+
+%\_____________________________________________________________________
+
+
 
 \cleardoublepage
 \section{Software Projekt: VRClassroom}
@@ -465,6 +541,9 @@ Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender 
 \cleardoublepage
 
 \section{Nutzerstudie und Evaluation}
+
+
+\subsection{Ursprünglich geplanter Ablauf der Studie}
 Da das System speziell für die Nutzung im Schulunterricht entwickelt wurde, wurde auch die Nutzerstudie in diesem Szenario durchgeführt. Dadurch wurde die eigentliche Durchführung der Studie deutlich erschwert, denn viele Lehrer konnten trotz Interesse keine Zeit für die Durchführung der Studie in ihren Unterrichtsstunden freimachen und zudem musste Inhalte gefunden werden, die sich für den Schulunterricht eignen und ein Thema für eine Schulstunde ergeben.
 
 Insgesamt haben sich XXX Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassroom System auszuprobieren und im Anschluss einen Fragebogen auszufüllen. 
@@ -478,15 +557,33 @@ Der Rechner, auf dem das Programm installiert war, wurde den Lehrkräften bereitg
 Da einige Schulen aber teilweise getrennte Netzwerke für Lehrergeräte und Schülergeräte haben oder Websocket-Verbindungen zwischen den Geräten unterdrücken, wurde für die Studie ein extra Netzwerk genutzt, um diese Probleme zu umgehen.
 Dafür wurde im Klassenzimmer ein Router aufgestellt, der ein offenes WLAN eröffnete, mit dem sich alle Geräte verbanden. Dieses WLAN war nicht mit dem Internet verbunden und nur für den Zweck des reibungslosen Ablaufs der Studie verwendet. 
 
-\subsection{Ablauf der Studie}
+\subsubsection{Ablauf der Studie}
 Für die Durchführung der Studie war ein Zeitrahmen von 15 bis 20 Minuten veranschlagt. In dieser Zeit sollte die Lehrkraft die App starten, sich alle Schüler-Geräte damit verbinden und die Lehrkraft die eigentlichen Inhalte präsentieren.
 
 Damit alle Studienteilnehmer, Lehrer und Schüler gleichermaßen, die gleichen Erlebnisse haben und sich zu allen Funktionen des Systems eine Meinung bilden können, hatte jede Lehrkraft ein vollständiges Set an Inhalten mit jeweils mindestens einem 360°-Fotos, einem 360°-Video und einem 3D-Modell.
 Da die Studie in dem WLAN ohne Internetverbindung durchgeführt wurde konnte die Funktion des Ladens von Google Streetview-Panoramas nicht getestet werden. Dies hätte allerdings nur für die Lehrkraft einen Unterschied bedeutet, da es sich für die Schüler wie jedes andere 360°-Foto verhält.
 
-\subsection{Fragebogen}
+\subsubsection{Freigabe Kulturministerium}
+Da alle Studien, die an Schulen gemacht werden, einer Freigabe des Kultusministeriums bedürfen, wurde im Vorfeld der Studie beim Kultusministerium eine solche Freigabe beantragt. Für den Antrag werden alle Fragebögen und der gesamte Ablauf der Studie an das Kultusministerium zur Prüfung vorgelegt. Das Kultusministerium hat die Durchführung von Studien beschränkt, um den Datenschutz der Schülerinnen und Schüler zu sichern. Da allerdings in der Studie nur die Lehrkräfte befragt werden und die Fragebögen komplett anonym gehalten sind, sind die Daten der Schüler zu keinem Zeitpunkt in Gefahr.
 
-\subsection{Erkenntnisse}
+Leider wurde der Antrag nie beantwortet, sodass die gesamte Studie kurzfristig abgesagt werden musste. Es hatten sich bereits 15 Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassroom System auszuprobieren und im Anschluss den Fragebogen zu beantworten, die sehr an dem System interessiert waren. Da das VRClassroom-System speziell für den Einsatz im Unterricht entwickelt wurde, wäre eine Nutzerstudie im Unterricht sehr sinnvoll gewesen, um abschätzen zu können, ob es im aktuellen Zustand einen guten Mehrwert bietet oder noch Anpassungen braucht um gut im Unterrichtsablauf zu funktionieren.
+
+\subsection{Qualitative Nutzerstudie}
+\subsubsection{Fragebogen}
+\subsubsection{Erkenntnisse}
+
+\subsection{Online-Umfrage}
+Um die Meinung möglichst vieler verschiedener Lehrkräfte zum entwickelten VRClassroom System zu erfahren, wurde neben der qualitativen Studie, in der die Studienteilnehmer das System ausprobieren und im Anschluss Feedback geben konnten, noch eine Online-Befragung von Lehrkräften in Bayern durchgeführt. 
+
+Dafür wurde ein Video produziert, welches die Idee und Nutzung von VRClassroom erklärt und die einzelnen Funktionen zeigt, die die App anbietet. Im Anschluss haben die teilnehmenden Lehrkräfte einen kurzen Fragebogen ausgefüllt.
+
+\begin{itemize}
+  \item Teilnehmer: Anzahl, geschlechterverteilung, Alter, Schulen
+  \item Fragen der Studie
+  \item Antworten der Lehrer
+  \item Schlüsse daraus
+\end{itemize}
+
 
 
 %______________________________________________________________________
@@ -495,9 +592,31 @@ Da die Studie in dem WLAN ohne Internetverbindung durchgeführt wurde konnte die 
 \section{Ausblick}
 \subsection{Weiterentwicklungen an VR-Geräten}
 \subsection{Mögliche Weiterentwicklungen an VRClassroom}
+
+
+\subsubsection{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}
+Vorteile/ Probleme
+
+\subsubsection{Skalierung von 3D-Modellen auf echte Größe}
+Um den Schülern zu vermitteln wie groß beziehungsweise klein die Dinge in echt sind, die gerade besprochen werden, könnte eine Funktion in der Lehrer-App eingefügt werden, die die 3D-Modelle auf Originalgröße skaliert. Dazu müsste selbstverständlich alle 3D-Modelle in Originalgröße vorliegen, was nur sehr selten der Fall ist, da diese Funktion für die meisten Verwendungszwecke nicht benötigt wird und daher einfach unbeachtet bleibt.
+
+Um die gezeigten Inhalte gut zu begreifen und auch in der echten Welt einschätzen zu können, würden Schüler allerdings sehr davon profitieren diesen Einblick zu haben. Denn erst wenn man direkt davor steht, kann man begreifen wie groß der Eiffelturm ist oder wie klein eine extrem giftige Spinne wie die schwarze Witwe in Wahrheit ist.
+
+Wie schon erwähnt müssen dazu zum einen die Modelle in der richtigen Größe vorliegen, aber zum anderen müsste auch die VR-Classroom-App angepasst werden, um diese Funktion sinnvoll zu erfüllen. Wird das Modell auf Originalgröße skaliert, die kleiner ist als die Größe, in der man sie genauer betrachten würde ist das kein Problem und könnte direkt erfüllt werden. Problematisch wird die Skalierung wenn sie extrem viel größer wird als das Modell normal angesehen wird, wie zum Beispiel beim Betrachten eines Gebäudes. Wird das Modell in der App extrem groß skaliert, wird es ab einer gewissen Größe nicht mehr vollständig angezeigt und Teile abgeschnitten. Das passiert, da React360 darauf ausgelegt ist, dass die Kamera in einer Art Kugel ist, in der sie sehen kann. Das dient dazu den Rendering-Aufwand nicht zu extrem werden zu lassen. (QUELLE dafür?) Alles was die Kugel durchbricht wird nur bis zum Rand der Kugel gerendert und alles was außerhalb liegt abgeschnitten. 
+
+\subsubsection{Navigation von 3D-Modellen aus Schüler-App}
+Momentan können Schüler keinen Einfluss darauf nehmen, welchen Teil eines 3D-Modells sie sehen können und welchen nicht, da nur aus der Teacher-App gesteuert werden kann wie das Modell skaliert und gedreht wird. 
+Eine mögliche Erweiterung von VRClassroom könnte sein, dass die Schüler die 3D-Modelle selbstständig drehen und skalieren können beziehungsweise zu anderen Punkten am Modell springen können. 
+
+
 \subsubsection{Ausfragemodus: Ausgewählter Schüler setzt Markierung}
-Lehrer wählt aus Liste mit Schülern aus und dieser Schüler kann dann eine Markierung setzen
-Was bräuchte es dazu: Möglichkeit für Schüler zu navigieren im Modell, Setzen von Markierung an anvisierte Stelle
+Eine mögliche Weiterentwicklung von VRClassroom wäre eine Art ``Ausfragemodus'', bei dem die Lehrkraft aus der Liste der verbundenen Geräte eins auswählen kann, das dann eine Markierung setzen kann. Das ausgewählte Gerät hätte dann die Möglichkeit einmalig eine Markierungen zu setzen.
+
+Dafür wäre es notwendig für die Schüler-Geräte eine Möglichkeit zu geben einen Punkt auszuwählen, an dem die Markierung gesetzt werden soll. Bei der aktuellen Implementierung mit einem Smartphone in einem Google Cardboard ist das noch nicht möglich. Dazu müsste mit dem Touch-Event vom Cardboard an der aktuellen Gaze-Position des Nutzers an dieser Stelle ein Marker gesetzt werden. Mit einem Headset, das bereits einen zugehörigen Controller hat, wäre das einfacher zu lösen, da lediglich die Position des ``Rays'' des Controllers abgefragt werden müsste. 
+
+Da die Markierungen auch in der Teacher App über das iFrame mit der Student-App gesetzt werden ist die Kommunikation der Markerposition an die Teacher-App bereits implementiert und müsste nur leicht abgeändert werden. Möglicherweise wäre es gut die von Schülern gesetzten Marker noch in einer anderen Farbe darzustellen wie die der Lehrkraft, um für andere Schüler leichter erkennbar zu machen, welche Marker von welcher Person kommen. 
+
+Momentan können Schüler nicht beeinflussen wie sie 3D-Modelle sehen, sondern nur den von der Lehrkraft ausgewählten Blickwinkel. Um auch auf 3D-Modellen sinnvoll Markierungen setzen zu können wäre es dann auch sehr sinnvoll den Schülern die Möglichkeit zu geben den Blickwinkel des 3D-Modells zu verändern. 
 
 %______________________________________________________________________
 
