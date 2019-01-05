@@ -156,6 +156,11 @@ Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Di
 3DoF/ 6DoF
 Was bedeutet DoF?
 
+https://www.roadtovr.com/introduction-positional-tracking-degrees-freedom-dof/
+% https://web.archive.org/web/20111125015923/http://www.pomorci.com/Zanimljivosti/Ship's%20movements%20at%20sea.pdf
+% Springerlink: https://link.springer.com/chapter/10.1007/978-3-540-45287-4_1
+https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt4.html
+
 \subsubsection{Display}
 Maße, Auflösung, 2 einzelne/ ein großes
 Vielleicht Display und Frequenz zu einem Punkt verbinden?
@@ -225,6 +230,9 @@ Controller: 3DoF Daydream Motion Controller
 
 % Google Daydream View: https://store.google.com/product/google_daydream_view_specs
 
+
+Vergleich: https://www.vrnerds.de/vr-brillen-vergleich/
+https://upload-magazin.de/blog/25071-standalone-vr-headsets/
 
 \begin{table}[]
 %\begin{tabular}{l|l|l|l|l|l}
@@ -305,8 +313,11 @@ Augenabstand
 Controller
 Voice Control
 
-\subsection{Existierende VR-Systeme im Bildungsbereich}
+\subsection{VR-Systeme im Bildungsbereich}
 Google Expeditions
+Hier kommen noch mehr Sachen aus den Papern rein!
+
+
 
 \cleardoublepage % Neue rechte Seite anfangen
 \section{Aktuelle Challenges an VR-Systemen}
@@ -314,10 +325,17 @@ Google Expeditions
 
 Hier wird gerade besonders daran geforscht oder das gibt es noch nicht, ist aber sehr gewünscht.
 \subsection{Virtual Reality Sickness}
+https://vrodo.de/virtual-reality-laut-umfrage-haben-60-prozent-probleme-mit-vr-uebelkeit/
 Umfrage auf reddit: https://www.strawpoll.me/12015620/r
 Unterschied zu motion sickness
 Symptome
 Lösungen?
+
+https://www.ncbi.nlm.nih.gov/pubmed/6847562
+https://www.twentymilliseconds.com/post/all-about-motion-sickness/
+http://fortune.com/2018/02/06/virtual-reality-motion-sickness/
+https://www.iflscience.com/technology/turns-out-answer-virtual-reality-sickness-right-front-your-face/
+
 
 \subsection{Mindestalter zur Nutzung von VR-Systemen}
 Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in ~\ref{tab:table1} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
@@ -364,6 +382,7 @@ Google Cardboard & keine Angabe & nur unter Aufsicht eines Erwachsenen
 
 
 
+
 \cleardoublepage % Neue rechte Seite anfangen
 \section{360°-Inhalte}
 Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual Reality Erlebnis eine erhebliche Rolle. Nur wenn die gezeigten Inhalte richtig in der 360°-Umgebung dargestellt werden bringt die Darstellung Nutzung von VR-Headsets die gewünschte Immersion.
@@ -386,6 +405,10 @@ https://www.airpano.com
 Teuer, hat auch Videos
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Fotos}
+Metadaten wichtig: https://www.panotwins.de/technical/how-to-add-mandatory-photo-sphere-meta-data-to-an-equirectangular-image/
+% http://u88.n24.queensu.ca/~bogdan/#m_workspace
+https://developers.google.com/streetview/spherical-metadata
+
 \subsection{360°-Videos}
 \subsubsection{Quellen für 360°-Videos}
 \subsubsection{Erstellung und Bearbeitung von 360°-Videos}
@@ -396,9 +419,28 @@ Teuer, hat auch Videos
 \subsubsection{Quellen für 360°-Sounds}
 \subsubsection{Erstellung und Bearbeitung von 360°-Sounds}
 \subsection{Virtual Reality Spiele und Anwendungen}
+
+\subsubsection{Quellen für Games}
+HTC: SteamVR Store
+Listings für alle Geräte: https://www.wearvr.com/
+Oculus devices: https://www.oculus.com/experiences
+Playstation VR Store: https://store.playstation.com/de-de/grid/STORE-MSF75508-PLAYSTATIONVR/1
+WebVR: https://itch.io/games/tag-webvr, 
+
+\subsubsection{Erstellung und Bearbeitung von Spielen und Anwendungen}
+Unity: C\#
+Unreal Engine: C++, Blueprints
+% -> https://www.reddit.com/r/learnVRdev/comments/65cvxo/how_to_start_making_vr_games_for_beginners_what/
+
+mobile VR can be JS or native
+WebVR is JS
+Google Cardboard: Android
+
 \subsection{360°-Inhalte in 3D}
 \subsection{360°-Inhalte in React360}
-
+Photos+Videos: https://facebook.github.io/react-360/docs/photos-and-videos.html
+Audio: https://facebook.github.io/react-360/docs/audio.html
+3D-Modelle: https://facebook.github.io/react-360/docs/objects.html
 
 
 %\_____________________________________________________________________
@@ -407,7 +449,7 @@ Teuer, hat auch Videos
 \section{Software Entwicklung von VR-Systemen}
 \subsection{Native VR-Applikationen}
 C++
-\subsection{VR im Browser}
+\subsection{WebVR + Mobile VR: VR im Browser}
 \subsubsection{A-Frame}
 \subsubsection{React360}
 \subsubsection{Three.js}
