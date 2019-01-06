@@ -341,7 +341,7 @@ https://www.iflscience.com/technology/turns-out-answer-virtual-reality-sickness-
 Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in ~\ref{tab:table1} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
 \bigskip
 
-Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altergruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben.
+Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altersgruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben.
   ~\cite{FacebookTechnologiesLLC2018}
 
 Samsung geht dabei noch einen Schritt weiter und warnt vor einer Nutzung unter 13 Jahren, da sich jüngere Kinder in einer ``critical period in visual development''  ~\cite{SAMSUNG} befinden. Zudem sollen auch Kinder über 13 Jahren nur unter Aufsicht einer erwachsenen Person die Gear VR benutzen und dabei darauf achten regelmäßig Pausen zu machen. Eine lange Nutzung soll generell vermieden werden und die Kinder sollen während und nach der Nutzung beobachtet werden, ob sich ihre Fähigkeiten in der Hand-Augen-Koordination, Balance oder Multi-Tasking verschlechtern.
@@ -460,6 +460,12 @@ C++
 
 \cleardoublepage
 \section{Software Projekt: VRClassroom}
+Aufbauend auf den Erkenntnissen aus ANDEREN KAPITELN wurde im Rahmen dieser Arbeit VRClassroom entwickelt. VRClassroom ist ein zweiteiliges System, das es Lehrkräften ermöglichen soll 360°-Fotos, -Videos und 3D-Modelle im Unterricht zeigen zu können, dabei die Anzeige auf allen Geräten steuern zu können und trotzdem den Überblick in der Klasse behalten zu können. 
+
+VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Schüler-App, die über den Browser der mobilen Geräte beziehungsweise VR-Headsets erreicht werden kann.
+
+Die Lehrer-App ist eine Electron-App, die wiederum eine React-App für das Interface enthält und die Schüler-App startet. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in Javascript gehalten, nur unterschieden durch die verschiedenen Libraries Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer Creative Commons Lizenz veröffentlicht und so kann ein Entwickler schnell alle Teile des Codes verstehen ohne sich in mehrere Programmiersprachen einarbeitenzu müssen.
+
 \subsection{Nutzungsszenario und Anwendungsfokus}
 VRClassroom wurde speziell für die Nutzung in der Schule entwickelt.
 Dabei kann die Lehrkraft das VR-Erlebnis für die SchülerInnen führen und ihnen so komplexe 3-dimensionale Inhalte besser vermitteln und eine spannende neue Art des Lernens zu erleben. 
@@ -467,7 +473,7 @@ Außerdem wurde Funktionen wie etwa die Seitenleiste mit den verbundenen Geräten 
 
 Da viele Schulen noch überhaupt keine Ausrüstung an VR-Headsets haben, lag der Fokus besonders auf der Nutzung des VRClassroom Systems mit einem Smartphone in einem Google Cardboard. Allerdings wurde es bewusst so entwickelt, dass auch mit ``echten'' VR-Headsets das System problemlos weiter genutzt werden kann. So wird den Schulen ermöglicht mit einer sehr geringen Investition zu testen, ob es für sie in Frage kommt und können zu einem späteren Zeitpunkt zu einem elaborierteren Hardware-System wechseln ohne auf neue Software umsteigen zu müssen.
 
-Weitere Einsatzszenarien für VRClassroom könnten Besprechungen im Arbeitsumfeld gehen, bei denen es sich um plastische Inhalte handelt wie zum Beispiel Architekturbüros, Designagenturen oder Landschaftsgärtner handelt. Mit einem 360°-Foto oder -Video könnte der Ist-Zustand besprochen werden und anschließend die Entwürfe in 3D-Modellen vorgeführt werden. Dadurch könnten Kunden sich besser in die Entwürfe hineinversetzen und bewusster entscheiden, was sie haben möchten.
+Weitere Einsatzszenarien für VRClassroom könnten Besprechungen im Arbeitsumfeld gehen, bei denen es sich um plastische Inhalte handelt wie zum Beispiel Architekturbüros, Designagenturen oder Landschaftsgärtner. Mit einem 360°-Foto oder -Video könnte der Ist-Zustand besprochen werden und anschließend die Entwürfe in 3D-Modellen vorgeführt werden. Dadurch könnten sich Kunden besser in die Entwürfe hineinversetzen und bewusster entscheiden, was sie letztendlich haben möchten.
 
 \subsection{Anwender}
 Da an Schulen Lehrkräfte und Schülerinnen und Schüler verschiedenster Altersstufen und Leveln an Technikaffinität zu finden sind sollte die Software
@@ -523,23 +529,29 @@ Daraus lässt sich schließen, dass es sich um eine iPhone handelt, welches Safari
 	\item 360° Videos synchronisiert auf allen Geräten zeigen und play/pause aus Lehrer-App steuern
 	\item Streetview photos von locations laden und anzeigen (?)
   \end{itemize}
-  \item hält history der zuvor gezeigten Inhalte, um sie vereinfacht wiederanzuzeigen 
+  \item hält history der zuvor gezeigten Inhalte, um sie vereinfacht wieder anzuzeigen 
  \end{itemize}
 
 \subsubsection{Hineinladen von Inhalten}
 
  
 \subsubsection{Controls}
-Overlay über iFrame mit Controls, die sich je nach gezeigtem Inhalt unterscheiden:
+Wie in Grafik XXX zu sehen sind die Controls, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
+
+Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle unterscheiden sich die Bedienelemente und Funktionen, das Setzen einer Markierung ist allerdings bei allen Medientypen gegeben.
 
 \paragraph{Marker}
-3D-Modell erstellt.
-Leuchtende Farbe -> gut zu finden
-Rotation -> erweckt aufmerksamkeit
-Marker in Fotos/ Videos und auf Modellen
-Skalierung von Markern auf 3D-Modellen zu Entfernung von Kamera
-Berechnung der Markerposition im Zylinder und auf 3D Modellen: Aus Mausposition und Fenstergröße wird Strahl berechnet. 
-Bei Zylinder wird z auf festen Wert gesetzt, bei 3D Modellen Schnittpunkt mit Modell berechnet.
+Soll ein Marker gesetzt werden, muss zuerst in den ``Markierung setzen''-Modus gewechselt werden, indem in der Control Bar auf ``Marker setzen'' geklickt wird. Danach kann an beliebiger Stelle eine Markierung gesetzt werden.
+
+Um die 3D-Koordinaten des Markers zu bekommen wird mit Hilfe von Mouseposition und Fenstergröße ein Strahl berechnet, der aus der 2D-Koordinate der Mouseposition ausgeht. 
+Bei 360°-Fotos und -Videos wird die Entfernung zur Kamera auf einen festen Wert gesetzt, der so gewählt wurde, dass er gerade noch im Zylinder der Welt liegt. Mit der Entfernung zur Kamera lässt sich die 3D-Koordinate dann leicht berechnen.
+
+Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Modells mit dem virtuellen Strahl berechnet werden. 
+(Soll das wirklich rein?) In React360 gibt es momentan keine Möglichkeit auf diese Weise auf die in der 3D-Welt platzierten 3D-Modelle zuzugreifen, sodass
+
+Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
+
+Das verwendete Modell erinnert wie in Grafik YYY zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
 
 \paragraph{Video Controls}
 Länge des Videos, PLay/ Pause, Timeslider, aktuelle Zeit, Mute/Sound, Marker (nur im pausierten Zustand nutzbar)
@@ -583,7 +595,7 @@ Um die
 
 
 \subsubsection{Abspielen von Videos mit Ton}
-Da die meisten Browser das automatische Abspielen von Videos mit Ton verbieten, werden 360°-Videos von React360 standardmäßig beim erstellen des Videoplayer-Komponenten ``muted'' auf ``true'' gesetzt. Die Hersteller wollen dadurch die Ablenkungen, die beim surfen auf den Nutzer zukommen, abmildern. Erst wenn der Nutzer ein ``user gesture click'' also einen Klick auf der Website gemacht hat, darf die Tonspur automatisiert abgespielt werden. Wird versucht ein Video mit Ton abzuspielen, ohne das ein Klick gemacht wurden, wird der Videoplayer blockiert und kann gar nicht mehr abspielen. \cite{Decker2017}
+Da die meisten Browser das automatische Abspielen von Videos mit Ton verbieten, werden 360°-Videos von React360 standardmäßig beim erstellen des Videoplayer-Komponenten ``muted'' auf ``true'' gesetzt. Die Hersteller wollen dadurch die Ablenkungen, die beim surfen auf den Nutzer zukommen, abmildern. Erst wenn der Nutzer ein ``user gesture click'' also einen Klick auf der Website gemacht hat, darf die Tonspur automatisiert abgespielt werden. Wird versucht ein Video mit Ton abzuspielen, ohne dass ein Klick gemacht wurde, wird der Videoplayer blockiert und kann nicht mehr abspielen. \cite{Decker2017}
 
 Damit React360 in einer single-threaded Umgebung wie einem Webbrowser flüssig ablaufen kann und nicht durch ``blocking behavior'' irgendeiner Art das Rendern unterbrochen wird, ist eine React360-App in zwei Teile aufgeteilt: Die React-Applikation und den Code, der die React Komponenten in 3D Elemente auf dem Bildschirm umwandelt. Die App selbst läuft in einem Webworker, einem anderen Prozess als der des Hauptbrowserfensters. \cite{FacebookInc.2018}
 
@@ -592,7 +604,14 @@ Das führt dazu, das die React360-Elemente nicht als html-Elemente gelten und ein
 Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender Button über die React360-App gelegt, der bei einem Klick verschwindet, um die Erlaubnis vom Browser zu bekommen Ton abzuspielen. Wurde der Button am Schüler-Gerät geklickt wird ein flag gesetzt, dass die App Ton abspielen darf. Ob dann tatsächlich Ton beim Video abgespielt wird, kann der Lehrer aus der teacher-App einstellen. Auch dort ist das Abspielen von Ton an den Schüler-Geräten standardmäßig erst einmal abgestellt, damit der Lehrer entscheiden kann, ob er nur den Ton aus dem Rechner über Boxen für Alle abspielen möchte oder aus jedem Schüler-Gerät einzeln der Ton kommen soll.
 
 \subsubsection{WebVR Polyfill}
-% Let's talk about this!
+WebVR ist eine Javascript-API, um Virtual Reality-Inhalte im Browser anzuzeigen.\cite{WebVR} Wie in Grafik (XXX.a Icon WebVR + WebVR Screenshot) zu sehen wird auf einer Web-App, die mit WebVR angesehen werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die WebVR-Ansicht geladen werden kann. (In Grafik XXX.b zu sehen)
+WebVR teilt dafür den Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard auf. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen passen. Durch die Krümmung der Linsen wird daraus dann eine drei dimnesionale 360°-Welt, in der der Nutzer sich umsehen kann.
+
+Bisher ist weder in Chrome noch in Safari WebVR standarmäßig unterstützt. In Chrome auf Android kann es durch setzen der ``WebVR''- und ``Gamepad-Extension''-flags auf ``enabled'' eingeschaltet werden.  \cite{Jones2017}
+In Safari ist es bisher gar nicht möglich einzusetzen.
+
+Da aber VRClassroom auf allen mobilen Geräten funktionieren soll und möglichst auch keine Einstellungen auf der Nutzerseite benötigen soll, wurde ein Polyfill benutzt, um die WebVR Funktionen für die VRClassroom-App auf allen Geräten nutzen zu können. 
+Dafür 
 
 %______________________________________________________________________
 \cleardoublepage
@@ -601,20 +620,19 @@ Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender 
 
 
 \subsection{Ursprünglich geplanter Ablauf der Studie}
-Da das System speziell für die Nutzung im Schulunterricht entwickelt wurde, wurde auch die Nutzerstudie in diesem Szenario durchgeführt. Dadurch wurde die eigentliche Durchführung der Studie deutlich erschwert, denn viele Lehrer konnten trotz Interesse keine Zeit für die Durchführung der Studie in ihren Unterrichtsstunden freimachen und zudem musste Inhalte gefunden werden, die sich für den Schulunterricht eignen und ein Thema für eine Schulstunde ergeben.
+Da das System speziell für die Nutzung im Schulunterricht entwickelt wurde, sollte auch die Nutzerstudie in diesem Szenario durchgeführt werden. Dafür wurden Lehrkräfte angefragt, die dann einen Teil ihrer Unterrichtszeit für einen Test der Software verwenden wollten und im Anschluss bereit waren einen kurzen Fragebogen dazu zu beantworten.
 
-Insgesamt haben sich XXX Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassroom System auszuprobieren und im Anschluss einen Fragebogen auszufüllen. 
-Außerdem wurde den SchülerInnen die Möglichkeit gegeben ebenfalls ihre Erfahrungen mit den System in einer kurzen Online-Umfrage zu teilen, was  XXX SchülerInnen aus den ingesamt XXX SchülerInnen, die das System ausprobiert haben, auch gemacht haben.
+Insgesamt hatten sich 15 Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassroom System auszuprobieren und im Anschluss einen Fragebogen auszufüllen. 
 
 \bigskip
 
-Für den Test wurde allen SchülerInnen ein Cardboard zur Verfügung gestellt, das die Kinder mir ihrem eigenen Smartphone als VR-Brille genutzt haben. 
-Der Rechner, auf dem das Programm installiert war, wurde den Lehrkräften bereitgestellt und den Lehrkräften im Vorfeld eine kurze Einführung in die Software gegeben. 
+Für den Test sollte allen SchülerInnen ein Cardboard zur Verfügung gestellt werden, das die Kinder mir ihrem eigenen Smartphone als VR-Brille genutzt sollten. 
+Der Rechner, auf dem das Programm installiert war, sollte den Lehrkräften bereitgestellt und den Lehrkräften im Vorfeld eine kurze Einführung in die Software gegeben werden. Dies ist trotz Absage der Studie durch ein Video geschehen. Das Video wurde zudem für die Online-Umfrage benutzt. 
 
-Da einige Schulen aber teilweise getrennte Netzwerke für Lehrergeräte und Schülergeräte haben oder Websocket-Verbindungen zwischen den Geräten unterdrücken, wurde für die Studie ein extra Netzwerk genutzt, um diese Probleme zu umgehen.
-Dafür wurde im Klassenzimmer ein Router aufgestellt, der ein offenes WLAN eröffnete, mit dem sich alle Geräte verbanden. Dieses WLAN war nicht mit dem Internet verbunden und nur für den Zweck des reibungslosen Ablaufs der Studie verwendet. 
+Außerdem sollte ein Router, der ein lokales Netzwerk erstellt verwendet werden, um Restriktionen der einzelnen Schulnetzwerke zu umgehen, die den Ablauf der Studie behindern könnten.
 
-\subsubsection{Ablauf der Studie}
+\bigskip
+
 Für die Durchführung der Studie war ein Zeitrahmen von 15 bis 20 Minuten veranschlagt. In dieser Zeit sollte die Lehrkraft die App starten, sich alle Schüler-Geräte damit verbinden und die Lehrkraft die eigentlichen Inhalte präsentieren.
 
 Damit alle Studienteilnehmer, Lehrer und Schüler gleichermaßen, die gleichen Erlebnisse haben und sich zu allen Funktionen des Systems eine Meinung bilden können, hatte jede Lehrkraft ein vollständiges Set an Inhalten mit jeweils mindestens einem 360°-Fotos, einem 360°-Video und einem 3D-Modell.
