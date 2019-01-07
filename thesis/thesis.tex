@@ -24,6 +24,7 @@
 % pdflatex: Bilder in den Formaten .jpeg, .png und .pdf
 % latex: Bilder im .eps-Format
 \usepackage{graphicx}
+\usepackage{subcaption}
 
 \usepackage{fancyhdr} % Positionierung der Seitenzahlen
 \fancyhead[LE,RO,LO,RE]{}
@@ -390,6 +391,17 @@ Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual R
 Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
 
 \subsection{360°-Fotos}
+\subsubsection{Projektionen von 360°-Fotos}
+Equirectangular
+Rectilinear
+Cylindrical
+Mercator
+Circular
+Pannini/ Vedutismo
+Stereographic
+Cubemap/ Skybox
+% https://en.wikipedia.org/wiki/Skybox_(video_games)
+
 \subsubsection{Quellen für 360°-Fotos}
 Flickr-Group: https://www.flickr.com/groups/360images4schools/
 Flickr Search equirectangluar + Creative Commons: % https://www.flickr.com/search/?text=equirectangular&license=2%2C3%2C4%2C5%2C6%2C9
@@ -553,13 +565,20 @@ Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Sch
 
 Das verwendete Modell erinnert wie in Grafik YYY zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
 
-\paragraph{Video Controls}
-Länge des Videos, PLay/ Pause, Timeslider, aktuelle Zeit, Mute/Sound, Marker (nur im pausierten Zustand nutzbar)
 \paragraph{Photo Controls}
-Name des Fotos, Marker
-\paragraph{Model Controls}
-Switch: Skalieren/ Drehen, Slider zum Drehen/ Skalieren, Marker
+Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind.
 
+\paragraph{Video Controls}
+Wird ein Video gezeigt, hat die Lehrkraft mehrere unterschiedliche Funktionen in der Kontrollleiste: 
+Wie in Grafik ZZZ zu sehen sind die Elemente ähnlich wie bei bekannten Videoplayern wie Quicktime oder Netflix gehalten. Ganz links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
+Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezifische Button ist der Sound-Button, der im aktiven Zustand auf alle Geräten den Ton des Videos abspielt. Der Sound-Button ist standardmäßig deaktiviert. 
+
+Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch zurückgesetzt.
+
+\paragraph{Model Controls}
+Wie in Grafik WWWWW zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
+
+Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, dass nur auf dem Modell eine Markierung gesetzt werden kann. Wird außerhalb des 3D-Modells geklickt, wird keine Markierung gesetzt.
  
 \subsection{Kommunikation zwischen Lehrer-App und Schüler-App}
 WebSocket Server from Teacher App -> Schüler Gerät meldet sich bei Laden der URL an
@@ -569,32 +588,50 @@ Nachrichten von Schüler Geräten: visibilitychange, loading, Name
 Nachrichten von Teacher-App: Jede Veränderung des Inhalts, URL zu Inhalt
 
 \subsection{QR-Code Fenster}
-Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron App auf dem Lehrer-Computer gestartet wird. Es zeigt einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem die URL zu laden, auf der sie die Schüler-Applikation erreichen können. Der QR-Code wird dynamisch beim Öffnen der App generiert.
+Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron App auf dem Lehrer-Computer gestartet wird. Es zeigt, wie in \ref{fig:qrcode} zu sehen, einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem die URL zu laden, auf der sie die Schüler-Applikation erreichen können. Der QR-Code wird dynamisch beim Öffnen der App generiert.
 
 Für Geräte, die keine Kamera haben oder wenn das Scannen des QR-Codes fehlschlägt, wird zudem unterhalb des QR-Codes die URL angezeigt, unter der die Schüler-Applikation zu erreichen ist. 
 
 Der QR-Code wird in diesem extra Fenster generiert und angezeigt, damit die Lehrkraft dieses Fenster auf einem Beamer anzeigen kann, um den SchülerInnen den Zugang zur Schüler-App ohne umständliches URL-Abtippen zu ermöglichen.
 
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/QR-Code.png}
+  \caption{Qr-Code Fenster.}
+  \label{fig:qrcode}
+\end{figure}
+
 %% HIER SCREENSHOT QR-Code Fenster einfügen
 
 \subsection{Schüler-App}
-Um die 
+In der VRClassroom App nehmen die Schüler eine passive Rolle ein und können selbst nicht in der 3D-Welt navigieren. 
 
-\begin{itemize}
-  \item Schüler können Namen angeben, der in Lehrer-App angezeigt wird
-  \item läd die von Lehrer-App geschickten Inhalte und zeigt sie synchronisiert an
-  \item Schüler können sich in Szene umschauen und Inhalte besser erfahren
-\end{itemize}
+Die WebApp für die Schüler ist eine React360-App, sie stellt eine 3D-Welt da, in deren Mitte sich die Kamera, also der Viewport der Geräte, befindet. Sie stellt die in der Lehrer-App hineingeladenen 360°-Fotos und Videos in einer Kugel um den Viewport da, sodass die Nutzer sich in alle Richtungen umsehen können. 3D-Modelle werden in kurzer Entfernung vor dem Viewport angezeigt, als befänden sich sich im Raum vor der Person.
+
+%% Screenshot VRClassroom App?
 
 \subsubsection{Eingabe des Namens}
+Läd ein Gerät zum ersten Mal die VRClassroom-App wird dem Nutzer neben der Begrüßung, die immer angezeigt wird bevor Inhalte hineingeladen werden, eine Tastatur im VR-Raum angezeigt. Damit können die Schüler ihren Namen eingeben, der dann in der Liste der verbundenen Geräte angezeigt wird. Wird ein Smartphone als VR-Headset genutzt, muss die Tastatur mittels der Toucheingabe auf dem Display gemacht werden, bevor die WebVR Ansicht geladen wird. VR-Headsets, die einen Controller haben, können den Namen mit dem Controller auf der Tastatur tippen. 
+
+Damit die Schüler nicht jedes Mal wieder ihren Namen eingeben müssen, wird der eingegebene Name im Browser des Schüler-Gerätes gespeichert und beim erneuten Laden der VRClassroom Applikation direkt wieder an die Lehrer-App übermittelt.
+
+%% Screenshot VRClassroom App mit Tastatur + Greeting
+
 \subsubsection{Anzeigen von 360°-Fotos}
+Um 360°-Fotos in der 3D-Szene anzuzeigen lädt die React360-App das Foto von dem Link, den die Teacher-App geschickt hat und setzt sobald das gesamte Foto geladen wurde das Bild als Hintergrund der Szene. Gleichzeitig wird bei erfolgreichem Ladens des Fotos eine Nachricht an die Teacher-App geschickt, um dem Status des Geräts von ``loading'' wieder auf ``active'' zu setzen.
+Das 360°-Bild wird dazu von innen an die Kugel in der die React360-Szene ist projiziert und ergibt so durch seine equirectangulare Projektion ein unverzerrtes 360°-Bild.
+
+Das Bild wird angezeigt bis VRClassroom von der Lehrkraft beendet wird oder etwas anderes in die App hineingeladen wird.
+
 \subsubsection{Abspielen von 360°-Videos}
-\subsubsection{Anzeigen von 3D-Modellen}
+Sendet die Teacher-App die Nachricht, dass ein Video angezeigt werden soll, startet die React360-App sofort mit dem Laden des Videos und lädt soviel von dem Video wie es geht. 
+Ist eine Zeit des Videos vorgeladen, sodass React360 davon ausgeht, dass das Video ruckelfrei abgespielt werden kann, sendet wird wiederum die Nachricht, dass das Gerät aus dem ``loading''-Status wieder auf ``active'' gesetzt wird.
+Ähnlich wie bei 360°-Fotos wird das 360°-Video dann als Hintergrund-Video der Szene gesetzt, um als 360°-Video abgespielt werden zu können
 
+Die React360-App spielt das Video nicht automatisch ab, sobald genug geladen ist, sondern wartet auf das Signal der Teacher-App, um das Abspielen zu starten. Alle Funktionen werden erst ausgeführt wenn das Signal der Teacher-App kommt, die Funktion auszuführen. Zu den Funktionen zählen: Play, Pause, Springen zu einer anderen Stelle im Video und den Ton des Videos abspielen.
 
+Falls ein Schüler-Gerät sich verspätet verbindet oder ein Paket verloren gegangen ist, sendet die Teacher-App jede Sekunde eine neue Nachricht in der immer der Link zum aktuellen Video und die aktuelle Abspielposition enthalten ist. Unterscheidet sie sich mehr als eine Sekunde von der Abspielposition in der React360-App wird zu der Abspielposition, die in der Nachricht steht gesprungen.
 
-
-\subsubsection{Abspielen von Videos mit Ton}
+\subsubsection{Abspielen von Ton in Videos}
 Da die meisten Browser das automatische Abspielen von Videos mit Ton verbieten, werden 360°-Videos von React360 standardmäßig beim erstellen des Videoplayer-Komponenten ``muted'' auf ``true'' gesetzt. Die Hersteller wollen dadurch die Ablenkungen, die beim surfen auf den Nutzer zukommen, abmildern. Erst wenn der Nutzer ein ``user gesture click'' also einen Klick auf der Website gemacht hat, darf die Tonspur automatisiert abgespielt werden. Wird versucht ein Video mit Ton abzuspielen, ohne dass ein Klick gemacht wurde, wird der Videoplayer blockiert und kann nicht mehr abspielen. \cite{Decker2017}
 
 Damit React360 in einer single-threaded Umgebung wie einem Webbrowser flüssig ablaufen kann und nicht durch ``blocking behavior'' irgendeiner Art das Rendern unterbrochen wird, ist eine React360-App in zwei Teile aufgeteilt: Die React-Applikation und den Code, der die React Komponenten in 3D Elemente auf dem Bildschirm umwandelt. Die App selbst läuft in einem Webworker, einem anderen Prozess als der des Hauptbrowserfensters. \cite{FacebookInc.2018}
@@ -602,13 +639,32 @@ Damit React360 in einer single-threaded Umgebung wie einem Webbrowser flüssig ab
 Das führt dazu, das die React360-Elemente nicht als html-Elemente gelten und ein Click-Event auf einem VRButton nicht als Interaktion zählt, um die Erlaubnis zu haben Ton abzuspielen.
 
 Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender Button über die React360-App gelegt, der bei einem Klick verschwindet, um die Erlaubnis vom Browser zu bekommen Ton abzuspielen. Wurde der Button am Schüler-Gerät geklickt wird ein flag gesetzt, dass die App Ton abspielen darf. Ob dann tatsächlich Ton beim Video abgespielt wird, kann der Lehrer aus der teacher-App einstellen. Auch dort ist das Abspielen von Ton an den Schüler-Geräten standardmäßig erst einmal abgestellt, damit der Lehrer entscheiden kann, ob er nur den Ton aus dem Rechner über Boxen für Alle abspielen möchte oder aus jedem Schüler-Gerät einzeln der Ton kommen soll.
+\subsubsection{Anzeigen von 3D-Modellen}
+
 
 \subsubsection{WebVR Polyfill}
-WebVR ist eine Javascript-API, um Virtual Reality-Inhalte im Browser anzuzeigen.\cite{WebVR} Wie in Grafik (XXX.a Icon WebVR + WebVR Screenshot) zu sehen wird auf einer Web-App, die mit WebVR angesehen werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die WebVR-Ansicht geladen werden kann. (In Grafik XXX.b zu sehen)
-WebVR teilt dafür den Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard auf. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen passen. Durch die Krümmung der Linsen wird daraus dann eine drei dimnesionale 360°-Welt, in der der Nutzer sich umsehen kann.
+WebVR ist eine Javascript-API, um Virtual Reality-Inhalte im Browser anzuzeigen. \cite{WebVR} 
 
-Bisher ist weder in Chrome noch in Safari WebVR standarmäßig unterstützt. In Chrome auf Android kann es durch setzen der ``WebVR''- und ``Gamepad-Extension''-flags auf ``enabled'' eingeschaltet werden.  \cite{Jones2017}
-In Safari ist es bisher gar nicht möglich einzusetzen.
+Wie in Grafik \ref{fig:WebVRfig}a links zu sehen wird auf einer Web-App, die mit WebVR angesehen werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die WebVR-Ansicht geladen werden kann.
+
+Wie Grafik \ref{fig:WebVRfig}b zeigt teilt WebVR dafür den Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard auf. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen passen. Durch die Krümmung der Linsen wird daraus dann eine drei dimensionale 360°-Welt, in der der Nutzer sich umsehen kann.
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{images/WebVR1.png}
+    \subcaption{``View in VR'' Button in VRClassroom.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{images/WebVR2.png}
+    \subcaption{VR-Szene mit WebVR Ansicht.}
+  \end{subfigure}
+  \caption{VR-Szene mit und ohne WebVR Ansicht.}
+  \label{fig:WebVRfig}
+\end{figure}
+
+Bisher ist weder in Chrome noch in Safari WebVR standardmäßig unterstützt. In Chrome auf Android kann es durch setzen der ``WebVR''- und ``Gamepad-Extension''-flags auf ``enabled'' eingeschaltet werden.  \cite{Jones2017}
+In Safari ist es bisher gar nicht möglich WebVR zu nutzen.
 
 Da aber VRClassroom auf allen mobilen Geräten funktionieren soll und möglichst auch keine Einstellungen auf der Nutzerseite benötigen soll, wurde ein Polyfill benutzt, um die WebVR Funktionen für die VRClassroom-App auf allen Geräten nutzen zu können. 
 Dafür 
@@ -629,14 +685,12 @@ Insgesamt hatten sich 15 Lehrkräfte bereit erklärt mit ihrer Klasse das VRClassr
 Für den Test sollte allen SchülerInnen ein Cardboard zur Verfügung gestellt werden, das die Kinder mir ihrem eigenen Smartphone als VR-Brille genutzt sollten. 
 Der Rechner, auf dem das Programm installiert war, sollte den Lehrkräften bereitgestellt und den Lehrkräften im Vorfeld eine kurze Einführung in die Software gegeben werden. Dies ist trotz Absage der Studie durch ein Video geschehen. Das Video wurde zudem für die Online-Umfrage benutzt. 
 
-Außerdem sollte ein Router, der ein lokales Netzwerk erstellt verwendet werden, um Restriktionen der einzelnen Schulnetzwerke zu umgehen, die den Ablauf der Studie behindern könnten.
-
 \bigskip
+
 
 Für die Durchführung der Studie war ein Zeitrahmen von 15 bis 20 Minuten veranschlagt. In dieser Zeit sollte die Lehrkraft die App starten, sich alle Schüler-Geräte damit verbinden und die Lehrkraft die eigentlichen Inhalte präsentieren.
 
 Damit alle Studienteilnehmer, Lehrer und Schüler gleichermaßen, die gleichen Erlebnisse haben und sich zu allen Funktionen des Systems eine Meinung bilden können, hatte jede Lehrkraft ein vollständiges Set an Inhalten mit jeweils mindestens einem 360°-Fotos, einem 360°-Video und einem 3D-Modell.
-Da die Studie in dem WLAN ohne Internetverbindung durchgeführt wurde konnte die Funktion des Ladens von Google Streetview-Panoramas nicht getestet werden. Dies hätte allerdings nur für die Lehrkraft einen Unterschied bedeutet, da es sich für die Schüler wie jedes andere 360°-Foto verhält.
 
 \subsubsection{Freigabe Kulturministerium}
 Da alle Studien, die an Schulen gemacht werden, einer Freigabe des Kultusministeriums bedürfen, wurde im Vorfeld der Studie beim Kultusministerium eine solche Freigabe beantragt. Für den Antrag werden alle Fragebögen und der gesamte Ablauf der Studie an das Kultusministerium zur Prüfung vorgelegt. Das Kultusministerium hat die Durchführung von Studien beschränkt, um den Datenschutz der Schülerinnen und Schüler zu sichern. Da allerdings in der Studie nur die Lehrkräfte befragt werden und die Fragebögen komplett anonym gehalten sind, sind die Daten der Schüler zu keinem Zeitpunkt in Gefahr.
@@ -665,10 +719,19 @@ Dafür wurde ein Video produziert, welches die Idee und Nutzung von VRClassroom e
 \cleardoublepage
 
 \section{Ausblick}
-\subsection{Weiterentwicklungen an VR-Geräten}
+\subsection{Zukunft von VR}
+
+\subsection{Probleme von VRClassroom}
+\subsubsection{Anzeigen großer Dateien}
+Eines der größten Probleme, die VRClassroom momentan hat, ist die Anzeige von komplexen 3D-Modellen oder 360°-Videos mit einer großen Dateigröße. 360°-Videos sind besonders problematisch, wenn sie eine extrem hohe Auflösung haben (>4096) und eine hohe Framerate. 
+
+Für diese Probleme gibt es allerdings momentan nicht wirklich eine Lösung, da die Daten über das WLAN übertragen werden muss und bei 25-30 Geräten, die verfügbare Bandbreite zwischen allen Geräten geteilt werden muss und das einfach nicht genug pro Gerät hergibt, um so hohe Datenmengen schnell genug zu übertragen. 
+
+(Hier vielleicht noch eine Vorrechnung mit einem geläufigen Router einfügen?)
+
+Zudem war bei Tests vereinzelt zu sehen, dass bei extrem komplexen Modellen WebVR crasht und ein Neuladen der Schüler-App herbeigeführt wird, sodass das Gerät aus dem Cardboard genommen und die WebVR-Ansicht neu aktiviert werden muss.
+
 \subsection{Mögliche Weiterentwicklungen an VRClassroom}
-
-
 \subsubsection{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}
 Vorteile/ Probleme
 

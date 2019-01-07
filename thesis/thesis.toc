@@ -37,8 +37,9 @@
 \contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{9}{subsection.4.2}
 \contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{11}{section.5}
 \contentsline {subsection}{\numberline {5.1}360\IeC {\textdegree }-Fotos}{11}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{11}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Fotos}{11}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1}Projektionen von 360\IeC {\textdegree }-Fotos}{11}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{11}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Fotos}{11}{subsubsection.5.1.3}
 \contentsline {subsection}{\numberline {5.2}360\IeC {\textdegree }-Videos}{11}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Quellen f\"ur 360\IeC {\textdegree }-Videos}{11}{subsubsection.5.2.1}
 \contentsline {subsubsection}{\numberline {5.2.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Videos}{11}{subsubsection.5.2.2}
@@ -67,30 +68,32 @@
 \contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{16}{subsubsection.7.4.1}
 \contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{17}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}Controls}{17}{subsubsection.7.4.3}
-\contentsline {paragraph}{Marker}{17}{section*.4}
-\contentsline {paragraph}{Video Controls}{17}{section*.5}
-\contentsline {paragraph}{Photo Controls}{18}{section*.6}
-\contentsline {paragraph}{Model Controls}{18}{section*.7}
+\contentsline {paragraph}{Marker}{17}{section*.6}
+\contentsline {paragraph}{Photo Controls}{18}{section*.7}
+\contentsline {paragraph}{Video Controls}{18}{section*.8}
+\contentsline {paragraph}{Model Controls}{18}{section*.9}
 \contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{18}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{18}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{18}{subsection.7.7}
-\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{18}{subsubsection.7.7.1}
-\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{18}{subsubsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{18}{subsubsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.4}Anzeigen von 3D-Modellen}{18}{subsubsection.7.7.4}
-\contentsline {subsubsection}{\numberline {7.7.5}Abspielen von Videos mit Ton}{18}{subsubsection.7.7.5}
-\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{19}{subsubsection.7.7.6}
-\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{21}{section.8}
-\contentsline {subsection}{\numberline {8.1}Urspr\"unglich geplanter Ablauf der Studie}{21}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Freigabe Kulturministerium}{21}{subsubsection.8.1.1}
-\contentsline {subsection}{\numberline {8.2}Qualitative Nutzerstudie}{22}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Fragebogen}{22}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Erkenntnisse}{22}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Online-Umfrage}{22}{subsection.8.3}
-\contentsline {section}{\numberline {9}Ausblick}{23}{section.9}
-\contentsline {subsection}{\numberline {9.1}Weiterentwicklungen an VR-Ger\"aten}{23}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}M\"ogliche Weiterentwicklungen an VRClassroom}{23}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{23}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{23}{subsubsection.9.2.2}
-\contentsline {subsubsection}{\numberline {9.2.3}Navigation von 3D-Modellen aus Sch\"uler-App}{23}{subsubsection.9.2.3}
-\contentsline {subsubsection}{\numberline {9.2.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{23}{subsubsection.9.2.4}
+\contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{20}{subsection.7.7}
+\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{20}{subsubsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{20}{subsubsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{20}{subsubsection.7.7.3}
+\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{21}{subsubsection.7.7.4}
+\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{21}{subsubsection.7.7.5}
+\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{21}{subsubsection.7.7.6}
+\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{23}{section.8}
+\contentsline {subsection}{\numberline {8.1}Urspr\"unglich geplanter Ablauf der Studie}{23}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Freigabe Kulturministerium}{23}{subsubsection.8.1.1}
+\contentsline {subsection}{\numberline {8.2}Qualitative Nutzerstudie}{23}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Fragebogen}{23}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Erkenntnisse}{23}{subsubsection.8.2.2}
+\contentsline {subsection}{\numberline {8.3}Online-Umfrage}{23}{subsection.8.3}
+\contentsline {section}{\numberline {9}Ausblick}{25}{section.9}
+\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{25}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{25}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{25}{subsubsection.9.2.1}
+\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{25}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{25}{subsubsection.9.3.1}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{25}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{25}{subsubsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{26}{subsubsection.9.3.4}
