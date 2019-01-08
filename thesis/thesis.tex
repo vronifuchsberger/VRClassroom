@@ -548,9 +548,15 @@ Daraus lässt sich schließen, dass es sich um eine iPhone handelt, welches Safari
 
  
 \subsubsection{Controls}
-Wie in Grafik XXX zu sehen sind die Controls, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
+Wie in Grafik \ref{fig:controls} zu sehen sind die Controls, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
 
 Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle unterscheiden sich die Bedienelemente und Funktionen, das Setzen einer Markierung ist allerdings bei allen Medientypen gegeben.
+
+\begin{figure}
+  \includegraphics[width=0.9\linewidth]{images/controls-overlay.png}
+  \caption{Die Kontrollleiste als Overlay über den iFrame der React360-App.}
+  \label{fig:controls}
+\end{figure}
 
 \paragraph{Marker}
 Soll ein Marker gesetzt werden, muss zuerst in den ``Markierung setzen''-Modus gewechselt werden, indem in der Control Bar auf ``Marker setzen'' geklickt wird. Danach kann an beliebiger Stelle eine Markierung gesetzt werden.
@@ -566,19 +572,38 @@ Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Sch
 Das verwendete Modell erinnert wie in Grafik YYY zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
 
 \paragraph{Photo Controls}
-Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind.
+Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Grafik \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/photocontrols.png}
+  \caption{Die Kontrolleiste für 360°-Photos.}
+  \label{fig:photocontrols}
+\end{figure}
+
 
 \paragraph{Video Controls}
 Wird ein Video gezeigt, hat die Lehrkraft mehrere unterschiedliche Funktionen in der Kontrollleiste: 
-Wie in Grafik ZZZ zu sehen sind die Elemente ähnlich wie bei bekannten Videoplayern wie Quicktime oder Netflix gehalten. Ganz links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
+Wie in Grafik \ref{fig:videocontrols} zu sehen sind die Elemente ähnlich wie bei bekannten Videoplayern wie Quicktime oder Netflix gehalten. Ganz links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
 Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezifische Button ist der Sound-Button, der im aktiven Zustand auf alle Geräten den Ton des Videos abspielt. Der Sound-Button ist standardmäßig deaktiviert. 
 
 Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch zurückgesetzt.
 
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/videocontrols.png}
+  \caption{Die Kontrolleiste für 360°-Videos.}
+  \label{fig:videocontrols}
+\end{figure}
+
 \paragraph{Model Controls}
-Wie in Grafik WWWWW zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
+Wie in Grafik \ref{fig:modelcontrols} zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
 
 Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, dass nur auf dem Modell eine Markierung gesetzt werden kann. Wird außerhalb des 3D-Modells geklickt, wird keine Markierung gesetzt.
+
+\begin{figure}
+  \includegraphics[width=\linewidth]{images/modelcontrols.png}
+  \caption{Die Kontrolleiste für 3D-Modelle.}
+  \label{fig:modelcontrols}
+\end{figure}
  
 \subsection{Kommunikation zwischen Lehrer-App und Schüler-App}
 WebSocket Server from Teacher App -> Schüler Gerät meldet sich bei Laden der URL an
@@ -595,7 +620,7 @@ Für Geräte, die keine Kamera haben oder wenn das Scannen des QR-Codes fehlschläg
 Der QR-Code wird in diesem extra Fenster generiert und angezeigt, damit die Lehrkraft dieses Fenster auf einem Beamer anzeigen kann, um den SchülerInnen den Zugang zur Schüler-App ohne umständliches URL-Abtippen zu ermöglichen.
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{images/QR-Code.png}
+  \includegraphics[width=0.8\linewidth]{images/QR-Code.png}
   \caption{Qr-Code Fenster.}
   \label{fig:qrcode}
 \end{figure}
