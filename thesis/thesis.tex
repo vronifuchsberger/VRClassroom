@@ -722,18 +722,42 @@ Dafür wurde ein Video produziert, welches die Idee und Nutzung von VRClassroom e
 \subsection{Zukunft von VR}
 
 \subsection{Probleme von VRClassroom}
-\subsubsection{Anzeigen großer Dateien}
-Eines der größten Probleme, die VRClassroom momentan hat, ist die Anzeige von komplexen 3D-Modellen oder 360°-Videos mit einer großen Dateigröße. 360°-Videos sind besonders problematisch, wenn sie eine extrem hohe Auflösung haben (>4096) und eine hohe Framerate. 
+In Tests haben sich noch ein paar Probleme gezeigt, die das VRClassroom System in seinem aktuellen Zustand noch hat, die beim ``echten'' Einsatz im Schulunterricht das Erlebnis stören könnten.
+Diese Problem konnten aber leider nicht im Rahmen dieser Arbeit gelöst werden, das sie nicht wirklich Probleme der entwickelten Software sind, sondern technischen Grenzen von Geräten, die sich in der Zukunft aller Voraussicht nach weiter verschieben werden, sodass sie dann kein Problem mehr darstellen.
 
-Für diese Probleme gibt es allerdings momentan nicht wirklich eine Lösung, da die Daten über das WLAN übertragen werden muss und bei 25-30 Geräten, die verfügbare Bandbreite zwischen allen Geräten geteilt werden muss und das einfach nicht genug pro Gerät hergibt, um so hohe Datenmengen schnell genug zu übertragen. 
+\subsubsection{Anzeigen großer Dateien}
+Eines der größten Probleme, die VRClassroom momentan hat, ist die Anzeige von komplexen 3D-Modellen oder 360°-Videos mit einer großen Dateigröße. 360°-Videos sind besonders problematisch, wenn sie eine extrem hohe Auflösung (>4096) und eine hohe Framerate haben. 
+
+Für diese Probleme gibt es allerdings momentan nicht wirklich eine Lösung, da die Daten über das WLAN übertragen werden müssen und bei 25-30 Geräten, die verfügbare Bandbreite zwischen allen Geräten geteilt werden muss und das einfach nicht genug pro Gerät hergibt, um so hohe Datenmengen schnell genug zu übertragen. 
 
 (Hier vielleicht noch eine Vorrechnung mit einem geläufigen Router einfügen?)
 
 Zudem war bei Tests vereinzelt zu sehen, dass bei extrem komplexen Modellen WebVR crasht und ein Neuladen der Schüler-App herbeigeführt wird, sodass das Gerät aus dem Cardboard genommen und die WebVR-Ansicht neu aktiviert werden muss.
 
+\subsubsection{Synchronisierung}
+Ein weiteres Problem bei VRClassroom ist es, alle Veränderungen exakt synchron auf allen Geräten darzustellen. Besonders beim Abspielen von 360°-Videos fällt dieses Problem auf. 
+
+Der Websocket-Server broadcastet die Nachricht über den veränderten Inhalt an alle Clients und da die Nachricht nur eine kurze JSON-Datei ist, wird sie auch instantan auf allen Geräten empfangen. Trotzdem kommt es zu geringen Verschiebungen der Anzeigeaktualisierung bei den einzelnen Geräten.
+Der Ton der Videos ist dann um einen Bruchteil einer Sekunde verschoben, was zu unangenehmen Vermischungen der Sounds der verschiedenen Geräte und Halleffekten führt. 
+
+Das kann dadurch umgangen werden, dass nur der Sound aus der Teacher-App abgespielt wird, die Schüler Ohrstöpsel tragen oder sie die Abspiellautstärke auf ihren Geräten weit herunterdrehen, dass es nicht durch den ganzen Raum schallt. Eine echte Lösung dafür gibt es allerdings nicht.
+
 \subsection{Mögliche Weiterentwicklungen an VRClassroom}
+VRClassroom ist ein vollfunktionsfähiges System, dass laut Umfrageergebnissen bereits bei einigigen Lehrkräften das Interesse geweckt hat, es in ihrem Unterricht einzusetzen. Trotzdem sind in der Entwicklung und bei der Online-Befragung noch mögliche Weiterentwicklungen von VRClassroom aufgefallen, die zukünftig noch integriert werden könnten.
+
 \subsubsection{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}
-Vorteile/ Probleme
+Eine mögliche Weiterentwicklung von VRClassroom könnte sein das ganze VRClassroom System nicht lokal auf dem Rechner der Lehrkraft laufen zu lassen, mit dem sich dann alle VR-Geräte verbinden, sondern auch eine Version anzubieten, die Online gehostet ist.
+
+Die Entscheidung VRClassroom so zu entwickeln, dass es lokal läuft wurde allerdings ganz bewusste gefällt: Durch Vorgespräche mit den Lehrkräften, die an der Studie teilnehmen wollten und aus eigener Erfahrung wurde schnell klar, dass jede Schule unterschiedlich gut mit Netzwerk versorgt ist. Es gibt Schulen, die für Schüler gar kein WLAN anbieten oder dieses stark beschränken, sodass direkte Verbindungen zwischen den Geräten im Netzwerk unterdrückt werden, oder andere Restriktionen in ihrem Netz haben.
+Um diese Probleme zu umgehen, wurde dann die Entscheidung gefällt, VRClassroom so zu entwickeln, dass es unabhängig vom Internet funktionieren kann. Einzig die Streetview-Funktion fällt dann weg. So kann dann einfach ein lokales Netzwerk eröffnet werden mit dem sich alle Geräte verbinden und VRClassroom problemlos genutzt werden. Dies könnte zum Beispiel mit einem Aufbau gelöst werden, bei dem der Rechner auf dem VRClassroom installiert ist und ein vorkonfigurierter Router immer gemeinsam genutzt werden und sobald Strom angesteckt wird der Router sein lokales Netzwerk aufmacht.
+
+Ein weiteres Argument für die aktuelle Implementierung ist das schon zuvor in (HIER REF) besprochene Problem des Ladens von komplexen Modellen oder hochaufgelösten Videos, also großen Datenmengen. Laden alle Geräte lokal vom Lehrercomputer wird nicht die gesamte Internetverbindung der Schule lahmgelegt und auch die Übertragungsrate ist höher als beim Laden aus dem Internet. 
+
+Wird VRClassroom nur in einem lokalen Netzwerk benutzt fällt allerdings wie bereits oben erwähnt die Funktionen zum Anzeigen von Google Streetview Fotos weg, denn dafür wird die Verbindung zum Internet benötigt. 
+Zudem könnte es für technisch weniger verzierte Lehrkräfte schwieriger sein nachzuvollziehen, wo das Problem liegt, wenn etwa ein Schüler Gerät sich nicht verbinden kann, weil es nicht im Netzwerk ist, in dem VRClassroom läuft. 
+Diese Punkte würden wiederum eher dafür sprechen die Struktur zu ändern, sodass VRClassroom online gehostet wird. 
+
+Für den Rahmen der Arbeit ist die Entscheidung dafür gefallen, VRClassroom über den Rechner der Lehrkraft zu hosten, aber eine Online-Version wäre defintiv eine interessante Weiterentwicklung.
 
 \subsubsection{Skalierung von 3D-Modellen auf echte Größe}
 Um den Schülern zu vermitteln wie groß beziehungsweise klein die Dinge in echt sind, die gerade besprochen werden, könnte eine Funktion in der Lehrer-App eingefügt werden, die die 3D-Modelle auf Originalgröße skaliert. Dazu müsste selbstverständlich alle 3D-Modelle in Originalgröße vorliegen, was nur sehr selten der Fall ist, da diese Funktion für die meisten Verwendungszwecke nicht benötigt wird und daher einfach unbeachtet bleibt.
