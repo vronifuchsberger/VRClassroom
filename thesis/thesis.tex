@@ -25,6 +25,7 @@
 % latex: Bilder im .eps-Format
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{sidecap}
 
 \usepackage{fancyhdr} % Positionierung der Seitenzahlen
 \fancyhead[LE,RO,LO,RE]{}
@@ -390,8 +391,7 @@ Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual R
 
 Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
 
-\subsection{360°-Fotos}
-\subsubsection{Projektionen von 360°-Fotos}
+\subsection{Projektionen von 360°-Fotos und -Videos}
 Equirectangular
 Rectilinear
 Cylindrical
@@ -399,12 +399,25 @@ Mercator
 Circular
 Pannini/ Vedutismo
 Stereographic
-Cubemap/ Skybox
+Cubemap/ Skybox == cubic?
 % https://en.wikipedia.org/wiki/Skybox_(video_games)
+https://explorationjunkie.com/panoramic-image-projections/
+http://hugin.sourceforge.net/docs/manual/Projections.html
+
+\subsection{360°-Fotos}
+Google Maps projection: Mercator: https://setcompass.com/GoogleMapsProjection.htm
 
 \subsubsection{Quellen für 360°-Fotos}
+Es gibt bisher keine Plattform, die sich darauf spezialisiert hat 360°-Fotos, die in der Lehre genutzt werden können, anzubieten. 
+
+Die verbreiteten Anbieter für Stockphotos wie zum Beispiel Shutterstock oder iStockphoto bieten zwar bereits 360°-Fotos an, aber die meisten dieser Stockphotos zeigen keine relevanten Inhalte, sondern nur eine schöne Landschaft oder einen Raum. Sie sind also für zur Nutzung im Unterricht nicht geeignet. Zudem sind diese Bilder oft teuer oder mit einem Abo beim jeweiligen Anbieter verbunden.
+
+Die aktuell beste Quelle für 360°-Fotos ist die Foto-Sharing-Plattform Flickr, auf der die Urheber das Herunterladen ihrer Bilder erlauben und auch die Nutzungslizenz dafür angeben können. Eine Suche nach ``equirectangular'' und der Creative Commons Lizenz ist dort einfach möglich und man wird schnell fündig. 
+Ein engagierter Lehrer hat sogar eine Gruppe gegründet, die speziell dafür gedacht ist, dass Lehrkräfte aus aller Welt ihre 360°-Fotos teilen können, damit Andere sie auch in ihrem Unterricht nutzen können.
+
 Flickr-Group: https://www.flickr.com/groups/360images4schools/
 Flickr Search equirectangluar + Creative Commons: % https://www.flickr.com/search/?text=equirectangular&license=2%2C3%2C4%2C5%2C6%2C9
+
 
 Google Photo Sphere Community: https://plus.google.com/communities/115970110085205516914/stream/abbc1e71-8239-4ab0-9de3-3f6429e7681f
 Download nicht immer möglich
@@ -559,6 +572,13 @@ Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle untersc
 \end{figure}
 
 \paragraph{Marker}
+\begin{SCfigure}
+  \centering
+  \caption{Die leuchtende Farbe und das Drehen der Marker erhöht die Erkennbarkeit.}
+  		\includegraphics[width=0.4\textwidth]{images/marker.png}
+	\label{fig:marker}
+\end{SCfigure}
+
 Soll ein Marker gesetzt werden, muss zuerst in den ``Markierung setzen''-Modus gewechselt werden, indem in der Control Bar auf ``Marker setzen'' geklickt wird. Danach kann an beliebiger Stelle eine Markierung gesetzt werden.
 
 Um die 3D-Koordinaten des Markers zu bekommen wird mit Hilfe von Mouseposition und Fenstergröße ein Strahl berechnet, der aus der 2D-Koordinate der Mouseposition ausgeht. 
@@ -569,12 +589,14 @@ Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Mo
 
 Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
 
-Das verwendete Modell erinnert wie in Grafik YYY zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
+Das verwendete Modell erinnert wie in Grafik \ref{fig:marker} zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
+
+
 
 \paragraph{Photo Controls}
 Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Grafik \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
 
-\begin{figure}
+\begin{figure}[h]
   \includegraphics[width=\linewidth]{images/photocontrols.png}
   \caption{Die Kontrolleiste für 360°-Photos.}
   \label{fig:photocontrols}
@@ -588,7 +610,7 @@ Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezi
 
 Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch zurückgesetzt.
 
-\begin{figure}
+\begin{figure}[h]
   \includegraphics[width=\linewidth]{images/videocontrols.png}
   \caption{Die Kontrolleiste für 360°-Videos.}
   \label{fig:videocontrols}
@@ -599,7 +621,7 @@ Wie in Grafik \ref{fig:modelcontrols} zu sehen ist auch in der Kontrollleiste be
 
 Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, dass nur auf dem Modell eine Markierung gesetzt werden kann. Wird außerhalb des 3D-Modells geklickt, wird keine Markierung gesetzt.
 
-\begin{figure}
+\begin{figure}[h]
   \includegraphics[width=\linewidth]{images/modelcontrols.png}
   \caption{Die Kontrolleiste für 3D-Modelle.}
   \label{fig:modelcontrols}
