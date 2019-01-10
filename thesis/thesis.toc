@@ -9,17 +9,17 @@
 \contentsline {subsubsection}{\numberline {2.1.3}Frequenz}{3}{subsubsection.2.1.3}
 \contentsline {subsubsection}{\numberline {2.1.4}Field of View}{3}{subsubsection.2.1.4}
 \contentsline {subsubsection}{\numberline {2.1.5}Rechenleistung}{3}{subsubsection.2.1.5}
-\contentsline {subsubsection}{\numberline {2.1.6}Inputmethoden}{3}{subsubsection.2.1.6}
+\contentsline {subsubsection}{\numberline {2.1.6}Inputmethoden}{4}{subsubsection.2.1.6}
 \contentsline {subsubsection}{\numberline {2.1.7}Tracking}{4}{subsubsection.2.1.7}
 \contentsline {subsubsection}{\numberline {2.1.8}Gewicht}{4}{subsubsection.2.1.8}
 \contentsline {subsubsection}{\numberline {2.1.9}Preis}{4}{subsubsection.2.1.9}
 \contentsline {subsubsection}{\numberline {2.1.10}Liste Quellen etc}{4}{subsubsection.2.1.10}
-\contentsline {subsection}{\numberline {2.2}Computer-gest\"utzte VR-Hardware}{4}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Oculus Rift}{4}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}HTC Vive}{4}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}HTC Vive Pro}{4}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Playstation VR}{4}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.2}Computer-gest\"utzte VR-Hardware}{6}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Oculus Rift}{6}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}HTC Vive}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}HTC Vive Pro}{6}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Playstation VR}{6}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{6}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{6}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{6}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{6}{subsubsection.2.3.3}
@@ -62,39 +62,39 @@
 \contentsline {subsubsection}{\numberline {6.2.3}Three.js}{13}{subsubsection.6.2.3}
 \contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{15}{section.7}
 \contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{15}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Anwender}{15}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}Anwender}{16}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Grundstruktur}{16}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Lehrer-Applikation}{16}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{16}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{17}{subsubsection.7.4.2}
-\contentsline {subsubsection}{\numberline {7.4.3}Controls}{17}{subsubsection.7.4.3}
-\contentsline {paragraph}{Marker}{17}{figure.caption.8}
-\contentsline {paragraph}{Photo Controls}{19}{section*.9}
-\contentsline {paragraph}{Video Controls}{19}{section*.11}
-\contentsline {paragraph}{Model Controls}{19}{section*.13}
-\contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{19}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.4}Lehrer-Applikation}{17}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{17}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{18}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.3}Controls}{18}{subsubsection.7.4.3}
+\contentsline {paragraph}{Marker}{18}{figure.caption.11}
+\contentsline {paragraph}{Photo Controls}{19}{section*.12}
+\contentsline {paragraph}{Video Controls}{19}{section*.14}
+\contentsline {paragraph}{Model Controls}{20}{section*.16}
+\contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{20}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{20}{subsection.7.6}
 \contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{20}{subsection.7.7}
-\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{21}{subsubsection.7.7.1}
-\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{21}{subsubsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{21}{subsubsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{21}{subsubsection.7.7.4}
-\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{22}{subsubsection.7.7.5}
-\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{22}{subsubsection.7.7.6}
-\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{23}{section.8}
-\contentsline {subsection}{\numberline {8.1}Urspr\"unglich geplanter Ablauf der Studie}{23}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Freigabe Kulturministerium}{23}{subsubsection.8.1.1}
-\contentsline {subsection}{\numberline {8.2}Qualitative Nutzerstudie}{23}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Fragebogen}{23}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Erkenntnisse}{23}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Online-Umfrage}{23}{subsection.8.3}
-\contentsline {section}{\numberline {9}Ausblick}{25}{section.9}
-\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{25}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{25}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{25}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{25}{subsubsection.9.2.2}
-\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{25}{subsection.9.3}
-\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{25}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{26}{subsubsection.9.3.2}
-\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{27}{subsubsection.9.3.3}
-\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{27}{subsubsection.9.3.4}
+\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{20}{subsubsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{22}{subsubsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{22}{subsubsection.7.7.3}
+\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{23}{subsubsection.7.7.4}
+\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{23}{subsubsection.7.7.5}
+\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{23}{subsubsection.7.7.6}
+\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{25}{section.8}
+\contentsline {subsection}{\numberline {8.1}Urspr\"unglich geplanter Ablauf der Studie}{25}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Freigabe Kulturministerium}{25}{subsubsection.8.1.1}
+\contentsline {subsection}{\numberline {8.2}Qualitative Nutzerstudie}{25}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Fragebogen}{25}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Erkenntnisse}{25}{subsubsection.8.2.2}
+\contentsline {subsection}{\numberline {8.3}Online-Umfrage}{25}{subsection.8.3}
+\contentsline {section}{\numberline {9}Ausblick}{31}{section.9}
+\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{31}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{31}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{31}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{31}{subsubsection.9.2.2}
+\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{31}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{31}{subsubsection.9.3.1}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{32}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{33}{subsubsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{33}{subsubsection.9.3.4}

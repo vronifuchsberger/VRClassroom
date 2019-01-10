@@ -163,6 +163,15 @@ https://www.roadtovr.com/introduction-positional-tracking-degrees-freedom-dof/
 % Springerlink: https://link.springer.com/chapter/10.1007/978-3-540-45287-4_1
 https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt4.html
 
+Grafik \ref{fig:dof}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{images/dof.eps}
+ \caption{Degrees of Freedom.}
+  \label{fig:dof}
+\end{figure}
+
 \subsubsection{Display}
 Maße, Auflösung, 2 einzelne/ ein großes
 Vielleicht Display und Frequenz zu einem Punkt verbinden?
@@ -491,6 +500,15 @@ VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Sch
 
 Die Lehrer-App ist eine Electron-App, die wiederum eine React-App für das Interface enthält und die Schüler-App startet. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in Javascript gehalten, nur unterschieden durch die verschiedenen Libraries Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer Creative Commons Lizenz veröffentlicht und so kann ein Entwickler schnell alle Teile des Codes verstehen ohne sich in mehrere Programmiersprachen einarbeitenzu müssen.
 
+Grafik \ref{fig:electron}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=\textwidth]{images/electron.eps}
+ \caption{Aufbau von Electron-Appliaktionen.}
+  \label{fig:electron}
+\end{figure}
+
 \subsection{Nutzungsszenario und Anwendungsfokus}
 VRClassroom wurde speziell für die Nutzung in der Schule entwickelt.
 Dabei kann die Lehrkraft das VR-Erlebnis für die SchülerInnen führen und ihnen so komplexe 3-dimensionale Inhalte besser vermitteln und eine spannende neue Art des Lernens zu erleben. 
@@ -514,8 +532,15 @@ Da an Schulen Lehrkräfte und Schülerinnen und Schüler verschiedenster Altersstuf
 \subsection{Grundstruktur}
 Das VRClassroom System besteht aus zwei verschiedenen Applikationen: Zum einem der Schüler-App, die auf den VR-Systemen läuft mit denen die Schüler sehen können, was der Lehrer ihnen präsentiert, und die Lehrer-App, in der die Lehrkraft die verschiedenen Inhalte hineinladen, Markierungen auf die Inhalte setzen kann und und sehen kann, welche Schüler-Geräte aktuell verbunden sind.
 
-Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in Berührung gekommen sind, sondern es gewohnt sind mit den ``klassichen'' Medien zu arbeiten, lag der Augenmerk bei der Entwicklung darauf, dass das benötigte technische Verständnis möglichst niedrig ist und auch Personen, die sich selbst als nicht technikaffin bezeichnen würden, keinerlei Probleme bei der Nutzung haben. Gleiches gilt selbstverständlich auch auf der Seite der Schüler. Da diese aber hauptsächlich passiv agieren, standen hier die Lehrkräfte im Mittelpunkt der Aufmerksamkeit.
+Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in Berührung gekommen sind, sondern es gewohnt sind mit den ``klassischen'' Medien zu arbeiten, lag der Augenmerk bei der Entwicklung darauf, dass das benötigte technische Verständnis möglichst niedrig ist und auch Personen, die sich selbst als nicht technikaffin bezeichnen würden, keinerlei Probleme bei der Nutzung haben. Gleiches gilt selbstverständlich auch auf der Seite der Schüler. Da diese aber hauptsächlich passiv agieren, standen hier die Lehrkräfte im Mittelpunkt der Aufmerksamkeit.
 
+Grafik \ref{fig:architecture}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/architecture1.eps}
+ \caption{Aufbau des VRClassroom Systems.}
+  \label{fig:architecture}
+\end{figure}
 
 \subsection{Lehrer-Applikation}
 Die Lehrer-Applikation besteht aus einer Electron-App, die in zwei logische Teile zerlegt ist. Das ist zum einen der main-Prozess, der es erlaubt Zugriffe auf das File-System des Rechners zu machen und für rechenaufwändige Hintergrundprozesse genutzt wird, und zum Anderen der render-Prozess. Der render-Prozess ist der Teil des Programms, das die Lehrkraft letztendlich auf ihrem Bildschirm sieht.
@@ -654,6 +679,14 @@ In der VRClassroom App nehmen die Schüler eine passive Rolle ein und können selb
 
 Die WebApp für die Schüler ist eine React360-App, sie stellt eine 3D-Welt da, in deren Mitte sich die Kamera, also der Viewport der Geräte, befindet. Sie stellt die in der Lehrer-App hineingeladenen 360°-Fotos und Videos in einer Kugel um den Viewport da, sodass die Nutzer sich in alle Richtungen umsehen können. 3D-Modelle werden in kurzer Entfernung vor dem Viewport angezeigt, als befänden sich sich im Raum vor der Person.
 
+Grafik \ref{fig:react360}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/react360.eps}
+ \caption{Struktur der React360 App von VRClassroom.}
+  \label{fig:react360}
+\end{figure}
+
 %% Screenshot VRClassroom App?
 
 \subsubsection{Eingabe des Namens}
@@ -760,6 +793,85 @@ Dafür wurde ein Video produziert, welches die Idee und Nutzung von VRClassroom e
   \item Schlüsse daraus
 \end{itemize}
 
+Grafik \ref{fig:survey1}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey1.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey1}
+\end{figure}
+
+
+Grafik \ref{fig:survey2}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey2.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey2}
+\end{figure}
+
+
+Grafik \ref{fig:survey3}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey3.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey3}
+\end{figure}
+
+
+Grafik \ref{fig:survey4}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey4.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey4}
+\end{figure}
+
+
+Grafik \ref{fig:survey5}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey5.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey5}
+\end{figure}
+
+
+Grafik \ref{fig:survey6}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey6.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey6}
+\end{figure}
+
+
+Grafik \ref{fig:survey7}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey7.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey7}
+\end{figure}
+
+
+Grafik \ref{fig:survey8}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey8.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey8}
+\end{figure}
+
+
+Grafik \ref{fig:survey9}
+
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey9.eps}
+ \caption{Ich brauche noch einen sinnvollen Text.}
+  \label{fig:survey9}
+\end{figure}
 
 
 %______________________________________________________________________
