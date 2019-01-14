@@ -160,20 +160,16 @@ Um die verschiedenen VR-Hardware-Systeme einordnen zu können, gibt es einige Mer
 Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Displaygröße und -auflösung, die Frequenz des Displays, Field of View, Rechenleistung und Gewicht des Headsets, die verwendete Tracking-Methode, die mitgelieferten Controller beziehungsweise mögliche Input-Methoden, das Gewicht des Headsets und der Verkaufspreis.
 
 \subsubsection{Degrees of Freedom}
-3DoF/ 6DoF
-Was bedeutet DoF?
+Das Konzept der Degrees of Freedom, kurz DoF, entspringt ursprünglich der Mechanik. Wie Gans in seiner Arbeit ``Engineering dynamics: From the lagrangian to simulation'' erläutert, hat ein Körper grundlegend sechs Freiheitsgrade. Die Bewegungen in x-Richtung, y-Richtung und z-Richtung. Hinzu kommen dann noch die Rotationen um die jeweiligen Achsen. Kurz beschreibt er Freiheitsgrade als die minimale Anzahl an Variablen um ein System zu spezifizieren. \cite{Gans2013}
 
-https://www.roadtovr.com/introduction-positional-tracking-degrees-freedom-dof/
-% https://web.archive.org/web/20111125015923/http://www.pomorci.com/Zanimljivosti/Ship's%20movements%20at%20sea.pdf
-% Springerlink: https://link.springer.com/chapter/10.1007/978-3-540-45287-4_1
-https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt4.html
+Freiheitsgrade wurden zudem viel genutzt um die Bewegungen von maritimen Fahrzeugen zu benennen: Die Bewegung in x-Richtung wird ``surge'' genannt, in y-Richtung ``sway'' und in z-Richtung ``heave''. Die Rotation um die x-Achse heißt ``roll'', um die y-Achse ``pitch'' und um die z-Achse ``yaw''. Diese Bezeichnungen beziehen sich dabei auf ein Schiff, das in x-Richtung ausgerichtet ist. \cite{Fossen1995}
 
-Grafik \ref{fig:dof}
+Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet, kann es auch die Bewegungen im Raum verarbeiten ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also positional Tracking der Nutzer benötigt. 
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/dof.eps}
- \caption{Degrees of Freedom.}
+ \caption{Degrees of Freedom eine Virtual Reality Headsets.}
   \label{fig:dof}
 \end{figure}
 
@@ -190,11 +186,19 @@ Was ist Field of View?
 Theorie: Was ist notwendig, dass immersion funktioniert?
 Was ist verbaut?
 
+Augenabstand IPD
+
 
 \subsubsection{Rechenleistung}
-Welche Chips: CPU \& GPU ?
-überhaupt reinnehmen?
-Relevant eigentlich nur für stand-alone Headsets
+Generell lässt sich sagen, je höher die Rechenleistung, desto aufwändigere VR-Szenen können dargestellt werden. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten konkurrieren, was die Kombination aus Display-Auflösung, Bildwiederholungsrate und Field of View angeht.
+Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden muss.
+
+Fast alle hier aufgeführten Geräte haben dabei den gleichen Prozessor eingebaut, den Qualcomm Snapdragon 835, nur die Oculus Go hat einen Qualcomm Snapdragon 821. Damit sind die anderen Geräte etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go.
+
+Quellen:
+https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/
+https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/
+https://www.vive.com/cn/product/vive-focus-en/
 
 
 \subsubsection{Inputmethoden}
@@ -219,6 +223,8 @@ was ist Ziel, das sich nicht schwer anfühlt?
 
 
 \subsubsection{Preis}
+
+
 Die Preise sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
 
 
@@ -306,8 +312,7 @@ https://upload-magazin.de/blog/25071-standalone-vr-headsets/
 Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für extrem rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
 
 \subsubsection{Oculus Rift}
-\subsubsection{HTC Vive}
-\subsubsection{HTC Vive Pro}
+\subsubsection{HTC Vive und HTC Vive Pro}
 \subsubsection{Playstation VR}
 
 
@@ -445,14 +450,14 @@ Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu könne
 
 Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreiteten Projektionen erläutert und verglichen:
 
-\subsection{Equirectangulare Projektion}
-\subsection{Rectilineare Projektion}
-\subsection{Cylindrische Projektion}
-\subsection{Mercator-Projektion}
-\subsection{Circulare Projektion}
-\subsection{Pannini/ Vedutismo-Projektion}
-\subsection{Stereographische Projektion}
-\subsection{Cubemap/ Skybox-Projektion}
+\subsubsection{Equirectangulare Projektion}
+\subsubsection{Rectilineare Projektion}
+\subsubsection{Cylindrische Projektion}
+\subsubsection{Mercator-Projektion}
+\subsubsection{Circulare Projektion}
+\subsubsection{Pannini/ Vedutismo-Projektion}
+\subsubsection{Stereographische Projektion}
+\subsubsection{Cubemap/ Skybox-Projektion}
  == cubic?
  
  
@@ -798,6 +803,8 @@ Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle untersc
 \end{figure}
 
 \paragraph{Marker}
+\label{subsec:marker}
+
 \begin{SCfigure}
   \centering
   \caption{Die leuchtende Farbe und das Drehen der Marker erhöht die Erkennbarkeit.}
@@ -920,8 +927,13 @@ Damit React360 in einer single-threaded Umgebung wie einem Webbrowser flüssig ab
 Das führt dazu, das die React360-Elemente nicht als html-Elemente gelten und ein Click-Event auf einem VRButton nicht als Interaktion zählt, um die Erlaubnis zu haben Ton abzuspielen.
 
 Um dieses Hindernis zu umgehen ist nun ein durchsichtiger, Bildschirm-füllender Button über die React360-App gelegt, der bei einem Klick verschwindet, um die Erlaubnis vom Browser zu bekommen Ton abzuspielen. Wurde der Button am Schüler-Gerät geklickt wird ein flag gesetzt, dass die App Ton abspielen darf. Ob dann tatsächlich Ton beim Video abgespielt wird, kann der Lehrer aus der teacher-App einstellen. Auch dort ist das Abspielen von Ton an den Schüler-Geräten standardmäßig erst einmal abgestellt, damit der Lehrer entscheiden kann, ob er nur den Ton aus dem Rechner über Boxen für Alle abspielen möchte oder aus jedem Schüler-Gerät einzeln der Ton kommen soll.
-\subsubsection{Anzeigen von 3D-Modellen}
 
+\subsubsection{Anzeigen von 3D-Modellen}
+Wird die Nachricht empfangen, dass der ``mediatype'' auf ``model'' gesetzt wurde, wird als Hintergrund der Standardhintergrund gesetzt, wie er auch angezeigt wird, bevor Medien von der Lehrkraft in die App geladen wurden. Das Laden und Darstellen der 3D-Modelle passiert in der ModelView. Hier wird zuerst analysiert, ob es sich um eine gltf-Datei oder eine .obj-Datei handelt. Valide gltf-Dateien haben die Endung .gltf oder .glb, ein Container-Dateiformat, das alle Texturen und Styling-Dateien enthält. Handelt es sich um eine .obj-Datei wird versucht eine gleichnamige .mtl-Datei zu laden. Diese enhält alle Informationen über Texturen und Materialien, die .obj-Datei ist allein das Modell.
+
+Im Anschluss wird die Datei geladen und angezeigt. Damit die Modelle zu erkennen sind und nicht schwarz gerendert werden wird zudem eine Punktlichtquelle installiert, die das Modell von oben rechts beleuchtet. Außerdem wird das Modell mit einem leichten Ambientlight versehen, damit auch Teile des Modells, die sonst im Schatten liegen, erkennbar werden.
+
+Auf die ähnliche Weise werden die Marker gerendert, die von der Lehrkraft gesetzt werden können, wie bereits in ref{subsec:marker} beschrieben. Die Marker haben keine Punktlichtquelle, sondern nur ein Ambientlight. Sie werden zudem nicht an eine feste Position, sondern an die von der Lehrkraft ausgewählt Stelle in der VR-Szene gerendert und ihre Größe wird zudem in Abhängigkeit ihrer Entfernung zur Kamera skaliert.
 
 \subsubsection{WebVR Polyfill}
 WebVR ist eine Javascript-API, um Virtual Reality-Inhalte im Browser anzuzeigen. \cite{WebVR} 
@@ -1088,7 +1100,9 @@ Grafik \ref{fig:survey9}
 \cleardoublepage
 
 \section{Ausblick}
-Wie könnte die Zukunft von VR und VRClassroom aussehen und wie trägt VRClassroom jetzt schon dazu bei?
+Allen Prognosen nach wird VR (Quelle dazu?) in den kommenden Jahren eine immer größere Rolle einnehmen, von Ausbildung, Beruf bis in die Freizeit hinein, wird es immer mehr VR-Geräte und -Programme geben. 
+Im Bildungsbereich bietet VRClassroom bereits jetzt eine Möglichkeit für Lehrkräfte ohne großen finanziellen Aufwand und ohne viel Vorwissen zu benötigen, VR-Inhalte in ihren Unterricht einfließen zu lassen. Im Folgenden wird darauf eingegangen, wie die Zukunft von Virtual Reality aussehen kann beziehungsweise was an nächsten Entwicklungsstufen passieren muss, damit VR den prognostizierten Durchbruch auch haben wird.
+Außerdem werden bestehende Probleme von VRClassroom besprochen und wie das System in der Zukunft weiterentwickelt werden könnte.
 
 \subsection{Zukunft von VR}
 VR wird sich noch weiter verbreiten, da Geräte günstiger werden und mehr Inhalte da sind
@@ -1097,6 +1111,10 @@ Was muss sich ändern, damit es sich noch mehr verbreitet?
  -> standalone Geräte, müssen mehr Rechenleistung, bessere Displays und weniger Gewicht haben
  -> besseres Tracking?
  -> mehr Anwendungen abseits von Games
+ 
+ Geräteweiterentwicklungen
+ - Gestenerkennung ohne Controller?
+ - Gazeinput wie zB EyeVR Paper?
 
 \subsection{Probleme von VRClassroom}
 In Tests haben sich noch ein paar Probleme gezeigt, die das VRClassroom System in seinem aktuellen Zustand noch hat, die beim ``echten'' Einsatz im Schulunterricht das Erlebnis stören könnten.

@@ -21,6 +21,16 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Gans2013}
+R.~F. Gans, ``{Engineering dynamics: From the lagrangian to simulation},''
+  \emph{Engineering Dynamics: From the Lagrangian to Simulation}, pp. 1--267,
+  2013.
+
+\bibitem{Fossen1995}
+T.~I. Fossen and O.-E. Fjellstad, ``{Nonlinear modelling of marine vehicles in
+  6 degrees of freedom},'' \emph{Mathematical Modelling of Systems}, vol.~1,
+  pp. 17--27, 1995.
+
 \bibitem{FacebookTechnologiesLLC2018}
 \BIBentryALTinterwordspacing
 {Facebook Technologies LLC}, ``{Oculus Terms of Service},'' 2018. [Online].
