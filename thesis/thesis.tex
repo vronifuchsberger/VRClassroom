@@ -383,6 +383,8 @@ Augenabstand
 \subsection{Eingabemethoden in VR}
 Controller
 Voice Control
+EyeVR GazeInput
+Gesteninput
 
 Input schon bei Geräten besprochen?
 
@@ -489,12 +491,9 @@ Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreit
 
  === Mercator?
  
- https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
- Vimeo Videos in equirectingular
+
  
- https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
- YT früher equirectangular, jetzt 
- 
+ % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
  Nachteile:
  It has high quality at the poles (top and bottom of image) where people don?t look as much ? typically, sky overhead and ground below are not that interesting to look at.
 It has lower quality at the equator or horizon where there is typically more interesting content.
@@ -508,6 +507,9 @@ A straight line motion in the real world does not result in a straight line moti
 \subsubsection{Pannini/ Vedutismo-Projektion}
 \subsubsection{Stereographische Projektion}
 \subsubsection{Cubemap/ Skybox-Projektion}
+cubemap, cubestrip 
+% Erklärung: https://github.com/naver/egjs-view360/wiki/Supported-Projection-Type
+
 
 % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
 kommt aus der Computerspiele-Szene
@@ -575,11 +577,14 @@ Ansonsten: Racks zusammenbauen mit mehreren Kameras
 Aufhänger?
 https://filmpuls.info/360-videos-zukunft/
 
-Youtube 360 Videos
-https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
-
 Vimeo:
 https://vimeo.com/blog/post/introducing-vimeo-360
+
+ https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
+ Vimeo Videos in equirectingular
+ 
+ https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
+ YT früher equirectangular, jetzt EAC
 
 \subsubsection{Quellen für 360°-Videos}
 Vimeo:
@@ -641,7 +646,16 @@ https://www.vrtonung.de/spatial-audio-support-for-360-video-platform/
 Paper: Def von spatial Audio
 
 \subsubsection{Quellen für Spatial Audio-Dateien}
+
+
 \subsubsection{Erstellung und Bearbeitung von Spatial Audio}
+Hier muss wieder zwischen den verschiedenen Typen von Sounds Unterschieden werden, die spatial Audio erzeugen:
+
+Werden in einer VR-Anwendung Geräusche nur an einem bestimmten Ort in der Szene platziert handelt es sich in der Regel um Mono-, manchmal Stereo-Audiodateien, diese können in allen Audio-Bearbeitungsprogrammen bearbeitet und mit allen Audiorecordern erstellt werden.
+
+- Ambisonic
+- Object-based spatial audio (Dolby Atmos)
+
 \subsection{Virtual Reality Spiele und Anwendungen}
 Die Kombination aus den vorigen Inhalten ergibt VR-Anwendungen und Spiele. Inzwischen ist die Auswahl an verschiedenen Anwendungen extrem gewachsen und tut das auch weiterhin. Allerdings ist der hier nach wie vor der allergrößte Anteil an VR-Programmen Spiele.
 
@@ -673,7 +687,7 @@ Genauere Ausführungen dazu sind wiederum in \ref{subsec:unity} beziehungsweise \
 Die zweite Möglichkeit ist die Nutzung von Tools wie zum Beispiel InstaVR oder Vizor360. Mit diesen Programmen können auch Personen, die keinerlei Programmierkenntnisse haben einfache 360°-Anwendungen erstellen. Dazu werden einfach 360°-Fotos oder -Videos hochgeladen, mit dem Tool zu einer Tour verbunden und schon ist eine einfach Anwendung fertig. So könnte zum Beispiel eine kleine Tour über den Campus einer Uni erstellt werden, sodass mögliche zukünftige Studierende besser erfahren können, wie der Campus aussieht. \cite{Vizor2019} \cite{InstaVRInc}
 Außerdem können auch noch Textelemente eingefügt werden, um zum Beispiel auf einem Foto zu markieren, welche Gebäude zu sehen sind, um dem Betrachter noch etwas mehr Kontext zu geben.
 
-\subsection{360°-Inhalte in 3D}
+\subsection{3D 360°}
 https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-22/issue-3/030902/Acquisition-of-omnidirectional-stereoscopic-images-and-videos-of-dynamic-scenes/10.1117/1.JEI.22.3.030902.full?SSO=1
 
 https://www.youtube.com/watch?v=0OKBjkhdnOc
@@ -692,25 +706,48 @@ https://patents.google.com/patent/US7463280B2/en
 http://blog.dsky.co/capturing-virtual-worlds-a-method-for-taking-360-virtual-photos-and-videos/
 
 \subsection{360°-Inhalte in React360}
-Photos+Videos: https://facebook.github.io/react-360/docs/photos-and-videos.html
-Audio: https://facebook.github.io/react-360/docs/audio.html
-	3 Soundtypen:
-		- environmental audio: nicht spatial, spielt im loop ab
-		- sound Effekte: spielen einmal ab (playOneShot())
-		- spatial audio: muss erst created werden, dann wird Position übergeben, wenn is3d===true
-		
-		// Play a sound to the user's right (3 meters down the positive x-axis)
+Die VR-App innerhalb von VRClassroom wurde mit React360 entwickelt. Nachfolgend wird darauf eingegangen, wie 360°-Inhalte in React360 eingebunden werden können.
 
-AudioModule.createAudio('bird', {
-  source: asset('chirp.mp3'),
-  is3d: true,
-});
-AudioModule.play('bird', {
-  position: [3, 0, 0],
-});
+\subsubsection{Fotos und Videos}
+React360 ermöglicht sowohl die Nutzung von 180°- also auch 360°-Panoramas für Videos und für Fotos. Ebenfalls für beide Medientypen gilt, dass React360 mono und stereo Signale verarbeiten kann.
 
-3D-Modelle: https://facebook.github.io/react-360/docs/objects.html
+Die Fotopanoramas in 360° müssen entweder in equirectangularer Projektion oder im 1x6 Cubemap-Format vorliegen. Dabei besteht das Gesamtbild aus sechs unverzerrten Einzelbildern, die in der Reihenfolge rechts, links, oben, unten, vorne, hinten angeordnet sind.
+In der equirectangularen Projektion kann das Bild auch stereo sein. Dazu müssen die zwei Bilder übereinander angeordnet sein, diese Anordnung ist als ``top/bottom''-Layout bekannt. (Cubemap-Panoramas können nur als mono-Signal verarbeitet werden.)
 
+180°-Panoramen sind nur equirectangular möglich. Das Stereobild kann hierbei neben dem ``top/bottom''-Layout auch in ``left/right'', also nebeneinander vorliegen.
+
+Bei den möglichen Formaten für Videos verhält es sich ganz ähnlich wie bei den Fotos: equirectangulare Panoramas können mono oder stereo sein. Sind sie 360°-Panoramen im ``top/bottom''-Layout, sind sie 180° im ``left/right''-Layout. 360° Panoramen können wiederum auch im Cubemap-Format sein, bei Videos allerdings in 3x2.
+
+/// Hier noch genauer auf 3x2 (+ 1\% expansion) eingehen??
+
+Wenn ein Foto stereo eingebunden werden soll, muss der Parameter ``format'' auf einen der folgenden Werte gesetzt werden:
+
+\begin{itemize}
+\item \textbf{2D}: [Defaultwert] Für Monobilder
+\item \textbf{3DTB}: Stereobilder, bei denen das linke Bild oben ist und das rechte unten
+\item \textbf{3DBT}: Stereobilder, bei denen das linke Bild unten ist und das rechte oben
+\item \textbf{3DLR}: Stereobilder, bei denen das linke Bild links ist und das rechte rechts
+\end{itemize}
+
+Die Fotos und Videos können entweder von der Runtime oder aus der React360-App selbst gesetzt und gesteuert werden. Um sie im Panorama sehen zu können müssen sie als Hintergrundbild beziehungsweise -video gesetzt werden.
+
+Um Videos abzuspielen muss zuerst ein player erstellt werden und der Pfad zur Video-Datei übergeben werden. Danach können auf dem Player die Steuerungsfunktionen zu den Videos aufgerufen werden. \cite{React360video}
+
+\subsubsection{Sounds}
+In React360 gibt es zwei grundlegende Arten Sounds einzubinden:
+
+Zum Einen können Audiodateien als Hintergrundaudio oder Soundeffekt eingebunden werden. Hier wird auf dem AudioModule die Funktion playEnvironmental() mit dem Pfad und der gewünschten Lautstärke übergeben. Die Audiodateien werden dann als Loop abgespielt und erst beendet, wenn stopEnvironmental() aufgerufen wird. Soundeffekte werde mit .playOnShot() einmalig abgespielt.
+
+Zum Anderen können Sounds in der 360°-Szene an einem bestimmten Ort installiert werden. Dazu muss die .createAudio()-Funktion aufgerufen werden. Sie erwartet einen ``handle'', den Pfad zur Audiodatei und ``is3d'' muss auf true gesetzt werden. Im Aufruf der play-Funktion wird dann die gewünschte Location übergeben, an der der Sound abgespielt werden soll. \cite{React360audio}
+
+\subsubsection{3D-Modelle}
+3D-Modell - in React360 als ``Entities'' bezeichnet - müssen an eine Location gerendert werden. Während Panoramabilder und -videos von überall als Hintergrundbild beziehungsweise -video gesetzt werden können, muss der Component, der die Entities beinhaltet in der auf eine Location gerendert werden.
+
+Die Location des beinhaltenden Components ist das der Nullpunkt für die Entities im Component, sie werden dann also relativ dazu gesetzt.
+
+Um Modell zu rendern muss nur eine Entity-Komponente erstellt werden und er Link zu dieser Entity übergeben werden. Mit einem transform-Attribut können sie dann noch skaliert, rotiert und verschoben werden.
+
+3D-Modelle können als gltf2-Dateien (Dateiendung .gltf oder .glb) oder als OBJ-Dateien vorliegen. Bei OBJ-Modellen muss auch noch die zugehörige MTL-Datei übergeben werden, die die Materialdefinitionen enthält. \cite{React360models}
 
 %\_____________________________________________________________________
 
