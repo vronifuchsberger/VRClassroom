@@ -479,14 +479,28 @@ Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual R
 Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Grundsätzlich gibt es fünf verschiedene Medientypen von 360°-Inhalten: 360°-Fotos, -Videos, 3D-Modelle und spatial Audio, auch bekannt als 3D Audio. 
 
 \subsection{Projektionen von 360°-Fotos und -Videos}
-Um 360°-Bildmaterial in 2D Bildformaten zu speichern, werden sie auf verschiedene Arten ``zerschnitten'' oder verzerrt, um dann zur richtigen Darstellung wieder zusammengesetzt werden zu können.
-Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
+Um 360°-Bildmaterial in 2D Bildformaten zu speichern, werden sie auf verschiedene Arten ``zerschnitten'' oder verzerrt, um dann zur richtigen Darstellung wieder zusammengesetzt werden zu können. Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
 
-Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu können, auf denen die gesamte Erdkugel zu erkennen ist. Daher sind sie auch als ``map projections'' bekannt.
+Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu können, auf denen die gesamte Erdkugel zu erkennen ist. Sie wurden als ``map projections'' bekannt. Daraus haben sich die heutigen ``image projections'' der Panoramafotografie entwickelt. (Quelle map projections?)
 
 Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreiteten Projektionen erläutert und verglichen:
 
 \subsubsection{Equirectangulare Projektion}
+
+ === Mercator?
+ 
+ https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
+ Vimeo Videos in equirectingular
+ 
+ https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
+ YT früher equirectangular, jetzt 
+ 
+ Nachteile:
+ It has high quality at the poles (top and bottom of image) where people don?t look as much ? typically, sky overhead and ground below are not that interesting to look at.
+It has lower quality at the equator or horizon where there is typically more interesting content.
+It has fewer vertical pixels for 3D content.
+A straight line motion in the real world does not result in a straight line motion in equirectangular projection, making videos hard to compress.
+ 
 \subsubsection{Rectilineare Projektion}
 \subsubsection{Cylindrische Projektion}
 \subsubsection{Mercator-Projektion}
@@ -494,8 +508,17 @@ Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreit
 \subsubsection{Pannini/ Vedutismo-Projektion}
 \subsubsection{Stereographische Projektion}
 \subsubsection{Cubemap/ Skybox-Projektion}
+
+% Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
+kommt aus der Computerspiele-Szene
+
+
  == cubic?
- 
+
+% Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
+YT jetzt EAC, Equi-angular
+(Heatmap Grafiken aufnehmen?) 
+
  
  
 % https://en.wikipedia.org/wiki/Skybox_(video_games)
@@ -666,7 +689,7 @@ Welche Kameras gibt es?
 
 https://patents.google.com/patent/US7463280B2/en
 
-
+http://blog.dsky.co/capturing-virtual-worlds-a-method-for-taking-360-virtual-photos-and-videos/
 
 \subsection{360°-Inhalte in React360}
 Photos+Videos: https://facebook.github.io/react-360/docs/photos-and-videos.html
