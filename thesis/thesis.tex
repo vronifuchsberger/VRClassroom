@@ -188,6 +188,8 @@ Was ist verbaut?
 
 Augenabstand IPD
 
+Auflösung immer pro Auge! in Tabelle
+
 
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, je höher die Rechenleistung, desto aufwändigere VR-Szenen können dargestellt werden. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten konkurrieren, was die Kombination aus Display-Auflösung, Bildwiederholungsrate und Field of View angeht.
@@ -311,6 +313,17 @@ https://upload-magazin.de/blog/25071-standalone-vr-headsets/
 \subsection{Computer-gestützte VR-Hardware}
 Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für extrem rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
 
+\begin{table}[]
+\begin{tabular}{p{0.14\linewidth}|p{0.1\linewidth}|p{0.14\linewidth}|p{0.13\linewidth}|p{0.13\linewidth}|p{0.1\linewidth}|p{0.1\linewidth}}
+\textbf{VR-Gerät} & \textbf{DoF} & \textbf{Display} & \textbf{Input} & \textbf{Tracking} & \textbf{Gewicht} & \textbf{Preis} \\ \hline
+Oculus Rift &  & t \newline 90Hz \newline 100° & & & 380-470g &  399\$ \\
+Playstation VR & & t \newline120Hz \newline 100° & & 610g & &\\
+HTC Vive & & t  \newline 90Hz \newline 110° & & & &
+\end{tabular}
+  \caption{Vergleich der Computer-gestützten VR-Headsets.}
+  ~\label{tab:headests1}
+\end{table}
+
 \subsubsection{Oculus Rift}
 \subsubsection{HTC Vive und HTC Vive Pro}
 \subsubsection{Playstation VR}
@@ -319,6 +332,18 @@ Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit ein
 \subsection{Stand-alone VR-Hardware}
 Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, Oculus Quest oder Google Daydream. Es handelt sich hierbei um vollumfängliche Systeme, die ohne weiteres Equipment auskommen und auch keinen Computer benötigen. Da sie mit einem Akku betrieben werden, ist die Betriebsdauer allerdings eingeschränkt und auch die Rechenleistung ist deutlich geringer als die der Computer-gestützten Systeme.
 
+\begin{table}[]
+\begin{tabular}{p{0.14\linewidth}|p{0.08\linewidth}|p{0.14\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.1\linewidth}|p{0.08\linewidth}}
+\textbf{VR-Gerät} & \textbf{DoF} & \textbf{Display} & \textbf{Input} & \textbf{Tracking} & \textbf{Gewicht} & \textbf{Preis} \\ \hline
+Oculus Go & 3 DoF & 1280x1440  \newline 60-72Hz \newline 100° & & & 468g & 199\$ \\
+Oculus Quest & 6 DoF & 1600x1440 \newline OLED \newline 72Hz \newline 100° & Oculus Touch Controller &  & & 399\$ \\
+Lenovo Mirage Solo & & & & & 645g & \\
+HTC Vive Focus & & & & & &
+\end{tabular}
+  \caption{Vergleich der Stand-alone VR-Headsets.}
+  ~\label{tab:headests2}
+\end{table}
+
 \subsubsection{Oculus Go}
 \subsubsection{Oculus Quest}
 \subsubsection{Lenovo Mirage Solo}
@@ -326,6 +351,17 @@ Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, 
 
 \subsection{Smartphone gestützte VR-Hardware}
 Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone integriert wird, um die VR-Inhalte zu zeigen. Diese liegen preislich auf einem sehr niedrigen bis mittlerem Niveau und bilden so eine gute Möglichkeit für alle Leute in die Welt der VR-Systeme einzutauchen, ohne direkt mehrere Hundert Euro ausgeben zu müssen.
+
+\begin{table}[]
+\begin{tabular}{l|l|l|l|l}
+\textbf{VR-Gerät} & \textbf{DoF} & \textbf{Input} & \textbf{Gewicht} & \textbf{Preis} \\ \hline
+Google Daydream View &  &  & 261g &  \\
+Samsung Gear VR & & & 345g & \\
+Google Cardboard & & & 96g &
+\end{tabular}
+  \caption{Vergleich der Smartphone-gestützten VR-Headsets.}
+  ~\label{tab:headests3}
+\end{table}
 
 \subsubsection{Google Cardboard}
 \subsubsection{Samsung Gear VR}
@@ -584,42 +620,42 @@ Paper: Def von spatial Audio
 \subsubsection{Quellen für Spatial Audio-Dateien}
 \subsubsection{Erstellung und Bearbeitung von Spatial Audio}
 \subsection{Virtual Reality Spiele und Anwendungen}
+Die Kombination aus den vorigen Inhalten ergibt VR-Anwendungen und Spiele. Inzwischen ist die Auswahl an verschiedenen Anwendungen extrem gewachsen und tut das auch weiterhin. Allerdings ist der hier nach wie vor der allergrößte Anteil an VR-Programmen Spiele.
+
+\subsubsection{Quellen für Virtual Reality Anwendungen}
+Auf jeder Plattform von VR-Geräten gibt es eigene Stores, um Virtual Reality-Anwendungen für die jeweilige Plattform zu finden. 
+Bei HTC Vive und HTC Focus ist das der SteamVR Store \cite{ValveCorporation}, bei den Oculus Geräten der Oculus Store \cite{FacebookTechnologiesLLC} und Anwendungen für die Playstation VR sind im Playstation Store zu finden. \cite{SonyInteractiveEntertainmentEuropeLimited}
+
+Da WebVR plattformunabhängig ist, gibt es dafür keinen ``Standard''-Store auf dem Gerät, hier ist es relativ schwierig, Apps zu finden. Eine Möglichkeit, mit allerdings sehr begrenzter Auswahl ist auf itch.io nach ``WebVR'' zu filtern. \cite{Itchcorp}
+
+Außerdem gibt es noch wearvr.com, einen unabhängigen Virtual Reality App Store, der Sammlungen für Anwendungen für alle Plattformen haben. \cite{WEARVR}
 
 
-\subsubsection{Quellen für Games}
-HTC: SteamVR Store
-Listings für alle Geräte: https://www.wearvr.com/
-Oculus devices: https://www.oculus.com/experiences
-Playstation VR Store: https://store.playstation.com/de-de/grid/STORE-MSF75508-PLAYSTATIONVR/1
-WebVR: https://itch.io/games/tag-webvr, 
+\subsubsection{Erstellung von Virtual Reality Anwendungen}
+Um Virtual Reality Anwendungen zu erstellen, gibt es zwei grundlegend verschiedene Ansätze: 
 
-\subsubsection{Erstellung und Bearbeitung von Spielen und Anwendungen}
-% https://www.instavr.co/?gclid=EAIaIQobChMIxY_KroDm3wIVT4uyCh35XQs5EAAYASAAEgIT9fD_BwE
-VR Apps erstellen
+Zum einen können die Anwendungen für die verschiedenen Plattformen oder als WebVR Apps entwickelt werden. Dazu muss die Person die jeweilige Programmiersprache beherrschen und einiges an Zeit investieren, kann aber dafür eine Anwendung entwickeln, bei der alles so ist, wie es die entwickelnde Person sich wünscht.
 
-https://site.vizor.io/products
-Vizor 360
-Tool, um interactive 360 experiences ohne Programmieren zu erstellen
-Einfach Fotos hochladen, miteinander verbinden, personalisieren, fertig!
+Eine spannende Möglichkeit VR-Applikationen oder -Games zu entwickeln ist die Nutzung von PlayCanvas. PlayCanvas ist eine Web-basierte Game-Engine, in der mit HTML und WebGL entwickelt werden kann. Das besondere ist, dass in Real-Time kollaborativ gearbeitet werden kann und da es keine Kompilierzeit gibt die Veränderungen auch direkt auf den Geräten angezeigt werden. PlayCanvas ist WebVR kompatibel und ist damit sehr gut geeignet VR-Anwendungen für Smartphone-gestützte VR-Headsets zu entwickeln. \cite{PlayCanvasLtd}
 
-https://playcanvas.com
-Web-basierte Game Engine
-damit kann man auch VR-Anwendungen erstellen
-kollaborativ
-WebGl editor im Browser mit live updates auf mehreren Geräten -> schnelles Testen auf Geräten möglich
-open-source
-hat mobile browser support (sogar auf iPhone 4s) und schnelle Ladezeiten (durch script concatenation, minifaction, deferred loading nicht essentieller assets und andere)
+Weitere Web-basierte Möglichkeiten VR-Applikationen zu entwickeln sind A-Frame, React360 oder Three.js. Genauere Erläuterungen dazu finden sich in \ref{subsec:webvr}.
 
+Alternativ können Anwendungen auch nativ entwickelt werden, zum Beispiel als Android-Anwendung, die dann in der Google Cardboard-App Nutzern zur Verfügung gestellt werden kann.
 
-Unity: C\#
-Unreal Engine: C++, Blueprints
-% -> https://www.reddit.com/r/learnVRdev/comments/65cvxo/how_to_start_making_vr_games_for_beginners_what/
+Außerdem besteht die Möglichkeit die Virtual Reality-Apps auf die klassische Weise mit einer Game Engine zu entwickeln. Das kann entweder mit Unity und C\# geschehen oder der Unreal Engine mit C++ und Blueprints. Diese Game Engines können dann den Code für die jeweilige Plattform kompilieren und man erhält native Apps.
+Genauere Ausführungen dazu sind wiederum in \ref{subsec:unity} beziehungsweise \ref{subsec:unreal} zu finden.
 
-mobile VR can be JS or native
-WebVR is JS
-Google Cardboard: Android
+\bigskip
+
+Die zweite Möglichkeit ist die Nutzung von Tools wie zum Beispiel InstaVR oder Vizor360. Mit diesen Programmen können auch Personen, die keinerlei Programmierkenntnisse haben einfache 360°-Anwendungen erstellen. Dazu werden einfach 360°-Fotos oder -Videos hochgeladen, mit dem Tool zu einer Tour verbunden und schon ist eine einfach Anwendung fertig. So könnte zum Beispiel eine kleine Tour über den Campus einer Uni erstellt werden, sodass mögliche zukünftige Studierende besser erfahren können, wie der Campus aussieht. \cite{Vizor2019} \cite{InstaVRInc}
+Außerdem können auch noch Textelemente eingefügt werden, um zum Beispiel auf einem Foto zu markieren, welche Gebäude zu sehen sind, um dem Betrachter noch etwas mehr Kontext zu geben.
 
 \subsection{360°-Inhalte in 3D}
+https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-22/issue-3/030902/Acquisition-of-omnidirectional-stereoscopic-images-and-videos-of-dynamic-scenes/10.1117/1.JEI.22.3.030902.full?SSO=1
+
+https://www.youtube.com/watch?v=0OKBjkhdnOc
+Nett erklärt, weirder Typ
+
 https://vuze.camera/camera/vuze-xr-camera/
 180 in 3D oder 360 in 2D
 
@@ -630,9 +666,26 @@ Welche Kameras gibt es?
 
 https://patents.google.com/patent/US7463280B2/en
 
+
+
 \subsection{360°-Inhalte in React360}
 Photos+Videos: https://facebook.github.io/react-360/docs/photos-and-videos.html
 Audio: https://facebook.github.io/react-360/docs/audio.html
+	3 Soundtypen:
+		- environmental audio: nicht spatial, spielt im loop ab
+		- sound Effekte: spielen einmal ab (playOneShot())
+		- spatial audio: muss erst created werden, dann wird Position übergeben, wenn is3d===true
+		
+		// Play a sound to the user's right (3 meters down the positive x-axis)
+
+AudioModule.createAudio('bird', {
+  source: asset('chirp.mp3'),
+  is3d: true,
+});
+AudioModule.play('bird', {
+  position: [3, 0, 0],
+});
+
 3D-Modelle: https://facebook.github.io/react-360/docs/objects.html
 
 
@@ -641,9 +694,14 @@ Audio: https://facebook.github.io/react-360/docs/audio.html
 \cleardoublepage
 \section{Software Entwicklung von VR-Systemen}
 \subsection{Native VR-Applikationen}
+\subsubsection{Unity}
+\label{subsec:unity}
 Unity: C\#
+\subsubsection{Unreal Engine}
+\label{subsec:unreal}
 Unreal: C++
 \subsection{WebVR + Mobile VR: VR im Browser}
+\label{subsec:webvr}
 Was ist WebVR?
 https://webvr.info
 (https://en.wikipedia.org/wiki/WebVR)
@@ -693,6 +751,8 @@ Warum für React360 entschieden?
 \subsubsection{Three.js}
 \subsubsection{WebGL}
 Sollte ich das vielleicht auch noch erwähnen?
+
+playcanvas?
 
 %\_____________________________________________________________________
 
@@ -1106,7 +1166,11 @@ Außerdem werden bestehende Probleme von VRClassroom besprochen und wie das Syste
 
 \subsection{Zukunft von VR}
 VR wird sich noch weiter verbreiten, da Geräte günstiger werden und mehr Inhalte da sind
-Trotzdem noch langer weg, siehe Studie nur 40\% der Lehrer haben schon einmal ein VR-Headset verwendet.
+-> Artikel mit Prognosen?
+
+Trotz dieser steigenden Zahlen und positive Prognosen ist davon auszugehen, dass es trotzdem noch eine Weile dauern wird, bis Virtual Reality den Weg in die Schulen finden wird. Denn wie auch in den Ergebnissen der Studie zu sehen sind, glauben nur 38\%, dass Virtual Reality - in welcher Form auch immer - eine große Rolle im Unterricht spielen wird. Außerdem haben selbst von den teilnehmenden Lehrkräften bis dato nur 43\% jemals selber eine VR-Brille ausprobiert. Erst wenn ein übermäßiger Teil der Lehrkräfte selbst Erfahrungen sammeln konnten und genug Unterrichts-geeignetes Material zur Verfügung steht, besteht die Chance, dass Virtual Reality im Unterrichtsgeschehen einbezogen werden wird. VRClassroom soll dabei einen Möglichkeit bieten, mit den Schülerinnen und Schülern erste Erfahrungen mit Unterrichtsmaterialien zu sammeln.
+
+Nochmal Artikel von davor aufgreifen?
 Was muss sich ändern, damit es sich noch mehr verbreitet?
  -> standalone Geräte, müssen mehr Rechenleistung, bessere Displays und weniger Gewicht haben
  -> besseres Tracking?
@@ -1138,7 +1202,7 @@ Der Ton der Videos ist dann um einen Bruchteil einer Sekunde verschoben, was zu 
 Das kann dadurch umgangen werden, dass nur der Sound aus der Teacher-App abgespielt wird, die Schüler Ohrstöpsel tragen oder sie die Abspiellautstärke auf ihren Geräten weit herunterdrehen, dass es nicht durch den ganzen Raum schallt. Eine echte Lösung dafür gibt es allerdings nicht.
 
 \subsection{Mögliche Weiterentwicklungen an VRClassroom}
-VRClassroom ist ein vollfunktionsfähiges System, dass laut Umfrageergebnissen bereits bei einigigen Lehrkräften das Interesse geweckt hat, es in ihrem Unterricht einzusetzen. Trotzdem sind in der Entwicklung und bei der Online-Befragung noch mögliche Weiterentwicklungen von VRClassroom aufgefallen, die zukünftig noch integriert werden könnten.
+VRClassroom ist ein vollfunktionsfähiges System, dass laut Umfrageergebnissen bereits bei einigen Lehrkräften das Interesse geweckt hat, es in ihrem Unterricht einzusetzen. Trotzdem sind in der Entwicklung und bei der Online-Befragung noch mögliche Weiterentwicklungen von VRClassroom aufgefallen, die zukünftig noch integriert werden könnten.
 
 \subsubsection{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}
 Eine mögliche Weiterentwicklung von VRClassroom könnte sein das ganze VRClassroom System nicht lokal auf dem Rechner der Lehrkraft laufen zu lassen, mit dem sich dann alle VR-Geräte verbinden, sondern auch eine Version anzubieten, die Online gehostet ist.

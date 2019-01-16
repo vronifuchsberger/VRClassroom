@@ -17,14 +17,14 @@
 \contentsline {subsubsection}{\numberline {2.2.2}HTC Vive und HTC Vive Pro}{5}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{5}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{5}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{7}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{7}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{7}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{7}{subsubsection.2.3.4}
-\contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{7}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{7}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{7}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{7}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{8}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{8}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{8}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{8}{subsubsection.2.3.4}
+\contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{8}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{8}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{8}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{8}{subsubsection.2.4.3}
 \contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{9}{section.3}
 \contentsline {subsection}{\numberline {3.1}3D in VR}{9}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{9}{subsection.3.2}
@@ -55,18 +55,20 @@
 \contentsline {subsubsection}{\numberline {5.5.1}Quellen f\"ur Spatial Audio-Dateien}{15}{subsubsection.5.5.1}
 \contentsline {subsubsection}{\numberline {5.5.2}Erstellung und Bearbeitung von Spatial Audio}{15}{subsubsection.5.5.2}
 \contentsline {subsection}{\numberline {5.6}Virtual Reality Spiele und Anwendungen}{15}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Quellen f\"ur Games}{15}{subsubsection.5.6.1}
-\contentsline {subsubsection}{\numberline {5.6.2}Erstellung und Bearbeitung von Spielen und Anwendungen}{15}{subsubsection.5.6.2}
-\contentsline {subsection}{\numberline {5.7}360\IeC {\textdegree }-Inhalte in 3D}{15}{subsection.5.7}
+\contentsline {subsubsection}{\numberline {5.6.1}Quellen f\"ur Virtual Reality Anwendungen}{15}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.2}Erstellung von Virtual Reality Anwendungen}{15}{subsubsection.5.6.2}
+\contentsline {subsection}{\numberline {5.7}360\IeC {\textdegree }-Inhalte in 3D}{16}{subsection.5.7}
 \contentsline {subsection}{\numberline {5.8}360\IeC {\textdegree }-Inhalte in React360}{16}{subsection.5.8}
 \contentsline {section}{\numberline {6}Software Entwicklung von VR-Systemen}{17}{section.6}
 \contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{17}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Unity}{17}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Unreal Engine}{17}{subsubsection.6.1.2}
 \contentsline {subsection}{\numberline {6.2}WebVR + Mobile VR: VR im Browser}{17}{subsection.6.2}
 \contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{17}{subsubsection.6.2.1}
 \contentsline {subsubsection}{\numberline {6.2.2}React360}{17}{subsubsection.6.2.2}
 \contentsline {subsubsection}{\numberline {6.2.3}Vergleich von A-Frame und React360}{17}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{17}{subsubsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.5}WebGL}{17}{subsubsection.6.2.5}
+\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{18}{subsubsection.6.2.4}
+\contentsline {subsubsection}{\numberline {6.2.5}WebGL}{18}{subsubsection.6.2.5}
 \contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{19}{section.7}
 \contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{19}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Anwender}{20}{subsection.7.2}
@@ -75,10 +77,10 @@
 \contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{21}{subsubsection.7.4.1}
 \contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{22}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}Controls}{22}{subsubsection.7.4.3}
-\contentsline {paragraph}{Marker}{22}{figure.caption.11}
-\contentsline {paragraph}{Photo Controls}{23}{section*.12}
-\contentsline {paragraph}{Video Controls}{23}{section*.14}
-\contentsline {paragraph}{Model Controls}{24}{section*.16}
+\contentsline {paragraph}{Marker}{22}{figure.caption.14}
+\contentsline {paragraph}{Photo Controls}{23}{section*.15}
+\contentsline {paragraph}{Video Controls}{23}{section*.17}
+\contentsline {paragraph}{Model Controls}{24}{section*.19}
 \contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{24}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{24}{subsection.7.6}
 \contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{24}{subsection.7.7}
@@ -99,9 +101,9 @@
 \contentsline {subsection}{\numberline {9.1}Zukunft von VR}{35}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{35}{subsection.9.2}
 \contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{35}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{35}{subsubsection.9.2.2}
+\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{36}{subsubsection.9.2.2}
 \contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{36}{subsection.9.3}
 \contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{36}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{36}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{37}{subsubsection.9.3.2}
 \contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{37}{subsubsection.9.3.3}
 \contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{37}{subsubsection.9.3.4}
