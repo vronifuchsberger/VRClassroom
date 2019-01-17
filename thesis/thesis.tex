@@ -209,40 +209,40 @@ Wie in Kapitel XXX (hier Ref einfügen) beschrieben, gibt es drei grundsätzliche 
 Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Touch-Event auf dem Display auszulösen.
 (Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Punkt verbunden werden, um dem Nutzer sinnvollen Input zu erlauben.
 
-Gaze Input? (-> EyeVR paper)
 
+nicht existent, wäre aber gut:
+Gaze Input? (-> EyeVR paper)
 Bisher gibt es keine Geräte, die mit Voice-Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
 
-\subsubsection{Tracking}
+\subsubsection{Positional Tracking}
+
 Trackingmethode: kein tracking/ inside out/ Sensoren im Raum
 
 nur relevant für Rechner-gestützt und stand-alone
 
 
 \subsubsection{Gewicht}
-Was wiegen Geräte
-was ist Ziel, das sich nicht schwer anfühlt?
+Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen, allerdings ist bei diesen neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen, aber dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
+
+Die Playstation VR hat ein kleines Gegengewicht im Bügel, sodass sich das Gewicht etwas besser verteilt.
+
+Das leichteste aller VR-Headsets ist das Google Cardboard mit einem eingelegten Smartphone, es hat dann ein Gesamtgewicht von etwa 270g, wenn man die 96g des Cardboards mit einem durchschnittlichen aktuellen Smartphone addiert. Allerdings sind dadurch auch keine besonders angenehmen Polsterungen oder Riemen eingebaut.
+Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, das Gewicht immer ohne das Smartphone ist.
 
 
 \subsubsection{Preis}
+Wie in \ref{sec:challenges} erläutert sieht die Autorin des Artikels ``5 Major Challenges For The VR Industry'' den Preis als eines der Hautprobleme, dass sich VR noch nicht überall durchgesetzt hat.
+Da aber besonders die Smartphone-gestützten VR-Systeme sehr günstig zu bekommen sind, gilt dieses Argument eigentlich nicht wirklich.
 
+Trotzdem wird von Experten (QUELLE) erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden.
 
-Die Preise sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
+Die Preise in den Tabllen \ref{tab:headsets1}, \ref{tab:headsets2} und \ref{tab:headsets3} sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
 
-Preis PlaystationVR ist ein Bundel-Preis, bei dem 2 Spiele enthalten sind
+Preis PlaystationVR ist ein Bundle-Preis, bei dem 2 Spiele enthalten sind.
 
 
 
 \subsubsection{Liste Quellen etc}
-% HTC Vive: https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD_BwE#vive-spec
-Augenabstand:	Einstellung der Pupillendistanz und des Objektivabstands
-Sensoren:	SteamVR Tracking, G-Sensor, Gyroskop, Nähesensor
-Controller:	Multifunktions-Trackpad, Greifknöpfe, zweistufiger Abzug, Systemknopf, Menütaste
-Outside Tracking, Kamera in Headset
-% Preis: https://store.eu.vive.com/store?Action=DisplayPage&Locale=de_DE&SiteID=htcemea&id=ThreePgCheckoutShoppingCartPage
-
-Oculus Rift: https://www.vrbound.com/headsets/oculus/rift
-Preis: Oculus.com/rift
 
 Playstation VR: https://www.vrbound.com/headsets/sony/playstation-vr, https://www.playstation.com/de-de/explore/playstation-vr/tech-specs/
 
@@ -284,7 +284,7 @@ Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit ein
 Oculus Rift & 6 DoF & 1080x1200 \newline 90Hz \newline 100° & Oculus Touch, Xbox One Controller & 2 optische Sensoren im Raum & 380-470g &  349\$ \\
 Playstation VR & 6 DoF & 960 x 1080 \newline120Hz \newline 100° & PlayStation Move Controller
  & Playstation Camera & 610g & 349 \$ \\
-HTC Vive & 6 DoF & 1080x1200  \newline 90Hz \newline 110° & SteamVR-Tracking Controller & 2 Laser-Sensoren im Raum & 555g &
+HTC Vive & 6 DoF & 1080x1200  \newline 90Hz \newline 110° & SteamVR-Tracking Controller & 2 Laser-Sensoren im Raum & 555g & 499\$
 \end{tabular}
   \caption{Vergleich der Computer-gestützten VR-Headsets.}
   ~\label{tab:headsets1}
@@ -301,6 +301,9 @@ Die Oculus Rift ist mit bis zu 470g deutlich leichter als die beiden anderen Kab
 
 Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die Oculus Rift Brille, die Oculus Touch Controller und die zwei Sensoren benötigt. 
 
+% https://www.vrbound.com/headsets/oculus/rift
+% https://www.oculus.com/rift/
+
 \subsubsection{HTC Vive}
 Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie haben die gleiche Auflösung und Bildwiederholungsrate von 90Hz, allein das Field of View ist mit 110° etwas weiter als bei anderen VR-Headsets. Im Vive-Headset lässt sich die Pupillendistanz und der Objektivabstand einstellen.
 
@@ -312,6 +315,11 @@ Die Controller haben ein klickbares Trackpad, Menü- und System-Buttons auf der V
 
 Die HTC Vive hat zusätzlich zu den Sensoren auch noch eine Kamera eingebaut, um gegebenenfalls im Weg stehende Gegenstände zu erkennen, um Unfälle zu verhindern.
 
+Preislich liegt die Vive mit 499\$ am oberen Ende des Spektrums der VR-Headsets.
+
+% https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD_BwE#vive-spec
+% 
+
 \subsubsection{Playstation VR}
 Die Playstation VR ist dafür entwickelt mit der Playstation 4 Konsole benutzt zu werden, sie wurde also spezielle für den Anwendungsfall des Gamings entwickelt. Sie unterstützt sogar das Spielen mit zwei Spielern, wobei ein Spieler die Playstation VR nutzt und der zweite Spieler das Bild auf dem Fernseher sieht. Beide Nutzen die Playstation Move Controller.
 
@@ -322,6 +330,9 @@ Wie in Tabelle \ref{tab:headsets1} zu sehen ist die Auflösung der Playstation VR
 Zum Tracking der Position im Raum nutzt die Playstation VR die bereits existierende Playstation Camera. Darin sind 2 Kameras verbaut, die beide Tiefenwahrnehmung haben. Sie tracken optisch sowohl die Position des Headsets als auch die der Playstation Move Controller.
 
 Für ein vollständiges Setup wird ein Playstation 4 Konsole, die Playstation VR Brille, die Playstation Move Controller und die Playstation Camera benötigt. 
+
+% https://www.vrbound.com/headsets/sony/playstation-vr
+% https://www.playstation.com/de-de/explore/playstation-vr/tech-specs/
 
 
 \subsection{Stand-alone VR-Hardware}
@@ -393,7 +404,9 @@ Paper: Virtual reality for collaborative e-learning 2008
 
 \cleardoublepage % Neue rechte Seite anfangen
 \section{Aktuelle Challenges an VR-Systemen}
+\label{sec:challenges} 
 5 Major Challenges in VR: https://channels.theinnovationenterprise.com/articles/5-major-challenges-of-vr-industry
+\cite{Wolwort2018}
 
 1. Preis
 	-> inziwschen für alle Preisklassen was dabei
@@ -819,7 +832,7 @@ Aufbauend auf den Erkenntnissen aus ANDEREN KAPITELN wurde im Rahmen dieser Arbe
 
 VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Schüler-App, die über den Browser der mobilen Geräte beziehungsweise VR-Headsets erreicht werden kann.
 
-Die Lehrer-App ist eine Electron-App, die wiederum eine React-App für das Interface enthält und die Schüler-App startet. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in Javascript gehalten, nur unterschieden durch die verschiedenen Libraries Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer Creative Commons Lizenz veröffentlicht und so kann ein Entwickler schnell alle Teile des Codes verstehen ohne sich in mehrere Programmiersprachen einarbeitenzu müssen.
+Die Lehrer-App ist eine Electron-App, die wiederum eine React-App für das Interface enthält und die Schüler-App startet. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in Javascript gehalten, nur unterschieden durch die verschiedenen Libraries Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer Creative Commons Lizenz veröffentlicht und so kann ein Entwickler schnell alle Teile des Codes verstehen ohne sich in mehrere Programmiersprachen einarbeiten zu müssen.
 
 Grafik \ref{fig:electron}
 
