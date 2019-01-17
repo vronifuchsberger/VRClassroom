@@ -14,17 +14,17 @@
 \contentsline {subsubsection}{\numberline {2.1.8}Liste Quellen etc}{5}{subsubsection.2.1.8}
 \contentsline {subsection}{\numberline {2.2}Computer-gest\"utzte VR-Hardware}{5}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Oculus Rift}{5}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}HTC Vive und HTC Vive Pro}{5}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{5}{subsubsection.2.2.3}
-\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{5}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{8}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{8}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{8}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{8}{subsubsection.2.3.4}
-\contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{8}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{8}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{8}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{8}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.2.2}HTC Vive}{6}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{6}{subsubsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{7}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{7}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{7}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{7}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{7}{subsubsection.2.3.4}
+\contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{7}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{7}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{7}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{7}{subsubsection.2.4.3}
 \contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{9}{section.3}
 \contentsline {subsection}{\numberline {3.1}3D in VR}{9}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{9}{subsection.3.2}
@@ -80,10 +80,10 @@
 \contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{23}{subsubsection.7.4.1}
 \contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{24}{subsubsection.7.4.2}
 \contentsline {subsubsection}{\numberline {7.4.3}Controls}{24}{subsubsection.7.4.3}
-\contentsline {paragraph}{Marker}{24}{figure.caption.14}
-\contentsline {paragraph}{Photo Controls}{25}{section*.15}
-\contentsline {paragraph}{Video Controls}{25}{section*.17}
-\contentsline {paragraph}{Model Controls}{26}{section*.19}
+\contentsline {paragraph}{Marker}{24}{figure.caption.13}
+\contentsline {paragraph}{Photo Controls}{25}{section*.14}
+\contentsline {paragraph}{Video Controls}{25}{section*.16}
+\contentsline {paragraph}{Model Controls}{26}{section*.18}
 \contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{26}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{26}{subsection.7.6}
 \contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{26}{subsection.7.7}
