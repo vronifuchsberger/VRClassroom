@@ -11,102 +11,99 @@
 \contentsline {subsubsection}{\numberline {2.1.5}Positional Tracking}{4}{subsubsection.2.1.5}
 \contentsline {subsubsection}{\numberline {2.1.6}Gewicht}{4}{subsubsection.2.1.6}
 \contentsline {subsubsection}{\numberline {2.1.7}Preis}{5}{subsubsection.2.1.7}
-\contentsline {subsubsection}{\numberline {2.1.8}Liste Quellen etc}{5}{subsubsection.2.1.8}
 \contentsline {subsection}{\numberline {2.2}Computer-gest\"utzte VR-Hardware}{5}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Oculus Rift}{5}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}HTC Vive}{6}{subsubsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{6}{subsubsection.2.2.3}
-\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{6}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{7}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{7}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{7}{subsubsection.2.3.3}
 \contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{7}{subsubsection.2.3.4}
 \contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{7}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{8}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{7}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{8}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{8}{subsubsection.2.4.3}
-\contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{9}{section.3}
-\contentsline {subsection}{\numberline {3.1}3D in VR}{9}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{9}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}VR-Systeme im Bildungsbereich}{9}{subsection.3.3}
-\contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{11}{section.4}
-\contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{11}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{11}{subsection.4.2}
-\contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{15}{section.5}
-\contentsline {subsection}{\numberline {5.1}Projektionen von 360\IeC {\textdegree }-Fotos und -Videos}{15}{subsection.5.1}
-\contentsline {subsubsection}{\numberline {5.1.1}Equirectangulare Projektion}{15}{subsubsection.5.1.1}
-\contentsline {subsubsection}{\numberline {5.1.2}Rectilineare Projektion}{15}{subsubsection.5.1.2}
-\contentsline {subsubsection}{\numberline {5.1.3}Cylindrische Projektion}{15}{subsubsection.5.1.3}
-\contentsline {subsubsection}{\numberline {5.1.4}Mercator-Projektion}{15}{subsubsection.5.1.4}
-\contentsline {subsubsection}{\numberline {5.1.5}Circulare Projektion}{15}{subsubsection.5.1.5}
-\contentsline {subsubsection}{\numberline {5.1.6}Pannini/ Vedutismo-Projektion}{15}{subsubsection.5.1.6}
-\contentsline {subsubsection}{\numberline {5.1.7}Stereographische Projektion}{15}{subsubsection.5.1.7}
-\contentsline {subsubsection}{\numberline {5.1.8}Cubemap/ Skybox-Projektion}{15}{subsubsection.5.1.8}
-\contentsline {subsection}{\numberline {5.2}360\IeC {\textdegree }-Fotos}{16}{subsection.5.2}
-\contentsline {subsubsection}{\numberline {5.2.1}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{16}{subsubsection.5.2.1}
-\contentsline {subsubsection}{\numberline {5.2.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Fotos}{16}{subsubsection.5.2.2}
-\contentsline {subsection}{\numberline {5.3}360\IeC {\textdegree }-Videos}{16}{subsection.5.3}
-\contentsline {subsubsection}{\numberline {5.3.1}Quellen f\"ur 360\IeC {\textdegree }-Videos}{16}{subsubsection.5.3.1}
-\contentsline {subsubsection}{\numberline {5.3.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Videos}{17}{subsubsection.5.3.2}
-\contentsline {subsection}{\numberline {5.4}3D-Modelle}{17}{subsection.5.4}
-\contentsline {subsubsection}{\numberline {5.4.1}Quellen f\"ur 3D-Modellen}{17}{subsubsection.5.4.1}
-\contentsline {subsubsection}{\numberline {5.4.2}Erstellung und Bearbeitung von 3D-Modellen}{17}{subsubsection.5.4.2}
-\contentsline {subsection}{\numberline {5.5}360\IeC {\textdegree } Sound/ Spatial Audio}{17}{subsection.5.5}
-\contentsline {subsubsection}{\numberline {5.5.1}Quellen f\"ur Spatial Audio-Dateien}{17}{subsubsection.5.5.1}
-\contentsline {subsubsection}{\numberline {5.5.2}Erstellung und Bearbeitung von Spatial Audio}{17}{subsubsection.5.5.2}
-\contentsline {subsection}{\numberline {5.6}Virtual Reality Spiele und Anwendungen}{17}{subsection.5.6}
-\contentsline {subsubsection}{\numberline {5.6.1}Quellen f\"ur Virtual Reality Anwendungen}{18}{subsubsection.5.6.1}
-\contentsline {subsubsection}{\numberline {5.6.2}Erstellung von Virtual Reality Anwendungen}{18}{subsubsection.5.6.2}
-\contentsline {subsection}{\numberline {5.7}3D 360\IeC {\textdegree }}{18}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}360\IeC {\textdegree }-Inhalte in React360}{19}{subsection.5.8}
-\contentsline {subsubsection}{\numberline {5.8.1}Fotos und Videos}{19}{subsubsection.5.8.1}
-\contentsline {subsubsection}{\numberline {5.8.2}Sounds}{19}{subsubsection.5.8.2}
-\contentsline {subsubsection}{\numberline {5.8.3}3D-Modelle}{20}{subsubsection.5.8.3}
-\contentsline {section}{\numberline {6}Software Entwicklung von VR-Systemen}{21}{section.6}
-\contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{21}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Unity}{21}{subsubsection.6.1.1}
-\contentsline {subsubsection}{\numberline {6.1.2}Unreal Engine}{21}{subsubsection.6.1.2}
-\contentsline {subsection}{\numberline {6.2}WebVR + Mobile VR: VR im Browser}{21}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{21}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}React360}{21}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Vergleich von A-Frame und React360}{21}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{22}{subsubsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.5}WebGL}{22}{subsubsection.6.2.5}
-\contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{23}{section.7}
-\contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{23}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Anwender}{24}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Grundstruktur}{24}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Lehrer-Applikation}{25}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{25}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{26}{subsubsection.7.4.2}
-\contentsline {subsubsection}{\numberline {7.4.3}Controls}{26}{subsubsection.7.4.3}
-\contentsline {paragraph}{Marker}{26}{figure.caption.13}
-\contentsline {paragraph}{Photo Controls}{27}{section*.14}
-\contentsline {paragraph}{Video Controls}{27}{section*.16}
-\contentsline {paragraph}{Model Controls}{28}{section*.18}
-\contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{28}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{28}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{28}{subsection.7.7}
-\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{28}{subsubsection.7.7.1}
-\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{30}{subsubsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{30}{subsubsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{31}{subsubsection.7.7.4}
-\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{31}{subsubsection.7.7.5}
-\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{31}{subsubsection.7.7.6}
-\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{33}{section.8}
-\contentsline {subsection}{\numberline {8.1}Urspr\"unglich geplanter Ablauf der Studie}{33}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Freigabe Kulturministerium}{33}{subsubsection.8.1.1}
-\contentsline {subsection}{\numberline {8.2}Qualitative Nutzerstudie}{33}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Fragebogen}{33}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Erkenntnisse}{33}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Online-Umfrage}{33}{subsection.8.3}
-\contentsline {section}{\numberline {9}Ausblick}{39}{section.9}
-\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{39}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{39}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{39}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{40}{subsubsection.9.2.2}
-\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{40}{subsection.9.3}
-\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{40}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{41}{subsubsection.9.3.2}
-\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{41}{subsubsection.9.3.3}
-\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{41}{subsubsection.9.3.4}
+\contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{11}{section.3}
+\contentsline {subsection}{\numberline {3.1}3D in VR}{11}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{11}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}VR-Systeme im Bildungsbereich}{11}{subsection.3.3}
+\contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{14}{subsection.4.2}
+\contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{17}{section.5}
+\contentsline {subsection}{\numberline {5.1}Projektionen von 360\IeC {\textdegree }-Fotos und -Videos}{17}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Equirectangulare Projektion}{17}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Rectilineare Projektion}{17}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}Cylindrische Projektion}{17}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}Mercator-Projektion}{17}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Circulare Projektion}{17}{subsubsection.5.1.5}
+\contentsline {subsubsection}{\numberline {5.1.6}Pannini/ Vedutismo-Projektion}{17}{subsubsection.5.1.6}
+\contentsline {subsubsection}{\numberline {5.1.7}Stereographische Projektion}{17}{subsubsection.5.1.7}
+\contentsline {subsubsection}{\numberline {5.1.8}Cubemap/ Skybox-Projektion}{17}{subsubsection.5.1.8}
+\contentsline {subsection}{\numberline {5.2}360\IeC {\textdegree }-Fotos}{18}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{18}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Fotos}{18}{subsubsection.5.2.2}
+\contentsline {subsection}{\numberline {5.3}360\IeC {\textdegree }-Videos}{18}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Quellen f\"ur 360\IeC {\textdegree }-Videos}{18}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Erstellung und Bearbeitung von 360\IeC {\textdegree }-Videos}{19}{subsubsection.5.3.2}
+\contentsline {subsection}{\numberline {5.4}3D-Modelle}{19}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Quellen f\"ur 3D-Modellen}{19}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Erstellung und Bearbeitung von 3D-Modellen}{19}{subsubsection.5.4.2}
+\contentsline {subsection}{\numberline {5.5}360\IeC {\textdegree } Sound/ Spatial Audio}{19}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Quellen f\"ur Spatial Audio-Dateien}{19}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Erstellung und Bearbeitung von Spatial Audio}{19}{subsubsection.5.5.2}
+\contentsline {subsection}{\numberline {5.6}Virtual Reality Spiele und Anwendungen}{19}{subsection.5.6}
+\contentsline {subsubsection}{\numberline {5.6.1}Quellen f\"ur Virtual Reality Anwendungen}{20}{subsubsection.5.6.1}
+\contentsline {subsubsection}{\numberline {5.6.2}Erstellung von Virtual Reality Anwendungen}{20}{subsubsection.5.6.2}
+\contentsline {subsection}{\numberline {5.7}3D 360\IeC {\textdegree }}{20}{subsection.5.7}
+\contentsline {subsection}{\numberline {5.8}360\IeC {\textdegree }-Inhalte in React360}{21}{subsection.5.8}
+\contentsline {subsubsection}{\numberline {5.8.1}Fotos und Videos}{21}{subsubsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.2}Sounds}{22}{subsubsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.3}3D-Modelle}{22}{subsubsection.5.8.3}
+\contentsline {section}{\numberline {6}Software Entwicklung von VR-Systemen}{23}{section.6}
+\contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{23}{subsection.6.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Unity}{23}{subsubsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.2}Unreal Engine}{23}{subsubsection.6.1.2}
+\contentsline {subsection}{\numberline {6.2}WebVR + Mobile VR: VR im Browser}{23}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{23}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}React360}{23}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}Vergleich von A-Frame und React360}{23}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{24}{subsubsection.6.2.4}
+\contentsline {subsubsection}{\numberline {6.2.5}WebGL}{24}{subsubsection.6.2.5}
+\contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{25}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Anwender}{26}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Grundstruktur}{26}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Lehrer-Applikation}{27}{subsection.7.4}
+\contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{27}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{28}{subsubsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.3}Controls}{28}{subsubsection.7.4.3}
+\contentsline {paragraph}{Marker}{28}{figure.caption.13}
+\contentsline {paragraph}{Photo Controls}{29}{section*.14}
+\contentsline {paragraph}{Video Controls}{29}{section*.16}
+\contentsline {paragraph}{Model Controls}{30}{section*.18}
+\contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{30}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{30}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{30}{subsection.7.7}
+\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{30}{subsubsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{32}{subsubsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{32}{subsubsection.7.7.3}
+\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{33}{subsubsection.7.7.4}
+\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{33}{subsubsection.7.7.5}
+\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{33}{subsubsection.7.7.6}
+\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{35}{section.8}
+\contentsline {subsection}{\numberline {8.1}Online-Umfrage}{35}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Demografie und pers\"onliche Angaben}{35}{subsubsection.8.1.1}
+\contentsline {subsection}{\numberline {8.2}Urspr\"unglich geplanter Ablauf der Studie}{36}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{37}{subsubsection.8.2.1}
+\contentsline {section}{\numberline {9}Ausblick}{41}{section.9}
+\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{41}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{41}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{41}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{42}{subsubsection.9.2.2}
+\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{42}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{42}{subsubsection.9.3.1}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{43}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{43}{subsubsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{43}{subsubsection.9.3.4}
