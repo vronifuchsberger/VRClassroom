@@ -519,35 +519,53 @@ Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu könne
 
 Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreiteten Projektionen erläutert und verglichen:
 
+
 \subsubsection{Equirectangulare Projektion}
+Verbildlichen könnte man sich die Projektion etwa damit, dass eine Kugel in einem Zylinder sitzt, der den gleichen Durchmesser wie Kugel hat und dann die Pole packt und immer weiter nach außen zieht, bis die Kugel die Form des Zylinders angenommen hat.
 
- === Mercator?
- 
+Bei der equirectangularen Projektion werden die Gradzahlen von Longitude und Latitude auf die x und y-Werte in einem Grid gemappt. Ein Bildpunkt an (53°/ 90°) wird dann im projizierten Bild an (53,100) dargestellt. Es wird keine zusätzliche Skalierung oder Transformation vorgenommen.
+Dadurch werden Äquator-nahe Bildbereiche wenig verzerrt und die Pol-nahen Regionen extrem in horizontaler Richtung verzerrt, sodass die Pole der sphere auf die Breite des Äquators gestrecht werden. 
+Vertikale Linien bleiben unverzerrt erhalten, horizontale Linien werden bis auf den Äquator verzerrrt. Dadurch bleiben zudem keine Winkel erhalten.
 
- 
- % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
- Nachteile:
- It has high quality at the poles (top and bottom of image) where people don?t look as much ? typically, sky overhead and ground below are not that interesting to look at.
-It has lower quality at the equator or horizon where there is typically more interesting content.
-It has fewer vertical pixels for 3D content.
-A straight line motion in the real world does not result in a straight line motion in equirectangular projection, making videos hard to compress.
- 
-\subsubsection{Rectilineare Projektion}
-\subsubsection{Cylindrische Projektion}
+Die equirectangulare Projektion hat dadurch den Nachteil, dass die Bildelemente an den Polen eine deutlich höhere Auflösung haben als die Bildbereiche am Äquator, was meist diejenigen sind, die interessanter für den Betrachter sind. Außerdem ist durch die starke Verzerrung das Bild an den Rändern schwer zu erkennen.
+
+Trotz diesen Nachteilen ist die equirectangulare Projektion die am weitesten verbreitete Projektion in der 360°-Szene. Das liegt vermutlich daran, dass sie durch das einfache Mapping am leichtesten zu verarbeiten und wieder zu einer Kugel zusammensetzbar ist. 
+
+Die Online-Video-Plattform Vimeo nutzt für 360°-Videos die equirectangular Projektion und auch Youtube hat bis 2017 diese Projektion benutzt bis sie auf ihren eigens entwickelten Standard EAC gewechselt haben.
+% https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
+% https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
+
+\subsubsection{Zylindrische Projektion}
+Die zylindrische Projektion hat einen änhlichen Ansatz wie die Equirectangulare. Auch hier kann man sich die Kugel in einem stehen Zylinder vorstellen, der die Kugel am Äquator berührt. Dann wird die Oberfläche der Kugel aus dem Mittelpunkt auf den Zylinder projiziert. Dadurch bleiben vertikale Linien und der Äquator unverzerrt, alle anderen Linien werden allerdings verzerrt. 
+
+Durch diese Projektion werden Bildbereiche die Nahe den Polen extrem in vertikaler Richtung verzerrt, sodass sie viel größer erscheinen, als sie eigentlich sind. Daher ist ein vertikales Field of View, das höher als 120° ist, für zylindrische Projektion nicht zu empfehlen.
+
 \subsubsection{Mercator-Projektion}
+Die Mercator-Projektion ist die wohl berühmteste Projektion für Karten, die seit ihrer Entwicklung 1569 für Weltkarten genutzt wird und auch heute noch besonders in der Nautik eine große Rolle spielt. 
+
+Eine Mercator-Projektion sieht letztendlich sehr ähnlich wie eine zylindrische Projektion aus, die Berechnung ist aber ungleich viel komplexer. Der große Vorteil einer Mercator-Projektion ist, dass sie winkelttreu ist. So kann also eine Route zwischen zwei Punkten gezeichnet werden und die Gradzahl, die sich auf der Karte abläsen lässt ist exakt die, die man dann auf dem Kompass verfolgen muss, um ans Ziel zu kommen. Dadurch bewirkte die Mercator-Projektion einen Durchbruch in der Kartografie und Seefahrt. Auch heute sind viele Karten noch in der Mercator-Projektion abgebildet.
+
+Problematisch an dieser Projektion ist wie auch bei der zylindrischen Projektion die extreme Verzerrung von Bereichen, die weit vom Äquator entfernt sind. Sie kann auch keine komplette 180° vertikal-Projektion produzieren, sondern nur bis 85° nördlich und südlich, und deckt damit einen Bereich von 170° an. Diese extreme Verzerrung führt beispielsweise dazu, dass Grönland größer als der ganze afrikanische Kontinent wirkt, obwohl es in der Realität nur etwa einem Vierzehntel der Fläche entspricht.
+
+Varianten der Mercator-Projektion sind bis heute der de-facto Standard für digitale Karten. Auch Google Maps hat lange eine Abwandlung der Mercator Projektion, die so genannte ``Web Mercator Projection'' verwendet. Mit einem Tweet im August 2018 haben sie jedoch ihren Wechsel zu einer Kugeldarstellung angekündigt. Bisher ist diese neue 3D Globe Ansicht allerdings nur auf dem Desktop ausgerollt und nicht in den mobilen Apps zu sehen.
+% https://twitter.com/googlemaps/status/1025130620471656449?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1025130620471656449&ref_url=http%3A%2F%2Fgeoawesomeness.com%2Fthe-earth-is-not-flat-google-maps-confirms-with-globe-mode%2F
+ 
+\subsubsection{Rectilinear-Projektion}
+Die Rectilinear-Projektion ist anders als die vorigen Projektionen keine zylindrische Projektion, sondern lässt sich verbildlichen indem man eine Kugel auf eine Fläche legt und einen Teil der Kugel vom Mittelpunkt der Kugel auf die Ebene projiziert. Ein einzelnes recitlienares Bild stellt also kein komplettes 360°-Panorama dar. Um ein komplettes Panorama zu erhalten werden dann einfach mehrere rectilineare Projektionen zusammen gesetzt.
+
+Ein großer Vorteil dieser Projektion liegt darin, dass gerade Linien erhalten bleiben. Eine starke Verzerrung in dieser Projektion ist in den Ecken des Bildes zu finden und wird umso stärker, je weiter das Field of View ist. Will man also ein möglichst unverzerrtes Panorama, sollten mehrere rectilienare Bilder mit einem kleineren Field of View zusammengesetzt werden.
+
+Bekannt unter dem Begriff Cubemap Projektion oder Skybox aus der Gaming-Szene ist die Kombination mehrer rectilinearer Bilder. Ein bekanntes Beispiel, bei dem Cubemap-Bilder verwendet werden, sind die Google Streetview-Panoramas. 
+
 \subsubsection{Circulare Projektion}
+gibts so nicht. Stattdessen vll Lambert equal-area?
+
 \subsubsection{Pannini/ Vedutismo-Projektion}
 \subsubsection{Stereographische Projektion}
-\subsubsection{Cubemap/ Skybox-Projektion}
-cubemap, cubestrip 
-% Erklärung: https://github.com/naver/egjs-view360/wiki/Supported-Projection-Type
-
 
 % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
 kommt aus der Computerspiele-Szene
 
-
- == cubic?
 
 % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
 YT jetzt EAC, Equi-angular
@@ -558,6 +576,7 @@ YT jetzt EAC, Equi-angular
 % https://en.wikipedia.org/wiki/Skybox_(video_games)
 https://explorationjunkie.com/panoramic-image-projections/
 http://hugin.sourceforge.net/docs/manual/Projections.html
+
 
 \subsection{360°-Fotos}
 Google Maps projection: Mercator: https://setcompass.com/GoogleMapsProjection.htm
