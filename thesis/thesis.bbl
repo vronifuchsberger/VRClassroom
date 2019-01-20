@@ -31,6 +31,13 @@ T.~I. Fossen and O.-E. Fjellstad, ``{Nonlinear modelling of marine vehicles in
   6 degrees of freedom},'' \emph{Mathematical Modelling of Systems}, vol.~1,
   pp. 17--27, 1995.
 
+\bibitem{Wolwort2018}
+\BIBentryALTinterwordspacing
+K.~Wolwort, ``{5 Major Challenges For The VR Industry},'' 2018. [Online].
+  Available:
+  \url{https://channels.theinnovationenterprise.com/articles/5-major-challenges-of-vr-industry}
+\BIBentrySTDinterwordspacing
+
 \bibitem{FacebookTechnologiesLLC2018}
 \BIBentryALTinterwordspacing
 {Facebook Technologies LLC}, ``{Oculus Terms of Service},'' 2018. [Online].
@@ -39,7 +46,7 @@ T.~I. Fossen and O.-E. Fjellstad, ``{Nonlinear modelling of marine vehicles in
 
 \bibitem{SAMSUNG}
 \BIBentryALTinterwordspacing
-SAMSUNG, ``{Samsungs FAQs - Is the Gear VR safe for children?}'' [Online].
+{SAMSUNG}, ``{Samsungs FAQs - Is the Gear VR safe for children?}'' [Online].
   Available:
   \url{https://www.samsung.com/uk/support/mobile-devices/is-the-gear-vr-safe-for-children/}
 \BIBentrySTDinterwordspacing
@@ -87,13 +94,13 @@ S.~Hill, ``{Is VR too dangerous for kids? We asked the experts},'' 2016.
 
 \bibitem{Itchcorp}
 \BIBentryALTinterwordspacing
-I.~corp, ``{Itch.io}.'' [Online]. Available:
+{Itch corp}, ``{Itch.io}.'' [Online]. Available:
   \url{https://itch.io/games/tag-webvr}
 \BIBentrySTDinterwordspacing
 
 \bibitem{WEARVR}
 \BIBentryALTinterwordspacing
-WEARVR, ``{WEARVR - the Virtual Reality App Store}.'' [Online]. Available:
+{WEARVR}, ``{WEARVR - the Virtual Reality App Store}.'' [Online]. Available:
   \url{https://www.wearvr.com}
 \BIBentrySTDinterwordspacing
 
@@ -105,14 +112,32 @@ WEARVR, ``{WEARVR - the Virtual Reality App Store}.'' [Online]. Available:
 
 \bibitem{Vizor2019}
 \BIBentryALTinterwordspacing
-Vizor, ``{The easiest way to share VR on the web},'' 2019. [Online]. Available:
-  \url{https://site.vizor.io/products}
+{Vizor}, ``{The easiest way to share VR on the web},'' 2019. [Online].
+  Available: \url{https://site.vizor.io/products}
 \BIBentrySTDinterwordspacing
 
 \bibitem{InstaVRInc}
 \BIBentryALTinterwordspacing
-{InstaVR Inc}, ``{InstaVR - Make your VR apps in minutes!}'' [Online].
+{InstaVR Inc.}, ``{InstaVR - Make your VR apps in minutes!}'' [Online].
   Available: \url{https://www.instavr.co/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{React360video}
+\BIBentryALTinterwordspacing
+{Facebook Technologies LLC}, ``{360 Photos and Videos}.'' [Online]. Available:
+  \url{https://facebook.github.io/react-360/docs/photos-and-videos.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{React360audio}
+\BIBentryALTinterwordspacing
+------, ``{Playing Audio}.'' [Online]. Available:
+  \url{https://facebook.github.io/react-360/docs/audio.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{React360models}
+\BIBentryALTinterwordspacing
+------, ``{3D Objects}.'' [Online]. Available:
+  \url{https://facebook.github.io/react-360/docs/objects.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Decker2017}
@@ -123,13 +148,13 @@ K.~Decker, ``{Auto-Play Policy Changes for macOS},'' 2017. [Online]. Available:
 
 \bibitem{FacebookInc.2018}
 \BIBentryALTinterwordspacing
-{Facebook Inc.}, ``{React360 Runtime},'' 2018. [Online]. Available:
+{Facebook Technologies LLC}, ``{React360 Runtime},'' 2018. [Online]. Available:
   \url{https://facebook.github.io/react-360/docs/runtime.html}
 \BIBentrySTDinterwordspacing
 
 \bibitem{WebVR}
 \BIBentryALTinterwordspacing
-WebVR, ``{WebVR}.'' [Online]. Available: \url{https://webvr.rocks}
+{WebVR}, ``{WebVR}.'' [Online]. Available: \url{https://webvr.rocks}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Jones2017}
