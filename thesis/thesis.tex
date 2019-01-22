@@ -519,7 +519,6 @@ Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu könne
 
 Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreiteten Projektionen erläutert und verglichen:
 
-
 \subsubsection{Equirectangulare Projektion}
 Verbildlichen könnte man sich die Projektion etwa damit, dass eine Kugel in einem Zylinder sitzt, der den gleichen Durchmesser wie Kugel hat und dann die Pole packt und immer weiter nach außen zieht, bis die Kugel die Form des Zylinders angenommen hat.
 
@@ -551,35 +550,46 @@ Varianten der Mercator-Projektion sind bis heute der de-facto Standard für digit
 % https://twitter.com/googlemaps/status/1025130620471656449?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1025130620471656449&ref_url=http%3A%2F%2Fgeoawesomeness.com%2Fthe-earth-is-not-flat-google-maps-confirms-with-globe-mode%2F
  
 \subsubsection{Rectilinear-Projektion}
-Die Rectilinear-Projektion ist anders als die vorigen Projektionen keine zylindrische Projektion, sondern lässt sich verbildlichen indem man eine Kugel auf eine Fläche legt und einen Teil der Kugel vom Mittelpunkt der Kugel auf die Ebene projiziert. Ein einzelnes recitlienares Bild stellt also kein komplettes 360°-Panorama dar. Um ein komplettes Panorama zu erhalten werden dann einfach mehrere rectilineare Projektionen zusammen gesetzt.
+Die Rectilinear-Projektion ist anders als die vorigen Projektionen keine zylindrische Projektion, sondern lässt sich verbildlichen indem man eine Kugel auf eine Fläche legt und einen Teil der Kugel vom Mittelpunkt der Kugel auf die Ebene projiziert. Ein einzelnes rectilienares Bild stellt also kein komplettes 360°-Panorama dar. Um ein komplettes Panorama zu erhalten werden dann einfach mehrere rectilineare Projektionen zusammen gesetzt.
 
 Ein großer Vorteil dieser Projektion liegt darin, dass gerade Linien erhalten bleiben. Eine starke Verzerrung in dieser Projektion ist in den Ecken des Bildes zu finden und wird umso stärker, je weiter das Field of View ist. Will man also ein möglichst unverzerrtes Panorama, sollten mehrere rectilienare Bilder mit einem kleineren Field of View zusammengesetzt werden.
 
 Bekannt unter dem Begriff Cubemap Projektion oder Skybox aus der Gaming-Szene ist die Kombination mehrer rectilinearer Bilder. Ein bekanntes Beispiel, bei dem Cubemap-Bilder verwendet werden, sind die Google Streetview-Panoramas. 
 
-\subsubsection{Circulare Projektion}
-gibts so nicht. Stattdessen vll Lambert equal-area?
+\subsubsection{Stereographische Projektion}
+Die Stereographische Projektion hat den gleichen Ansatz wie die rectilineare Projektion. Der Unterschied ist, dass nicht aus dem Mittelpunkt der Kugel projiziert wird, sondern aus dem Punkt an der Oberfläche der Kugel, der exakt gegenüber dem Punkt liegt, der die Ebene berührt, auf die projiziert wird. 
+
+Auch mit der stereographischen Projektion ist keine volles 360°-Panorama möglich, sondern nur bis 330°. Empfehlenswert ist es allerdings ein Panorama aus drei 120°-Projektionen zusammenzusetzen. 
+
+Stereographische Projektionen erzeugen immer ein Rundes Bild, das einer Fish-Eye Projektion ähnlich sieht.
 
 \subsubsection{Pannini/ Vedutismo-Projektion}
-\subsubsection{Stereographische Projektion}
+Die Vedutismo oder Pannini-Projektion ist ebenfalls eine zylindrische Projektion und hat damit dem Vorteil, dass alle vertikalen Linien unverzerrt bleiben. Mit dieser Projektion werden jedoch zusätzlich auch noch alle Linien, die durch das Projektionszentrum gehen ebenfalls als gerade Linien dargestellt. Die Perspektive mit einem zentralen Fluchtpunkt wird dadurch also für einen weiten Blickwinkel möglich.
 
+Die Pannini-Projektion lässt sich als eine rectilineare Projektion einer Kugel auf einen Zylinder vorstellen. Das Projektionszentrum kann dabei überall auf der Sichtachse liegen mit der Distanz d zur Zylinder-Achse. Ist d also d=0, wird eine normale rectilineare Projektion erzielt, geht d gegen Unendlich entsteht eine zylindrische Projektion. Durch die Variation von d werden jeweils unterschiedliche Projektion erreicht. 
+Die Pannini-Projektion entspricht dabei d=1.
+
+Eine einzelne Pannini-Projektion ist allerdings für maximal 150° in beiden Richtungen möglich, sodass ein volles Panorama wiederum durch mehrere zusammengesetzt werden muss, ganz ähnlich wie bei der rectilinearen Projektion.
+
+\subsubsection{Equi-Angular Cubemap (EAC)}
+Wie bereits erwähnt hat Youtube vor einigen Jahren ihren eigenen Standard für 360°-Bildprojektionen Equi-Angular Cubemap entwickelt. Der Name Cubemap verrät bereits, dass auch dieses Bild wieder aus mehreren Projektionen zusammengesetzt wird. Hierbei werden allerdings die einzelnen Projektionen nicht aus rectilinearen Projektionen zusammengesetzt.
+
+Die Teile der EAC-Cubemap sind sehr ähnlich wir rectilineare Projektionen mit dem Unterschied, dass Bildabschnitte in Äquatornähe genauso hoch aufgelöst werden wie Bildbereiche nahe den Polen. Die Pixeldichte bleibt also an allen Bildbereichen gleich, sodass alle Bereiche des 360°-Bildes eine gleiche Auflösung haben. Letztendlich führt das dann zu einer besseren Videoqualität mit gleicher Auflösung.
+
+% https://blog.google/products/google-ar-vr/bringing-pixels-front-and-center-vr-video/
 % Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
-kommt aus der Computerspiele-Szene
 
+\subsubsection{Fish-Eye Projektion}
+Die Fish-Eye Projektion lässt sich wie die Spiegelung in einer Silberkugel vorstellen. Sie kann eine Szene mit bis zu 180° in beiden Dimensionen darstellen und erzeugt damit ein rundes Bild. Bildbereiche nahe dem Zentrum werden dann vergrößert wahrgenommen, während Bildbereiche nahe den Rändern stark verzerrt werden. Die Fish-Eye Projektion ist meist nicht als End-Projektion sondern eher als Output einer Kamera zu finden, das dann noch weiter verarbeitet wird.
+% https://www.cambridgeincolour.com/tutorials/image-projections.htm
 
-% Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
-YT jetzt EAC, Equi-angular
-(Heatmap Grafiken aufnehmen?) 
-
- 
- 
-% https://en.wikipedia.org/wiki/Skybox_(video_games)
-https://explorationjunkie.com/panoramic-image-projections/
-http://hugin.sourceforge.net/docs/manual/Projections.html
-
+Viele 360° Kameras, wie zum Beispiel auch die Rico Theta haben zwei Linsen, die jeweils ein 180°-Fish-Eye Panorama erzeugen. Diese können dann in der Nachbearbeitung zu vollen 360°-Panoramas in einer anderen Projektion zusammengesetzt werden. Eine volles Panorama ist mit einer Fish-Eye Projektion nicht darstellbar und auch das zusammensetzen mehrerer Fish-Eye Panoramen wie bei rectilinearen Projektionen ist nicht möglich
+% https://theta360.com/en/about/theta/technology.html
 
 \subsection{360°-Fotos}
-Google Maps projection: Mercator: https://setcompass.com/GoogleMapsProjection.htm
+Bei 360°-Fotos handelt es sich um Bilddateien, die wenn sie mit Programmen angesehen werden, die 360°-Inhalte korrekt anzeigen können, ein volles Panorama um den Nutzer bilden, in dem er sich dann umsehen kann. 
+
+Die wahrscheinlich bekanntesten Anwendungen, die 360°-Bilder anzeigen sind Google Streetview und 360°-Fotos auf Facebook, die der Nutzer einfach durch bewegen des Smartphones erkunden kann. (Quellen!)
 
 \subsubsection{Quellen für 360°-Fotos}
 Es gibt bisher keine Plattform, die sich darauf spezialisiert hat 360°-Fotos, die in der Lehre genutzt werden können, anzubieten. 
@@ -587,42 +597,41 @@ Es gibt bisher keine Plattform, die sich darauf spezialisiert hat 360°-Fotos, di
 Die verbreiteten Anbieter für Stockphotos wie zum Beispiel Shutterstock oder iStockphoto bieten zwar bereits 360°-Fotos an, aber die meisten dieser Stockphotos zeigen keine relevanten Inhalte, sondern nur eine schöne Landschaft oder einen Raum. Sie sind also für zur Nutzung im Unterricht nicht geeignet. Zudem sind diese Bilder oft teuer oder mit einem Abo beim jeweiligen Anbieter verbunden.
 
 Die aktuell beste Quelle für 360°-Fotos ist die Foto-Sharing-Plattform Flickr, auf der die Urheber das Herunterladen ihrer Bilder erlauben und auch die Nutzungslizenz dafür angeben können. Eine Suche nach ``equirectangular'' und der Creative Commons Lizenz ist dort einfach möglich und man wird schnell fündig. 
+Flickr hat zudem die Funktionalität die equirectigularen 360°-Fotos richtig darzustellen, sodass die Nutzer sich im Bild umsehen können, indem sie den Viewport verschieben.
+
 Ein engagierter Lehrer hat sogar eine Gruppe gegründet, die speziell dafür gedacht ist, dass Lehrkräfte aus aller Welt ihre 360°-Fotos teilen können, damit Andere sie auch in ihrem Unterricht nutzen können.
 
-Flickr-Group: https://www.flickr.com/groups/360images4schools/
-Flickr Search equirectangluar + Creative Commons: % https://www.flickr.com/search/?text=equirectangular&license=2%2C3%2C4%2C5%2C6%2C9
+% Flickr-Group: https://www.flickr.com/groups/360images4schools/
+% Flickr Search equirectangluar + Creative Commons: % https://www.flickr.com/search/?text=equirectangular&license=2%2C3%2C4%2C5%2C6%2C9
 
+Eine weitere Möglichkeit an 360°-Fotos zu kommen, die größtenteils ebenfalls von Hobbi-Fotografen stammen, ist die Google Photo Sphere Community, eine Gruppe auf Google Plus. Allerdings ist hier der Download nicht immer erlaubt und die Rechte für die Bilder auch nicht immer angegeben.
+% Google Photo Sphere Community: https://plus.google.com/communities/115970110085205516914/stream/abbc1e71-8239-4ab0-9de3-3f6429e7681f
 
-Google Photo Sphere Community: https://plus.google.com/communities/115970110085205516914/stream/abbc1e71-8239-4ab0-9de3-3f6429e7681f
-Download nicht immer möglich
+Außerdem gibt es noch die Möglichkeit 360°-Fotos bei 360cities oder Airpano zu lizensieren. 
+360cities ist eine Plattform auf der professionelle 360°-Fotographen ihre Panoramen hochladen und zum Verkauf anbieten können. Dabei handelt es sich oft um sehr gute Bilder, es ist aber relativ teuer, sodass sich das für die Lizenzierung für eine einzelne Lehrkraft nicht wirklich anbietet.
 
-www.360cities.net
-Realtiv teuer, dafür tolle Fotos
+Airpano bietet speziell Bilder von Orten auf der Welt an wie zum Beispiel Städten oder geschichtlichen Orten aus der Luftperspektive an. Die Lizenzierung dieser Bilder ist mit ca 1000 Euro pro Jahr extrem teuer, sodass das für die Nutzung im Unterricht eher nicht in Frage kommt.
 
-
-https://www.airpano.com
-Teuer, hat auch Videos
+% www.360cities.net
+% https://www.airpano.com
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Fotos}
+Es gibt grundlegend zwei verschiedene Arten 360°-Bilder zu erstellen:  Die eine Möglichkeit, die für den Nutzer deutlich einfacher ist, ist die Verwendung einer 360°-Kamera wie zum Beispiel die Vuze 360, 360 Rize, Rico Theta, Samsung Gear 360, oder Panono 360 Kamera. Diese Kameras haben mehrere Linsen eingebaut und generieren aus den Einzelbildern ein fertiges 360°-Foto, das dann direkt weiterverwendet werden kann.
+
+% https://vuze.camera/vr-software/
+% https://www.360rize.com/vr/
+% https://theta360.com/de/
+% https://www.samsung.com/de/wearables/gear-360-r210/
+% https://www.panono.com/en/home/
+
+Die zweite Möglichkeit ist mehrere normale Kameras auf ein Rack, also ein Stativ für mehrere Kameras, zu installieren, bei dem jede Kamera einen anderen Bildabschnitt abdeckt und die Bilder dann nachträglich manuell zusammenzusetzen. 
+Den Vorgang des Zusammensetzens der Bilder nennt man Stitching. Erstellt man 360°-Fotos durch zusammenstitchen mehrerer ``normaler'' Kamerabilder ist es wichtig, dass dann die richtigen Metadaten zum Bild hinzugefügt werden, damit Software, die 360°-Bilder anzeigen kann, weiß, dass es sich um ein 360°-Bild handelt und welche Projektion es hat.
+
+360°-Bilder, die direkt von einer 360°-Kamera kommen, haben bereits die passenden Metadaten und sie müssen nicht manuell hinzugefügt werden.
+
 Metadaten wichtig: https://www.panotwins.de/technical/how-to-add-mandatory-photo-sphere-meta-data-to-an-equirectangular-image/
 % http://u88.n24.queensu.ca/~bogdan/#m_workspace
 https://developers.google.com/streetview/spherical-metadata
-
-https://vuze.camera/vr-software/
-Vuze 360 Kameras
-
-https://www.360rize.com/vr/
-360 rize Kamera
-
-https://theta360.com/de/
-
-SAMSUNG Gear 360 360-Grad-Kamera
-https://www.samsung.com/de/wearables/gear-360-r210/
-
-https://www.panono.com/en/home/
-Panono 360p Kamera
-
-Ansonsten: Racks zusammenbauen mit mehreren Kameras
 
 \subsection{360°-Videos}
 Aufhänger?
@@ -638,21 +647,29 @@ https://vimeo.com/blog/post/introducing-vimeo-360
  YT früher equirectangular, jetzt EAC
 
 \subsubsection{Quellen für 360°-Videos}
-Vimeo:
-Videobesitzer kann es zum download anbieten
+Eine gute Quelle für 360°-Videos is genau wie bei 360°-Fotos Vimeo. Wie bereits oben beschrieben, können die Eigentümer der Videos angeben unter welcher Lizenz sie das Video veröffentlichen und es gegebenenfalls zum Download freigeben. In den meisten Fällen sind sie frei zur privaten Nutzung und nur die kommerzielle Weiterverwendung untersagt.
 
-Youtube 360 Videos:
-offiziell nicht runterladbar
-Aber Videos in Smartphone App + Cardboard anschaubar, Apps auf Plattformen: Oculus (Youtube VR), Youtube VR in SteamVR ( HTC Vive), 
+Auch bei Youtube gibt es viele interessante 360°-Videos. Insgesamt ist es aber nicht so einfach direkt auf der Plattform die Videos zu finden, die interessant sind, da oft bei der Such innerhalb der Plattform normale Videos hineingespült werden. 
+Youtube lässt den Download der Videos nicht zu, allerdings stehen Apps auf fast allen Geräten und Plattformen zur Verfügung: die Youtube VR-App gibt es im Oculus und SteamVR-Store, die iOS und Android Youtube App kann die 360° Videos ebenfalls für das Abspielen in VR-Headsets anzeigen.
+Da bei Youtube immer ersichtlich ist, wer der Urheber des Videos ist, besteht hier allerdings die Möglichkeit in Kontakt zu treten, um zu Erfragen, ob das Video für die Nutzung im Unterricht bereitgestellt werden könnte.
 
-https://vr.zdf.de
-Aber nicht runterladbar -> nicht für VRClassroom geeignet
+Auch bei Facebook gibt es 360°-Videos. Wie bei fast allen anderen Videoplattformen sind sie auch hier nicht zum Download freigegeben. Sie sind mit der Facebook App auf den mobilen Geräten, der Facebook 360 App im Oculus Store und im Browser anzusehen. Im VR-Modus mit Bilder für jedes Auge einzeln kann man die Videos allerdings nur in der Facebook 360 App ansehen.
 
-www.360cities.net und https://www.airpano.com
+Die BBC hat sogar eine App veröffentlicht, die exklusiv VR-Inhalte für ihre Leser bereitstellt und speziell für die Nutzung mit dem Google Cardboard entwickelt wurde. Darin zeigen sie von gefilmten 360°-Reportage bis hin zu 360°-Animationsfilmen Geschichten, die speziell für das 360°-Medium entwickelt wurden.
+% https://www.theguardian.com/technology/ng-interactive/2016/nov/10/virtual-reality-by-the-guardian
 
-https://de.videoblocks.com/videos/footage/360-files
-verschiedenste Videos (aber wieder eher Stockmaterial, das nicht direkt verwendbar ist)
+Auch die New York Times hat einige Beiträge seit 2016 in 360°. Die Videos können im Browser oder in der New York Times-App angesehen werden. Der Player unterstützt allerdings keine VR-Headsets, die Smartphones können also nur genutzt werden um sich in der Szene umzusehen indem sie in der Hand gehalten und bewegt werden.
+Ein Download ist auch hier nicht vorgesehen.
+% https://www.nytimes.com/2016/11/01/nytnow/the-daily-360-videos.html
 
+Eine schöne Quelle deutschsprachiger 360°-Videos gibt es vom ZDF, leider sind diese allerdings ebenfalls nicht zum Herunterladen, sondern nur über die ZDF VR-App, die es für Android, iOS und GearVR gibt, oder im Browser anschaubar.
+% https://vr.zdf.de
+
+Lizenzierbare 360°-Videos gibt es wie auch Fotos bei 360cities und Airpano. Diese sind aber eher gedacht um in Filme eingebaut zu werden, als einzeln verwendet zu werden. Sie sind also eher vergleichbar zu Stockphotos und damit wirklich nicht im Bildungsbereich verwendbar.
+% www.360cities.net und https://www.airpano.com
+
+In die gleiche Kategorie fallen dabei die Videos von Videoblocks.com, die ebenfalls einige schöne 360°-Videos haben, die aber keinen wirklichen Inhalt haben, sondern eher als Bildmaterial für die Weiterverarbeitung gedacht sind. Alle drei Anbieter sind zudem nicht besonders günstig.
+% https://de.videoblocks.com/videos/footage/360-files
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Videos}
 https://de.wikipedia.org/wiki/360-Grad-Video
@@ -660,18 +677,33 @@ https://de.wikipedia.org/wiki/360-Grad-Video
 Entweder direkt 360 Kamera oder mehrere und dann stitchen (stitchen besser bei statischen Inhalten)
 
 \subsection{3D-Modelle}
-\subsubsection{Quellen für 3D-Modellen}
-% https://www.turbosquid.com/Search/Index.cfm?FuseAction=SEOTokenizeSearchURL&stgURlFragment=3D-Models/free
-https://www.cgtrader.com/3d-models
-https://sketchfab.com/models/popular
-https://free3d.com
+3D Modelle können einen Blick auf Dinge gewähren, die so nicht so einfach angesehen werden. Beispielsweise können damit Molekülstrukturen oder menschliche Organe gezeigt und erforscht werden, wie sie wirklich aussehen. Da es bereits eine große Szene für 3D-Modelle gibt, ist es nicht schwierig für die verschiedensten Themengebiete passende Modelle zu finden. Auch für den Bildungsbereich gibt es dort einiges zu finden, was man im Unterricht verwenden kann.
 
+\subsubsection{Quellen für 3D-Modellen}
+3D-Modelle sind die einzige Art von Inhalten für 360°, für die es Webseiten gibt, über die man Modelle suche und herunterladen kann. Dabei kann man nach Output-Formaten, Polycount, Lizenzen und Preisen Filtern, sodass man für alle Anwendungsbereiche die passenden Modelle finden kann.
+
+Anbieter gibt es dafür viele. Im Laufe der Entstehung dieser Arbeit sind unter Anderen folgende Webseiten genutzt worden:
+
+\begin{itemize}
+      \item Turbosquid.com
+      \item cgtrader.com
+      \item Sketchfab.com
+      \item free3d.com
+   \end{itemize}
+
+Da für Computerspiele, neuere Animationsfilme und für 3D-Druck bereits seit Jahren viele 3D-Modelle benötigt werden, hat sich hier anders als bei den anderen Inhalten bereits eine Szene gebildet, in der Modelle erstellt und dann verkauft oder verschenkt werden.
+   
 \subsubsection{Erstellung und Bearbeitung von 3D-Modellen}
-3D-Modelling Software:
-Autodesk 3ds Max
-Blender
-Cinema 4D
-Paint 3D (on Windows 10)
+Das Erstellen von 3D-Modellen ist anders als bei den anderen Inhalten deutlich aufwändiger. Man muss sich dafür zuerst in eines der 3D-Modellierungsprogramme hineinarbeiten und auch das Erstellen der Modelle ist sehr zeitaufwändig. 
+
+Es gibt viele verschiedene 3D-Modellierungsprogramme, die auch alle etwas unterschiedlich zu benutzen sind:
+Beliebte Programme sind Autodesk 3ds Max, Blender, Cinema 4D, Paint 3D. Das einfachste dieser Programme ist wohl Paint3D, das allerdings auch den geringsten Funktionsumfang hat und nur auf Windows-Rechnern mit Windows 10 benutzbar ist.
+
+Blender ist als gratis Open-Source-Software das wahrscheinlichsten verbreiteste Programm überhaupt, da es so den Nutzern die Möglichkeit bietet in die Welt der 3D-Modellierung hineinzuschnuppern.
+
+Da man mit der Maus in all diesen Programmen sowohl den Viewport steuert, als auch Funktionen auslöst, ist es ratsam eine gute Mouse, am besten sogar eine 3D-Maus zu verwenden.
+
+Da es so viele verschiedene Programme gibt, gibt es ebenso viele Output-Formate für die fertigen Modelle. Jede Software hat eigene Speicherformate, aber die meisten können auch in andere exportieren. Den Export zu OBJ-Dateien, unterstützen dabei alle Programme und ist damit eine gute Speicherform, um 3D-Modelle zu veröffentlichen.
 
 \subsection{360° Sound/ Spatial Audio}
 https://flypaper.soundfly.com/produce/wtf-vr-and-spatial-audio-mixing-360-audio/
