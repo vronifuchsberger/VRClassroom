@@ -174,22 +174,26 @@ Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Head
 \end{figure}
 
 \subsubsection{Display, Frequenz und Field of View}
-Maße, Auflösung, 2 einzelne/ ein großes
-Vielleicht Display und Frequenz zu einem Punkt verbinden?
-Spalten zwischen Pixeln?
+Bei Displays von VR-Headsets gibt es zwei grundsätzliche Ansätze: Ein durchgehendes Display, das das Bild für beide Augen generiert und zwei kleinere unabhängige Displays. 
+Auf ein einzelnes großes Display setzt eigentlich nur Sony mit ihrer Playstation VR, alle anderen Hersteller von VR-Headsets, die fest integrierte Displays haben, arbeiten mit getrennten Display für die beiden Augen.
 
-Bildwiederholungsrate:
-- was ist nötig, dass es gut aussieht
-- was ist in Headsets verbaut?
+Bei Smartphone-gestützten VR-Headsets hängt die Größe des Displays, sowie die Auflösung und damit auch das letztendliche Field of View vom eingelegten Smartphone ab. Da in aktuelle Smartphones allerdings sehr hochaufgelöste Displays eingebaut werden, stehen diese den fest integrierten nicht oder nur minimal nach. Nutzt man beispielsweise ein Galaxy S9+ hat man ein Display mit 2960x1440 Pixel Auflösung und 530 ppi, was einer Auflösung von 1480x1440 pro Auge entspricht, was damit höher aufgelöst ist als alle fest eingebauten Displays (abgesehen von der Oculus Quest, die erst im Laufe des Jahres auf den Markt kommen soll).
 
-Was ist Field of View?
-Theorie: Was ist notwendig, dass immersion funktioniert?
-Was ist verbaut?
+In den Tabellen \ref{tab:headsets1} und \ref{tab:headsets2} sind die Angaben zur Auflösung der Displays auf die Auflösung pro Auge zu verstehen.
 
-Augenabstand IPD
+Der Screen Door Effect und der Pixel Fill Factor beziehen sich auf den nicht leuchtenden Abstand zwischen zwei Pixeln. Der Screen Door Effect bezeichnet den Zustand, wenn diese Abstände deutlich als Gitter über dem Inhalt erkennbar werden. Der Pixel Fill Factor beschreibt die Dichte der Pixel zueinander. Ist der Pixel Fill Factor hoch, wird der Screen Door Effect schwächer oder sogar ganz verschwinden.
+Da bei VR-Headsets das Display extrem nah am Auge ist, wurden bei den ersten Geräten von Oculus und HTC starke Screen Door Effekte wahrgenommen. Aber mit den Versionen, die dann letztendlich in den Handel kamen, sind diese Probleme großteils ausgeräumt worden.
+% Paper: A Review Paper on Oculus Rift-A Virtual Reality Headset
 
-Auflösung immer pro Auge! in Tabelle
+Die Arbeit von XXX et al. schließt aus ihren Nachforschungen, dass das menschliche visuelle System schon ab 13ms komplette verschiedene Bilder wahrnehmen und damit unterscheiden kann. Das entspräche einer benötigten Framerate von knapp 80Hz. Die Forschungen zeigen allerdings auch, dass kleinere Veränderungen noch deutlich schneller, mit bis zu 500Hz wahrgenommen werden können. 
+Die VR-Headsets sind dabei mit ihren zwischen 60 und 120Hz noch ein ganzes Stück davon entfernt, allerdings ist zu vermuten, dass nicht 500 Hz benötigt sind, um das natürliche Sehen komplett auszunutzen, da die Studie reinen Flackern von Lichtern getestet hat und keine konkreteren Inhalte.
+% https://www.nature.com/articles/srep07861 (500Hz Flicker)
+% Detecting Meaning in Rapid Serial Visual Representation ({RSVP}) at 13 ms Per Picture (Paper)
 
+Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.
+Das ultimative Ziel für VR-Headsets wird also diesen Wert anstreben, mit dem momentan 100°-110° sind sie davon allerdings noch etwas entfernt. 
+Augenabstand IPD.
+Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen.
 
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, je höher die Rechenleistung, desto aufwändigere VR-Szenen können dargestellt werden. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten konkurrieren, was die Kombination aus Display-Auflösung, Bildwiederholungsrate und Field of View angeht.
@@ -204,22 +208,23 @@ https://www.vive.com/cn/product/vive-focus-en/
 
 
 \subsubsection{Inputmethoden}
-Wie in Kapitel XXX (hier Ref einfügen) beschrieben, gibt es drei grundsätzliche Input-Methoden für VR-Headsets: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt, das Auslösen von Touch-Events auf dem Display des VR-Headsets und Voice-Input. 
+Wie in Kapitel XXX (hier Ref einfügen) beschrieben, gibt es zwei grundsätzliche Input-Methoden für VR-Headsets, die momentan verwendet werden: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
 
 Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Touch-Event auf dem Display auszulösen.
 (Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Punkt verbunden werden, um dem Nutzer sinnvollen Input zu erlauben.
 
-
-nicht existent, wäre aber gut:
-Gaze Input? (-> EyeVR paper)
-Bisher gibt es keine Geräte, die mit Voice-Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
+Bisher gibt es keine Geräte, die mit Voice-Input oder Gaze Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
 
 \subsubsection{Positional Tracking}
+Um für ein VR-Headsets 6 DoF zu bekommen, muss die Position im Raum getrackt werden. Positional Tracking wird also generell nur von 6 DoF Headsets genutzt.
 
-Trackingmethode: kein tracking/ inside out/ Sensoren im Raum
+Momentan gibt es dazu 2 verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum tracken. Die Computer-gestützten VR-Headsets nutzen alle diese Weise, das so genannte outside-Tracking, um die Brillen zu tracken.
 
-nur relevant für Rechner-gestützt und stand-alone
+Die zweite Möglichkeit ist das inside-out Tracking. Für das Inside-out Tracking müssen keinerlei Sensoren im Raum platziert werden, es werden nur Sensoren verwendet, die in das Headset integriert sind. Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google, das die zwei in das Headset integrierten Kameras zur Feststellung der Position nutzt.
+% https://developers.google.com/vr/discover/worldsense
 
+Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht, die die Position im Raum anhand von Objekten im Raum bestimmen, die die Kameras erkennen. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller Tracken, sodass auch diese 6 Degrees of Freedom unterstützen.
+% https://www.roadtovr.com/oculus-quest-hands-specs-tech-details-oculus-connect-5/
 
 \subsubsection{Gewicht}
 Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen, allerdings ist bei diesen neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen, aber dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
@@ -228,7 +233,6 @@ Die Playstation VR hat ein kleines Gegengewicht im Bügel, sodass sich das Gewich
 
 Das leichteste aller VR-Headsets ist das Google Cardboard mit einem eingelegten Smartphone, es hat dann ein Gesamtgewicht von etwa 270g, wenn man die 96g des Cardboards mit einem durchschnittlichen aktuellen Smartphone addiert. Allerdings sind dadurch auch keine besonders angenehmen Polsterungen oder Riemen eingebaut.
 Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, das Gewicht immer ohne das Smartphone ist.
-
 
 \subsubsection{Preis}
 \label{subsec:price}
@@ -342,6 +346,9 @@ Dimensions: 204 mm x 269.5 mm x 179.86 mm
 Sensoren: P-Sensor, Gyroscope, Accelerometer, Magnetometer
 Controller: 3DoF Daydream Motion Controller
 
+https://www.theverge.com/2018/5/4/17318648/lenovo-mirage-solo-google-daydream-standalone-vr-headset-review
+keine eingebauten Lautsprecher
+
 \subsubsection{HTC Vive Focus}
 
 \subsection{Smartphone gestützte VR-Hardware}
@@ -446,6 +453,21 @@ Als letztes sagt Wolfort, VR werde momentan nur als ``gimmick'' wahrgenommen. Da
 
 \subsection{Virtual Reality Sickness}
 \label{subsec:cybersickness} 
+
+Da in der Vergangenheit die Begriffe immer wieder vermischt wurden und dadurch oft unklar sind, werden im Folgenden die Begriffe ``motion sickness'',
+``simulator sickness'', ``virtual reality sickness'' und ``cybersickness'' noch einmal differenziert und für diese Arbeit definiert.
+
+\paragraph{Motion Sickness}
+\paragraph{Simulator Sickness}
+\paragraph{Virtual Reality Sickness}
+\paragraph{Cybersickness}
+
+2. Symptome
+
+3. Umfrage
+
+4. Mögliche Lösungen (Artikel dazu)
+
 https://vrodo.de/virtual-reality-laut-umfrage-haben-60-prozent-probleme-mit-vr-uebelkeit/
 Umfrage auf reddit: https://www.strawpoll.me/12015620/r
 Unterschied zu motion sickness
@@ -461,7 +483,7 @@ https://www.iflscience.com/technology/turns-out-answer-virtual-reality-sickness-
 
 
 \subsection{Mindestalter zur Nutzung von VR-Systemen}
-Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in ~\ref{tab:table1} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
+Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in Tabelle~\ref{tab:tableage} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
 \bigskip
 
 Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht und diese erst für diese Altersgruppe entwickelt sind.  ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben.
@@ -845,6 +867,10 @@ Um Modell zu rendern muss nur eine Entity-Komponente erstellt werden und er Link
 \cleardoublepage
 \section{Software Entwicklung von VR-Systemen}
 \subsection{Native VR-Applikationen}
+Um VR-Anwendungen zu entwickeln, gibt es momentan nur zwei verschiedene Möglichkeiten. Das sind die Game-Engines Unity und Unreal. Wie aus dem Namen schon erkennbar, wurden sie entworfen, um Computerspiele zu erstellen, wurden aber weiterentwickelt, sodass sie sich inzwischen auch sehr gut zur Entwicklung von VR-Anwendungen eignen.
+
+Ingesamt sind sich die beiden Engines relativ ähnlich, verwendet man Unity, muss man C\# programmieren und die Unreal Engine verwendet so gennante Blueprints, um einfachere Sachen visuell programmieren zu können mit einem Editor, in dem Nodes mit Links verbunden werden können um Funktionen zu nutzen. Darunterliegend wird in der Unreal Engine mit C++ gearbeitet.
+
 \subsubsection{Unity}
 \label{subsec:unity}
 Unity: C\#
