@@ -28,6 +28,12 @@
 \contentsline {subsection}{\numberline {3.1}3D in VR}{11}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{11}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}VR-Systeme im Bildungsbereich}{11}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}ClassVR}{11}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Google Expeditions}{12}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Senselab.io}{12}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}DiscoveryVR}{12}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}Victory VR}{12}{subsubsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.6}Evtl}{12}{subsubsection.3.3.6}
 \contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{13}{section.4}
 \contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{13}{subsection.4.1}
 \contentsline {paragraph}{Motion Sickness}{13}{section*.8}
@@ -98,17 +104,22 @@
 \contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{38}{subsubsection.7.7.6}
 \contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{41}{section.8}
 \contentsline {subsection}{\numberline {8.1}Online-Umfrage}{41}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Net Promotor Score}{41}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Demografie und pers\"onliche Angaben}{41}{subsubsection.8.1.2}
-\contentsline {subsection}{\numberline {8.2}VRClassroom Studie in Schulen}{43}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{44}{subsubsection.8.2.1}
-\contentsline {section}{\numberline {9}Ausblick}{47}{section.9}
-\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{47}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{47}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{47}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{48}{subsubsection.9.2.2}
-\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{48}{subsection.9.3}
-\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{48}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{49}{subsubsection.9.3.2}
-\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{49}{subsubsection.9.3.3}
-\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{49}{subsubsection.9.3.4}
+\contentsline {subsubsection}{\numberline {8.1.1}Gesamteindruck VRClassroom}{41}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Medien in VRClassroom}{43}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}Alters- und F\"achergruppen f\"ur VRClassroom}{43}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}Net Promotor Score}{43}{subsubsection.8.1.4}
+\contentsline {subsubsection}{\numberline {8.1.5}Einsch\"atzung der Zukunft von VR und VRClassroom}{44}{subsubsection.8.1.5}
+\contentsline {subsubsection}{\numberline {8.1.6}Demografie und pers\"onliche Angaben}{45}{subsubsection.8.1.6}
+\contentsline {subsubsection}{\numberline {8.1.7}Ergebnis und Schl\"usse aus der Evaluation}{45}{subsubsection.8.1.7}
+\contentsline {subsection}{\numberline {8.2}VRClassroom Studie in Schulen}{46}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{47}{subsubsection.8.2.1}
+\contentsline {section}{\numberline {9}Ausblick}{49}{section.9}
+\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{49}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{49}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{49}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{50}{subsubsection.9.2.2}
+\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{50}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {9.3.1}Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{50}{subsubsection.9.3.1}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{51}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{51}{subsubsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{51}{subsubsection.9.3.4}
