@@ -195,6 +195,9 @@ Das ultimative Ziel für VR-Headsets wird also diesen Wert anstreben, mit dem mom
 Augenabstand IPD.
 Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen.
 
+% Human Field of View 180° auf 135°
+% \cite{Stone2017}
+
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, je höher die Rechenleistung, desto aufwändigere VR-Szenen können dargestellt werden. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten konkurrieren, was die Kombination aus Display-Auflösung, Bildwiederholungsrate und Field of View angeht.
 Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden muss.
@@ -218,9 +221,10 @@ Bisher gibt es keine Geräte, die mit Voice-Input oder Gaze Input kontrolliert we
 \subsubsection{Positional Tracking}
 Um für ein VR-Headsets 6 DoF zu bekommen, muss die Position im Raum getrackt werden. Positional Tracking wird also generell nur von 6 DoF Headsets genutzt.
 
-Momentan gibt es dazu 2 verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum tracken. Die Computer-gestützten VR-Headsets nutzen alle diese Weise, das so genannte outside-Tracking, um die Brillen zu tracken.
+Momentan gibt es dazu 2 verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum tracken. Die Computer-gestützten VR-Headsets nutzen alle diese Weise, das so genannte outside-in-Tracking, um die Brillen zu tracken.  \cite{Stone2017}
 
-Die zweite Möglichkeit ist das inside-out Tracking. Für das Inside-out Tracking müssen keinerlei Sensoren im Raum platziert werden, es werden nur Sensoren verwendet, die in das Headset integriert sind. Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google, das die zwei in das Headset integrierten Kameras zur Feststellung der Position nutzt.
+Die zweite Möglichkeit ist das inside-out Tracking. Für das Inside-out Tracking müssen keinerlei Sensoren im Raum platziert werden, es werden nur Sensoren verwendet, die in das Headset integriert sind.  \cite{Stone2017}
+Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google, das die zwei in das Headset integrierten Kameras zur Feststellung der Position nutzt.
 % https://developers.google.com/vr/discover/worldsense
 
 Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht, die die Position im Raum anhand von Objekten im Raum bestimmen, die die Kameras erkennen. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller Tracken, sodass auch diese 6 Degrees of Freedom unterstützen.
@@ -401,29 +405,27 @@ Der Controller hat oben ein Touchpad, sowie einen Apps und Home-Button. An der l
 Der Strap mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am hinteren Ende den Controller einstecken kann, sodass er nicht verloren gehen kann.
 
 % ---------------------------------------------------------------------------------------------------------------------------
+%% Wohin hiermit?! - Vielleicht zu Geräten?
+% \subsection{Eingabemethoden in VR}
+% Controller
+% Voice Control
+% EyeVR GazeInput
+% Gesteninput
+
+% ---------------------------------------------------------------------------------------------------------------------------
+
+
 \cleardoublepage % Neue rechte Seite anfangen
 
-\section{Aktuelle Einsatzgebiete von VR}
-medizin
+\section{VR-Systeme im Bildungsbereich}
+\label{sec:VReducation}
+Hier gibt es schon viele Sachen: medizin
 Gaming
 Forschung
 verschiedene Therapien zB Angsttherapien
 
-\subsection{3D in VR}
-WebVR macht das schon.
-Dadurch muss die Szene doppelt gerendert werden.
-Wie entsteht 3d generell?
-Augenabstand
-\subsection{Eingabemethoden in VR}
-Controller
-Voice Control
-EyeVR GazeInput
-Gesteninput
+aber für die Arbeit interessant sind andere Apps im Bildungbereich:
 
-Input schon bei Geräten besprochen?
-
-\subsection{VR-Systeme im Bildungsbereich}
-\label{subsec:VReducation}
 Hier kommen noch mehr Sachen aus den Papern rein!
 Paper: Virtual reality for collaborative e-learning 2008
 
@@ -469,14 +471,14 @@ nur Naturwissenschaften
 
 %_______________________________________________________________________________________________________________________
 \cleardoublepage % Neue rechte Seite anfangen
-\section{Aktuelle Challenges an VR-Systemen}
+\section{Challenges von VR-Systemen}
 \label{sec:challenges} 
 In ihrem Artikel ``5 Major Challenges For The VR Industry'' von März 2018 sieht Wolwort den Preis, fehlende Inhalte für VR-Systeme, fehlende Businessmodelle, die unklaren Folgen für die Gesundheit der Nutzer und das Image als ``gimmick'' von Virtual Reality als Grund dafür, dass VR bisher noch nicht den prophezeiten Durchbruch hat. \cite{Wolwort2018}
 
 Wie bereits in \ref{subsec:price} diskutiert ist der Preis eigentlich kein valides Argument mehr, seitdem es Smartphone-gestützte VR-Headsets gibt. Sie bieten die Möglichkeit für jeden einen Blick in die Virtual Reality Szene zu werfen.
 
 Der zweite Problempunkt der fehlenden Inhalte ist nach wie vor akut: Abseits von der Welt der Spiele gibt es nach wie vor wenig Anwendungen, die für VR-Headsets entwickelt wurden. Besonders im Bildungsbereich sieht die Autorin eine Zukunft mit Virtual Reality-Apps, die eine komplett andere Wahrnehmung der Inhalte bieten. 
-Besonders bei Simulator-Trainings wird bereits seit langer Zeit auf VR gesetzt (QUELLE), diese sind aber meist nicht auf konventionellen VR-Headsets nutzbar. Eine neuere Applikation für VR in der Bildung sind Google Expiditions, wie in \ref{subsec:VReducation} genauer erläutert.
+Besonders bei Simulator-Trainings wird bereits seit langer Zeit auf VR gesetzt (QUELLE), diese sind aber meist nicht auf konventionellen VR-Headsets nutzbar. Eine neuere Applikation für VR in der Bildung sind Google Expiditions, wie in \ref{sec:VReducation} genauer erläutert.
 Facebook hat außerdem die Facebook Spaces App entwickelt, die es den Teilnehmern eines Treffens erlauben sich mit ihren Freunden auszutauschen, Fotos zu teilen, Videotelefonate zu führen und zusammen in VR zu malen. Das lässt vermuten, dass sie auch an VR Meetingräumen arbeiten, die zukünftig die Zahl der notwendigen Dienstreisen der Mitarbeiter verringern könnten.
 % Quelle: https://www.facebook.com/spaces
 
@@ -494,29 +496,32 @@ Da in der Vergangenheit die Begriffe immer wieder vermischt wurden und dadurch o
 ``simulator sickness'', ``virtual reality sickness'' und ``cybersickness'' noch einmal differenziert und für diese Arbeit definiert.
 
 \paragraph{Motion Sickness}
+Motion Sickness beschreibt die Symptome wie sie zum Beispiel beim Fahren in einem Auto als Beifahrer entstehen können. Bekannt und erforscht ist Motion Sickness vor Allem bei Piloten und Astronauten.
+
 \paragraph{Simulator Sickness}
-\paragraph{Virtual Reality Sickness}
-\paragraph{Cybersickness}
+Simulator Sickness bezeichnet man die negativen Effekte, die man verspüren kann, wenn man einen Simulator irgendeiner Art und Weise verwendet hat. Oft handelt es sich dabei um die Differenz der Simulierten Bewegungen zu denen, die der Körper wirklich erfährt, die dann zu Schwindel und Übelkeit führen können.
 
-2. Symptome
+\paragraph{Virtual Reality Sickness und Cybersickness}
+Virtual Reality und Cybersickness sind Synonyme. Sie bezeichnen die Symptome, die Nutzer erleben können, wenn sie Virtual Reality Systeme wie VR-Brillen verwenden. Sie sind verwandt mit der Simulator Sickness, allerdings beziehen sie sich ausschließlich auf die Folgen von Virtual Reality-Anwendungen.
 
-3. Umfrage
+\bigskip
 
-4. Mögliche Lösungen (Artikel dazu)
+Symptome von Cybersickness sind Schwindelgefühle, Orientierungslosigkeit, Augenschmerzen, Müdigkeit und Übelkeit. In extremen Fällen kann es auch zu Erbrechen führen. Physiologische Indikatoren von  Cybersickness sind Reaktionen des symphatischen Nervensystems wie elektrodermale Aktivität, die sich durch Hautrötungen und Schweiß äußern können, oder eine erhöhte Herzfrequenz. \cite{Stone2017}
+ 
+Eine Umfrage von 2017, die auf reddit unter VR-Nutzern durchgeführt wurde zeigte sich, dass 60\% der insgesamt 862 Teilnehmer Symptome von Cybersickness erleben. 35\% hatten dabei leichte Symptome, 15\% mittel starke und 8\% stark ausgeprägte Symptome. 2\% der Teilnehmer gab an extrem starke Probleme mit Cybersickness zu haben. \cite{Unknown2017}
+Diese Umfrage zeigt, dass Cybersickness nach wie vor ein großes Problem im Umgang mit VR-Headsets ist, an dessen Linderung weiter geforscht werden muss, damit Virtual Reality isch weiter durchsetzen kann.
 
-https://vrodo.de/virtual-reality-laut-umfrage-haben-60-prozent-probleme-mit-vr-uebelkeit/
-Umfrage auf reddit: https://www.strawpoll.me/12015620/r
-Unterschied zu motion sickness
-Symptome
-Lösungen?
+Die Ergebnisse der Online-Befragung passen zu der Studie, die Stone in seiner Dissertation durchgeführt hat. Bei seiner Befragung mit 202 Teilnehmer erlebten 46\% keinerlei Symptome von Cybersickness, 35\% leichte Symptome, 13\% mittelstarke und 7\% sehr starke Symptome. 
+Zudem ermittelten sie, dass Teilnehmer, die im VR-Headset noch eine Brille tragen, deutlich öfter Symptome von Cybersickness erlitten.
+Trotz der vielen Personen, die Cybersickness-Symptome erlebten gaben 54\% im Anschluss an die Studie an, wieder VR-Headsets nutzen zu wollen, da sie Spaß an der Nutzung hatten.  \cite{Stone2017}
 
-Paper: Psychometric evaluation of the Simulator Sickness Questionnaire as a measure of cybersickness
+In seinem Artikel ``Everything You Wanted to Know About Simulator Sickness'' beschreibt der Autor, dass besonders Kinder zwischen 2 und 12 Jahren anfällig für Cybersickness. Außerdem sind laut ihm Frauen öfter von Symptomen betroffen als Männer. Zudem sind Personen, die eine Krankheit wie eine Ohrinfektion, Erkältung oder Grippe haben, sowie Personen die unter Alkohol- oder Drogeneinfluss stehen oder einen Kater haben öfter Cybersickness ausgesetzt. \cite{Burke2014}
 
-https://www.ncbi.nlm.nih.gov/pubmed/6847562
-https://www.twentymilliseconds.com/post/all-about-motion-sickness/
-http://fortune.com/2018/02/06/virtual-reality-motion-sickness/
-https://www.iflscience.com/technology/turns-out-answer-virtual-reality-sickness-right-front-your-face/
+Eine relativ einfache Maßnahme um das Auftreten von Cybersickness zu verhindern ist das Field of View der VR-Brillen zu verschmälern. Allerdings hängt der Grad der immersion eng mit dem Field of View zusammen. Wird also das Field of View verkleinert, sinkt die Immersion und die Nutzer haben weniger Spaß an dem Virtual Reality Erlebnis. \cite{Lin2002}
 
+In 2015 hat ein Team der Purdue University zudem herausgefunden, dass Cybersickness dadurch bekämpft werden kann, indem dem Nutzer eine virtuelle Nase angezeigt wird. Sie gibt dem Auge einen fixen Punkt im Bild, der dann hilft die Bewegungen im Rest des Bildes zu verarbeiten. Sie erklären, dass sie durch das Phänomen der Seekrankheit auf die Idee gekommen sind die Nase ins Bild zu integrieren, da es sich genau gegenteilig dazu verhält.\cite{whittinghill2015nasum}
+
+Einen weiteren Ansatz zur Lösung des Problems der Cybersickness hat Eric Bear, der Gründer von MONKEYmedia. Er fand heraus, dass wenn die Bewegungen in der VR-Welt durch Neigen des Kopfes ausgelöst werden als stünde der Nutzer auf einem Hoverboard, erlebten deutlich weniger Probanden Symptome der Cybersickness. Zusätzlich kommt diese Art der Bewegung gänzlich ohne die Nutzung von Controllern aus, sodass die Hände für andere Interaktionen frei bleiben.  \cite{Samit2018}
 
 \subsection{Mindestalter zur Nutzung von VR-Systemen}
 Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in Tabelle~\ref{tab:tableage} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
@@ -830,30 +835,32 @@ Die zweite Möglichkeit ist die Nutzung von Tools wie zum Beispiel InstaVR oder V
 Außerdem können auch noch Textelemente eingefügt werden, um zum Beispiel auf einem Foto zu markieren, welche Gebäude zu sehen sind, um dem Betrachter noch etwas mehr Kontext zu geben.
 
 \subsection{3D 360°}
-1. Wie entsteht ein 3D-Bild generell?
+Um ein 3D Bild zu erzeugen müssen zwei leicht verschobene Bilder angezeigt werden, die um den Augenabstand eines Menschen horizontal verschoben sind. Soll also ein 3D Bild oder Video produziert werden, werden zwei Kameras um den Augenabstand versetzt auf ein Stativ montiert und und dadurch ein Bild pro Auge produziert.
 
-2. Was ist das Problem von 3D in 360?
+Wird ein 360° Bild erstellt nimmt eine Kamera oder ein Rig mit mehreren Kameras wie in Grafik \ref{fig:3d-360} links zu sehen ein Bild der kompletten Umgebung auf, in dem sich dann der Betrachter umsehen kann.
+Würde man nun also einfach zwei 360° Bilder um den Augenabstand versetzt aufnehmen hätte man das Problem, dass nur in einem Blickwinkel der Abstand stimmt, sodass ein 3D Bild entsteht. Ist der Betrachter um 90° gedreht, zeigen die beiden Bilder exakt das Gleiche und ist er um 180° gedreht, sind die beiden Bilder in die andere Richtung verschoben. So kann also kein 3D für 360° produziert werden.
 
-3. Wie macht man 3D 360 Bilder?
+Für 360° Fotos können die zwei Kameras auf ein drehbares Rig montiert werden, sodass jede Kamera aus den Fotos, die sie gemacht hat ein 360° Bild errechnet. Da allerdings durch die Drehung nicht durchgehend aufgenommen werden kann ist diese Technik nur für die Produktion von Fotos geeignet.
+% Paper: Bourke: Synthetic stereoscopic panoramic images
+
+Grundsätzlich gibt es zwei Ansätze, wie 3D 360° Videos produziert werden können. Für beide braucht man ein Setup von mindestens acht Kameras, um ein brauchbares Bild zu erzeugen.
+Die erste Möglichkeit ist ein Rig-Aufbau wie in \ref{fig:3d-360} in der Mitte zu sehen. Es besteht aus acht Kameras, von denen jeweils zwei parallel zueinander ausgerichtet sind und die Paare wiederum jeweils 90° zueinander ausgerichtet sind.
+Werden nun jeweils die Bilder der linken Kameras und die der rechten Kameras zusammengestitcht, entsteht ein 360° Bild pro Auge, das beim Drehen den Abstand der Augen behält.
+Dieses Setup funktioniert sehr gut, wenn der Betrachter in eine der vier Richtungen schaut, in die die Kameras zeigen, dazwischen verschiebt sich der Augenabstand jedoch wieder, sodass hier Bildbereiche entstehen, die wiederum nicht korrekt in 3D angezeigt werden.
+Zudem könnte das ständige Verschieben des Augenabstandes dazu führen, dass die Nutzer schneller Symptome von Cybersickness erleben.
+
+Die zweite Möglichkeit die acht Kameras zu nutzen ist in \ref{fig:3d-360} dargestellt. Die acht Kameras werden sternförmig mit jeweils einer Rotation von 45° zueinander auf das Rig montiert. Um daraus dann das korrekte 3D 360°-Bild zu bekommen, werden die Kamerabilder jeweils in einen rechten und einen linken Bildbereich aufgeteilt. Dann werden alle linken Bildbereiche zum Bild für das linke Auge zusammengestitcht und alle rechten Bildbereiche zum Bild für das rechte Auge.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{images/3d-360.eps}
+  \caption{Aufbau von 360° Rigs.}
+  \label{fig:3d-360}
+\end{figure}
 
 
+% https://www.youtube.com/watch?v=0OKBjkhdnOc
+% Paper: Omnistereo: Panoramic stereo imaging
 
-https://www.spiedigitallibrary.org/journals/Journal-of-Electronic-Imaging/volume-22/issue-3/030902/Acquisition-of-omnidirectional-stereoscopic-images-and-videos-of-dynamic-scenes/10.1117/1.JEI.22.3.030902.full?SSO=1
-
-https://www.youtube.com/watch?v=0OKBjkhdnOc
-Nett erklärt, weirder Typ
-
-https://vuze.camera/camera/vuze-xr-camera/
-180 in 3D oder 360 in 2D
-
-https://www.aerofotografie.de/3d-360-grad-video-produktion/
-Wie funktioniert das?
-https://www.aerofotografie.de/360-grad-3d-kamera/
-Welche Kameras gibt es?
-
-https://patents.google.com/patent/US7463280B2/en
-
-http://blog.dsky.co/capturing-virtual-worlds-a-method-for-taking-360-virtual-photos-and-videos/
 
 \subsection{360°-Inhalte in React360}
 Die VR-App innerhalb von VRClassroom wurde mit React360 entwickelt. Nachfolgend wird darauf eingegangen, wie 360°-Inhalte in React360 eingebunden werden können.

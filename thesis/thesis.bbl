@@ -31,11 +31,52 @@ T.~I. Fossen and O.-E. Fjellstad, ``{Nonlinear modelling of marine vehicles in
   6 degrees of freedom},'' \emph{Mathematical Modelling of Systems}, vol.~1,
   pp. 17--27, 1995.
 
+\bibitem{Stone2017}
+\BIBentryALTinterwordspacing
+W.~B. Stone, ``{Psychometric evaluation of the Simulator Sickness Questionnaire
+  as a measure of cybersickness},'' 2017. [Online]. Available:
+  \url{https://search.proquest.com/openview/c2d59f535cdea2e705131a3b052a1b05/1?pq-origsite=gscholar{\&}cbl=18750{\&}diss=y}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Wolwort2018}
 \BIBentryALTinterwordspacing
 K.~Wolwort, ``{5 Major Challenges For The VR Industry},'' 2018. [Online].
   Available:
   \url{https://channels.theinnovationenterprise.com/articles/5-major-challenges-of-vr-industry}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Unknown2017}
+\BIBentryALTinterwordspacing
+Unknown, ``{Cybersickness Poll},'' 2017. [Online]. Available:
+  \url{https://www.strawpoll.me/12015620/r{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Burke2014}
+\BIBentryALTinterwordspacing
+K.~Burke, ``{Everything You Wanted to Know About Simulator Sickness},'' 2014.
+  [Online]. Available:
+  \url{https://www.twentymilliseconds.com/post/all-about-motion-sickness/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Lin2002}
+\BIBentryALTinterwordspacing
+J.-W. Lin, H.~Duh, D.~Parker, H.~Abi-Rached, and T.~Furness, ``{Effects of
+  field of view on presence, enjoyment, memory, and simulator sickness in a
+  virtual environment},'' \emph{Proceedings IEEE Virtual Reality 2002}, no.
+  February, pp. 164--171, 2002. [Online]. Available:
+  \url{http://ieeexplore.ieee.org/document/996519/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{whittinghill2015nasum}
+D.~M. Whittinghill, B.~Ziegler, T.~Case, and B.~Moore, ``Nasum virtualis: A
+  simple technique for reducing simulator sickness,'' in \emph{Games Developers
+  Conference (GDC)}, 2015.
+
+\bibitem{Samit2018}
+\BIBentryALTinterwordspacing
+J.~Samit, ``{A Possible Cure for Virtual Reality Motion Sickness},'' 2018.
+  [Online]. Available:
+  \url{http://fortune.com/2018/02/06/virtual-reality-motion-sickness/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{FacebookTechnologiesLLC2018}

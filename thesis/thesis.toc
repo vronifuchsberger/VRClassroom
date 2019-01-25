@@ -24,22 +24,18 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{8}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{9}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{9}{subsubsection.2.4.3}
-\contentsline {section}{\numberline {3}Aktuelle Einsatzgebiete von VR}{11}{section.3}
-\contentsline {subsection}{\numberline {3.1}3D in VR}{11}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Eingabemethoden in VR}{11}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}VR-Systeme im Bildungsbereich}{11}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}ClassVR}{11}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Google Expeditions}{12}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Senselab.io}{12}{subsubsection.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}DiscoveryVR}{12}{subsubsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.5}Victory VR}{12}{subsubsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.6}Evtl}{12}{subsubsection.3.3.6}
-\contentsline {section}{\numberline {4}Aktuelle Challenges an VR-Systemen}{13}{section.4}
+\contentsline {section}{\numberline {3}VR-Systeme im Bildungsbereich}{11}{section.3}
+\contentsline {subsubsection}{\numberline {3.0.1}ClassVR}{11}{subsubsection.3.0.1}
+\contentsline {subsubsection}{\numberline {3.0.2}Google Expeditions}{12}{subsubsection.3.0.2}
+\contentsline {subsubsection}{\numberline {3.0.3}Senselab.io}{12}{subsubsection.3.0.3}
+\contentsline {subsubsection}{\numberline {3.0.4}DiscoveryVR}{12}{subsubsection.3.0.4}
+\contentsline {subsubsection}{\numberline {3.0.5}Victory VR}{12}{subsubsection.3.0.5}
+\contentsline {subsubsection}{\numberline {3.0.6}Evtl}{12}{subsubsection.3.0.6}
+\contentsline {section}{\numberline {4}Challenges von VR-Systemen}{13}{section.4}
 \contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{13}{subsection.4.1}
 \contentsline {paragraph}{Motion Sickness}{13}{section*.8}
 \contentsline {paragraph}{Simulator Sickness}{13}{section*.9}
-\contentsline {paragraph}{Virtual Reality Sickness}{13}{section*.10}
-\contentsline {paragraph}{Cybersickness}{14}{section*.11}
+\contentsline {paragraph}{Virtual Reality Sickness und Cybersickness}{14}{section*.10}
 \contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{14}{subsection.4.2}
 \contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{17}{section.5}
 \contentsline {subsection}{\numberline {5.1}Projektionen von 360\IeC {\textdegree }-Fotos und -Videos}{17}{subsection.5.1}
@@ -67,10 +63,10 @@
 \contentsline {subsubsection}{\numberline {5.6.1}Quellen f\"ur Virtual Reality Anwendungen}{23}{subsubsection.5.6.1}
 \contentsline {subsubsection}{\numberline {5.6.2}Erstellung von Virtual Reality Anwendungen}{23}{subsubsection.5.6.2}
 \contentsline {subsection}{\numberline {5.7}3D 360\IeC {\textdegree }}{24}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}360\IeC {\textdegree }-Inhalte in React360}{24}{subsection.5.8}
-\contentsline {subsubsection}{\numberline {5.8.1}Fotos und Videos}{24}{subsubsection.5.8.1}
-\contentsline {subsubsection}{\numberline {5.8.2}Sounds}{25}{subsubsection.5.8.2}
-\contentsline {subsubsection}{\numberline {5.8.3}3D-Modelle}{25}{subsubsection.5.8.3}
+\contentsline {subsection}{\numberline {5.8}360\IeC {\textdegree }-Inhalte in React360}{25}{subsection.5.8}
+\contentsline {subsubsection}{\numberline {5.8.1}Fotos und Videos}{25}{subsubsection.5.8.1}
+\contentsline {subsubsection}{\numberline {5.8.2}Sounds}{26}{subsubsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.3}3D-Modelle}{26}{subsubsection.5.8.3}
 \contentsline {section}{\numberline {6}Software Entwicklung von VR-Systemen}{27}{section.6}
 \contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{27}{subsection.6.1}
 \contentsline {subsubsection}{\numberline {6.1.1}Unity}{27}{subsubsection.6.1.1}
