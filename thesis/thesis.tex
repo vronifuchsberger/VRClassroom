@@ -449,15 +449,19 @@ Der Strap mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man a
 
 \section{VR-Systeme im Bildungsbereich}
 \label{sec:VReducation}
-Hier gibt es schon viele Sachen: medizin
-Gaming
-Forschung
-verschiedene Therapien zB Angsttherapien
-
-aber für die Arbeit interessant sind andere Apps im Bildungbereich:
 
 Hier kommen noch mehr Sachen aus den Papern rein!
 Paper: Virtual reality for collaborative e-learning 2008
+
+Virtual Reality wird in immer mehr verschiedenen Lebensbereichen eingesetzt und inzwischen gibt es neben den klassischen Simulatoren für Industriemaschinen und Flugobjekten auch verschiedene Ansätze von VR-Systemen im Bildungsbereich.
+
+Merchant et al. schließen in ihrer Arbeit in 2014, dass Lernen mit Virtual Reality bessere Lernergebnisse produziert als Lernen ohne VR. Sie sehen damit die finanzielle und zeitliche Invesitition der Einführung von VR-Systemen als sinnvoll.
+% Paper: Computers & Education Effectiveness of virtual reality-based instruction on students ? learning outcomes in K-12 and higher education : A meta-analysis
+
+Im folgenden Kapitel werden fünf dieser Systeme besprochen. Diese Auflistung erhebt dabei keinen Anspruch auf Vollständigkeit.
+
+In der Forschung wurden schon seit langer Zeit Systeme entwickelt, mit denen versucht wurde Behinderungen und psychische Störungen von Kindern und Jugendlichen zu verstehen und zu behandeln. Beispiele dafür sind:
+
 
 \subsubsection{ClassVR}
 Ein Beispiel für ein VR-System im Bildungsbereich, das einen ganz ähnlich Ansatz wie das im Rahmen dieser Arbeit entwickelte System, ist ClassVR. 
@@ -718,27 +722,26 @@ Es gibt grundlegend zwei verschiedene Arten 360°-Bilder zu erstellen:  Die eine 
 % https://www.samsung.com/de/wearables/gear-360-r210/
 % https://www.panono.com/en/home/
 
-Die zweite Möglichkeit ist mehrere normale Kameras auf ein Rack, also ein Stativ für mehrere Kameras, zu installieren, bei dem jede Kamera einen anderen Bildabschnitt abdeckt und die Bilder dann nachträglich manuell zusammenzusetzen. 
+Die zweite Möglichkeit ist mehrere normale Kameras auf ein Rig, also ein Stativ für mehrere Kameras, zu installieren, bei dem jede Kamera einen anderen Bildabschnitt abdeckt und die Bilder dann nachträglich manuell zusammenzusetzen. 
 Den Vorgang des Zusammensetzens der Bilder nennt man Stitching. Erstellt man 360°-Fotos durch zusammenstitchen mehrerer ``normaler'' Kamerabilder ist es wichtig, dass dann die richtigen Metadaten zum Bild hinzugefügt werden, damit Software, die 360°-Bilder anzeigen kann, weiß, dass es sich um ein 360°-Bild handelt und welche Projektion es hat.
 
 360°-Bilder, die direkt von einer 360°-Kamera kommen, haben bereits die passenden Metadaten und sie müssen nicht manuell hinzugefügt werden.
 
-Metadaten wichtig: https://www.panotwins.de/technical/how-to-add-mandatory-photo-sphere-meta-data-to-an-equirectangular-image/
-% http://u88.n24.queensu.ca/~bogdan/#m_workspace
-https://developers.google.com/streetview/spherical-metadata
+Die Metadaten können auf verschiedene Art und Weisen zu den Fotos hinzugefügt werden, unter anderem mit Photoshop oder mit dem ExifMetaLrPlugin für Lightroom. 
+In den Metadaten sind ist gespeichert, welche Software zum Stitching verwendet wurde, welche Dimensionen das Bild hat, was die Ausgangsblickrichtung ist und natürlich welche Projektion das Panorama hat und dass es in einem Panorama Viewer angezeigt werden soll. 
+Zusätzlich können dort auch noch die Koordinaten, an denen das Bild aufgenommen wurde, der Urheber, das Copyright und einige andere Informationen gespeichert sein, die jedoch nicht spezifisch für 360°-Bilder sind.
+
+% https://www.panotwins.de/technical/how-to-add-mandatory-photo-sphere-meta-data-to-an-equirectangular-image/
 
 \subsection{360°-Videos}
-Aufhänger?
-https://filmpuls.info/360-videos-zukunft/
+In seinem Artikel ``360 Videos und ihre Zukunft: eine Prognose'' im filmpuls-Magazin, einem Fachmagazin für Filmemacher, erklärt der Autor Kristian Widmer, dass die größte Challenge für die Produktion von guten 360°-Filmen ist, dass komplett eigene Erzählkonzepte entwickelt werden müssen, da die aus dem klassischen Filmformat nicht anwendbar sind. Außerdem können viele Tricks und Praktiken nicht angewandt werden, weil es keine unsichtbaren Bereiche um die Kamera gibt.
 
-Vimeo:
-https://vimeo.com/blog/post/introducing-vimeo-360
+Seiner Meinung nach sollten 360°-Filme so angelegt werden, dass der Zuschauer dazu ermuntert wird die Szene zu erkunden und dazu auch 3D-Sound intgeriert werden sollte, um zu suggerieren wo im Panorama gerade interessanter Inhalt zu sehen ist.
 
- https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
- Vimeo Videos in equirectingular
- 
- https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
- YT früher equirectangular, jetzt EAC
+Die großen Videoplattformen Vimeo und Youtube haben auch seit einigen Jahren die Funktion 360°-Videos abzuspielen und bieten auch Möglichkeiten die Filme in VR-Headsets zu sehen. Widmer kritisiert hier allerdings die Qualität der Filme und die Tatsache, dass oft nur Stereo-Sound in die Filme integriert ist.
+% https://filmpuls.info/360-videos-zukunft/
+
+Allerdings sind erst durch die Angebote von Youtube und Vimeo 360°-Filme und ihre Möglichkeiten weiter in das Bewusstsein der breiten Masse gekommen.
 
 \subsubsection{Quellen für 360°-Videos}
 Eine gute Quelle für 360°-Videos is genau wie bei 360°-Fotos Vimeo. Wie bereits oben beschrieben, können die Eigentümer der Videos angeben unter welcher Lizenz sie das Video veröffentlichen und es gegebenenfalls zum Download freigeben. In den meisten Fällen sind sie frei zur privaten Nutzung und nur die kommerzielle Weiterverwendung untersagt.
@@ -800,38 +803,37 @@ Da man mit der Maus in all diesen Programmen sowohl den Viewport steuert, als au
 Da es so viele verschiedene Programme gibt, gibt es ebenso viele Output-Formate für die fertigen Modelle. Jede Software hat eigene Speicherformate, aber die meisten können auch in andere exportieren. Den Export zu OBJ-Dateien, unterstützen dabei alle Programme und ist damit eine gute Speicherform, um 3D-Modelle zu veröffentlichen.
 
 \subsection{360° Sound/ Spatial Audio}
-https://flypaper.soundfly.com/produce/wtf-vr-and-spatial-audio-mixing-360-audio/
-https://www.youtube.com/watch?v=mcUwiYwgBHw
-https://medium.com/@superavi/goodbye-stereo-hello-360º-sound-6a9d64fbd1f
+360° Sound, 3D audio oder auch spatial audio bezeichnet Audioinhalte, die Töne die an verschiedenen Orten um den Kopf platzieren und so eine reale Situation erschaffen. 
+Das menschliche Gehör ist in der Lage für Soundquellen zu bestimmen von wo sie kommen. Dazu werden die drei Dimensionen der Töne bestimmt, die vom Kopf als Bezugspunkt im Zentrum ausgehen. Die Dimensionen sind die Entfernung vom Kopf, der Azimuth-Winkel und der Elevationswinkel.
+Der Azimuth-Winkel beschreibt dabei die horizontale Rotation und der Elevationswinkel die vertikale Rotation. 
 
-https://facebook.github.io/react-360/docs/audio.html
+Es gibt drei verschiedene Formate für spatial audio: Channel-based, object-based und transform domain-based spatial audio.
 
-https://developers.google.com/vr/ios/spatial-audio
-Audioquellen im Raum platzieren (Mono-Soundquelle)
-oder als ambisonic background sound (zB Regen/ Meeresrauschen etc)
+Momentan ist das Channel-basierte Audio-Format am weitesten verbreitet. Channel-basierte audio-Inhalte sind playback-orientiert, brauchen als nur minimales Processing beim Abspielen und können direkt an die Lautsprecher gegeben werden, da das Mixing bereits im Vorfeld von einem Sound Engineer vorgenommen wurde. Dabei muss die Standard Konfiguration der Lautsprecher beachtet werden, damit das spatial audio dann auch wie gewünscht funktioniert. Zudem muss die Anzahl der Channels mit dem des Output-Systems, also der Anzahl der Lautsprecher übereinstimmen.
+Beispiele für Channel-basierte spatial Audio sind Dolby Atmos und Auro 3D.
 
-https://creator.oculus.com/learn/spatial-audio/
-Was ist spatial audio?
-Content creation
+Object-basiertes spatial Audio besteht aus einer Soundszene und einfach Soundobjekten. Diese Soundobjekte haben alle eigene Metadaten in denen unter anderem ihre Position, Lautstärke, Richtung und Gedämpftheit gespeichert sind. Die Soundszene kann dann mit den verschiedensten Abspiel-Setups genutzt werden, da sie keine festgelegte Konfiguration braucht. Dafür ist es extrem aufwändig objekt-basiertes spatial audio in Realtime zu berechnen. Inzwischen wird objekt-basiertes spatial audio immer beliebter, da die Geräte immer stärkere Prozessoren haben und damit die aufwändige Berechnung problemlos schaffen.
 
-https://sonicscoop.com/2018/02/05/audio-mixing-for-vr-the-beginners-guide-to-spatial-audio-3d-sound-and-ambisonics/
+Das transform domain-based spatial audio wird auch als Ambisonics bezeichnet und beruht auf den zuvor beschriebenen Dimensionen der Lage der Tonquellen. Da die Richtungen nicht direkt in Kanälen abgespeichert werden wie beim Channel-basierten spatial audio, kann auch hier ein variables Abspielsystem verwendet werden.
 
-http://www.bbc.co.uk/guides/zrn66yc
+% Paper: Spatial Audio Reproduction with Primary Ambient Extraction
 
-https://www.vrtonung.de/spatial-audio-support-for-360-video-platform/
-
-Paper: Def von spatial Audio
+% https://flypaper.soundfly.com/produce/wtf-vr-and-spatial-audio-mixing-360-audio/
+% sehr guter Artikel, aber Information bisher alle aus dem Paper
 
 \subsubsection{Quellen für Spatial Audio-Dateien}
-
+360° Videos auf Youtube können bereits mit spatial Audio hochgeladen werden. Hier könnten die Audiospuren als 3D-Sounddateien heruntergeladen werden. Eine Plattform für den Vertrieb von Spatial Audio Dateien gibt es allerdings nicht.
 
 \subsubsection{Erstellung und Bearbeitung von Spatial Audio}
-Hier muss wieder zwischen den verschiedenen Typen von Sounds Unterschieden werden, die spatial Audio erzeugen:
+Um Channel-basierten spatial audio content zu erstellen werden 8 Channels benötigt. Pro Achse (Vorne/Hinten, Links/Rechts, Oben/Unten) wird ein Stereo-Signal erzeugt. Hinzu kommt noch ein Stereo-Signal für den Teil der Töne, die aus keiner Richtung kommen, sondern direkt auf dem Zentrum sitzen. Das sind dann meistens Inhalte wie eine Hintergrundmusik.
 
-Werden in einer VR-Anwendung Geräusche nur an einem bestimmten Ort in der Szene platziert handelt es sich in der Regel um Mono-, manchmal Stereo-Audiodateien, diese können in allen Audio-Bearbeitungsprogrammen bearbeitet und mit allen Audiorecordern erstellt werden.
+Es gibt verschiedene Tools, um Spatial Audio Dateien zu erzeugen. Die meisten größeren Audiosoftwareprodukte haben zudem Plugins für 3D Audio. Beispiele für kostenfreie Tools sind die Spatial Workstation von Facebook oder das Ambisonic Toolkit für Reaper.
+% https://facebook360.fb.com/spatial-workstation/
+% http://www.ambisonictoolkit.net
 
-- Ambisonic
-- Object-based spatial audio (Dolby Atmos)
+In der Entwicklung von VR-Anwendungen wird der 3D Sound meist dadurch erzeugt, dass Soundquellen direkt als Objekte in den virtuellen 3D-Raum platziert werden. Die eingebundene Audiodateien sind dabei dann nur normale Mono- oder Stereodateien.
+% https://developers.google.com/vr/ios/spatial-audio
+%https://facebook.github.io/react-360/docs/audio.html
 
 \subsection{Virtual Reality Spiele und Anwendungen}
 Die Kombination aus den vorigen Inhalten ergibt VR-Anwendungen und Spiele. Inzwischen ist die Auswahl an verschiedenen Anwendungen extrem gewachsen und tut das auch weiterhin. Allerdings ist der hier nach wie vor der allergrößte Anteil an VR-Programmen Spiele.
@@ -941,7 +943,7 @@ Um Modell zu rendern muss nur eine Entity-Komponente erstellt werden und er Link
 \cleardoublepage
 \section{Software Entwicklung von VR-Systemen}
 \subsection{Native VR-Applikationen}
-Um VR-Anwendungen zu entwickeln, gibt es momentan nur zwei verschiedene Möglichkeiten. Das sind die Game-Engines Unity und Unreal. Wie aus dem Namen schon erkennbar, wurden sie entworfen, um Computerspiele zu erstellen, wurden aber weiterentwickelt, sodass sie sich inzwischen auch sehr gut zur Entwicklung von VR-Anwendungen eignen.
+Um VR-Anwendungen, die nativ auf den VR-Headsets laufen, zu entwickeln gibt es momentan nur zwei verschiedene Möglichkeiten. Das sind die Game-Engines Unity und Unreal. Wie aus dem Namen schon erkennbar, wurden sie entworfen, um Computerspiele zu erstellen, wurden aber weiterentwickelt, sodass sie sich inzwischen auch sehr gut zur Entwicklung von VR-Anwendungen eignen.
 
 Ingesamt sind sich die beiden Engines relativ ähnlich, verwendet man Unity, muss man C\# programmieren und die Unreal Engine verwendet so gennante Blueprints, um einfachere Sachen visuell programmieren zu können mit einem Editor, in dem Nodes mit Links verbunden werden können um Funktionen zu nutzen. Darunterliegend wird in der Unreal Engine mit C++ gearbeitet.
 
@@ -1582,6 +1584,18 @@ Momentan können Schüler nicht beeinflussen wie sie 3D-Modelle sehen, sondern nur
 \cleardoublepage
 \fancyhead[LE,RO,LO,RE]{} % Keine Kopfzeile mehr oben auf jeder Seite
 \section*{Inhalt der beigelegten CD}
+Die beigelegte CD enthält folgende Dateien:
+
+\begin{itemize}
+\item Sourcecode von VRClassroom
+\item Kompilierte VRClassroom App für MacOS, Linux und Windows
+\item VRClassroom Video, das als Grundlage der Online-Umfrage diente
+\item PDF der Thesis
+\end{itemize}
+
+Das Github-Repository, in dem der Sourcecode von VRClassroom sowie die Thesis sind ist zudem unter XXXXX erreichbar.
+Das für die Umfragen produzierte Video zu VRClassroom ist auf Youtube unter https://youtu.be/b60PQ3bqjk0 zu erreichen.
+
 %______________________________________________________________________
 
 \cleardoublepage
