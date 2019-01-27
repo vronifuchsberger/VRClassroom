@@ -96,8 +96,14 @@ Abschließend wird diskutiert wie Zukunft von Virtual Reality im Schulunterricht 
 
 \selectlanguage{english}
 \section*{Abstract}
+This works topic is the use of virtual reality headsets in education. The first chapter gives an overview of recent VR headsets and compares them in functionality, retail price and other characteristics. Afterwards, existing software for education is discussed and assessed.
 
-Short abstract of the work, maximum of 250 words. %TODO
+Based on the gathered information VRClassroom was developed. VRClassroom is a software which gives teacher the opportunity to present their students 360 content without losing the overview over the class. The software consists of two components: The teacher app, in which they put the content, and the students app, which shows the content provided by the teacher.
+The teacher app gives an overview of the connected student-devices and their activity status, show the current content and offers controls to modify it. The teacher can use 360 photos, 360 videos and 3D models with VRClassroom. They can directly load Google Streetview panoramas, too. 360 videos are played synchronously on all devices once the teacher hits play. 3D models can be scaled and rotated by the teacher. Additionally, the teacher can place markers on all three content types.
+
+The developed software was evaluated with 59 teachers. They were presented with a video explaining the use of VRClassroom and answered a questionnaire afterwards. The majority of the participants liked VRClassroom and could see themselves using VRClassroom in the future.
+
+The last chapters discusses the future of Virtual Reality in education and possible advancements of VRClassroom.
 
 \selectlanguage{ngerman}
 \clearpage
@@ -149,18 +155,16 @@ Erfolg neuer Lehrkonzepte bzgl neue Medien %TODO
 Was ist VR, wie unterscheidet es sich zu AR? %TODO
 
 Virtual Reality kurz VR bezeichnet
-Augmented Reality (AR) dagegen integriert virtuelle Objekte in den realen Raum. Dazu wird in ein Kamerabild an eine bestimmte Stelle ein Objekt gezeichnet, das dort physisch nicht existiert. AR wird meist nur für 3D-Modelle verwendet, während VR auch 360?-Fotos oder Videos anzeigen kann.
+Augmented Reality (AR) dagegen integriert virtuelle Objekte in den realen Raum. Dazu wird in ein Kamerabild an eine bestimmte Stelle ein Objekt gezeichnet, das dort physisch nicht existiert. AR wird meist nur für 3D-Modelle verwendet, während VR auch 360°-Fotos oder Videos anzeigen kann.
 
 \subsection{Aufbau von VR-Headsets}
-Grundsätzlicher Aufbau eines Headmounted displays. %TODO
-
 Ein VR-System ist ein Gerät, dass VR-Inhalte anzeigen kann. Das können zum Einen so genannte Head-mounted Displays (HMD), auch bekannt als VR-Brillen oder VR-Headset, sein oder eine CAVE. Eine CAVE ist ein Raum, bei dem alle Seiten Displays sind, die virtuelle Inhalte anzeigen. In beiden Fällen können Nutzer mit dem VR-System interagieren.
 Da eine CAVE ein gesamter Raum ist, der pro Nutzer benötigt wird, ist sie für VR-Anwendungen im Unterricht nicht geeignet. Daher werden in dieser Arbeit ausschließlich VR-Headsets behandelt.
 
+Ein VR-Headset besteht aus einer Art Brille, in der sich ein Display und Linsen befinden und mit Riemen am Kopf befestigt wird. Die Linsen dienen dazu das auf dem Display gezeigte auf ein weiteres Blickfeld zu bringen und einen angenehmen Fokuspunkt für die Augen zu schaffen, der weiter entfernt ist als das Display. Zusätzlich sind noch verschiedene Sensoren verbaut, mit denen Bewegungen und Position des Nutzers registriert werden.
+Bei einem VR-Headset sieht der Nutzer nur die ihm gezeigten Inhalte und nicht den um ihn liegenden Raum. 
 
-\subsection{Aufbau von VR-Headsets}
-Grundsätzlicher Aufbau eines Headmounted displays. %TODO
-
+Die meisten VR-Headsets haben zusätzlich einen Controller, mit dem der Nutzer mit der VR-Welt interagieren kann.
 %______________________________________________________________________
 
 % Der Befehl \cleardoublepage erscheint nur vor \section, nicht vor
@@ -246,44 +250,44 @@ In ihrer Arbeit haben XXX et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamer
 % EyeVR Paper
 
 \subsubsection{Positional Tracking}
-Um für ein VR-Headsets 6 DoF zu bekommen, muss die Position im Raum getrackt werden. Positional Tracking wird also generell nur von 6 DoF Headsets genutzt.
+Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum oder die Veränderung der Position relativ zum Raum berechnet werden. Positional Tracking wird also generell nur von 6DoF-Headsets genutzt.
 
-Momentan gibt es dazu 2 verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum tracken. Die Computer-gestützten VR-Headsets nutzen alle diese Weise, das so genannte outside-in-Tracking, um die Brillen zu tracken.  \cite{Stone2017}
+Momentan gibt es dazu zwei verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum bestimmen. Die Computer-gestützten VR-Headsets nutzen alle diese Technik, sie wird outside-in-Tracking genannt.  \cite{Stone2017}
 
-Die zweite Möglichkeit ist das inside-out Tracking. Für das Inside-out Tracking müssen keinerlei Sensoren im Raum platziert werden, es werden nur Sensoren verwendet, die in das Headset integriert sind.  \cite{Stone2017}
-Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google, das die zwei in das Headset integrierten Kameras zur Feststellung der Position nutzt.
+Die zweite Möglichkeit ist das inside-out-Tracking. Für das inside-out-Tracking müssen keinerlei Sensoren im Raum platziert werden. Es werden nur Sensoren verwendet, die in das Headset integriert sind.  \cite{Stone2017}
+Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google. Es verwendet in das Headset integrierten Kameras zur Bestimmung der Position nutzt.
 % https://developers.google.com/vr/discover/worldsense
 
-Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht, die die Position im Raum anhand von Objekten im Raum bestimmen, die die Kameras erkennen. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller Tracken, sodass auch diese 6 Degrees of Freedom unterstützen.
+Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht. Diese bestimmen die Position im Raum anhand von Objekten im Raum, die von den Kameras erkannt werden. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller bestimmen, sodass auch diese sechs Degrees of Freedom unterstützen.
 % https://www.roadtovr.com/oculus-quest-hands-specs-tech-details-oculus-connect-5/
 
 \subsubsection{Gewicht}
-Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen, allerdings ist bei diesen neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen, aber dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
+Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen. Allerdings ist bei den neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen. Dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
 
 Die Playstation VR hat ein kleines Gegengewicht im Bügel, sodass sich das Gewicht etwas besser verteilt.
 
-Das leichteste aller VR-Headsets ist das Google Cardboard mit einem eingelegten Smartphone, es hat dann ein Gesamtgewicht von etwa 270g, wenn man die 96g des Cardboards mit einem durchschnittlichen aktuellen Smartphone addiert. Allerdings sind dadurch auch keine besonders angenehmen Polsterungen oder Riemen eingebaut.
-Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, das Gewicht immer ohne das Smartphone ist.
+Das leichteste aller VR-Headsets ist das Google Cardboard mit einem eingelegten Smartphone, es hat dann ein Gesamtgewicht von etwa 270g, wenn man die 96g des Cardboards mit einem durchschnittlichen aktuellen Smartphone addiert. Allerdings bietet das Gerät auch keine Polsterungen oder Riemen.
+Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, bezieht sich das Gewicht immer auf das Headset ohne Smartphone.
 
 \subsubsection{Preis}
 \label{subsec:price}
-Wie in \ref{sec:challenges} erläutert sieht die Autorin des Artikels ``5 Major Challenges For The VR Industry'' den Preis als eines der Hautprobleme, dass sich VR noch nicht überall durchgesetzt hat.
+Wie in \ref{sec:challenges} erläutert sieht die Autorin des Artikels ``5 Major Challenges For The VR Industry'' den Preis als eines der Hautprobleme, dass sich VR noch nicht weiter durchgesetzt hat.
 Da aber besonders die Smartphone-gestützten VR-Systeme sehr günstig zu bekommen sind, gilt dieses Argument eigentlich nicht wirklich.
 
-Trotzdem wird von Experten (QUELLE) erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden.
+Trotzdem wird von Experten (QUELLE) erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden. %TODO Quelle
 
-Die Preise in den Tabellen \ref{tab:headsets1}, \ref{tab:headsets2} und \ref{tab:headsets3} sind in Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin sind keine Umsatzsteuern enthalten.
+Die Preise in den Tabellen \ref{tab:headsets1}, \ref{tab:headsets2} und \ref{tab:headsets3} sind in US-Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin ist keine Umsatzsteuern enthalten.
 
-Preis PlaystationVR ist ein Bundle-Preis, bei dem 2 Spiele enthalten sind.
+Bei PlaystationVR handelt es sich um ein Bundle-Preis, bei dem 2 Spiele enthalten sind.
 
 \subsection{Computer-gestützte VR-Hardware}
-Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für extrem rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
+Die erste Gruppe sind die Computer-gestützten Hardware-Systeme: Sie sind mit einem Kabel mit dem Rechner verbunden, der die Rechenleistung für die eigentlich Brille übernimmt. Sie eignen sich besonders für rechenaufwändige Anwendungen, aber schränken durch ihre Kabel die Bewegungsfreiheit des Nutzers ein.
 
 \begin{table}[]
 \begin{tabular}{p{0.14\linewidth}|p{0.07\linewidth}|p{0.14\linewidth}|p{0.18\linewidth}|p{0.18\linewidth}|p{0.08\linewidth}|p{0.06\linewidth}}
 \textbf{VR-Gerät} & \textbf{DoF} & \textbf{Display} & \textbf{Input} & \textbf{Tracking} & \textbf{Gewicht} & \textbf{Preis} \\ \hline
 Oculus Rift & 6 DoF & 1080x1200 \newline 90Hz \newline 100° & Oculus Touch, Xbox One Controller & 2 optische Sensoren im Raum & 380-470g &  349\$ \\
-Playstation VR & 6 DoF & 960 x 1080 \newline120Hz \newline 100° & PlayStation Move Controller
+Playstation VR & 6 DoF & 960x1080 \newline120Hz \newline 100° & PlayStation Move Controller
  & Playstation Camera & 610g & 349 \$ \\
 HTC Vive & 6 DoF & 1080x1200  \newline 90Hz \newline 110° & SteamVR-Tracking Controller & 2 Laser-Sensoren im Raum & 555g & 499\$
 \end{tabular}
@@ -300,11 +304,11 @@ HTC Vive & 6 DoF & 1080x1200  \newline 90Hz \newline 110° & SteamVR-Tracking Con
 \subsubsection{Oculus Rift}
 Die Oculus Rift ist die erste von Oculus herausgebrachte VR-Brille. Sie wird durch einen Windows-Computer bespielt und wird durch zwei Kameras, die auf dem Schreibtisch um den Bildschirm des Computer platziert werden können, optisch getrackt. 
 
-Mit der Oculus Rift kommen die zwei Oculus Touch Controller, diese haben jeweils zwei Action-Buttons, einen Menü-Button und einen Thumbstick sowie einen rückseitigen Button, der für den Zeigefinger gedacht ist. Die Buttons erkennen alle, ob ein Finger auflegt, was mehr verschieden Aktionen als nur die Events des Klickens der Buttons erlaubt.
+Mit der Oculus Rift kommen zwei Oculus Touch Controller, diese haben jeweils zwei Action-Buttons, einen Menü-Button und einen Thumbstick sowie einen rückseitigen Button, der für den Zeigefinger gedacht ist. Die Buttons können erkennen, ob ein Finger aufliegt, während der Button aber noch nicht gedrückt wurde. Dies erlaubt neben dem Klicken der Buttons auch die Position der Finger zu bestimmen, und so zu erkennen, ob der Nutzer beispielsweise ein Faust bildet.
 
-Der IPD ist verstellbar zwischen 58 und 72mm, der Linsendurchmesser liegt bei circa 50mm. 
+Der Augenabstand (Inter-pupillary distance; IPD) ist verstellbar zwischen 58 und 72mm, der Linsendurchmesser liegt bei circa 50mm. 
 
-Die Oculus Rift ist mit bis zu 470g deutlich leichter als die beiden anderen Kabel-gebundenen VR-Brillen. Auch die Controller mit 160g merkbar leichter als die der HTC Vive.
+Die Oculus Rift ist mit bis zu 470g deutlich leichter als die beiden anderen Kabel-gebundenen VR-Brillen. Auch die Controller sind mit 160g merkbar leichter als die der HTC Vive.
 
 Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die Oculus Rift Brille, die Oculus Touch Controller und die zwei Sensoren benötigt. 
 
@@ -314,9 +318,9 @@ Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und 
 \subsubsection{HTC Vive}
 Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie haben die gleiche Auflösung und Bildwiederholungsrate von 90Hz, allein das Field of View ist mit 110° etwas weiter als bei anderen VR-Headsets. Im Vive-Headset lässt sich die Pupillendistanz und der Objektivabstand einstellen.
 
-Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die HTC Vive Brille, die HTC Vive Controller und die zwei Laser-Sensoren, genannt ``Lighthouses'' benötigt. Die Lighthouses müssen an diagonalen Enden des Spielfelds überhalb des Aktionsbereich aufgestellt werden, was die initiale Installation etwas aufwändiger macht. Durch die Lasertechnologie in den Lighthouses statt einer optischen Erkennung ist das mögliche Spielfeld der HTC Vive deutlich größer als das der anderen beiden VR-Systeme.
+Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die HTC Vive Brille, die HTC Vive Controller und die zwei Laser-Sensoren, genannt ``Lighthouses'' benötigt. Die Lighthouses müssen an diagonalen Enden des Raums überhalb des Aktionsbereich aufgestellt werden, was die initiale Installation etwas aufwändiger macht. Durch die Lasertechnologie in den Lighthouses ist das mögliche Spielfeld der HTC Vive deutlich größer als das der anderen beiden VR-Systeme.
 
-Um das Tracking perfekt einzustellen muss zu Beginn der ersten Nutzung das System kalibriert und der Spielbereich virtuell markiert werden.
+Um das Tracking einzustellen muss zu Beginn der ersten Nutzung das System kalibriert und der Spielbereich virtuell markiert werden.
 
 Die Controller haben ein klickbares Trackpad, Menü- und System-Buttons auf der Vorderseite, einen Abzugsknopf für den Zeigefinger auf der Rückseite und Greifknöpfe an den Seiten des Controllers.
 
@@ -327,9 +331,9 @@ Preislich liegt die Vive mit 499\$ am oberen Ende des Spektrums der VR-Headsets.
 % https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD_BwE#vive-spec
 
 \subsubsection{Playstation VR}
-Die Playstation VR ist dafür entwickelt mit der Playstation 4 Konsole benutzt zu werden, sie wurde also spezielle für den Anwendungsfall des Gamings entwickelt. Sie unterstützt sogar das Spielen mit zwei Spielern, wobei ein Spieler die Playstation VR nutzt und der zweite Spieler das Bild auf dem Fernseher sieht. Beide Nutzen die Playstation Move Controller.
+Die Playstation VR ist dafür entwickelt mit der Playstation 4 Konsole benutzt zu werden, sie wurde also spezielle für den Anwendungsfall des Gamings entwickelt. Sie unterstützt sogar das Spielen mit zwei Spielern, wobei ein Spieler die Playstation VR nutzt und der zweite Spieler das Bild auf dem Fernseher sieht. Beide nutzen die Playstation Move Controller.
 
-Die Controller haben die gewohnten Playstation-Buttons und ihre Position im Raum wird getrackt.
+Die Controller haben die üblichen Buttons eines Playstation-Controllers und ihre Position im Raum wird getrackt.
 
 Wie in Tabelle \ref{tab:headsets1} zu sehen ist die Auflösung der Playstation VR deutlich geringer als die der anderen beiden Headsets. Dafür hat sie eine extrem hohe Bildwiederholrate von 120Hz, was gerade für schnelle Spiele einen Vorteil bietet. Allerdings ist sie mit 610g recht schwer, sodass ein langes Tragen nicht sehr angenehm ist.
 
@@ -353,14 +357,14 @@ Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, 
 Oculus Go & 3 DoF & 1280x1440  \newline 60-72Hz \newline 100° & Oculus Go Controller & kein Tracking & 468g & 199\$ \\
 Oculus Quest & 6 DoF & 1600x1440 \newline OLED \newline 72Hz \newline 100° & Oculus Touch Controller & Inside-out & 570g & 399\$ \\
 Lenovo Mirage Solo &1280x1440 \newline OLED \newline 75Hz \newline 110° & Daydream Motion Controller & &Inside-out  & 645g & 349,99\$ \\
-HTC Vive Focus & 6 DoF & 1440 x 1600 \newline  \newline 75Hz \newline 110° & & Inside-out & 670g & 599\$
+HTC Vive Focus & 6 DoF & 1440x1600 \newline  \newline 75Hz \newline 110° & & Inside-out & 670g & 599\$
 \end{tabular}
   \caption{Vergleich der Stand-alone VR-Headsets.}
   ~\label{tab:headsets2}
 \end{table}
 
 \subsubsection{Oculus Go}
-Mit ihrem Preis von knapp 200\$ ist die Oculus Go mit Abstand das günstigste VR-Headset. Sie kommt mit einem kleinen 3DoF Controller, der ein klickbares Touchfeld, einen Button für den Zeigefinger, sowie zwei einen kleine??Zurück''- und ``Oculus''-Button.
+Mit ihrem Preis von knapp 200\$ ist die Oculus Go mit Abstand das günstigste VR-Headset. Sie kommt mit einem kleinen 3DoF Controller, der ein klickbares Touchfeld, einen Button für den Zeigefinger, sowie einen kleinen ``Zurück''- und ``Oculus''-Button.
 
 Die Oculus Go hat pro Auge ein Display von 1280x1440 Pixeln mit einer Refreshrate von 60 bis 72Hz und einem Field of View von 100°.
 
@@ -368,7 +372,7 @@ Sie erkennt durch einen kleinen Sensor am inneren der Brille, ob sie aufgesetzt 
 Sie bietet die Möglichkeit für Nutzer mit Sehschwächen an die Sehstärke angepasste Linsen auf die festeingebauten Linsen zu setzen, sodass die eigene Brille nicht benötigt wird. Diese müssen aber separat erworben werden.
 Der Linsenabstand kann an der Oculus Go nicht individuell eingestellt werden und ist auf 64mm festgelegt.
 
-Die Oculus go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass man die Sounds der VR-Welt perfekt hört und trotzdem noch ein paar Umgebungsgeräusche hört, sodass man nicht abgeschottet wird.
+Die Oculus go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass man trotzdem noch Umgebungsgeräusche hören kann und nicht abgeschottet wird.
 
 Eine Akkuladung hält je nach Nutzung zwischen 2 und 2,5 Stunden, wobei die Ladezeit mit fast 3 Stunden relativ lange ist.
 
@@ -379,20 +383,20 @@ Da es sich bei der Oculus Go um ein 3DoF-Headset handelt, unterstützt sie kein P
 \subsubsection{Oculus Quest}
 Die Oculus Quest ist noch nicht auf dem Markt, sondern für Frühling 2019 angekündigt. Einige Informationen zu dem Headset sind jedoch schon bekannt.
 
-Die Oculus Quest ist ein 6 DoF-VR-Headset. Die Position im Raum wird durch vier an den äußeren Ecken des Headsets eingebauten Kameras bestimmt. Sie übernehmen auch das Tracking der Oculus Touch Controller, die damit ebenfalls sechs Freiheitsgrade erhalten.
-Sie hat auch die Funktion, den Linsenabstand individuell einzustellen, sodass für jeden Nutzer das Virtual Reality Erlebnis perfekt ist und das Risiko der Cybersickness durch Überanstrengung der Augen sinkt.
+Die Oculus Quest ist ein 6 DoF-VR-Headset. Die Position im Raum wird durch vier an den äußeren Ecken des Headsets eingebauten Kameras bestimmt. Sie übernehmen auch das Tracking der Oculus-Touch-Controller, die damit ebenfalls sechs Freiheitsgrade erhalten.
+Sie hat auch die Möglichkeit, den Linsenabstand individuell einzustellen, sodass für jeden Nutzer das Virtual Reality Erlebnis perfekt ist und das Risiko von Cybersickness durch Überanstrengung der Augen sinkt.
 
-die Oculus Quest soll mit einem OLED Display mit einer Auflösung von 1600x1440 pro Auge, die eine Refreshrate von 72Hz ausgestattet sein und ist damit das VR-Headsets mit dem am besten aufgelösten Display. Nur bei der Refreshrate haben die Computer-gestützten Headsets hier noch etwas voraus. Die Quest kommt genauso wieder Go mit eingebauten Lautsprechern, die es ermöglichen sowohl den Sound der VR-Welt zu hören, als auch noch Geräusche aus dem Raum mitzubekommen.
+Die Oculus Quest soll mit einem OLED-Display mit einer Auflösung von 1600x1440 pro Auge und einer Refreshrate von 72Hz ausgestattet sein und ist damit das VR-Headsets mit dem am besten aufgelösten Display. Nur bei der Refreshrate haben die Computer-gestützten Headsets hier noch etwas voraus. Die Quest kommt, genau wieder die Go, mit eingebauten Lautsprechern, die es ermöglichen sowohl den Sound der VR-Welt zu hören, als auch noch Geräusche aus dem Raum mitzubekommen.
 
-Die mitgelieferten Oculus Touch Controller sind denen der Oculus Rift sehr ähnlich, nur dass der Tracking Ring nun oberhalb statt unterhalb angebracht ist, was zu einer verbesserten Sichtbarkeit führen wird. Sie können alle Bewegungen im Raum erkennen und auch, ob die Buttons mit den Fingern berührt werden.
+Die mitgelieferten Oculus-Touch-Controller sind denen der Oculus Rift sehr ähnlich. Jedoch befindet sich der Ring mit dem die Controller getrackt werden nun oberhalb, damit er von den Kameras im Headset gesehen werden kann. Sie können alle Bewegungen im Raum erkennen und auch, ob die Buttons mit den Fingern berührt werden.
 
 Das Gesamtgewicht der Oculus Quest ist noch nicht bekannt, soll aber etwa 100g schwerer als das Rift-Headset sein und läge damit dann bei 570g. Auch die Akkulaufzeit der Oculus Quest wurde noch nicht herausgegeben.
 % https://uploadvr.com/oculus-quest-specs-price-release-date/
 
 \subsubsection{Lenovo Mirage Solo}
-Die Lenovo Mirage Solo liegt bei einem Preis von 350\$. Sie ist ebenfalls ein 6 DoF-Headsets, der mitgelieferte Daydream Motion Controller kann allerdings nur 3 Freiheitsgrade. Auch die Mirage Solo nutzt Inside-Out Tracking für die Positionsbestimmung im Raum. Dafür sind in das Display vorne zwei Kameras integriert. Berichten zufolge ist der nutzbare Spielbereich, der mit dem von Google entwickelten WorldSense getrackt wird, nur etwa einen Quadratmeter groß, sodass nur wenige Bewegung möglich ist.
+Die Lenovo Mirage Solo liegt bei einem Preis von 350\$. Sie ist ebenfalls ein 6DoF-Headsets, der mitgelieferte Daydream Motion Controller kann allerdings nur drei Freiheitsgrade. Auch die Mirage Solo nutzt inside-out-Tracking für die Positionsbestimmung im Raum. Dafür sind in das Display vorne zwei Kameras integriert. Berichten zufolge ist der nutzbare Spielbereich, der mit dem von Google entwickelten WorldSense getrackt wird, nur etwa einen Quadratmeter groß, sodass nur wenig Bewegung möglich ist.
 
-Die Controller sind die gleiche, die Google für das Daydream View-Headset verwendet. Zudem sind keine Lautsprecher eingebaut. Mit 645g ist die Mirage Solo das schwerste VR-Headset, das momentan auf dem Markt ist.
+Die Controller sind die gleichen, die Google für das Daydream-View-Headset verwendet. Zudem sind keine Lautsprecher eingebaut. Mit 645g ist die Mirage Solo das schwerste VR-Headset, das momentan auf dem Markt ist.
 % https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-mirage-solo/Mirage-Solo/p/ZZIRZRHVR01
 
 Lenovo gibt die Akkulaufzeit mir 2,5 Stunden an, die bei Tests wohl sogar auf 3 Stunden ausgedehnt werden konnte.
@@ -400,21 +404,21 @@ Auf der Mirage Solo läuft Google Daydream, über das auch Apps geladen werden kön
 % https://www.theverge.com/2018/5/4/17318648/lenovo-mirage-solo-google-daydream-standalone-vr-headset-review
 
 \subsubsection{HTC Vive Focus}
-Bisher ist die HTC Vive nur China auf dem Markt, allerdings wurde Ende 2018 angekündigt, dass sie demnächst auch in Europa und den USA verkauft werden wird. Mit ihrem Preis von 599\$ ist sie die mit deutlichem Abstand teuerste Stand-alone VR-Brille.
-Wie die Oculus Quest hat sie eine Auflösung von 1440 x 1600 pro Auge und eine Bildfrequenz von 75Hz und einem Field of View von 110°. Sie ist sich also insgesamt sehr ähnlich zur Oculus Quest.
+Bisher ist die HTC Vive Focus nur China auf dem Markt, allerdings wurde Ende 2018 angekündigt, dass sie demnächst auch in Europa und den USA verkauft werden wird. Mit ihrem Preis von 599\$ ist sie die mit deutlichem Abstand teuerste Stand-alone VR-Brille.
+Wie die Oculus Quest hat sie eine Auflösung von 1440x1600 pro Auge und eine Bildfrequenz von 75Hz und einem Field of View von 110°. Sie ist sich also insgesamt sehr ähnlich zur Oculus Quest.
 
-Die Controller der Vive Focus haben nur 3 DoF. Sie haben ein Trackpad, einen Trigger für den Zeigefinger und zwei Buttons auf der Oberseite. Sie erinnert formmäßig an eine Fernbedienung.
+Die Controller der Vive Focus haben nur 3DoF. Sie haben ein Trackpad, einen Trigger für den Zeigefinger und zwei Buttons auf der Oberseite. Sie erinnert formmäßig an eine Fernbedienung.
 
 Wie die Mirage Solo nutzt die Vive Focus zwei ins Headset verbaute Kameras für ein Inside-Out Tracking mit einem Spielbereich von 1,5mx1,5m. 
 Der Linsenabstand kann mechanisch eingestellt werden, bei größeren Brillen ist der Platz in der Brille allerdings etwas knapp.
 
-Sie hat eine Laufzeit von 3 Stunden. Momentan scheint es auch über den Viveport noch nicht besonders viele Anwendungen geben.
+Sie hat eine Laufzeit von 3 Stunden. Die Anzahl der verfügbaren Anwendungen ist noch gering.
 % https://www.vive.com/cn/product/vive-focus-en/
 % https://www.wareable.com/vr/htc-vive-focus-release-date-price-specs-5084
 
 \subsection{Smartphone gestützte VR-Hardware}
-Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone integriert wird, um die VR-Inhalte zu zeigen.
-Wie in Tabelle \ref{tab:headsets3} zu sehen sind damit die Merkmale für das Display, die Rechenleistung und das Tracking nicht beinhaltet, da diese abhängig vom eingelegten Smartphone sind. Diese liegen preislich auf einem sehr niedrigen bis mittlerem Niveau und bilden so eine gute Möglichkeit für alle Leute in die Welt der VR-Systeme einzutauchen, ohne direkt mehrere Hundert Euro ausgeben zu müssen.
+Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone genutzt wird, um die VR-Inhalte zu zeigen.
+Wie in Tabelle \ref{tab:headsets3} zu sehen sind damit die Merkmale für das Display, die Rechenleistung und das Tracking nicht beinhaltet, da diese abhängig vom eingelegten Smartphone sind. Diese liegen preislich auf einem sehr niedrigen bis mittlerem Niveau und bilden so eine gute Einstiegsmöglichkeit.
 
 \begin{table}[]
 \begin{tabular}{p{0.19\textwidth}|p{0.07\textwidth}|p{0.15\textwidth}|p{0.26\textwidth}|p{0.08\textwidth}|p{0.06\textwidth}}
@@ -429,18 +433,18 @@ Google Cardboard & 3 DoF &  90° & Hebel, der Touch-Event auf Display auslöst & 9
 
 \subsubsection{Google Cardboard}
 % Google Cardboard: https://store.google.com/product/google_cardboard
-In das Google Cardboard können Smartphones mit Displaygrößen zwischen 4 und 6 Zoll eingelegt werden. Um die Google Cardboard App zu nutzen, müssen die Geräten dann mindestens Android 4.1 oder iOS 8.0 oder höher haben.
+In das Google Cardboard können Smartphones mit Displaygrößen zwischen 4 und 6 Zoll eingelegt werden. Um die Google Cardboard App zu nutzen, müssen die Geräten dann mindestens Android 4.1 oder iOS 8.0 haben.
 
-Es kann kein Controller verbunden werden. Es kann lediglich mit einem Hebel ein Touch-Event auf dem Display ausgelöst werden. In der Google Cardboard App wieder die Interaktion beispielsweise so ausgelöst, dass der Mittelpunkt des Displays ``geklickt'' wird, wenn das Touch-Event ausgelöst wird. So ist ein Input, wenn auch etwas umständlich, möglich. 
+Es kann kein Controller verbunden werden. Es kann lediglich mit einem Hebel ein Touch-Event auf dem Display ausgelöst werden. In der Google Cardboard App wieder die Interaktion beispielsweise so ausgelöst, dass der Mittelpunkt des Displays ``geklickt'' wird, wenn das Touch-Event ausgelöst wird. So sind einfache Eingaben möglich. 
 
 Das Field of View der Google Cardboards kann je nach eingelegtem Smartphone bis zu 90° breit sein.
 
-Durch die einfache Konstruktion und den günstigen Preis ist das Google Cardboard das wohl am weitesten verbreitetste VR-Headset. Zudem gibt es davon diverse Arten von Nachbauten, die teilweise statt dem Hebel, der das Touch-Event auslöst, schwache Magneten an der Seite des Cardboards bewegen um wiederum ein Touch-Event auszulösen.
+Durch die einfache Konstruktion und den günstigen Preis ist das Google Cardboard weit verbreitet. Zudem gibt es davon diverse Arten von Nachbauten, die teilweise statt dem Hebel, der das Touch-Event auslöst, schwache Magneten an der Seite des Cardboards bewegen um so Touch-Events auszulösen.
 
 \subsubsection{Samsung Gear VR}
 % Samsung Gear VR: https://www.samsung.com/de/wearables/gear-vr-r324/SM-R324NZAADBT/?cid=de_ppc_google_im-wearables-gearvr-q3restructured_20180720_samsungvr-broad&tmcampid=7&tmad=c&tmplaceref=c_DE_IMECOM_Warm_Brand_GearVR_Broad&tmclickref=b_%2Bsamsung%20%2Bvr&gclid=EAIaIQobChMIpLnFnuvC3wIVCKQYCh0XVweYEAAYASAAEgLilfD_BwE
 
-Die Samsung Gear VR Brille funktioniert nur mit den Galaxy Geräten ab Version 6 oder neuer und benötigt mindestens Android Lollipop 5. Die Geräte werden auf dem USB-C-Stecker der Brille gesteckt, um die Verbindung herzustellen.
+Die Samsung Gear VR Brille funktioniert nur mit den Galaxy Geräten ab Version 6 oder neuer und benötigt mindestens Android 5. Die Geräte werden auf dem USB-Stecker der Brille gesteckt, um so eine Verbindung herzustellen.
 Wird ein Gerät zum ersten Mal verbunden werden Anweisungen angezeigt, die Oculus App herunterzuladen und einen Account zu erstellen beziehungsweise zu verbinden. Im Anschluss wird beim erneuten Verbinden mit dem Gerät die Oculus-App geöffnet um dort dann VR-Apps zu nutzen.
 
 Da das Display vom Smartphone abhängig ist, kann hier nicht mit den anderen Geräten verglichen werden, aber das Field of View kann je nach eingelegtem Geräte bis zu 101° weit sein.
@@ -453,13 +457,13 @@ Mit einem Preis von knapp 130\$ ist die GearVR die teuerste der drei Smartphone-
 
 \subsubsection{Google Daydream View}
 % Google Daydream View: https://store.google.com/product/google_daydream_view_specs
-Das Google Daydream View Headset funktioniert ebenfalls nicht mit allen Smartphones, sondern nur Android-Smartphones: das Google Pixel 2 und 3, das Galaxy 8 und 9, das Zenfone AR von Asos und das LG V30 werden auf der Herstellerwebseite als besonders geeignet aufgeführt. Grundsätzlich muss ein Gerät die Google Daydream App installiert haben innerhalb derer dann VR Apps gesucht und mit dem Controller verbunden und interagiert werden kann. 
+Das Google Daydream View Headset funktioniert ebenfalls nicht mit allen Smartphones, sondern nur Android-Smartphones: das Google Pixel 2 und 3, das Galaxy 8 und 9, das Zenfone AR von Asos und das LG V30 werden auf der Hersteller-Webseite als besonders geeignet aufgeführt. Grundsätzlich muss ein Gerät die Google Daydream App installiert haben innerhalb derer dann VR Apps gesucht und mit dem Controller verbunden und interagiert werden kann. 
 
-Google Daydream View kann den aktuellen Bildschirminhalt auf einen Chromecast streamen, sodass Andere sehen können, was gerade passiert.
+Google Daydream View kann den aktuellen Bildschirminhalt auf einen Chromecast streamen, sodass andere sehen können, was gerade passiert.
 
-Der Controller hat oben ein Touchpad, sowie einen Apps und Home-Button. An der linken Seite sind außerdem zwei Lautstärketasten platziert. Da allerdings Daydream View selbst keine Lautsprecher hat werden damit die integrierten Smartphone Lautsprecher beziehungsweise die verbundenen Kopfhörer gesteuert.
+Der Controller hat oben ein Touchpad, sowie einen Apps- und Home-Button. An der linken Seite sind zwei Lautstärketasten platziert. Da allerdings Daydream View selbst keine Lautsprecher hat werden damit die integrierten Smartphone Lautsprecher beziehungsweise die verbundenen Kopfhörer gesteuert.
 
-Der Strap mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am hinteren Ende den Controller einstecken kann, sodass er nicht verloren gehen kann.
+Das Band mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am hinteren Ende den Controller einstecken kann, sodass er nicht verloren gehen kann.
 
 % ---------------------------------------------------------------------------------------------------------------------------
 %% Wohin hiermit?! - Vielleicht zu Geräten?
