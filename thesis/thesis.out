@@ -24,88 +24,86 @@
 \BOOKMARK [1][]{section.3}{VR-Systeme im Bildungsbereich}{}% 24
 \BOOKMARK [2][]{subsubsection.3.0.1}{ClassVR}{section.3}% 25
 \BOOKMARK [3][]{subsubsection.3.0.2}{Google Expeditions}{subsubsection.3.0.1}% 26
-\BOOKMARK [3][]{subsubsection.3.0.3}{Senselab.io}{subsubsection.3.0.1}% 27
-\BOOKMARK [3][]{subsubsection.3.0.4}{DiscoveryVR}{subsubsection.3.0.1}% 28
-\BOOKMARK [3][]{subsubsection.3.0.5}{Victory VR}{subsubsection.3.0.1}% 29
-\BOOKMARK [3][]{subsubsection.3.0.6}{Evtl}{subsubsection.3.0.1}% 30
-\BOOKMARK [1][]{section.4}{Challenges von VR-Systemen}{}% 31
-\BOOKMARK [2][]{subsection.4.1}{Virtual Reality Sickness}{section.4}% 32
-\BOOKMARK [2][]{subsection.4.2}{Mindestalter zur Nutzung von VR-Systemen}{section.4}% 33
-\BOOKMARK [1][]{section.5}{360\260-Inhalte}{}% 34
-\BOOKMARK [2][]{subsection.5.1}{Projektionen von 360\260-Fotos und -Videos}{section.5}% 35
-\BOOKMARK [3][]{subsubsection.5.1.1}{Equirectangulare Projektion}{subsection.5.1}% 36
-\BOOKMARK [3][]{subsubsection.5.1.2}{Zylindrische Projektion}{subsection.5.1}% 37
-\BOOKMARK [3][]{subsubsection.5.1.3}{Mercator-Projektion}{subsection.5.1}% 38
-\BOOKMARK [3][]{subsubsection.5.1.4}{Rectilinear-Projektion}{subsection.5.1}% 39
-\BOOKMARK [3][]{subsubsection.5.1.5}{Stereographische Projektion}{subsection.5.1}% 40
-\BOOKMARK [3][]{subsubsection.5.1.6}{Pannini/ Vedutismo-Projektion}{subsection.5.1}% 41
-\BOOKMARK [3][]{subsubsection.5.1.7}{Equi-Angular Cubemap \(EAC\)}{subsection.5.1}% 42
-\BOOKMARK [3][]{subsubsection.5.1.8}{Fish-Eye Projektion}{subsection.5.1}% 43
-\BOOKMARK [2][]{subsection.5.2}{360\260-Fotos}{section.5}% 44
-\BOOKMARK [3][]{subsubsection.5.2.1}{Quellen f\374r 360\260-Fotos}{subsection.5.2}% 45
-\BOOKMARK [3][]{subsubsection.5.2.2}{Erstellung und Bearbeitung von 360\260-Fotos}{subsection.5.2}% 46
-\BOOKMARK [2][]{subsection.5.3}{360\260-Videos}{section.5}% 47
-\BOOKMARK [3][]{subsubsection.5.3.1}{Quellen f\374r 360\260-Videos}{subsection.5.3}% 48
-\BOOKMARK [3][]{subsubsection.5.3.2}{Erstellung und Bearbeitung von 360\260-Videos}{subsection.5.3}% 49
-\BOOKMARK [2][]{subsection.5.4}{3D-Modelle}{section.5}% 50
-\BOOKMARK [3][]{subsubsection.5.4.1}{Quellen f\374r 3D-Modellen}{subsection.5.4}% 51
-\BOOKMARK [3][]{subsubsection.5.4.2}{Erstellung und Bearbeitung von 3D-Modellen}{subsection.5.4}% 52
-\BOOKMARK [2][]{subsection.5.5}{360\260 Sound/ Spatial Audio}{section.5}% 53
-\BOOKMARK [3][]{subsubsection.5.5.1}{Quellen f\374r Spatial Audio-Dateien}{subsection.5.5}% 54
-\BOOKMARK [3][]{subsubsection.5.5.2}{Erstellung und Bearbeitung von Spatial Audio}{subsection.5.5}% 55
-\BOOKMARK [2][]{subsection.5.6}{Virtual Reality Spiele und Anwendungen}{section.5}% 56
-\BOOKMARK [3][]{subsubsection.5.6.1}{Quellen f\374r Virtual Reality Anwendungen}{subsection.5.6}% 57
-\BOOKMARK [3][]{subsubsection.5.6.2}{Erstellung von Virtual Reality Anwendungen}{subsection.5.6}% 58
-\BOOKMARK [2][]{subsection.5.7}{3D 360\260}{section.5}% 59
-\BOOKMARK [2][]{subsection.5.8}{360\260-Inhalte in React360}{section.5}% 60
-\BOOKMARK [3][]{subsubsection.5.8.1}{Fotos und Videos}{subsection.5.8}% 61
-\BOOKMARK [3][]{subsubsection.5.8.2}{Sounds}{subsection.5.8}% 62
-\BOOKMARK [3][]{subsubsection.5.8.3}{3D-Modelle}{subsection.5.8}% 63
-\BOOKMARK [1][]{section.6}{Software Entwicklung von VR-Systemen}{}% 64
-\BOOKMARK [2][]{subsection.6.1}{Native VR-Applikationen}{section.6}% 65
-\BOOKMARK [3][]{subsubsection.6.1.1}{Unity}{subsection.6.1}% 66
-\BOOKMARK [3][]{subsubsection.6.1.2}{Unreal Engine}{subsection.6.1}% 67
-\BOOKMARK [2][]{subsection.6.2}{WebVR + Mobile VR: VR im Browser}{section.6}% 68
-\BOOKMARK [3][]{subsubsection.6.2.1}{A-Frame}{subsection.6.2}% 69
-\BOOKMARK [3][]{subsubsection.6.2.2}{React360}{subsection.6.2}% 70
-\BOOKMARK [3][]{subsubsection.6.2.3}{Vergleich von A-Frame und React360}{subsection.6.2}% 71
-\BOOKMARK [3][]{subsubsection.6.2.4}{Three.js}{subsection.6.2}% 72
-\BOOKMARK [3][]{subsubsection.6.2.5}{WebGL}{subsection.6.2}% 73
-\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 74
-\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 75
-\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 76
-\BOOKMARK [2][]{subsection.7.3}{Grundstruktur}{section.7}% 77
-\BOOKMARK [2][]{subsection.7.4}{Lehrer-Applikation}{section.7}% 78
-\BOOKMARK [3][]{subsubsection.7.4.1}{Verbundene Ger\344te}{subsection.7.4}% 79
-\BOOKMARK [3][]{subsubsection.7.4.2}{Hineinladen von Inhalten}{subsection.7.4}% 80
-\BOOKMARK [3][]{subsubsection.7.4.3}{Controls}{subsection.7.4}% 81
-\BOOKMARK [2][]{subsection.7.5}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 82
-\BOOKMARK [2][]{subsection.7.6}{QR-Code Fenster}{section.7}% 83
-\BOOKMARK [2][]{subsection.7.7}{Sch\374ler-App}{section.7}% 84
-\BOOKMARK [3][]{subsubsection.7.7.1}{Eingabe des Namens}{subsection.7.7}% 85
-\BOOKMARK [3][]{subsubsection.7.7.2}{Anzeigen von 360\260-Fotos}{subsection.7.7}% 86
-\BOOKMARK [3][]{subsubsection.7.7.3}{Abspielen von 360\260-Videos}{subsection.7.7}% 87
-\BOOKMARK [3][]{subsubsection.7.7.4}{Abspielen von Ton in Videos}{subsection.7.7}% 88
-\BOOKMARK [3][]{subsubsection.7.7.5}{Anzeigen von 3D-Modellen}{subsection.7.7}% 89
-\BOOKMARK [3][]{subsubsection.7.7.6}{WebVR Polyfill}{subsection.7.7}% 90
-\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 91
-\BOOKMARK [2][]{subsection.8.1}{Online-Umfrage}{section.8}% 92
-\BOOKMARK [3][]{subsubsection.8.1.1}{Gesamteindruck VRClassroom}{subsection.8.1}% 93
-\BOOKMARK [3][]{subsubsection.8.1.2}{Medien in VRClassroom}{subsection.8.1}% 94
-\BOOKMARK [3][]{subsubsection.8.1.3}{Alters- und F\344chergruppen f\374r VRClassroom}{subsection.8.1}% 95
-\BOOKMARK [3][]{subsubsection.8.1.4}{Net Promotor Score}{subsection.8.1}% 96
-\BOOKMARK [3][]{subsubsection.8.1.5}{Einsch\344tzung der Zukunft von VR und VRClassroom}{subsection.8.1}% 97
-\BOOKMARK [3][]{subsubsection.8.1.6}{Demografie und pers\366nliche Angaben}{subsection.8.1}% 98
-\BOOKMARK [3][]{subsubsection.8.1.7}{Ergebnis und Schl\374sse aus der Evaluation}{subsection.8.1}% 99
-\BOOKMARK [2][]{subsection.8.2}{VRClassroom Studie in Schulen}{section.8}% 100
-\BOOKMARK [3][]{subsubsection.8.2.1}{Freigabe Kulturministerium}{subsection.8.2}% 101
-\BOOKMARK [1][]{section.9}{Ausblick}{}% 102
-\BOOKMARK [2][]{subsection.9.1}{Zukunft von VR}{section.9}% 103
-\BOOKMARK [2][]{subsection.9.2}{Probleme von VRClassroom}{section.9}% 104
-\BOOKMARK [3][]{subsubsection.9.2.1}{Anzeigen gro\337er Dateien}{subsection.9.2}% 105
-\BOOKMARK [3][]{subsubsection.9.2.2}{Synchronisierung}{subsection.9.2}% 106
-\BOOKMARK [2][]{subsection.9.3}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 107
-\BOOKMARK [3][]{subsubsection.9.3.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.3}% 108
-\BOOKMARK [3][]{subsubsection.9.3.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.3}% 109
-\BOOKMARK [3][]{subsubsection.9.3.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.3}% 110
-\BOOKMARK [3][]{subsubsection.9.3.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.3}% 111
+\BOOKMARK [3][]{subsubsection.3.0.3}{DiscoveryVR}{subsubsection.3.0.1}% 27
+\BOOKMARK [3][]{subsubsection.3.0.4}{Unimersiv}{subsubsection.3.0.1}% 28
+\BOOKMARK [1][]{section.4}{Challenges von VR-Systemen}{}% 29
+\BOOKMARK [2][]{subsection.4.1}{Virtual Reality Sickness}{section.4}% 30
+\BOOKMARK [2][]{subsection.4.2}{Mindestalter zur Nutzung von VR-Systemen}{section.4}% 31
+\BOOKMARK [1][]{section.5}{360\260-Inhalte}{}% 32
+\BOOKMARK [2][]{subsection.5.1}{Projektionen von 360\260-Fotos und -Videos}{section.5}% 33
+\BOOKMARK [3][]{subsubsection.5.1.1}{Equirectangulare Projektion}{subsection.5.1}% 34
+\BOOKMARK [3][]{subsubsection.5.1.2}{Zylindrische Projektion}{subsection.5.1}% 35
+\BOOKMARK [3][]{subsubsection.5.1.3}{Mercator-Projektion}{subsection.5.1}% 36
+\BOOKMARK [3][]{subsubsection.5.1.4}{Rectilinear-Projektion}{subsection.5.1}% 37
+\BOOKMARK [3][]{subsubsection.5.1.5}{Stereographische Projektion}{subsection.5.1}% 38
+\BOOKMARK [3][]{subsubsection.5.1.6}{Pannini/ Vedutismo-Projektion}{subsection.5.1}% 39
+\BOOKMARK [3][]{subsubsection.5.1.7}{Equi-Angular Cubemap \(EAC\)}{subsection.5.1}% 40
+\BOOKMARK [3][]{subsubsection.5.1.8}{Fish-Eye Projektion}{subsection.5.1}% 41
+\BOOKMARK [2][]{subsection.5.2}{360\260-Fotos}{section.5}% 42
+\BOOKMARK [3][]{subsubsection.5.2.1}{Quellen f\374r 360\260-Fotos}{subsection.5.2}% 43
+\BOOKMARK [3][]{subsubsection.5.2.2}{Erstellung und Bearbeitung von 360\260-Fotos}{subsection.5.2}% 44
+\BOOKMARK [2][]{subsection.5.3}{360\260-Videos}{section.5}% 45
+\BOOKMARK [3][]{subsubsection.5.3.1}{Quellen f\374r 360\260-Videos}{subsection.5.3}% 46
+\BOOKMARK [3][]{subsubsection.5.3.2}{Erstellung und Bearbeitung von 360\260-Videos}{subsection.5.3}% 47
+\BOOKMARK [2][]{subsection.5.4}{3D-Modelle}{section.5}% 48
+\BOOKMARK [3][]{subsubsection.5.4.1}{Quellen f\374r 3D-Modellen}{subsection.5.4}% 49
+\BOOKMARK [3][]{subsubsection.5.4.2}{Erstellung und Bearbeitung von 3D-Modellen}{subsection.5.4}% 50
+\BOOKMARK [2][]{subsection.5.5}{360\260 Sound/ Spatial Audio}{section.5}% 51
+\BOOKMARK [3][]{subsubsection.5.5.1}{Quellen f\374r Spatial Audio-Dateien}{subsection.5.5}% 52
+\BOOKMARK [3][]{subsubsection.5.5.2}{Erstellung und Bearbeitung von Spatial Audio}{subsection.5.5}% 53
+\BOOKMARK [2][]{subsection.5.6}{Virtual Reality Spiele und Anwendungen}{section.5}% 54
+\BOOKMARK [3][]{subsubsection.5.6.1}{Quellen f\374r Virtual Reality Anwendungen}{subsection.5.6}% 55
+\BOOKMARK [3][]{subsubsection.5.6.2}{Erstellung von Virtual Reality Anwendungen}{subsection.5.6}% 56
+\BOOKMARK [2][]{subsection.5.7}{3D 360\260}{section.5}% 57
+\BOOKMARK [2][]{subsection.5.8}{360\260-Inhalte in React360}{section.5}% 58
+\BOOKMARK [3][]{subsubsection.5.8.1}{Fotos und Videos}{subsection.5.8}% 59
+\BOOKMARK [3][]{subsubsection.5.8.2}{Sounds}{subsection.5.8}% 60
+\BOOKMARK [3][]{subsubsection.5.8.3}{3D-Modelle}{subsection.5.8}% 61
+\BOOKMARK [1][]{section.6}{Software Entwicklung von VR-Systemen}{}% 62
+\BOOKMARK [2][]{subsection.6.1}{Native VR-Applikationen}{section.6}% 63
+\BOOKMARK [3][]{subsubsection.6.1.1}{Unity}{subsection.6.1}% 64
+\BOOKMARK [3][]{subsubsection.6.1.2}{Unreal Engine}{subsection.6.1}% 65
+\BOOKMARK [2][]{subsection.6.2}{WebVR - VR im Browser}{section.6}% 66
+\BOOKMARK [3][]{subsubsection.6.2.1}{A-Frame}{subsection.6.2}% 67
+\BOOKMARK [3][]{subsubsection.6.2.2}{React360}{subsection.6.2}% 68
+\BOOKMARK [3][]{subsubsection.6.2.3}{Vergleich von A-Frame und React360}{subsection.6.2}% 69
+\BOOKMARK [3][]{subsubsection.6.2.4}{Three.js}{subsection.6.2}% 70
+\BOOKMARK [3][]{subsubsection.6.2.5}{PlayCanvas}{subsection.6.2}% 71
+\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 72
+\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 73
+\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 74
+\BOOKMARK [2][]{subsection.7.3}{Grundstruktur}{section.7}% 75
+\BOOKMARK [2][]{subsection.7.4}{Lehrer-Applikation}{section.7}% 76
+\BOOKMARK [3][]{subsubsection.7.4.1}{Verbundene Ger\344te}{subsection.7.4}% 77
+\BOOKMARK [3][]{subsubsection.7.4.2}{Hineinladen von Inhalten}{subsection.7.4}% 78
+\BOOKMARK [3][]{subsubsection.7.4.3}{Controls}{subsection.7.4}% 79
+\BOOKMARK [2][]{subsection.7.5}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 80
+\BOOKMARK [2][]{subsection.7.6}{QR-Code Fenster}{section.7}% 81
+\BOOKMARK [2][]{subsection.7.7}{Sch\374ler-App}{section.7}% 82
+\BOOKMARK [3][]{subsubsection.7.7.1}{Eingabe des Namens}{subsection.7.7}% 83
+\BOOKMARK [3][]{subsubsection.7.7.2}{Anzeigen von 360\260-Fotos}{subsection.7.7}% 84
+\BOOKMARK [3][]{subsubsection.7.7.3}{Abspielen von 360\260-Videos}{subsection.7.7}% 85
+\BOOKMARK [3][]{subsubsection.7.7.4}{Abspielen von Ton in Videos}{subsection.7.7}% 86
+\BOOKMARK [3][]{subsubsection.7.7.5}{Anzeigen von 3D-Modellen}{subsection.7.7}% 87
+\BOOKMARK [3][]{subsubsection.7.7.6}{WebVR Polyfill}{subsection.7.7}% 88
+\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 89
+\BOOKMARK [2][]{subsection.8.1}{Online-Umfrage}{section.8}% 90
+\BOOKMARK [3][]{subsubsection.8.1.1}{Gesamteindruck VRClassroom}{subsection.8.1}% 91
+\BOOKMARK [3][]{subsubsection.8.1.2}{Medien in VRClassroom}{subsection.8.1}% 92
+\BOOKMARK [3][]{subsubsection.8.1.3}{Alters- und F\344chergruppen f\374r VRClassroom}{subsection.8.1}% 93
+\BOOKMARK [3][]{subsubsection.8.1.4}{Net Promotor Score}{subsection.8.1}% 94
+\BOOKMARK [3][]{subsubsection.8.1.5}{Einsch\344tzung der Zukunft von VR und VRClassroom}{subsection.8.1}% 95
+\BOOKMARK [3][]{subsubsection.8.1.6}{Demografie und pers\366nliche Angaben}{subsection.8.1}% 96
+\BOOKMARK [3][]{subsubsection.8.1.7}{Ergebnis und Schl\374sse aus der Evaluation}{subsection.8.1}% 97
+\BOOKMARK [2][]{subsection.8.2}{VRClassroom Studie in Schulen}{section.8}% 98
+\BOOKMARK [3][]{subsubsection.8.2.1}{Freigabe Kulturministerium}{subsection.8.2}% 99
+\BOOKMARK [1][]{section.9}{Ausblick}{}% 100
+\BOOKMARK [2][]{subsection.9.1}{Zukunft von VR}{section.9}% 101
+\BOOKMARK [2][]{subsection.9.2}{Probleme von VRClassroom}{section.9}% 102
+\BOOKMARK [3][]{subsubsection.9.2.1}{Anzeigen gro\337er Dateien}{subsection.9.2}% 103
+\BOOKMARK [3][]{subsubsection.9.2.2}{Synchronisierung}{subsection.9.2}% 104
+\BOOKMARK [2][]{subsection.9.3}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 105
+\BOOKMARK [3][]{subsubsection.9.3.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.3}% 106
+\BOOKMARK [3][]{subsubsection.9.3.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.3}% 107
+\BOOKMARK [3][]{subsubsection.9.3.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.3}% 108
+\BOOKMARK [3][]{subsubsection.9.3.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.3}% 109

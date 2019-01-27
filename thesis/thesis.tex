@@ -211,12 +211,15 @@ https://www.vive.com/cn/product/vive-focus-en/
 
 
 \subsubsection{Inputmethoden}
-Wie in Kapitel XXX (hier Ref einfügen) beschrieben, gibt es zwei grundsätzliche Input-Methoden für VR-Headsets, die momentan verwendet werden: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
+Es zwei grundsätzliche Input-Methoden für VR-Headsets, die momentan verwendet werden: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
 
 Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Touch-Event auf dem Display auszulösen.
 (Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Punkt verbunden werden, um dem Nutzer sinnvollen Input zu erlauben.
 
 Bisher gibt es keine Geräte, die mit Voice-Input oder Gaze Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
+
+In ihrer Arbeit haben XXX et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamera in ein bestehendes VR-Headset eingebaut, die die Bewegungen der Augen registriert. Sie haben dazu eine Software entwickelt, die sowohl die Pupillenbewegungen als auch die Bewegungen des Lids registriert und als Input verarbeiten kann. 
+% EyeVR Paper
 
 \subsubsection{Positional Tracking}
 Um für ein VR-Headsets 6 DoF zu bekommen, muss die Position im Raum getrackt werden. Positional Tracking wird also generell nur von 6 DoF Headsets genutzt.
@@ -450,17 +453,18 @@ Der Strap mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man a
 \section{VR-Systeme im Bildungsbereich}
 \label{sec:VReducation}
 
-Hier kommen noch mehr Sachen aus den Papern rein!
-Paper: Virtual reality for collaborative e-learning 2008
+% Hier kommen noch mehr Sachen aus den Papern rein?
+% Paper: Virtual reality for collaborative e-learning 2008
 
 Virtual Reality wird in immer mehr verschiedenen Lebensbereichen eingesetzt und inzwischen gibt es neben den klassischen Simulatoren für Industriemaschinen und Flugobjekten auch verschiedene Ansätze von VR-Systemen im Bildungsbereich.
 
 Merchant et al. schließen in ihrer Arbeit in 2014, dass Lernen mit Virtual Reality bessere Lernergebnisse produziert als Lernen ohne VR. Sie sehen damit die finanzielle und zeitliche Invesitition der Einführung von VR-Systemen als sinnvoll.
 % Paper: Computers & Education Effectiveness of virtual reality-based instruction on students ? learning outcomes in K-12 and higher education : A meta-analysis
 
-Im folgenden Kapitel werden fünf dieser Systeme besprochen. Diese Auflistung erhebt dabei keinen Anspruch auf Vollständigkeit.
+Im folgenden Kapitel werden drei dieser Systeme besprochen, die besonders interessant für den Einsatz im Unterricht sind.
 
 In der Forschung wurden schon seit langer Zeit Systeme entwickelt, mit denen versucht wurde Behinderungen und psychische Störungen von Kindern und Jugendlichen zu verstehen und zu behandeln. Beispiele dafür sind:
+Hier noch die Beispiele einfügen
 
 
 \subsubsection{ClassVR}
@@ -484,24 +488,28 @@ Die Kommunikation zwischen der Lehrer-App und den ClassVR-Headsets funktioniert 
 % http://www.classvr.com
 
 \subsubsection{Google Expeditions}
+Google Expeditions ist eine kostenfreie App, die es für die Smartphone gestützten VR-Headsets entwickelt wurde.
+Sie kann einzeln genutzt werden oder im Unterricht. Wird sie im Unterricht genutzt, kann die Lehrkraft eine Guided Tour starten, in die sich dann die Schüler einklinken können. Dazu müssen sie im gleichen Netzwerk sein, in dem das Smartphone der Lehrkraft ist.
 
-\subsubsection{Senselab.io}
-% https://senselab.io/en/home-en
+Es gibt VR-Touren, die aus 360°Foto-Strecken oder -Videos bestehen und AR-Touren, bei denen die Nutzer 3D-Modelle im Raum begutachten können. Um die Modelle zu zeigen müssen dafür spezielle Marker ausgedruckt werden, die im Kamerabild erkannt werden.
+
+Wird eine Tour geleitet, kann der Tourleiter Markierungen setzen, auf die die Teilnehmer der Tour dann durch Pfeile in ihrem Bild hingewiesen werden. 
+Momentan gibt es mehr als 900 verschiedene Expeditionen, die gratis genutzt werden können. Zudem können auch selbst Touren erstellt werden.
+% https://edu.google.com/products/vr-ar/
 
 \subsubsection{DiscoveryVR}
 % https://www.discoveryvr.com
-Nur Videos
-Kostenlos
-Apps für Andoird, iOS, Daydream, GearVR, Oculus und HTC vive
+Die Discovery VR App ist eine Entwicklung des Discovery Channels, in der die Nutzer hochqualitative 360°-Videos ansehen können. Die App ist auf allen VR Plattformen kostenlos verfügbar.
 
-\subsubsection{Victory VR}
+Sie ist keine App, die speziell für das Szenario der Nutzung in der Schule entwickelt wurde, allerdings sind die Videos interessant und zum Einsatz im Unterricht geeignet. Die Videos haben dabei entweder eine englische Audiospur oder sind ohne Erzählstimme.
 
 
-\subsubsection{Evtl}
-https://unimersiv.com
+\subsubsection{Unimersiv}
+Unimersiv ist eine App, die es für GearVR und Oculus Rift gibt. Innerhalb der App können unterschiedliche VR-Anwedungen, in denen beispielsweise die ISS erkundet werden kann. Im Moment haben sie 9 verschiedene Experiences im Angebot. Schulen können für einmalig 49\$ pro Headset eine Lizenz erwerben, in der alle verfügbaren Inhalte enthalten sind und auch alle neuen Entwicklungen kostenlos geladen werden können.
 
-https://www.victoryvr.biz/education/
-nur Naturwissenschaften
+Außerdem haben sie auch Simulations-Anwendungen für Unternehmen im Angebot. Eine dieser Apps erlaubt es den Mitarbeitern einer Firma die Steuerung von Staplern in einem sicheren Rahmen zu erlernen.
+% https://unimersiv.com
+
 
 %_______________________________________________________________________________________________________________________
 \cleardoublepage % Neue rechte Seite anfangen
@@ -608,7 +616,7 @@ Google Cardboard & keine Angabe & nur unter Aufsicht eines Erwachsenen
 \section{360°-Inhalte}
 Neben der verwendeten Hardware spielen die verfügbaren Inhalte für das Virtual Reality Erlebnis eine erhebliche Rolle. Nur wenn die gezeigten Inhalte richtig in der 360°-Umgebung dargestellt werden bringt die Darstellung Nutzung von VR-Headsets die gewünschte Immersion.
 
-Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Grundsätzlich gibt es fünf verschiedene Medientypen von 360°-Inhalten: 360°-Fotos, -Videos, 3D-Modelle und spatial Audio, auch bekannt als 3D Audio. 
+Für 360°-Inhalte gibt es keine speziellen Dateiformate, die Inhalte werden in den gewohnten Formaten gespeichert. Grundsätzlich gibt es vier verschiedene Medientypen von 360°-Inhalten: 360°-Fotos, -Videos, 3D-Modelle und spatial Audio, auch bekannt als 3D Audio. 
 
 \subsection{Projektionen von 360°-Fotos und -Videos}
 Um 360°-Bildmaterial in 2D Bildformaten zu speichern, werden sie auf verschiedene Arten ``zerschnitten'' oder verzerrt, um dann zur richtigen Darstellung wieder zusammengesetzt werden zu können. Das Panorama wird dazu auf ein zwei-dimensionales Bild gemappt, um problemlos in den bekannten Formaten speicherbar zu sein. Die Information, wie das Panorama gemappt wurde, wird dann in den Metadaten der Datei gespeichert und 360°-fähige Software kann mit diesen Informationen die Panoramas dann wiederum richtig darstellen.
@@ -616,6 +624,8 @@ Um 360°-Bildmaterial in 2D Bildformaten zu speichern, werden sie auf verschieden
 Die Projektionen wurden ursprünglich dazu entwickelt Weltkarten drucken zu können, auf denen die gesamte Erdkugel zu erkennen ist. Sie wurden als ``map projections'' bekannt. Daraus haben sich die heutigen ``image projections'' der Panoramafotografie entwickelt. (Quelle map projections?)
 
 Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreiteten Projektionen erläutert und verglichen:
+
+Die Bilder beziehen sich auf eine Kugel, bei der die Längen- und Breitengrade alle 10° durch eine Linie dargestellt werden.
 
 \subsubsection{Equirectangulare Projektion}
 Verbildlichen könnte man sich die Projektion etwa damit, dass eine Kugel in einem Zylinder sitzt, der den gleichen Durchmesser wie Kugel hat und dann die Pole packt und immer weiter nach außen zieht, bis die Kugel die Form des Zylinders angenommen hat.
@@ -852,8 +862,6 @@ Um Virtual Reality Anwendungen zu erstellen, gibt es zwei grundlegend verschiede
 
 Zum einen können die Anwendungen für die verschiedenen Plattformen oder als WebVR Apps entwickelt werden. Dazu muss die Person die jeweilige Programmiersprache beherrschen und einiges an Zeit investieren, kann aber dafür eine Anwendung entwickeln, bei der alles so ist, wie es die entwickelnde Person sich wünscht.
 
-Eine spannende Möglichkeit VR-Applikationen oder -Games zu entwickeln ist die Nutzung von PlayCanvas. PlayCanvas ist eine Web-basierte Game-Engine, in der mit HTML und WebGL entwickelt werden kann. Das besondere ist, dass in Real-Time kollaborativ gearbeitet werden kann und da es keine Kompilierzeit gibt die Veränderungen auch direkt auf den Geräten angezeigt werden. PlayCanvas ist WebVR kompatibel und ist damit sehr gut geeignet VR-Anwendungen für Smartphone-gestützte VR-Headsets zu entwickeln. \cite{PlayCanvasLtd}
-
 Weitere Web-basierte Möglichkeiten VR-Applikationen zu entwickeln sind A-Frame, React360 oder Three.js. Genauere Erläuterungen dazu finden sich in \ref{subsec:webvr}.
 
 Alternativ können Anwendungen auch nativ entwickelt werden, zum Beispiel als Android-Anwendung, die dann in der Google Cardboard-App Nutzern zur Verfügung gestellt werden kann.
@@ -942,10 +950,12 @@ Um Modell zu rendern muss nur eine Entity-Komponente erstellt werden und er Link
 
 \cleardoublepage
 \section{Software Entwicklung von VR-Systemen}
-\subsection{Native VR-Applikationen}
-Um VR-Anwendungen, die nativ auf den VR-Headsets laufen, zu entwickeln gibt es momentan nur zwei verschiedene Möglichkeiten. Das sind die Game-Engines Unity und Unreal. Wie aus dem Namen schon erkennbar, wurden sie entworfen, um Computerspiele zu erstellen, wurden aber weiterentwickelt, sodass sie sich inzwischen auch sehr gut zur Entwicklung von VR-Anwendungen eignen.
+Wie bereits erwähnt gibt es verschiedene Software-Produkte, die es auch dem Laien ermöglichen simple VR-Anwendungen wie eine 360°-Fotostrecke zu erstellen. Sollen allerdings komplexere VR-Anwendungen entstehen, müssen VR-Apps programmiert werden. Dafür gibt es zwei grundlegend verschiedene Möglichkeiten. Entweder können native VR-Apps für die verschiedenen VR-Plattformen entwickelt werden oder auf WebVR gesetzt werden, das im Browser läuft und somit mit allen Plattformen kompatibel ist.
 
-Ingesamt sind sich die beiden Engines relativ ähnlich, verwendet man Unity, muss man C\# programmieren und die Unreal Engine verwendet so gennante Blueprints, um einfachere Sachen visuell programmieren zu können mit einem Editor, in dem Nodes mit Links verbunden werden können um Funktionen zu nutzen. Darunterliegend wird in der Unreal Engine mit C++ gearbeitet.
+\subsection{Native VR-Applikationen}
+Um VR-Anwendungen, die nativ auf den VR-Headsets laufen, zu entwickeln gibt es momentan nur zwei verschiedene Möglichkeiten. Das sind die Game-Engines Unity und Unreal. Wie aus dem Namen schon erkennbar, wurden sie ursprünglich entworfen, um normale Computer und Konsolenspiele zu programmieren. Sie wurden aber weiterentwickelt, sodass sie sich inzwischen auch sehr gut zur Entwicklung von VR-Anwendungen eignen.
+
+Ingesamt sind sich die beiden Engines relativ ähnlich, verwendet man Unity, muss man C\# programmieren und die Unreal Engine verwendet so genannte Blueprints, um einfachere Sachen visuell programmieren zu können mit einem Editor, in dem Nodes mit Links verbunden werden können um Funktionen zu nutzen. Darunterliegend wird in der Unreal Engine mit C++ gearbeitet.
 
 \subsubsection{Unity}
 \label{subsec:unity}
@@ -953,59 +963,56 @@ Unity: C\#
 \subsubsection{Unreal Engine}
 \label{subsec:unreal}
 Unreal: C++
-\subsection{WebVR + Mobile VR: VR im Browser}
+\subsection{WebVR - VR im Browser}
 \label{subsec:webvr}
-Was ist WebVR?
-https://webvr.info
-(https://en.wikipedia.org/wiki/WebVR)
-Request a list of the available VR devices.
-Checks to see if the desired device supports the presentation modes the application needs.
-If so, application advertises VR functionality to the user.
-User performs an action that indicates they want to enter VR mode.
-Request a VR session to present VR content with.
-Begin a render loop that produces graphical frames to be displayed on the VR device.
-Continue producing frames until the user indicates that they wish to exit VR mode.
-End the VR session.
 
-getPose liefert die Position, Ausrichtung, Bewegung und weitere Daten über den Nutzer
-Web Audio API erlaubt es, dreidimensionale Klangeindrücke zu erzeugen
+WebVR ist eine offene Spezifikation, die es erlaubt auch im Browser VR-Anwendungen zu nutzen.
+Dazu wird die Display-Fläche in der Mitte halbiert und WebVR rendert die VR-Anwendungen je Auge in einem linsenförmigen Format, sodass sie mit einem VR-Headset genutzt werden können.
 
-Browser-Unterstützung!
-https://webvr.rocks
+Um die VR-Ansicht zu aktivieren wird ein kleines Icon in der Ecke des Displays angezeigt, wenn die App geladen wird. Die WebVR-Ansicht gibt es nur im Landscape-Modus.
+% https://webvr.info
 
-Was ist Mobile VR?
-auf Smartphones und Standalone-Geräten
-https://www.slashgear.com/mobile-vr-what-it-needs-to-succeed-08530006/
+WebVR gibt der App zusätzlich die Funktionen die Position und Ausrichtung, sowie die Bewegungsdaten des Nutzers, damit voll funktionsfähige entwickelt werden können.
 
 \subsubsection{A-Frame}
-https://aframe.io/docs/0.8.0/introduction/
+% https://aframe.io/docs/0.8.0/introduction/
+A-Frame ist ein Framework, das ursprünglich von Mozilla entwickelt wurde, mit dem Virtual Reality und Augmented Reality Apps entwickelt werden können.
 
-Web (Three.js) Framework für VR
-ursprünglich von Mozilla entwickelt, jetzt open-source
-basiert auf html
-entity componetn framework
-deklarative, erweiterbare und zusammensetzbare Struktur auf Basis von three.js
+A-Frame basiert auf HTML, ist aber trotzdem ein Komponenten-basiertes Framework, das eine erweiterbare deklarative Struktur zur Nutzung von Three.js bietet. Es kommt bereits mit vielen Core Komponenten, diese können aber selbstverständlich durch eigene Komponenten erweitert werden.
+Es kann VR-Apps mit bis zu 90 FPS bauen und kommt mit einem visuellen 3D Inspector, der es einfach macht die VR-Szene zu überblicken.
 
-A-Frame nutzt den DOM, aber Updates von 3D-Objekten werden alle im Speicher mit kleinem Overhead mit einem einzigen requestAnimationFrame Call berechnet. Dadurch sind 90+ FPS Apps möglich
-
-Kompatibel mit fast alles Libraries und Frameworks, auch: React, Preact, Vue.js, d3.js, Ember.js, jQuery
-
-Hat einen integrierten visuellen 3D inspector (<ctrl> + <alt> + i, um in der Szene umzusehen)
-
-Viele Core-Components: geometries, materials, lights, animations, models, raycasters, shadows, positional audio, text, and Vive / Touch / Windows Motion / Daydream / GearVR / Cardboard controls. 
-Get even further with community components such as particle systems, physics, multiuser, oceans, mountains, speech recognition, motion capture, teleportation, super hands, and augmented reality
-
-Unterstützt Headseats: Vive, Rift, Windows Mixed Reality, Daydream, GearVR, Cardboard und im Web. Auch AR
-
-kann positional tracking und unterstützt Controller
+Mit A-Frame können auch Apps entwickelt werden, die positional Tracking nutzen, also sechs Freiheitsgrade haben. Zudem werden die Controller der VR-Headsets unterstützt.
 \subsubsection{React360}
+React360 nutzt ebenso wie A-Frame Three.js für einen Teil des Renderings. React360 ist wie A-Frame komponenten-basiert und kommt mit einigen Core-Components, die durch eigene Komponenten erweitert werden können.
+Um eine fertige React360-App zu bundeln wird Node.js genutzt.
+
+React360 bietet mit der React 360 CLI Die Möglichkeit mit dem ``react-360 init ProjectName'' Kommando im Terminal den initialen Code für das VR-Projekt zu generieren. Es wird das ProjectName-Projekt erzeugt, das direkt in der nötigen Software-Struktur mit allen Libraries erstellt wird. Auch die Development Server werden hier direkt mitgeliefert.
+
+Eine App besteht grundsätzlich erstmal aus drei Dateien. Das sind die index.html-Datei, in der der Javascript-Code eingebunden wird, die index.js-Datei, in der der eigentliche React360-Code ist, und die client.js, die die Runtime für die React360 App bildet. 
+Die HTML-Datei wird nur dazu genutzt, den Javascript-Code einzubinden. 
+In der client.js wird der React360 Code in den DOM eingebunden. Hier werden auch die Kompontenten auf Locations oder Surfaces gemounted.
+
+React360 baut auf React Native auf. Es werden zum Beispiel das Konzept der Stylesheets übernommen, die ein einfaches Styling der Komponenten erlauben, das dem Styling bei HTML sehr ähnlich sieht, und nutzt zum App Bundling ebenfalls den Metro Bundler.
+% https://facebook.github.io/react-360/docs/what-is.html
+
 \subsubsection{Vergleich von A-Frame und React360}
+
+% https://facebook.github.io/react-360/docs/what-is.html
 Warum für React360 entschieden?
 \subsubsection{Three.js}
-\subsubsection{WebGL}
-Sollte ich das vielleicht auch noch erwähnen?
+Three.js ist ein Javascript Framework mit dem 3D Szene erstellt werden können. Um Objekte in die Szene zu setzen müssen sie dem Document Object Tree hinzugefügt werden. Auch die Kamera muss als Objekt manuell hinzugefügt werden und ein Field of View, das Seitenverhältnis und die ``near'' und ``far''-Werte mit übergeben werden. Diese Werte bezeichnen den Bereich der z-Werte, der gerendert wird. Liegt ein Objekt außerhalb dieses Intervalls, ist es nicht in der Szene zu sehen.
 
-playcanvas?
+Three.js wird standardmäßig mit dem WebGL-Renderer gerendert, bietet aber auch andere Renderer als Fallback für inkompatible Browser.
+
+Um VR-Apps mit Three.js zu bauen, muss zuerst WebVR eingebunden werden. Dann kann ein WebVR Button hinzugefügt werden, der dann die VR-Ansicht startet. Zudem muss der Animations-Loop angepasst werden. Für VR-Apps muss statt der ``requestAnimationFrame''-Funktion die ``setAnimationLoop''-Funktion genutzt werden.
+
+Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind mehrere Schritte erforderlich. Zuerst muss mit THREE.BoxGeometry(1,1,1) eine Rechteckige Form und mit THREE.MeshBasicMaterial({color: 0x00ff00})ein Material erzeugt werden. Danach wird der Würfel erzeugt in dem das geometrische Objekt und das Material mit THREE.Mesh( geometry, material ) zusammengefügt werden. Zuletzt muss der erzeugte Würfel der Szene hinzugefügt werden. Damit ist Three.js eine sehr low-levelige Möglichkeit VR-Apps zu entwickeln. Dadurch stehen viele Möglichkeiten offen, es ist jedoch deutlich aufwändiger einfache VR-Szenen zu bauen. Andere VR-Frameworks wie A-Frame oder React360 nutzen im Hintergrund Three.js und bieten den Entwicklern einfache Funktionen, um Objekte in die VR-Szene zu setzen.
+
+% https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
+
+\subsubsection{PlayCanvas}
+
+Eine spannende Möglichkeit VR-Applikationen zu entwickeln ist die Nutzung von PlayCanvas. PlayCanvas ist eine Web-basierte Game-Engine, in der mit HTML und WebGL entwickelt werden kann. Das besondere ist, dass in Real-Time kollaborativ gearbeitet werden kann und da es keine Kompilierzeit gibt die Veränderungen auch direkt auf den Geräten angezeigt werden. PlayCanvas ist WebVR kompatibel und ist damit sehr gut geeignet VR-Anwendungen für Smartphone-gestützte VR-Headsets zu entwickeln. \cite{PlayCanvasLtd}
 
 %\_____________________________________________________________________
 
