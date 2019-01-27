@@ -1541,26 +1541,24 @@ Im Bildungsbereich bietet VRClassroom bereits jetzt eine Möglichkeit für Lehrkrä
 Außerdem werden bestehende Probleme von VRClassroom besprochen und wie das System in der Zukunft weiterentwickelt werden könnte.
 
 \subsection{Zukunft von VR}
-VR wird sich noch weiter verbreiten, da Geräte günstiger werden und mehr Inhalte da sind
--> Artikel mit Prognosen?
+Trotz dieser steigenden Zahlen und positive Prognosen ist davon auszugehen, dass es trotzdem noch eine Weile dauern wird, bis Virtual Reality den Weg in die Schulen finden wird. Denn wie auch in den Ergebnissen der Studie zu sehen sind, glauben nur 38\%, dass Virtual Reality - in welcher Form auch immer - eine große Rolle im Unterricht spielen wird. Außerdem haben selbst von den teilnehmenden Lehrkräften bis dato nur 43\% jemals selber eine VR-Brille ausprobiert. Erst wenn ein übermäßiger Teil der Lehrkräfte selbst Erfahrungen sammeln konnten und genug Unterrichts-geeignetes Material zur Verfügung steht, besteht die Chance, dass Virtual Reality flächendeckend im Unterrichtsgeschehen einbezogen werden wird. VRClassroom soll dabei einen Möglichkeit bieten, mit den Schülerinnen und Schülern erste Erfahrungen mit Virtual Reality als Lernmedium zu sammeln.
 
-Trotz dieser steigenden Zahlen und positive Prognosen ist davon auszugehen, dass es trotzdem noch eine Weile dauern wird, bis Virtual Reality den Weg in die Schulen finden wird. Denn wie auch in den Ergebnissen der Studie zu sehen sind, glauben nur 38\%, dass Virtual Reality - in welcher Form auch immer - eine große Rolle im Unterricht spielen wird. Außerdem haben selbst von den teilnehmenden Lehrkräften bis dato nur 43\% jemals selber eine VR-Brille ausprobiert. Erst wenn ein übermäßiger Teil der Lehrkräfte selbst Erfahrungen sammeln konnten und genug Unterrichts-geeignetes Material zur Verfügung steht, besteht die Chance, dass Virtual Reality im Unterrichtsgeschehen einbezogen werden wird. VRClassroom soll dabei einen Möglichkeit bieten, mit den Schülerinnen und Schülern erste Erfahrungen mit Unterrichtsmaterialien zu sammeln.
+Die Studie zeit allerdings auch, dass viele Lehrkräfte interessiert an VR sind, jedoch oft an der fehlenden Infrastruktur scheitern. Damit die Schulen VR-Systeme einsetzten können müssen die Schulnetzwerke verbessert werden und finanzielle Mittel für VR-Headsets bereitgestellt werden. 
 
-Nochmal Artikel von davor aufgreifen?
-Was muss sich ändern, damit es sich noch mehr verbreitet?
- -> standalone Geräte, müssen mehr Rechenleistung, bessere Displays und weniger Gewicht haben
- -> besseres Tracking?
- -> mehr Anwendungen abseits von Games
- 
- Geräteweiterentwicklungen
- - Gestenerkennung ohne Controller?
- - Gazeinput wie zB EyeVR Paper?
+Zukünftig ist damit zu rechnen, dass die VR-Headsets weiter im Preis fallen und gleichzeitig mehr Rechenleistung bekommen. Zudem zeigen die Ankündigungen, dass immer mehr Stand-alone Headsets auf den Markt kommen werden.
+
+Weiterhin könnte es sein, dass die Entwicklung der Headsets mit der Zeit wieder weg von den Controllern und hin zu anderen Interaktionskonzepte gehen wird. Dabei kämen zum Beispiel das Tracken der Augenbewegungen wie es bei EyeVR passiert oder die Nutzung von Freihandgesten wie es die ClassVR Headsets tun in Frage.
+% EyeVR Paper
+% ClassVR
+
+Eine weitere Veränderung ist die Wahrnehmung von Virtual Reality. Wie die Autorin von ``5 Major Challenges For The VR Industry'' beschreibt wird momentan VR von viele Menschen noch als Gimmick wahrgenommen. Diese Wahrnehmung wird sich aber zusehends ändern, wenn mehr Anwendungen abseits von Spielen auf den Markt kommen. \cite{Wolwort2018}
 
 \subsection{Probleme von VRClassroom}
 In Tests haben sich noch ein paar Probleme gezeigt, die das VRClassroom System in seinem aktuellen Zustand noch hat, die beim ``echten'' Einsatz im Schulunterricht das Erlebnis stören könnten.
 Diese Problem konnten aber leider nicht im Rahmen dieser Arbeit gelöst werden, das sie nicht wirklich Probleme der entwickelten Software sind, sondern technischen Grenzen von Geräten, die sich in der Zukunft aller Voraussicht nach weiter verschieben werden, sodass sie dann kein Problem mehr darstellen.
 
 \subsubsection{Anzeigen großer Dateien}
+\label{subsec:problems}
 Eines der größten Probleme, die VRClassroom momentan hat, ist die Anzeige von komplexen 3D-Modellen oder 360°-Videos mit einer großen Dateigröße. 360°-Videos sind besonders problematisch, wenn sie eine extrem hohe Auflösung (>4096) und eine hohe Framerate haben. 
 
 Für diese Probleme gibt es allerdings momentan nicht wirklich eine Lösung, da die Daten über das WLAN übertragen werden müssen und bei 25-30 Geräten, die verfügbare Bandbreite zwischen allen Geräten geteilt werden muss und das einfach nicht genug pro Gerät hergibt, um so hohe Datenmengen schnell genug zu übertragen. 
@@ -1586,7 +1584,7 @@ Eine mögliche Weiterentwicklung von VRClassroom könnte sein das ganze VRClassroo
 Die Entscheidung VRClassroom so zu entwickeln, dass es lokal läuft wurde allerdings ganz bewusste gefällt: Durch Vorgespräche mit den Lehrkräften, die an der Studie teilnehmen wollten und aus eigener Erfahrung wurde schnell klar, dass jede Schule unterschiedlich gut mit Netzwerk versorgt ist. Es gibt Schulen, die für Schüler gar kein WLAN anbieten oder dieses stark beschränken, sodass direkte Verbindungen zwischen den Geräten im Netzwerk unterdrückt werden, oder andere Restriktionen in ihrem Netz haben.
 Um diese Probleme zu umgehen, wurde dann die Entscheidung gefällt, VRClassroom so zu entwickeln, dass es unabhängig vom Internet funktionieren kann. Einzig die Streetview-Funktion fällt dann weg. So kann dann einfach ein lokales Netzwerk eröffnet werden mit dem sich alle Geräte verbinden und VRClassroom problemlos genutzt werden. Dies könnte zum Beispiel mit einem Aufbau gelöst werden, bei dem der Rechner auf dem VRClassroom installiert ist und ein vorkonfigurierter Router immer gemeinsam genutzt werden und sobald Strom angesteckt wird der Router sein lokales Netzwerk aufmacht.
 
-Ein weiteres Argument für die aktuelle Implementierung ist das schon zuvor in (HIER REF) besprochene Problem des Ladens von komplexen Modellen oder hochaufgelösten Videos, also großen Datenmengen. Laden alle Geräte lokal vom Lehrercomputer wird nicht die gesamte Internetverbindung der Schule lahmgelegt und auch die Übertragungsrate ist höher als beim Laden aus dem Internet. 
+Ein weiteres Argument für die aktuelle Implementierung ist das schon zuvor in \ref{subsec:problems} besprochene Problem des Ladens von komplexen Modellen oder hochaufgelösten Videos, also großen Datenmengen. Laden alle Geräte lokal vom Lehrercomputer wird nicht die gesamte Internetverbindung der Schule lahmgelegt und auch die Übertragungsrate ist höher als beim Laden aus dem Internet. 
 
 Wird VRClassroom nur in einem lokalen Netzwerk benutzt fällt allerdings wie bereits oben erwähnt die Funktionen zum Anzeigen von Google Streetview Fotos weg, denn dafür wird die Verbindung zum Internet benötigt. 
 Zudem könnte es für technisch weniger verzierte Lehrkräfte schwieriger sein nachzuvollziehen, wo das Problem liegt, wenn etwa ein Schüler Gerät sich nicht verbinden kann, weil es nicht im Netzwerk ist, in dem VRClassroom läuft. 
