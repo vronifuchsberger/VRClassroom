@@ -85,19 +85,19 @@ Verantw. Hochschullehrer: & Prof. Heinrich Hußmann
 
 \clearpage
 \section*{Zusammenfassung}
-In der folgenden Arbeit wurden aktuelle VR-Headsets verglichen und nach Preissegmenten und Anwendungsfunktionen eingeordnet. Zudem wurde bisher existierende Software, die Virtual Reality für den Schulunterricht zugänglich macht diskutiert und bewertet und auf die Challenges eingegangen, die Virtual Reality-Systeme generell und im Bezug auf die Nutzung im Schulunterricht momentan haben.
-Weiterhin wurde in der Arbeit auf die verschiedenen Inhalte für VR-Systeme eingegangen, welche Quellen es für diese Inhalte gibt und wie sie bearbeitet und selbst erstellt werden können.
+Die Arbeit setzt sich mit dem Einsatz von Virtual Reality-Headsets im Schulunterricht auseinander. Dazu wurden aktuelle VR-Headsets verglichen und nach Preissegmenten und Anwendungsfunktionen eingeordnet. Zudem wurde bisher existierende Software, die Virtual Reality für den Schulunterricht zugänglich macht diskutiert und bewertet. Herausforderungen für Virtual Reality-Systeme im Generellen und im Speziellen für den Einsatz im  Schulunterricht werden diskutiert.
+Weiterhin geht die Arbeit auf verschiedenen Inhaltstypen für VR-Systeme ein, welche Quellen es für diese Inhalte gibt und wie sie bearbeitet und selbst erstellt werden können.
 
-Anschließend wurde basierend auf den zuvor erörterten Anforderungen an eine Software, die Lehrkräfte im Unterricht nutzen können, um 360°-Inhalte zu zeigen, VRClassroom entwickelt. Ein zwei-teiliges System, mit dem der Lehrer in eine App auf seinem Computer Inhalte hineinladen kann, die dann in einer Web-App auf VR-Brillen gezeigt werden. Die Lehrkräfte führen dabei das komplette VR-Erlebnis für die Schüler und können 360°-Fotos und -Videos hineinladen, Markierungen setzen und das Video synchronisiert für alle abspielen und pausieren. Außerdem können auch 3D-Modelle in die App geladen werden, die die Lehrkraft dann je nach Bedarf skalieren und drehen kann und an interessanten Stellen Markierungen setzen kann. Um zu sehen, welche Geräte verbunden sind, wird in der Lehrer-App ein Liste mit allen Geräten mit einem Aktivitätsindikator angezeigt. 
+Anschließend wurde basierend auf den zuvor erörterten Anforderungen ``VRClassroom'' entwickelt. Eine Software die Lehrkräfte im Unterricht nutzen können, um 360°-Inhalte zu präsentieren. Das System besteht aus zwei Komponenten: Die Lehrkraft kann an einem Computer Inhalte laden, die dann in einer Web-App auf VR-Brillen der Schüler gezeigt werden. Die Lehrkräfte führen dabei das komplette VR-Erlebnis für die Schüler und können 360°-Fotos und -Videos laden und Markierungen darauf setzen. Das Video wird bei allen Schülern synchron abgespielt und kann von der Lehrkraft pausiert werden. Außerdem können 3D-Modelle in die App geladen werden, die die Lehrkraft skalieren und drehen kann und an interessanten Stellen Markierungen setzen. Um zu sehen, welche Geräte verbunden sind, wird in der Lehrkraft ein Liste mit allen verbundenen Geräten und einem Aktivitätsindikator angezeigt. 
 
-Anschließend wurde eine Online-Befragung mit Lehrkräften durchgeführt, bei der die Teilnehmer ein Video gezeigt wurde, das die Nutzung von VRClassroom erklärt, zu dem sie nachfolgend einige Fragen beantworteten. Die Mehrheit der Teilnehmer war dem System gegenüber sehr aufgeschlossen und konnte sich gut vorstellen VRClassroom zukünftig im Unterricht zu verwenden, um 360°-Inhalte zu zeigen.
+Anschließend wurde eine Online-Befragung mit Lehrkräften durchgeführt um die entwickelte Software zu evaluieren. Den Teilnehmern wurde ein Video gezeigt, das die Nutzung von VRClassroom erklärt und anschließend ein Fragebogen vorgelegt. Die Mehrheit der Teilnehmer war dem System gegenüber sehr aufgeschlossen und konnte sich gut vorstellen VRClassroom zukünftig im Unterricht zu einzusetzen, um 360°-Inhalte zu zeigen.
 
-Abschließend wurde diskutiert wie Zukunft von Virtual Reality im Schulunterricht aussehen könnte und wie VRClassroom weiterentwickelt werden könnte, um die Bedürfnisse von Lehrkräfte noch besser zu erfüllen beziehungsweise welche weiteren Funktionen das System noch interessanter machen würden.
+Abschließend wird diskutiert wie Zukunft von Virtual Reality im Schulunterricht aussehen könnte. Dazu werden auch mögliche Weiterentwicklungen von VRClassroom besprochen.
 
 \selectlanguage{english}
 \section*{Abstract}
 
-Short abstract of the work, maximum of 250 words.
+Short abstract of the work, maximum of 250 words. %TODO
 
 \selectlanguage{ngerman}
 \clearpage
@@ -143,11 +143,16 @@ VR-Headsets immer mehr verbeitet, es gibt immer mehr Content
 Umfrage, wie viele Leute schon VR-Headsets benutzt haben?
 Statistiken zu:
 Medien im Unterricht
-Erfolg neuer Lehrkonzepte bzgl neue Medien
+Erfolg neuer Lehrkonzepte bzgl neue Medien %TODO
 
-Definition von VR und AR
+\subsection{Definition von Virtual Reality}
+Was ist VR, wie unterscheidet es sich zu AR? %TODO
+
 Virtual Reality kurz VR bezeichnet
-Augmented Reality (AR) dagegen integriert virtuelle Objekte in den realen Raum. Dazu wird in ein Kamerabild an eine bestimmte Stelle ein Objekt gezeichnet, das dort physisch nicht existiert. AR wird meist nur für 3D-Modelle verwendet, während VR auch 360°-Fotos oder Videos anzeigen kann.
+Augmented Reality (AR) dagegen integriert virtuelle Objekte in den realen Raum. Dazu wird in ein Kamerabild an eine bestimmte Stelle ein Objekt gezeichnet, das dort physisch nicht existiert. AR wird meist nur für 3D-Modelle verwendet, während VR auch 360?-Fotos oder Videos anzeigen kann.
+
+\subsection{Aufbau von VR-Headsets}
+Grundsätzlicher Aufbau eines Headmounted displays. %TODO
 
 Ein VR-System ist ein Gerät, dass VR-Inhalte anzeigen kann. Das können zum Einen so genannte Head-mounted Displays (HMD), auch bekannt als VR-Brillen oder VR-Headset, sein oder eine CAVE. Eine CAVE ist ein Raum, bei dem alle Seiten Displays sind, die virtuelle Inhalte anzeigen. In beiden Fällen können Nutzer mit dem VR-System interagieren.
 Da eine CAVE ein gesamter Raum ist, der pro Nutzer benötigt wird, ist sie für VR-Anwendungen im Unterricht nicht geeignet. Daher werden in dieser Arbeit ausschließlich VR-Headsets behandelt.
@@ -161,16 +166,16 @@ Da eine CAVE ein gesamter Raum ist, der pro Nutzer benötigt wird, ist sie für VR
 Es gibt inzwischen eine große Zahl verschiedener VR-Hardware-Systeme, die sich in drei Gruppen mit unterschiedlichen Anwendungsszenarien unterteilen: Die Computer-gestützten VR-Systeme, die Stand-alone VR-Systeme und die Smartphone-gestützten VR-Systeme.
 
 \subsection{Merkmale von VR-Systemen}
-Um die verschiedenen VR-Hardware-Systeme einordnen zu können, gibt es einige Merkmale, auf die ein Käufer achten sollte. Denn die verschiedenen Headsets sind für unterschiedliche Anwendungsszenarien entwickelt worden, sodass ein potenzieller Käufer zuerst entscheiden sollte wie er das VR-Headset einsetzen möchte.
+Um die verschiedenen VR-Hardware-Systeme einordnen zu können, gibt es einige technische Merkmale, die Headsets in unterschiedliche Kategorien unterteilen. Diese verschiedenen Kategorien von Headsets dienen unterschiedlichen Anwendungsszenarien und sollten entsprechend der Nutzung ausgewählt werden.
 
-Diese Merkmale können dazu herangezogen werden: Degrees of Freedom (DoF), die Displaygröße und -auflösung, die Frequenz des Displays, Field of View, Rechenleistung und Gewicht des Headsets, die verwendete Tracking-Methode, die mitgelieferten Controller beziehungsweise mögliche Input-Methoden, das Gewicht des Headsets und der Verkaufspreis.
+Folgende Merkmale können zur Differenzierung herangezogen werden: Freiheitsgrade (Degrees of Freedom, bzw. DoF), die Displaygröße und -auflösung, die Bildwiederholrate des Displays (Frequenz), das Sichtfeld (Field of View), die Rechenleistung und das Gewicht des Headsets, die verwendete Tracking-Methode, die mitgelieferten Controller beziehungsweise mögliche Eingabemethoden und der Verkaufspreis.
 
-\subsubsection{Degrees of Freedom}
-Das Konzept der Degrees of Freedom, kurz DoF, entspringt ursprünglich der Mechanik. Wie Gans in seiner Arbeit ``Engineering dynamics: From the lagrangian to simulation'' erläutert, hat ein Körper grundlegend sechs Freiheitsgrade. Die Bewegungen in x-Richtung, y-Richtung und z-Richtung. Hinzu kommen dann noch die Rotationen um die jeweiligen Achsen. Kurz beschreibt er Freiheitsgrade als die minimale Anzahl an Variablen um ein System zu spezifizieren. \cite{Gans2013}
+\subsubsection{Freiheitsgrade (Degrees of Freedom)}
+Das Konzept der Freiheitsgrade oder Degrees of Freedom, kurz DoF, entspringt ursprünglich der Mechanik. Wie Gans in seiner Arbeit ``Engineering dynamics: From the lagrangian to simulation'' erläutert, hat ein Körper grundlegend sechs Freiheitsgrade. Die Bewegungen im Raum entlang der x-, y- und z-Achse. Hinzu kommen die Rotationen um die jeweiligen Achsen. Kurz beschreibt er Freiheitsgrade als die minimale Anzahl an Variablen um ein System zu spezifizieren. \cite{Gans2013}
 
-Freiheitsgrade wurden zudem viel genutzt um die Bewegungen von maritimen Fahrzeugen zu benennen: Die Bewegung in x-Richtung wird ``surge'' genannt, in y-Richtung ``sway'' und in z-Richtung ``heave''. Die Rotation um die x-Achse heißt ``roll'', um die y-Achse ``pitch'' und um die z-Achse ``yaw''. Diese Bezeichnungen beziehen sich dabei auf ein Schiff, das in x-Richtung ausgerichtet ist. \cite{Fossen1995}
+Freiheitsgrade werden oft auch genutzt um die Bewegungen von maritimen Fahrzeugen zu benennen: Die Bewegung in x-Richtung wird ``surge'' genannt, in y-Richtung ``sway'' und in z-Richtung ``heave''. Die Rotation um die x-Achse heißt ``roll'', um die y-Achse ``pitch'' und um die z-Achse ``yaw''. Diese Bezeichnungen beziehen sich dabei auf ein Schiff, das in x-Richtung ausgerichtet ist. \cite{Fossen1995}
 
-Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet, kann es auch die Bewegungen im Raum verarbeiten ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also positional Tracking der Nutzer benötigt. 
+Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Erkennung von Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet. Kann es zusätzlich die Bewegungen im Raum messen ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also ``positional tracking'' des Nutzers benötigt. 
 
 \begin{figure}[ht]
   \centering
@@ -180,35 +185,35 @@ Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Head
 \end{figure}
 
 \subsubsection{Display, Frequenz und Field of View}
-Bei Displays von VR-Headsets gibt es zwei grundsätzliche Ansätze: Ein durchgehendes Display, das das Bild für beide Augen generiert und zwei kleinere unabhängige Displays. 
-Auf ein einzelnes großes Display setzt eigentlich nur Sony mit ihrer Playstation VR, alle anderen Hersteller von VR-Headsets, die fest integrierte Displays haben, arbeiten mit getrennten Display für die beiden Augen.
+Bei Displays von VR-Headsets gibt es zwei grundsätzliche Ansätze: Ein durchgängiges Display, das das Bild für beide Augen darstellt oder zwei kleinere unabhängige Displays. 
+Auf ein einzelnes großes Display setzt eigentlich nur Sony mit ihrer Playstation VR, alle anderen Hersteller von VR-Headsets, die fest integrierte Displays haben, arbeiten mit getrennten Displays für die beiden Augen.
 
-Bei Smartphone-gestützten VR-Headsets hängt die Größe des Displays, sowie die Auflösung und damit auch das letztendliche Field of View vom eingelegten Smartphone ab. Da in aktuelle Smartphones allerdings sehr hochaufgelöste Displays eingebaut werden, stehen diese den fest integrierten nicht oder nur minimal nach. Nutzt man beispielsweise ein Galaxy S9+ hat man ein Display mit 2960x1440 Pixel Auflösung und 530 ppi, was einer Auflösung von 1480x1440 pro Auge entspricht, was damit höher aufgelöst ist als alle fest eingebauten Displays (abgesehen von der Oculus Quest, die erst im Laufe des Jahres auf den Markt kommen soll).
+Bei Smartphone-gestützten VR-Headsets hängt die Größe des Displays, sowie die Auflösung und damit auch das Sichtfeld (``Field of View'') vom eingelegten Smartphone ab. Da in aktuellen Smartphones sehr hochaufgelöste Displays eingebaut werden, stehen diese den festintegrierten Displays nicht oder nur minimal nach. Nutzt man beispielsweise ein Galaxy S9+ hat man ein Display mit 2960x1440 Pixel Auflösung und 530ppi (pixel per inch), was einer Auflösung von 1480x1440 pro Auge entspricht. Es ist damit höher aufgelöst als alle fest eingebauten Displays (abgesehen von der Oculus Quest, die erst im Laufe des Jahres auf den Markt kommen soll).
 
-In den Tabellen \ref{tab:headsets1} und \ref{tab:headsets2} sind die Angaben zur Auflösung der Displays auf die Auflösung pro Auge zu verstehen.
+In den Tabellen \ref{tab:headsets1} und \ref{tab:headsets2} sind die Angaben zur Auflösung der Displays als Auflösung pro Auge zu verstehen.
 
-Der Screen Door Effect und der Pixel Fill Factor beziehen sich auf den nicht leuchtenden Abstand zwischen zwei Pixeln. Der Screen Door Effect bezeichnet den Zustand, wenn diese Abstände deutlich als Gitter über dem Inhalt erkennbar werden. Der Pixel Fill Factor beschreibt die Dichte der Pixel zueinander. Ist der Pixel Fill Factor hoch, wird der Screen Door Effect schwächer oder sogar ganz verschwinden.
+Neben der Auflösung ist auch der Abstand der einzelnen Pixel zueinander entscheidend für die Qualität der visuellen Darstellung. Der Screen Door Effect und der Pixel Fill Factor beziehen sich auf den nicht leuchtenden Abstand zwischen zweier Pixel. Der Screen Door Effect bezeichnet den Zustand, wenn diese Abstände deutlich als Gitter über dem Inhalt erkennbar werden. Der Pixel Fill Factor beschreibt die Dichte der Pixel zueinander. Ist der Pixel Fill Factor hoch, wird der Screen Door Effect schwächer oder verschwindet sogar komplett.
 Da bei VR-Headsets das Display extrem nah am Auge ist, wurden bei den ersten Geräten von Oculus und HTC starke Screen Door Effekte wahrgenommen. Aber mit den Versionen, die dann letztendlich in den Handel kamen, sind diese Probleme großteils ausgeräumt worden.
 % Paper: A Review Paper on Oculus Rift-A Virtual Reality Headset
 
-Die Arbeit von XXX et al. schließt aus ihren Nachforschungen, dass das menschliche visuelle System schon ab 13ms komplette verschiedene Bilder wahrnehmen und damit unterscheiden kann. Das entspräche einer benötigten Framerate von knapp 80Hz. Die Forschungen zeigen allerdings auch, dass kleinere Veränderungen noch deutlich schneller, mit bis zu 500Hz wahrgenommen werden können. 
-Die VR-Headsets sind dabei mit ihren zwischen 60 und 120Hz noch ein ganzes Stück davon entfernt, allerdings ist zu vermuten, dass nicht 500 Hz benötigt sind, um das natürliche Sehen komplett auszunutzen, da die Studie reinen Flackern von Lichtern getestet hat und keine konkreteren Inhalte.
+Die Arbeit von XXX et al. schließt aus ihren Nachforschungen, dass das menschliche visuelle System schon ab 13ms komplette verschiedene Bilder wahrnehmen und damit unterscheiden kann. Das entspräche einer benötigten Bildwiederholrate (Framerate) von knapp 80Hz. Die Forschungen zeigen allerdings auch, dass kleinere Veränderungen mit bis zu 500Hz noch deutlich schneller wahrgenommen werden können. 
+Die aktuellen VR-Headsets sind mit Bildwiederholraten zwischen 60Hz und 120Hz noch deutlich davon entfernt. Allerdings ist zu vermuten, dass keine 500Hz notwendig benötigt werden, da die Studie mit hochfrequent flackernden Lichtern durchgeführt wurde, was in den meisten Situationen nicht der Realität entspricht.
 % https://www.nature.com/articles/srep07861 (500Hz Flicker)
 % Detecting Meaning in Rapid Serial Visual Representation ({RSVP}) at 13 ms Per Picture (Paper)
 
 Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.
-Das ultimative Ziel für VR-Headsets wird also diesen Wert anstreben, mit dem momentan 100°-110° sind sie davon allerdings noch etwas entfernt. 
-Augenabstand IPD.
+Aktuelle Headsets sind mit einem Sichtfeld von 100°-110° allerdings noch etwas von der Abbildung des vollen Sichtfelds entfernt. 
+Augenabstand IPD. %TODO
 Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen.
 
 % Human Field of View 180° auf 135°
 % \cite{Stone2017}
 
 \subsubsection{Rechenleistung}
-Generell lässt sich sagen, je höher die Rechenleistung, desto aufwändigere VR-Szenen können dargestellt werden. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten konkurrieren, was die Kombination aus Display-Auflösung, Bildwiederholungsrate und Field of View angeht.
-Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden muss.
+Generell lässt sich sagen, das mit höherer Rechenleistung aufwändigere VR-Szenen in höherer Qualität dargestellt werden können. Bessere Display-Auflösung, Bildwiederholungsrate und Field of View benötigen eine höhere Rechenleistung um die Bildinhalte zu generieren. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten Geräten in diesen Kategorien konkurrieren.
+Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden kann.
 
-Fast alle hier aufgeführten Geräte haben dabei den gleichen Prozessor eingebaut, den Qualcomm Snapdragon 835, nur die Oculus Go hat einen Qualcomm Snapdragon 821. Damit sind die anderen Geräte etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go.
+Fast alle in dieser Arbeit untersuchten Geräte haben dabei den gleichen Prozessor verbaut. Während alle anderen Geräte einen Qualcomm Snapdragon 835 nutzen, hat lediglich die Oculus Go hat einen Qualcomm Snapdragon 821 verbaut. Damit sind die anderen Geräte nominell etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go.
 
 Quellen:
 https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/
@@ -216,13 +221,20 @@ https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/
 https://www.vive.com/cn/product/vive-focus-en/
 
 
-\subsubsection{Inputmethoden}
-Es zwei grundsätzliche Input-Methoden für VR-Headsets, die momentan verwendet werden: Input über Controller mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
+\subsubsection{Eingabemethoden}
+Es zwei grundsätzliche Eingabemethoden für Virtual Reality, die momentan verwendet werden: Eingaben über einen oder mehrere externe Controller oder aber die Eingabe am Headset.
 
-Da nur solche Headsets Touch-Events auf dem Display registrieren, die ein Smartphone als Display nutzen, sind es ebenso nur diese, die Input durch Touch-Interaktionen mit dem Display als Input erlauben. Das sind vor Allem Google Cardboards, die eine Art ``Arm'' nutzen um auf das Display zu drücken oder einige Nachbauten des ursprünglichen Google Cardboards, die Magneten verwenden um ein Touch-Event auf dem Display auszulösen.
-(Diese Technik noch genauer erläutern?) Bei beiden Möglichkeiten ist es allerdings nur möglich an einer bestimmten Stelle ein Touch-Event auszulösen, sie müssen also in Verbindung mit einem Art Gaze-Punkt verbunden werden, um dem Nutzer sinnvollen Input zu erlauben.
+ % mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
 
-Bisher gibt es keine Geräte, die mit Voice-Input oder Gaze Input kontrolliert werden können. Allerdings wäre das sehr wünschenswert, da damit die Nutzung von VR-Systemen auch für Menschen mit körperlichen Behinderungen möglich wird.
+Eine einfache Methode für die Eingabe am Headset selbst ist bei Smartphone-gestützten Systemen das Auslösen von Touch-Eingaben auf dem Smartphone-Display. Ein Beispiel dafür sind Google Cardboards, die einen Auslöser am Gehäuse haben, der eine Art ``Arm'' auf das Display drückt. Einige Nachbauten des ursprünglichen Google Cardboards verwenden Magnete um Touch-Eingaben auf kapazitiven Touchscreens auszulösen.
+%TODO (Diese Technik noch genauer erläutern?)
+Egal mit welcher der beiden Techniken das Touch-Event ausgelöst wird, erfolgt das Touch-Event immer an der gleichen Stelle auf dem Display. Der Nutzer kann also keine bestimmte Stelle in der Szene auswählen. Deshalb wird bei dieser Eingabemetohde meist der Mittelpunkt der aktuellen Blickrichtung als Position oder Richtung des ausgelösten Events interpretiert.
+
+Ganz ohne Eingabe am Touchscreen können Gaze-Events (engl. ``starren'') zur Eingabe verwendet werden. Reagiert ein Bereich in einer Szene auf Gaze-Events, so löst das Ereignis aus, wenn der Bereich für eine bestimmte Zeit ``angestarrt'' wird. Üblicherweise wird der Mittelpunkt des Blickfelds als Zeiger für Gaze-Event verwendet.
+
+Externe Controller bieten meist mehrere Buttons zur Eingabe und stellen einen Zeiger da, mit dem Bereiche in der Szene ausgewählt werden können. Üblicherweise ist der Ursprung des Zeigers an einem Ort fixiert. Über Beschleunigungssensoren wird die Richtung des Zeigers bestimmt, in der ein Strahl ausgesendet wird (``Raycaster'').
+
+Bisher setzen keine Systeme auf Spracheingabe. Eine Entwicklung in diese Richtung ist aber abzusehen, da die Eingabe sehr natürlich ist und dadurch die Zugänglichkeit zu VR-Systemen erhöht werden kann.
 
 In ihrer Arbeit haben XXX et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamera in ein bestehendes VR-Headset eingebaut, die die Bewegungen der Augen registriert. Sie haben dazu eine Software entwickelt, die sowohl die Pupillenbewegungen als auch die Bewegungen des Lids registriert und als Input verarbeiten kann. 
 % EyeVR Paper
