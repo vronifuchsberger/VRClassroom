@@ -13,6 +13,8 @@
     "electron-prompt": "^1.2.0",
     "express": "^4.16.4",
     "fs-extra": "^7.0.1",
+    "google-panorama-equirectangular": "^2.1.0",
+    "jimp": "^0.6.0",
     "nocache": "^2.0.0",
     "terminate": "^2.1.0",
     "ws": "^6.1.2"

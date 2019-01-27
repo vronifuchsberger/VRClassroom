@@ -119,7 +119,7 @@ function getMenu(win, assetDir) {
       {
         label: 'StreetView...',
         click: () => {
-          prompt(win);
+          prompt(win, assetDir);
         },
       },
     ],
