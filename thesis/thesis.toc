@@ -72,11 +72,12 @@
 \contentsline {subsubsection}{\numberline {6.1.1}Unity}{31}{subsubsection.6.1.1}
 \contentsline {subsubsection}{\numberline {6.1.2}Unreal Engine}{31}{subsubsection.6.1.2}
 \contentsline {subsection}{\numberline {6.2}WebVR - VR im Browser}{32}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{32}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}React360}{32}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Three.js}{32}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}PlayCanvas}{33}{subsubsection.6.2.4}
-\contentsline {subsection}{\numberline {6.3}Vergleich und Auswahl}{33}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.2.1}Verwendung der WebVR-API}{32}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}A-Frame}{33}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}React360}{33}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{33}{subsubsection.6.2.4}
+\contentsline {subsubsection}{\numberline {6.2.5}PlayCanvas}{34}{subsubsection.6.2.5}
+\contentsline {subsection}{\numberline {6.3}Vergleich und Auswahl}{34}{subsection.6.3}
 \contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{35}{section.7}
 \contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{35}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Anwender}{36}{subsection.7.2}

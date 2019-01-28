@@ -66,45 +66,46 @@
 \BOOKMARK [3][]{subsubsection.6.1.1}{Unity}{subsection.6.1}% 66
 \BOOKMARK [3][]{subsubsection.6.1.2}{Unreal Engine}{subsection.6.1}% 67
 \BOOKMARK [2][]{subsection.6.2}{WebVR - VR im Browser}{section.6}% 68
-\BOOKMARK [3][]{subsubsection.6.2.1}{A-Frame}{subsection.6.2}% 69
-\BOOKMARK [3][]{subsubsection.6.2.2}{React360}{subsection.6.2}% 70
-\BOOKMARK [3][]{subsubsection.6.2.3}{Three.js}{subsection.6.2}% 71
-\BOOKMARK [3][]{subsubsection.6.2.4}{PlayCanvas}{subsection.6.2}% 72
-\BOOKMARK [2][]{subsection.6.3}{Vergleich und Auswahl}{section.6}% 73
-\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 74
-\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 75
-\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 76
-\BOOKMARK [2][]{subsection.7.3}{Lehrer-Applikation}{section.7}% 77
-\BOOKMARK [3][]{subsubsection.7.3.1}{Verbundene Ger\344te}{subsection.7.3}% 78
-\BOOKMARK [3][]{subsubsection.7.3.2}{Hineinladen von Inhalten}{subsection.7.3}% 79
-\BOOKMARK [3][]{subsubsection.7.3.3}{Bedienelemente}{subsection.7.3}% 80
-\BOOKMARK [2][]{subsection.7.4}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 81
-\BOOKMARK [2][]{subsection.7.5}{QR-Code Fenster}{section.7}% 82
-\BOOKMARK [2][]{subsection.7.6}{Sch\374ler-App}{section.7}% 83
-\BOOKMARK [3][]{subsubsection.7.6.1}{Eingabe des Namens}{subsection.7.6}% 84
-\BOOKMARK [3][]{subsubsection.7.6.2}{Anzeigen von 360\260-Fotos}{subsection.7.6}% 85
-\BOOKMARK [3][]{subsubsection.7.6.3}{Abspielen von 360\260-Videos}{subsection.7.6}% 86
-\BOOKMARK [3][]{subsubsection.7.6.4}{Abspielen von Ton in Videos}{subsection.7.6}% 87
-\BOOKMARK [3][]{subsubsection.7.6.5}{Anzeigen von 3D-Modellen}{subsection.7.6}% 88
-\BOOKMARK [3][]{subsubsection.7.6.6}{WebVR Polyfill}{subsection.7.6}% 89
-\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 90
-\BOOKMARK [2][]{subsection.8.1}{Online-Umfrage}{section.8}% 91
-\BOOKMARK [3][]{subsubsection.8.1.1}{Gesamteindruck VRClassroom}{subsection.8.1}% 92
-\BOOKMARK [3][]{subsubsection.8.1.2}{Medien in VRClassroom}{subsection.8.1}% 93
-\BOOKMARK [3][]{subsubsection.8.1.3}{Alters- und F\344chergruppen f\374r VRClassroom}{subsection.8.1}% 94
-\BOOKMARK [3][]{subsubsection.8.1.4}{Net Promotor Score}{subsection.8.1}% 95
-\BOOKMARK [3][]{subsubsection.8.1.5}{Einsch\344tzung der Zukunft von VR und VRClassroom}{subsection.8.1}% 96
-\BOOKMARK [3][]{subsubsection.8.1.6}{Demografie und pers\366nliche Angaben}{subsection.8.1}% 97
-\BOOKMARK [3][]{subsubsection.8.1.7}{Ergebnis und Schl\374sse aus der Evaluation}{subsection.8.1}% 98
-\BOOKMARK [2][]{subsection.8.2}{VRClassroom Studie in Schulen}{section.8}% 99
-\BOOKMARK [3][]{subsubsection.8.2.1}{Freigabe Kulturministerium}{subsection.8.2}% 100
-\BOOKMARK [1][]{section.9}{Ausblick}{}% 101
-\BOOKMARK [2][]{subsection.9.1}{Zukunft von VR}{section.9}% 102
-\BOOKMARK [2][]{subsection.9.2}{Probleme von VRClassroom}{section.9}% 103
-\BOOKMARK [3][]{subsubsection.9.2.1}{Anzeigen gro\337er Dateien}{subsection.9.2}% 104
-\BOOKMARK [3][]{subsubsection.9.2.2}{Synchronisierung}{subsection.9.2}% 105
-\BOOKMARK [2][]{subsection.9.3}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 106
-\BOOKMARK [3][]{subsubsection.9.3.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.3}% 107
-\BOOKMARK [3][]{subsubsection.9.3.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.3}% 108
-\BOOKMARK [3][]{subsubsection.9.3.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.3}% 109
-\BOOKMARK [3][]{subsubsection.9.3.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.3}% 110
+\BOOKMARK [3][]{subsubsection.6.2.1}{Verwendung der WebVR-API}{subsection.6.2}% 69
+\BOOKMARK [3][]{subsubsection.6.2.2}{A-Frame}{subsection.6.2}% 70
+\BOOKMARK [3][]{subsubsection.6.2.3}{React360}{subsection.6.2}% 71
+\BOOKMARK [3][]{subsubsection.6.2.4}{Three.js}{subsection.6.2}% 72
+\BOOKMARK [3][]{subsubsection.6.2.5}{PlayCanvas}{subsection.6.2}% 73
+\BOOKMARK [2][]{subsection.6.3}{Vergleich und Auswahl}{section.6}% 74
+\BOOKMARK [1][]{section.7}{Software Projekt: VRClassroom}{}% 75
+\BOOKMARK [2][]{subsection.7.1}{Nutzungsszenario und Anwendungsfokus}{section.7}% 76
+\BOOKMARK [2][]{subsection.7.2}{Anwender}{section.7}% 77
+\BOOKMARK [2][]{subsection.7.3}{Lehrer-Applikation}{section.7}% 78
+\BOOKMARK [3][]{subsubsection.7.3.1}{Verbundene Ger\344te}{subsection.7.3}% 79
+\BOOKMARK [3][]{subsubsection.7.3.2}{Hineinladen von Inhalten}{subsection.7.3}% 80
+\BOOKMARK [3][]{subsubsection.7.3.3}{Bedienelemente}{subsection.7.3}% 81
+\BOOKMARK [2][]{subsection.7.4}{Kommunikation zwischen Lehrer-App und Sch\374ler-App}{section.7}% 82
+\BOOKMARK [2][]{subsection.7.5}{QR-Code Fenster}{section.7}% 83
+\BOOKMARK [2][]{subsection.7.6}{Sch\374ler-App}{section.7}% 84
+\BOOKMARK [3][]{subsubsection.7.6.1}{Eingabe des Namens}{subsection.7.6}% 85
+\BOOKMARK [3][]{subsubsection.7.6.2}{Anzeigen von 360\260-Fotos}{subsection.7.6}% 86
+\BOOKMARK [3][]{subsubsection.7.6.3}{Abspielen von 360\260-Videos}{subsection.7.6}% 87
+\BOOKMARK [3][]{subsubsection.7.6.4}{Abspielen von Ton in Videos}{subsection.7.6}% 88
+\BOOKMARK [3][]{subsubsection.7.6.5}{Anzeigen von 3D-Modellen}{subsection.7.6}% 89
+\BOOKMARK [3][]{subsubsection.7.6.6}{WebVR Polyfill}{subsection.7.6}% 90
+\BOOKMARK [1][]{section.8}{Nutzerstudie und Evaluation}{}% 91
+\BOOKMARK [2][]{subsection.8.1}{Online-Umfrage}{section.8}% 92
+\BOOKMARK [3][]{subsubsection.8.1.1}{Gesamteindruck VRClassroom}{subsection.8.1}% 93
+\BOOKMARK [3][]{subsubsection.8.1.2}{Medien in VRClassroom}{subsection.8.1}% 94
+\BOOKMARK [3][]{subsubsection.8.1.3}{Alters- und F\344chergruppen f\374r VRClassroom}{subsection.8.1}% 95
+\BOOKMARK [3][]{subsubsection.8.1.4}{Net Promotor Score}{subsection.8.1}% 96
+\BOOKMARK [3][]{subsubsection.8.1.5}{Einsch\344tzung der Zukunft von VR und VRClassroom}{subsection.8.1}% 97
+\BOOKMARK [3][]{subsubsection.8.1.6}{Demografie und pers\366nliche Angaben}{subsection.8.1}% 98
+\BOOKMARK [3][]{subsubsection.8.1.7}{Ergebnis und Schl\374sse aus der Evaluation}{subsection.8.1}% 99
+\BOOKMARK [2][]{subsection.8.2}{VRClassroom Studie in Schulen}{section.8}% 100
+\BOOKMARK [3][]{subsubsection.8.2.1}{Freigabe Kulturministerium}{subsection.8.2}% 101
+\BOOKMARK [1][]{section.9}{Ausblick}{}% 102
+\BOOKMARK [2][]{subsection.9.1}{Zukunft von VR}{section.9}% 103
+\BOOKMARK [2][]{subsection.9.2}{Probleme von VRClassroom}{section.9}% 104
+\BOOKMARK [3][]{subsubsection.9.2.1}{Anzeigen gro\337er Dateien}{subsection.9.2}% 105
+\BOOKMARK [3][]{subsubsection.9.2.2}{Synchronisierung}{subsection.9.2}% 106
+\BOOKMARK [2][]{subsection.9.3}{M\366gliche Weiterentwicklungen an VRClassroom}{section.9}% 107
+\BOOKMARK [3][]{subsubsection.9.3.1}{Hosten von VRClassroom Online statt Verbindung mit Lehrer-Rechner}{subsection.9.3}% 108
+\BOOKMARK [3][]{subsubsection.9.3.2}{Skalierung von 3D-Modellen auf echte Gr\366\337e}{subsection.9.3}% 109
+\BOOKMARK [3][]{subsubsection.9.3.3}{Navigation von 3D-Modellen aus Sch\374ler-App}{subsection.9.3}% 110
+\BOOKMARK [3][]{subsubsection.9.3.4}{Ausfragemodus: Ausgew\344hlter Sch\374ler setzt Markierung}{subsection.9.3}% 111

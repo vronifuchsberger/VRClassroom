@@ -1007,13 +1007,35 @@ Für die Entwicklung von VR Anwendungen bietet die Unreal Engine die Möglichkeit 
 \subsection{WebVR - VR im Browser}
 \label{subsec:webvr}
 
-WebVR ist eine offene Spezifikation, die es erlaubt auch im Browser VR-Anwendungen zu nutzen.
-Dazu wird die Display-Fläche in der Mitte halbiert und WebVR rendert die VR-Anwendungen je Auge in einem linsenförmigen Format, sodass sie mit einem VR-Headset genutzt werden können.
+% Quelle: https://immersive-web.github.io/webvr/spec/1.1/
 
-Um die VR-Ansicht zu aktivieren wird ein kleines Icon in der Ecke des Displays angezeigt, wenn die App geladen wird. Die WebVR-Ansicht gibt es nur im Landscape-Modus.
-% https://webvr.info
+WebVR ist eine API, die es ermöglicht VR-Geräte und deren Sensoren über Webapps zu verwenden.
+Die ursprüngliche WebVR API wird zukünftig durch die WebXR API ersetzt werden, die neben Virtual Reality-Geräten auch Augmented Reality- und Mixed Reality-Geräte unterstützt.
+Da sich die WebXR-API noch in der Entwicklung befindet, wird in dieser Arbeit die WebVR-API verwendet. 
 
-WebVR gibt der App zusätzlich die Funktionen die Position und Ausrichtung, sowie die Bewegungsdaten des Nutzers, damit voll funktionsfähige entwickelt werden können.
+Die WebVR-API erlaubt Zugriff auf mit dem Browser verbundene VR-Displays. Eine Webseite oder Webapp kann so Inhalte auf VR-Headsets darstellen. Die WebVR-API übernimmt dann die korrekte, auf das entsprechende Headset abgestimmte Darstellung der Inhalte. Das ermöglicht Webanwendungen unabhängig vom einzelnen Headset des Nutzers zu entwickeln und Darstellungsdetails dem Browser und Betriebssystem zu überlassen.
+
+Die WebVR-API ist in folgenden Browsern unterstützt:
+\begin{itemize}
+\item Microsoft Edge: ab Version 15
+\item Google Chrome Desktop: ab Version 57, hinter einem Flag
+\item Google Chrome für Android: ab Version 71
+\item Samsung Internet: für GearVR-Geräte
+\item Mozilla Firefox: ab Version 55
+\item Oculus Browser: ja
+\end{itemize}
+
+% Quelle: https://caniuse.com/#feat=webvr
+
+In Browsern, die die WebVR-API nicht implementieren, kann die Unterstützung mit einem sogenannten Polyfill nachgerüstet werden. Ein Polyfill ist ein JavaScript, das von einer Webseite ausgeführt wird um fehlende APIs in Browsern dynamisch nachzurüsten. Dabei ahmen Polyfills die Funktion der API nach, damit sich der Browser so verhält, als wäre die API verfügbar. Oft haben Polyfills dadurch eine schlechtere Performance als die native Implementierung der Browserhersteller. Für WebVR gibt es ein offizielles Polyfill der Immersive Web Working Group des W3Cs, die auch für die Entwicklung des Standards zuständig ist. In Browsern, die die WebVR-API bereits unterstützen, wird das Polyfill ignoriert und die native Implementierung verwendet.
+% Quelle: https://github.com/immersive-web/webvr-polyfill
+
+\subsubsection{Verwendung der WebVR-API} 
+Per JavaScript kann von der Webseite mit navigator.getVRDisplays() die Liste aller verbundenen VR-Displays abgefragt werden. Im Regelfall kann davon ausgegangen werden, das an einem Gerät nur ein VR-Display verbunden ist. Mit display.requestPresent() kann dann angefragt werden Inhalte auf diesem Display darzustellen. Die Inhalte werden dann in display.requestAnimationFrame gerendert. Diese Funktion wird mit der Bildwiederholrate des verbundenen VR-Displays aufgerufen.
+
+Die WebVR-API liefert Informationen über das Display, etwa ob dieses positional tracking unterstützt. Ebenso können Informationen über verbundene VR-Controller abgefragt werden und die Eingaben dieser Controller verarbeitet werden. Dazu wurde die schon existierende Gamepad-API in Browsern verwendet. Hier können Button-, Touch- und Bewegungs-Eingaben behandelt werden.
+
+Die direkte Verwendung der WebVR-API ist allerdings für die Entwicklung von VR-Anwendungen umständlich. Deshalb werden üblicherweise Frameworks verwendet, die die Darstellung mittels WebVR-API übernehmen, sodass der Entwickler sich nicht um das eigentlich Rendern der Szene kümmern muss. Zwei verbreitete VR-Frameworks werden im Nachfolgenden behandelt.
 
 \subsubsection{A-Frame}
 % https://aframe.io/docs/0.8.0/introduction/
