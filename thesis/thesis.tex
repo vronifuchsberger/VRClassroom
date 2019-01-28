@@ -998,7 +998,14 @@ Neben der Anwendungsentwicklung können mit Unity auch 360°-Filme produziert werd
 
 \subsubsection{Unreal Engine}
 \label{subsec:unreal}
-Unreal: C++
+Ebenso wie Unity ist die Unreal Engine für die Entwicklung von Computer und Konsolenspielen entwickelt worden. Der Unreal Editor ist für Linux, MacOS und Windows verfügbar und die enwickelten Anwendungen können zu Windows PC, PlayStation 4, Xbox One, Mac OS X, iOS, Android, AR, VR, Linux, SteamOS, Nintendo Switch und HTML5 deployed werden.
+
+Die Unreal Engine ist erstmal komplett kostenfrei zu nutzen. Wird mit einer Anwendung Geld verdient, verlangt Epic Games allerdings einen Anteil von 5\% des Gewinnes. Ziel dieser Preisgestaltung ist es, möglichst vielen Leuten Zugang zur Engine zu geben und besonders auch für Schüler und Studenten die Möglichkeit zu bieten die Engine kennen zu lernen und Erfahrungen zu sammeln.
+
+Der Code wird in in der Unreal Engine in C++ geschrieben, einige Teile können aber über die Nutzung der Blueprints generiert werden ohne direkt Code schreiben zu müssen. Blueprints sind ein Tool, um visuell Skripte zu erzeugen und Design anzupassen. Die Blueprints sind in einem Node-Link Editor realisiert.
+
+Für die Entwicklung von VR Anwendungen bietet die Unreal Engine die Möglichkeit in VR an den VR-Szenen zu arbeiten. Dafür ist der komplette Unreal Editor in VR für die Oculus Rift und HTC Vive umgesetzt und macht vollen Nutzen der Interaktionsmöglichkeiten der Controller der VR-Headsets.
+
 \subsection{WebVR - VR im Browser}
 \label{subsec:webvr}
 
@@ -1031,10 +1038,7 @@ In der client.js wird der React360 Code in den DOM eingebunden. Hier werden auch
 React360 baut auf React Native auf. Es werden zum Beispiel das Konzept der Stylesheets übernommen, die ein einfaches Styling der Komponenten erlauben, das dem Styling bei HTML sehr ähnlich sieht, und nutzt zum App Bundling ebenfalls den Metro Bundler.
 % https://facebook.github.io/react-360/docs/what-is.html
 
-\subsubsection{Vergleich von A-Frame und React360}
 
-% https://facebook.github.io/react-360/docs/what-is.html
-Warum für React360 entschieden?
 \subsubsection{Three.js}
 Three.js ist ein Javascript Framework mit dem 3D Szene erstellt werden können. Um Objekte in die Szene zu setzen müssen sie dem Document Object Tree hinzugefügt werden. Auch die Kamera muss als Objekt manuell hinzugefügt werden und ein Field of View, das Seitenverhältnis und die ``near'' und ``far''-Werte mit übergeben werden. Diese Werte bezeichnen den Bereich der z-Werte, der gerendert wird. Liegt ein Objekt außerhalb dieses Intervalls, ist es nicht in der Szene zu sehen.
 
@@ -1049,6 +1053,13 @@ Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind me
 \subsubsection{PlayCanvas}
 
 Eine spannende Möglichkeit VR-Applikationen zu entwickeln ist die Nutzung von PlayCanvas. PlayCanvas ist eine Web-basierte Game-Engine, in der mit HTML und WebGL entwickelt werden kann. Das besondere ist, dass in Real-Time kollaborativ gearbeitet werden kann und da es keine Kompilierzeit gibt die Veränderungen auch direkt auf den Geräten angezeigt werden. PlayCanvas ist WebVR kompatibel und ist damit sehr gut geeignet VR-Anwendungen für Smartphone-gestützte VR-Headsets zu entwickeln. \cite{PlayCanvasLtd}
+
+\subsection{Vergleich und Auswahl einer Entwicklungsumgebung}
+Warum WebVR?
+- läuft im Browser -> ist damit cross-platform und kompatibel mit allen VR-Headsets
+
+% https://facebook.github.io/react-360/docs/what-is.html
+Warum für React360 entschieden?
 
 %\_____________________________________________________________________
 
@@ -1631,7 +1642,7 @@ Die beigelegte CD enthält folgende Dateien:
 \item PDF der Thesis
 \end{itemize}
 
-Das Github-Repository, in dem der Sourcecode von VRClassroom sowie die Thesis sind ist zudem unter XXXXX erreichbar.
+Das Github-Repository, in dem der Sourcecode von VRClassroom, die für MacOS, Linux und Windows kompilierten VRClassroom Apps sowie die Thesis sind ist zudem unter https://github.com/vronifuchsberger/masterarbeit erreichbar.
 Das für die Umfragen produzierte Video zu VRClassroom ist auf Youtube unter https://youtu.be/b60PQ3bqjk0 zu erreichen.
 
 %______________________________________________________________________

@@ -71,33 +71,32 @@
 \contentsline {subsection}{\numberline {6.1}Native VR-Applikationen}{31}{subsection.6.1}
 \contentsline {subsubsection}{\numberline {6.1.1}Unity}{31}{subsubsection.6.1.1}
 \contentsline {subsubsection}{\numberline {6.1.2}Unreal Engine}{31}{subsubsection.6.1.2}
-\contentsline {subsection}{\numberline {6.2}WebVR - VR im Browser}{31}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{31}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2}WebVR - VR im Browser}{32}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}A-Frame}{32}{subsubsection.6.2.1}
 \contentsline {subsubsection}{\numberline {6.2.2}React360}{32}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Vergleich von A-Frame und React360}{32}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Three.js}{32}{subsubsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.5}PlayCanvas}{33}{subsubsection.6.2.5}
+\contentsline {subsubsection}{\numberline {6.2.3}Three.js}{32}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}PlayCanvas}{33}{subsubsection.6.2.4}
+\contentsline {subsection}{\numberline {6.3}Vergleich und Auswahl einer Entwicklungsumgebung}{33}{subsection.6.3}
 \contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{35}{section.7}
 \contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{35}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Anwender}{36}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Grundstruktur}{36}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Lehrer-Applikation}{36}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Verbundene Ger\"ate}{37}{subsubsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.2}Hineinladen von Inhalten}{37}{subsubsection.7.4.2}
-\contentsline {subsubsection}{\numberline {7.4.3}Controls}{38}{subsubsection.7.4.3}
+\contentsline {subsection}{\numberline {7.3}Lehrer-Applikation}{36}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Verbundene Ger\"ate}{37}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Hineinladen von Inhalten}{37}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3}Bedienelemente}{38}{subsubsection.7.3.3}
 \contentsline {paragraph}{Marker}{38}{figure.caption.17}
-\contentsline {paragraph}{Photo Controls}{39}{section*.18}
-\contentsline {paragraph}{Video Controls}{39}{section*.20}
-\contentsline {paragraph}{Model Controls}{40}{section*.22}
-\contentsline {subsection}{\numberline {7.5}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{40}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}QR-Code Fenster}{41}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Sch\"uler-App}{41}{subsection.7.7}
-\contentsline {subsubsection}{\numberline {7.7.1}Eingabe des Namens}{41}{subsubsection.7.7.1}
-\contentsline {subsubsection}{\numberline {7.7.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{43}{subsubsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.3}Abspielen von 360\IeC {\textdegree }-Videos}{43}{subsubsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.4}Abspielen von Ton in Videos}{43}{subsubsection.7.7.4}
-\contentsline {subsubsection}{\numberline {7.7.5}Anzeigen von 3D-Modellen}{44}{subsubsection.7.7.5}
-\contentsline {subsubsection}{\numberline {7.7.6}WebVR Polyfill}{44}{subsubsection.7.7.6}
+\contentsline {paragraph}{Fotos}{39}{section*.18}
+\contentsline {paragraph}{Videos}{39}{section*.20}
+\contentsline {paragraph}{3D-Modelle}{39}{section*.22}
+\contentsline {subsection}{\numberline {7.4}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{40}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}QR-Code Fenster}{41}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Sch\"uler-App}{41}{subsection.7.6}
+\contentsline {subsubsection}{\numberline {7.6.1}Eingabe des Namens}{41}{subsubsection.7.6.1}
+\contentsline {subsubsection}{\numberline {7.6.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{41}{subsubsection.7.6.2}
+\contentsline {subsubsection}{\numberline {7.6.3}Abspielen von 360\IeC {\textdegree }-Videos}{43}{subsubsection.7.6.3}
+\contentsline {subsubsection}{\numberline {7.6.4}Abspielen von Ton in Videos}{43}{subsubsection.7.6.4}
+\contentsline {subsubsection}{\numberline {7.6.5}Anzeigen von 3D-Modellen}{44}{subsubsection.7.6.5}
+\contentsline {subsubsection}{\numberline {7.6.6}WebVR Polyfill}{44}{subsubsection.7.6.6}
 \contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{47}{section.8}
 \contentsline {subsection}{\numberline {8.1}Online-Umfrage}{47}{subsection.8.1}
 \contentsline {subsubsection}{\numberline {8.1.1}Gesamteindruck VRClassroom}{47}{subsubsection.8.1.1}
