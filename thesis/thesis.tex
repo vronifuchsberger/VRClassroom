@@ -202,32 +202,27 @@ In den Tabellen \ref{tab:headsets1} und \ref{tab:headsets2} sind die Angaben zur
 
 Neben der Auflösung ist auch der Abstand der einzelnen Pixel zueinander entscheidend für die Qualität der visuellen Darstellung. Der Screen Door Effect und der Pixel Fill Factor beziehen sich auf den nicht leuchtenden Abstand zwischen zweier Pixel. Der Screen Door Effect bezeichnet den Zustand, wenn diese Abstände deutlich als Gitter über dem Inhalt erkennbar werden. Der Pixel Fill Factor beschreibt die Dichte der Pixel zueinander. Ist der Pixel Fill Factor hoch, wird der Screen Door Effect schwächer oder verschwindet sogar komplett.
 Da bei VR-Headsets das Display extrem nah am Auge ist, wurden bei den ersten Geräten von Oculus und HTC starke Screen Door Effekte wahrgenommen. Aber mit den Versionen, die dann letztendlich in den Handel kamen, sind diese Probleme großteils ausgeräumt worden.
-% Paper: A Review Paper on Oculus Rift-A Virtual Reality Headset
+ \cite{Desai2014}
 
-Die Arbeit von XXX et al. schließt aus ihren Nachforschungen, dass das menschliche visuelle System schon ab 13ms komplette verschiedene Bilder wahrnehmen und damit unterscheiden kann. Das entspräche einer benötigten Bildwiederholrate (Framerate) von knapp 80Hz. Die Forschungen zeigen allerdings auch, dass kleinere Veränderungen mit bis zu 500Hz noch deutlich schneller wahrgenommen werden können. 
-Die aktuellen VR-Headsets sind mit Bildwiederholraten zwischen 60Hz und 120Hz noch deutlich davon entfernt. Allerdings ist zu vermuten, dass keine 500Hz notwendig benötigt werden, da die Studie mit hochfrequent flackernden Lichtern durchgeführt wurde, was in den meisten Situationen nicht der Realität entspricht.
-% https://www.nature.com/articles/srep07861 (500Hz Flicker)
-% Detecting Meaning in Rapid Serial Visual Representation ({RSVP}) at 13 ms Per Picture (Paper)
+Die Arbeit von Potter et al. schließt aus ihren Nachforschungen, dass das menschliche visuelle System schon ab 13ms komplette verschiedene Bilder wahrnehmen und damit unterscheiden kann. Das entspräche einer benötigten Bildwiederholrate (Framerate) von knapp 80Hz.  \cite{Potter2013}
+Andere Forschungen zeigen allerdings auch, dass kleinere Veränderungen mit bis zu 500Hz noch deutlich schneller wahrgenommen werden können. 
+Die aktuellen VR-Headsets sind mit Bildwiederholraten zwischen 60Hz und 120Hz noch deutlich davon entfernt. Allerdings ist zu vermuten, dass keine 500Hz notwendig werden, da die Studie mit hochfrequent flackernden Lichtern durchgeführt wurde, was in den meisten Situationen nicht der Realität entspricht.
+ \cite{davis2015humans}
 
-Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.
+Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.  \cite{Stone2017}
 Aktuelle Headsets sind mit einem Sichtfeld von 100°-110° allerdings noch etwas von der Abbildung des vollen Sichtfelds entfernt. 
 Augenabstand IPD. %TODO
 Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen.
-
-% Human Field of View 180° auf 135°
-% \cite{Stone2017}
+ \cite{Lin2002}
 
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, das mit höherer Rechenleistung aufwändigere VR-Szenen in höherer Qualität dargestellt werden können. Bessere Display-Auflösung, Bildwiederholungsrate und Field of View benötigen eine höhere Rechenleistung um die Bildinhalte zu generieren. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten Geräten in diesen Kategorien konkurrieren.
 Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden kann.
 
 Fast alle in dieser Arbeit untersuchten Geräte haben dabei den gleichen Prozessor verbaut. Während alle anderen Geräte einen Qualcomm Snapdragon 835 nutzen, hat lediglich die Oculus Go hat einen Qualcomm Snapdragon 821 verbaut. Damit sind die anderen Geräte nominell etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go.
-
-Quellen:
-https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/
-https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/
-https://www.vive.com/cn/product/vive-focus-en/
-
+\cite{HTCCorporationViveFocus}
+\cite{Bastian2018}
+\cite{Bastian2018a}
 
 \subsubsection{Eingabemethoden}
 Es zwei grundsätzliche Eingabemethoden für Virtual Reality, die momentan verwendet werden: Eingaben über einen oder mehrere externe Controller oder aber die Eingabe am Headset.
@@ -242,12 +237,12 @@ Ganz ohne Eingabe am Touchscreen können Gaze-Events (engl. ``starren'') zur Eing
 
 Externe 3DoF-Controller bieten meist mehrere Buttons zur Eingabe und stellen einen Zeiger da, mit dem Bereiche in der Szene ausgewählt werden können. Üblicherweise ist der Ursprung des Zeigers an einem Ort fixiert. Über Beschleunigungssensoren wird die Richtung des Zeigers bestimmt, in der ein Strahl ausgesendet wird (``Raycaster'').
 
-Bei 6DoF-Controllern, wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3DoF-Controllern, ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
+Bei 6 DoF-Controllern, wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3DoF-Controllern, ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
 
 Bisher setzen keine Systeme auf Spracheingabe. Eine Entwicklung in diese Richtung ist aber abzusehen, da die Eingabe sehr natürlich ist und dadurch die Zugänglichkeit zu VR-Systemen erhöht werden kann.
 
-In ihrer Arbeit haben XXX et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamera in ein bestehendes VR-Headset eingebaut, die die Bewegungen der Augen registriert. Sie haben dazu eine Software entwickelt, die sowohl die Pupillenbewegungen als auch die Bewegungen des Lids registriert und als Input verarbeiten kann. 
-% EyeVR Paper
+In ihrer Arbeit haben Geiselhart et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamera in ein bestehendes VR-Headset eingebaut, die die Bewegungen der Augen registriert. Sie haben dazu eine Software entwickelt, die sowohl die Pupillenbewegungen als auch die Bewegungen des Lids registriert und als Input verarbeiten kann. 
+ \cite{Geiselhart2016}
 
 \subsubsection{Positional Tracking}
 Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum oder die Veränderung der Position relativ zum Raum berechnet werden. Positional Tracking wird also generell nur von 6DoF-Headsets genutzt.
@@ -256,10 +251,10 @@ Momentan gibt es dazu zwei verschiedene Ansätze: Die eine Möglichkeit ist es Tra
 
 Die zweite Möglichkeit ist das inside-out-Tracking. Für das inside-out-Tracking müssen keinerlei Sensoren im Raum platziert werden. Es werden nur Sensoren verwendet, die in das Headset integriert sind.  \cite{Stone2017}
 Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google. Es verwendet in das Headset integrierten Kameras zur Bestimmung der Position nutzt.
-% https://developers.google.com/vr/discover/worldsense
+ \cite{GoogleWordlSense}
 
 Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht. Diese bestimmen die Position im Raum anhand von Objekten im Raum, die von den Kameras erkannt werden. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller bestimmen, sodass auch diese sechs Degrees of Freedom unterstützen.
-% https://www.roadtovr.com/oculus-quest-hands-specs-tech-details-oculus-connect-5/
+ \cite{Lang2018}
 
 \subsubsection{Gewicht}
 Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen. Allerdings ist bei den neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen. Dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
@@ -274,7 +269,7 @@ Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, bezieht s
 Wie in \ref{sec:challenges} erläutert sieht die Autorin des Artikels ``5 Major Challenges For The VR Industry'' den Preis als eines der Hautprobleme, dass sich VR noch nicht weiter durchgesetzt hat.
 Da aber besonders die Smartphone-gestützten VR-Systeme sehr günstig zu bekommen sind, gilt dieses Argument eigentlich nicht wirklich.
 
-Trotzdem wird von Experten (QUELLE) erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden. %TODO Quelle
+Trotzdem wird von Experten erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden. %TODO Quelle
 
 Die Preise in den Tabellen \ref{tab:headsets1}, \ref{tab:headsets2} und \ref{tab:headsets3} sind in US-Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin ist keine Umsatzsteuern enthalten.
 
@@ -762,10 +757,12 @@ Es gibt grundlegend zwei verschiedene Arten 360°-Bilder zu erstellen:  Die eine 
 % https://www.panono.com/en/home/
 
 Die zweite Möglichkeit ist mehrere normale Kameras auf ein Rig, also ein Stativ für mehrere Kameras, zu installieren, bei dem jede Kamera einen anderen Bildabschnitt abdeckt und die Bilder dann nachträglich manuell zusammenzusetzen. 
-Den Vorgang des Zusammensetzens der Bilder nennt man Stitching. Erstellt man 360°-Fotos durch zusammenstitchen mehrerer ``normaler'' Kamerabilder ist es wichtig, dass dann die richtigen Metadaten zum Bild hinzugefügt werden, damit Software, die 360°-Bilder anzeigen kann, weiß, dass es sich um ein 360°-Bild handelt und welche Projektion es hat.
+Den Vorgang des Zusammensetzens der Bilder nennt man Stitching. 
 
+Das Stitching kann entweder mit einer speziellen Software wie zum Beispiel PTGui oder mit bekannten Bildbearbeitungsprogrammen Photoshop oder Lightroom durchgeführt werden.
+
+Erstellt man 360°-Fotos durch zusammenstitchen mehrerer ``normaler'' Kamerabilder ist es wichtig, dass dann die richtigen Metadaten zum Bild hinzugefügt werden, damit Software, die 360°-Bilder anzeigen kann, weiß, dass es sich um ein 360°-Bild handelt und welche Projektion es hat.
 360°-Bilder, die direkt von einer 360°-Kamera kommen, haben bereits die passenden Metadaten und sie müssen nicht manuell hinzugefügt werden.
-
 Die Metadaten können auf verschiedene Art und Weisen zu den Fotos hinzugefügt werden, unter anderem mit Photoshop oder mit dem ExifMetaLrPlugin für Lightroom. 
 In den Metadaten sind ist gespeichert, welche Software zum Stitching verwendet wurde, welche Dimensionen das Bild hat, was die Ausgangsblickrichtung ist und natürlich welche Projektion das Panorama hat und dass es in einem Panorama Viewer angezeigt werden soll. 
 Zusätzlich können dort auch noch die Koordinaten, an denen das Bild aufgenommen wurde, der Urheber, das Copyright und einige andere Informationen gespeichert sein, die jedoch nicht spezifisch für 360°-Bilder sind.
@@ -775,7 +772,7 @@ Zusätzlich können dort auch noch die Koordinaten, an denen das Bild aufgenommen 
 \subsection{360°-Videos}
 In seinem Artikel ``360 Videos und ihre Zukunft: eine Prognose'' im filmpuls-Magazin, einem Fachmagazin für Filmemacher, erklärt der Autor Kristian Widmer, dass die größte Challenge für die Produktion von guten 360°-Filmen ist, dass komplett eigene Erzählkonzepte entwickelt werden müssen, da die aus dem klassischen Filmformat nicht anwendbar sind. Außerdem können viele Tricks und Praktiken nicht angewandt werden, weil es keine unsichtbaren Bereiche um die Kamera gibt.
 
-Seiner Meinung nach sollten 360°-Filme so angelegt werden, dass der Zuschauer dazu ermuntert wird die Szene zu erkunden und dazu auch 3D-Sound intgeriert werden sollte, um zu suggerieren wo im Panorama gerade interessanter Inhalt zu sehen ist.
+Seiner Meinung nach sollten 360°-Filme so angelegt werden, dass der Zuschauer dazu ermuntert wird die Szene zu erkunden und dazu auch 3D-Sound integriert werden sollte, um zu suggerieren wo im Panorama gerade interessanter Inhalt zu sehen ist.
 
 Die großen Videoplattformen Vimeo und Youtube haben auch seit einigen Jahren die Funktion 360°-Videos abzuspielen und bieten auch Möglichkeiten die Filme in VR-Headsets zu sehen. Widmer kritisiert hier allerdings die Qualität der Filme und die Tatsache, dass oft nur Stereo-Sound in die Filme integriert ist.
 % https://filmpuls.info/360-videos-zukunft/
@@ -808,9 +805,10 @@ In die gleiche Kategorie fallen dabei die Videos von Videoblocks.com, die ebenfa
 % https://de.videoblocks.com/videos/footage/360-files
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Videos}
-https://de.wikipedia.org/wiki/360-Grad-Video
+360°-Videos können wie 360°-Fotos entweder mit 360°-Kameras gefilmt werden oder aus Filmen von mehreren Kameras zusammengesetzt werden.
+Zum Stitchen von 360°-Filmen gibt es viele Programme. Beispiele dafür sind pixvana oder Stereostitch. 
 
-Entweder direkt 360 Kamera oder mehrere und dann stitchen (stitchen besser bei statischen Inhalten)
+Um aus den rohen 360°-Video kann dann in Videobearbeitungsprogrammen fertige 360°-Videos produziert werden. Unter Anderen haben die bekannten Programme Final Cut Pro und Adobe Premiere Pro Tools zur Bearbeitung von 360°-Videos eingebaut.
 
 \subsection{3D-Modelle}
 3D Modelle können einen Blick auf Dinge gewähren, die so nicht so einfach angesehen werden. Beispielsweise können damit Molekülstrukturen oder menschliche Organe gezeigt und erforscht werden, wie sie wirklich aussehen. Da es bereits eine große Szene für 3D-Modelle gibt, ist es nicht schwierig für die verschiedensten Themengebiete passende Modelle zu finden. Auch für den Bildungsbereich gibt es dort einiges zu finden, was man im Unterricht verwenden kann.

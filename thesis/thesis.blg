@@ -14,45 +14,45 @@ Database file #1: literature.bib
 Warning--empty journal in Stone2017
 
 Done.
-You've used 30 entries,
+You've used 39 entries,
             4087 wiz_defined-function locations,
-            978 strings with 11384 characters,
-and the built_in function-call counts, 12115 in all, are:
-= -- 914
-> -- 180
-< -- 25
-+ -- 92
-- -- 39
-* -- 473
-:= -- 2177
-add.period$ -- 60
-call.type$ -- 30
-change.case$ -- 30
-chr.to.int$ -- 60
-cite$ -- 31
-duplicate$ -- 981
-empty$ -- 1156
-format.name$ -- 43
-if$ -- 2654
+            1026 strings with 12973 characters,
+and the built_in function-call counts, 16832 in all, are:
+= -- 1303
+> -- 276
+< -- 47
++ -- 142
+- -- 58
+* -- 676
+:= -- 2969
+add.period$ -- 78
+call.type$ -- 39
+change.case$ -- 39
+chr.to.int$ -- 108
+cite$ -- 40
+duplicate$ -- 1347
+empty$ -- 1550
+format.name$ -- 66
+if$ -- 3722
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 216
-newline$ -- 165
-num.names$ -- 30
-pop$ -- 675
+int.to.str$ -- 39
+missing$ -- 287
+newline$ -- 204
+num.names$ -- 39
+pop$ -- 870
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 904
+skip$ -- 1269
 stack$ -- 0
-substring$ -- 168
-swap$ -- 558
-text.length$ -- 5
+substring$ -- 297
+swap$ -- 811
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 30
+type$ -- 39
 warning$ -- 1
-while$ -- 42
-width$ -- 32
-write$ -- 306
+while$ -- 60
+width$ -- 41
+write$ -- 396
 (There was 1 warning)

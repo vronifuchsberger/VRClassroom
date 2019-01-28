@@ -31,11 +31,76 @@ T.~I. Fossen and O.-E. Fjellstad, ``{Nonlinear modelling of marine vehicles in
   6 degrees of freedom},'' \emph{Mathematical Modelling of Systems}, vol.~1,
   pp. 17--27, 1995.
 
+\bibitem{Desai2014}
+\BIBentryALTinterwordspacing
+P.~N. P.~R. Desai, P.~N. P.~R. Desai, K.~D. Ajmera, and K.~Mehta, ``{A Review
+  Paper on Oculus Rift},'' \emph{International Journal of Engineering Trends
+  and Technology (IJETT)}, vol.~13, no.~4, pp. 175--179, 2014. [Online].
+  Available: \url{http://www.ijettjournal.org}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Potter2013}
+M.~C. Potter, B.~Wyble, C.~E. Hagmann, and E.~S. McCourt, ``{Detecting Meaning
+  in Rapid Serial Visual Representation ({\{}RSVP{\}}) at 13 ms Per Picture},''
+  \emph{Attention, Perception, {\&} Psychophysics}, 2013.
+
+\bibitem{davis2015humans}
+J.~Davis, Y.-H. Hsieh, and H.-C. Lee, ``Humans perceive flicker artifacts at
+  500 hz,'' \emph{Scientific reports}, vol.~5, p. 7861, 2015.
+
 \bibitem{Stone2017}
 \BIBentryALTinterwordspacing
 W.~B. Stone, ``{Psychometric evaluation of the Simulator Sickness Questionnaire
   as a measure of cybersickness},'' 2017. [Online]. Available:
   \url{https://search.proquest.com/openview/c2d59f535cdea2e705131a3b052a1b05/1?pq-origsite=gscholar{\&}cbl=18750{\&}diss=y}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Lin2002}
+\BIBentryALTinterwordspacing
+J.-W. Lin, H.~Duh, D.~Parker, H.~Abi-Rached, and T.~Furness, ``{Effects of
+  field of view on presence, enjoyment, memory, and simulator sickness in a
+  virtual environment},'' \emph{Proceedings IEEE Virtual Reality 2002}, no.
+  February, pp. 164--171, 2002. [Online]. Available:
+  \url{http://ieeexplore.ieee.org/document/996519/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{HTCCorporationViveFocus}
+\BIBentryALTinterwordspacing
+{HTC Corporation}, ``{Vive Focus}.'' [Online]. Available:
+  \url{https://www.vive.com/cn/product/vive-focus-en/{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Bastian2018}
+\BIBentryALTinterwordspacing
+M.~Bastian, ``{Lenovo Mirage Solo Test: Besser als Oculus Go?}'' 2018.
+  [Online]. Available:
+  \url{https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Bastian2018a}
+\BIBentryALTinterwordspacing
+------, ``{Oculus Quest vs. Oculus Go Vergleich: Das sind die Unterschiede},''
+  2018. [Online]. Available:
+  \url{https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Geiselhart2016}
+F.~Geiselhart, M.~Rietzler, and E.~Rukzio, ``{EyeVR: low-cost VR eye-based
+  interaction},'' \emph{Proceedings of the 2016 ACM International Joint
+  Conference on Pervasive and Ubiquitous Computing Adjunct - UbiComp '16}, pp.
+  277--280, 2016.
+
+\bibitem{GoogleWordlSense}
+\BIBentryALTinterwordspacing
+Google, ``{WorldSense},'' 2018. [Online]. Available:
+  \url{https://developers.google.com/vr/discover/worldsense}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Lang2018}
+\BIBentryALTinterwordspacing
+B.~Lang, ``{Oculus Quest Hands-on and Tech Details},'' 2018. [Online].
+  Available:
+  \url{https://www.roadtovr.com/oculus-quest-hands-specs-tech-details-oculus-connect-5/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Wolwort2018}
@@ -56,15 +121,6 @@ Unknown, ``{Cybersickness Poll},'' 2017. [Online]. Available:
 K.~Burke, ``{Everything You Wanted to Know About Simulator Sickness},'' 2014.
   [Online]. Available:
   \url{https://www.twentymilliseconds.com/post/all-about-motion-sickness/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Lin2002}
-\BIBentryALTinterwordspacing
-J.-W. Lin, H.~Duh, D.~Parker, H.~Abi-Rached, and T.~Furness, ``{Effects of
-  field of view on presence, enjoyment, memory, and simulator sickness in a
-  virtual environment},'' \emph{Proceedings IEEE Virtual Reality 2002}, no.
-  February, pp. 164--171, 2002. [Online]. Available:
-  \url{http://ieeexplore.ieee.org/document/996519/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{whittinghill2015nasum}
@@ -145,12 +201,6 @@ S.~Hill, ``{Is VR too dangerous for kids? We asked the experts},'' 2016.
   \url{https://www.wearvr.com}
 \BIBentrySTDinterwordspacing
 
-\bibitem{PlayCanvasLtd}
-\BIBentryALTinterwordspacing
-{PlayCanvas Ltd.}, ``{PlayCanvas VR/ AR}.'' [Online]. Available:
-  \url{https://playcanvas.com/industries/vr}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Vizor2019}
 \BIBentryALTinterwordspacing
 {Vizor}, ``{The easiest way to share VR on the web},'' 2019. [Online].
@@ -179,6 +229,12 @@ S.~Hill, ``{Is VR too dangerous for kids? We asked the experts},'' 2016.
 \BIBentryALTinterwordspacing
 ------, ``{3D Objects}.'' [Online]. Available:
   \url{https://facebook.github.io/react-360/docs/objects.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{PlayCanvasLtd}
+\BIBentryALTinterwordspacing
+{PlayCanvas Ltd.}, ``{PlayCanvas VR/ AR}.'' [Online]. Available:
+  \url{https://playcanvas.com/industries/vr}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Decker2017}

@@ -21,10 +21,10 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{8}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{9}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{9}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{10}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{9}{subsubsection.2.3.4}
 \contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{10}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{10}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{11}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{10}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{11}{subsubsection.2.4.3}
 \contentsline {section}{\numberline {3}VR-Systeme im Bildungsbereich}{13}{section.3}
 \contentsline {subsubsection}{\numberline {3.0.1}ClassVR}{13}{subsubsection.3.0.1}
