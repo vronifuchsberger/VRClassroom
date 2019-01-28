@@ -993,6 +993,9 @@ Die in Unity entwickelten Anwendungen können für viele verschiedene Plattformen 
 
 Unity ist für private und selbstständige Entwickler kostenlos, wenn sie unter 100.000\$ pro Jahr mit ihren Anwendungen verdienen kostenlos und für Unternehmen liegt der Preis bei 125\$ pro Entwickler.
 
+Neben der Anwendungsentwicklung können mit Unity auch 360°-Filme produziert werden. Dazu können 360°-Clips hineingeladen werden, Overlays, Objekte oder Animationen eingefügt werden und sogar Logik für Nutzerinteraktion eingebunden werden. Unity unterstützt dafür auch die Nutzung von Ambisonic Audioquellen.
+% unity3d.com
+
 \subsubsection{Unreal Engine}
 \label{subsec:unreal}
 Unreal: C++
@@ -1053,11 +1056,11 @@ Eine spannende Möglichkeit VR-Applikationen zu entwickeln ist die Nutzung von Pl
 
 \cleardoublepage
 \section{Software Projekt: VRClassroom}
-Aufbauend auf den Erkenntnissen aus ANDEREN KAPITELN wurde im Rahmen dieser Arbeit VRClassroom entwickelt. VRClassroom ist ein zweiteiliges System, das es Lehrkräften ermöglichen soll 360°-Fotos, -Videos und 3D-Modelle im Unterricht zeigen zu können, dabei die Anzeige auf allen Geräten steuern zu können und trotzdem den Überblick in der Klasse behalten zu können. 
+Aufbauend auf den Erkenntnissen dieser Arbeit wurde im Rahmen dieser Arbeit VRClassroom entwickelt. VRClassroom ist ein System, das es Lehrkräften ermöglichen soll 360°-Fotos, -Videos und 3D-Modelle im Unterricht zeigen zu können. Die Schüler können die Inhalte synchronisiert auf VR-Headsets ansehen. Die Lehrkraft kann die Anzeige vom Computer aus auf allen Headsets steuern und trotzdem den Überblick in der Klasse behalten. %TODO da stand Aufbauend auf den Erkenntnissen aus ANDEREN KAPITELN..., vielleicht willst du da was bestimmtes referenzieren.
 
 VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Schüler-App, die über den Browser der mobilen Geräte beziehungsweise VR-Headsets erreicht werden kann.
 
-Die Lehrer-App ist eine Electron-App, die wiederum eine React-App für das Interface enthält und die Schüler-App startet. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in Javascript gehalten, nur unterschieden durch die verschiedenen Libraries Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer Creative Commons Lizenz veröffentlicht und so kann ein Entwickler schnell alle Teile des Codes verstehen ohne sich in mehrere Programmiersprachen einarbeiten zu müssen.
+Die Lehrer-App ist eine Electron-App und damit für Windows, macOS und Linux verwendbar. Sie verwendet React.js für das Interface startet den Server von dem aus die Schüler-App geladen wird. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in JavaScript geschrieben, nur unterschieden durch die verschiedenen Frameworks Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer open-source-Lizenz veröffentlicht. Entwickler können dadurch alle Teile der Codebasis verstehen ohne sich in mehrere Programmiersprachen einarbeiten zu müssen.
 
 Grafik \ref{fig:electron}
 
@@ -1073,23 +1076,25 @@ VRClassroom wurde speziell für die Nutzung in der Schule entwickelt.
 Dabei kann die Lehrkraft das VR-Erlebnis für die SchülerInnen führen und ihnen so komplexe 3-dimensionale Inhalte besser vermitteln und eine spannende neue Art des Lernens zu erleben. 
 Außerdem wurde Funktionen wie etwa die Seitenleiste mit den verbundenen Geräten entwickelt, die es der Lehrkraft erleichtern sollen VRClassroom in einer Schulklasse einzusetzen und sicher zu stellen, dass alle Geräte verbunden sind und die Inhalte angezeigt werden.
 
-Da viele Schulen noch überhaupt keine Ausrüstung an VR-Headsets haben, lag der Fokus besonders auf der Nutzung des VRClassroom Systems mit einem Smartphone in einem Google Cardboard. Allerdings wurde es bewusst so entwickelt, dass auch mit ``echten'' VR-Headsets das System problemlos weiter genutzt werden kann. So wird den Schulen ermöglicht mit einer sehr geringen Investition zu testen, ob es für sie in Frage kommt und können zu einem späteren Zeitpunkt zu einem elaborierteren Hardware-System wechseln ohne auf neue Software umsteigen zu müssen.
+Da viele Schulen noch überhaupt keine Ausrüstung an VR-Headsets haben, lag der Fokus besonders auf der Nutzung des VRClassroom-Systems mit einem Smartphone in einem Google Cardboard. Allerdings wurde es bewusst so entwickelt, dass auch mit professionelleren VR-Headsets das System problemlos weiter genutzt werden kann. So wird den Schulen ermöglicht mit einer sehr geringen Investition zu testen, ob es für sie in Frage kommt. Zu einem späteren Zeitpunkt kann dann auf ein elaborierteres Hardware-System gewechselt werden ohne auf neue Software umsteigen zu müssen.
 
-Weitere Einsatzszenarien für VRClassroom könnten Besprechungen im Arbeitsumfeld gehen, bei denen es sich um plastische Inhalte handelt wie zum Beispiel Architekturbüros, Designagenturen oder Landschaftsgärtner. Mit einem 360°-Foto oder -Video könnte der Ist-Zustand besprochen werden und anschließend die Entwürfe in 3D-Modellen vorgeführt werden. Dadurch könnten sich Kunden besser in die Entwürfe hineinversetzen und bewusster entscheiden, was sie letztendlich haben möchten.
+Weitere Einsatzszenarien für VRClassroom könnten Besprechungen im Arbeitsumfeld sein, bei denen es sich um plastische Inhalte handelt wie zum Beispiel Architekturbüros, Designagenturen oder Landschaftsgärtner. Mit einem 360°-Foto oder -Video könnte der Ist-Zustand besprochen werden und anschließend die Entwürfe in 3D-Modellen vorgeführt werden. Dadurch könnten sich Kunden besser in die Entwürfe hineinversetzen und bewusster entscheiden, was sie letztendlich haben möchten.
 
 \subsection{Anwender}
 Wie bereits weiter oben beschrieben wurde VRClassroom speziell dafür entwickelt im Schulunterricht verwendet zu werden. Damit sind die Hauptanwendergruppe Lehrkräfte und Schülerinnen und Schüler.
 Die Schülerinnen und Schüler als Anwender der Schüler-App können dabei im Alter von Grundschulkindern bis hin zu Erwachsenen reichen, die Spanne ist damit also sehr weit und somit ist auch die Vorerfahrung mit VR-Headsets und die individuelle Technikaffinität äußerst unterschiedlich.
-Den Schülern soll es also möglichst leicht gemacht werden die Schüler-App von VRClassroom zu verwenden. Da fast keine Schulen über Mengen an VR-Headsets verfügen, die für eine gesamte Klasse ausreichen, muss also dafür Sorge getragen werden, dass die Schüler-App auf allen Geräten, aber besonders auf Smartphone-gestützten VR-Headsets läuft.
+Den Schülern soll es also möglichst leicht gemacht werden die Schüler-App von VRClassroom zu verwenden. Da wenige Schulen über VR-Headsets verfügen, die für eine gesamte Klasse ausreichen, muss also dafür Sorge getragen werden, dass die Schüler-App auf allen Geräten, aber besonders auf Smartphone-gestützten VR-Headsets läuft.
 
-Bei den Lehrkräfte verhält es sich ganz ähnlich: Sie kommen aus verschiedensten Fachrichtungen, mit unterschiedlichsten Leveln an Erfahrung und Technikaffinität, außerdem hat die Umfrage gezeigt, dass mehr als die Hälfte teilnehmenden Lehrkräfte selbst noch nie ein VR-Headset ausprobiert haben. 
+Bei den Lehrkräfte verhält es sich ähnlich: Sie kommen aus verschiedensten Fachrichtungen, mit unterschiedlicher Technikaffinität und Erfahrung im VR-Bereich, außerdem hat die Umfrage gezeigt, dass mehr als die Hälfte teilnehmenden Lehrkräfte selbst noch nie ein VR-Headset ausprobiert haben. 
 
-Dementsprechend lag der Fokus bei der Entwicklung besonders darauf, dass die Bedienung intuitiv und einfach ist. Außerdem soll den Lehrkräften mit der Anzeige der verbundenen Geräte mit dem Aktivitätsindikator eine Möglichkeit an die Hand gegeben werden, zu sehen, ob die Schüler-Geräte verbunden sind und alle Inhalte bekommen und anzeigen. Bewusst wurde das System so entworfen, dass die Lehrkräfte keine VR-Brille tragen, damit sie einen Überblick im Klassenzimmer behalten können und trotzdem sehen können, was die Schüler angezeigt bekommen.
+Dementsprechend lag der Fokus bei der Entwicklung besonders darauf, dass die Bedienung intuitiv und einfach ist. Außerdem soll den Lehrkräften mit der Anzeige der verbundenen Geräte eine Möglichkeit an die Hand gegeben werden, zu sehen, ob die Schüler-Geräte verbunden sind und alle Inhalte dargestellt werden. Bewusst wurde das System so entworfen, dass die Lehrkräfte keine VR-Brille tragen, damit sie einen Überblick im Klassenzimmer behalten können und trotzdem sehen können, was die Schüler angezeigt bekommen.
 
-\subsection{Grundstruktur}
-Das VRClassroom System besteht aus zwei verschiedenen Applikationen: Zum einem der Schüler-App, die auf den VR-Systemen läuft mit denen die Schüler sehen können, was der Lehrer ihnen präsentiert, und die Lehrer-App, in der die Lehrkraft die verschiedenen Inhalte hineinladen, Markierungen auf die Inhalte setzen kann und und sehen kann, welche Schüler-Geräte aktuell verbunden sind.
+% \subsection{Grundstruktur}
+% TODO: das ist einfach nur das gleiche wie im Absatz drüber "Anwender", ich würde es einfach weglassen
 
-Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in Berührung gekommen sind, sondern es gewohnt sind mit den ``klassischen'' Medien zu arbeiten, lag der Augenmerk bei der Entwicklung darauf, dass das benötigte technische Verständnis möglichst niedrig ist und auch Personen, die sich selbst als nicht technikaffin bezeichnen würden, keinerlei Probleme bei der Nutzung haben. Gleiches gilt selbstverständlich auch auf der Seite der Schüler. Da diese aber hauptsächlich passiv agieren, standen hier die Lehrkräfte im Mittelpunkt der Aufmerksamkeit.
+% Das VRClassroom System besteht aus zwei verschiedenen Applikationen: Zum einem der Schüler-App, die auf den VR-Systemen läuft mit denen die Schüler sehen können, was der Lehrer ihnen präsentiert, und die Lehrer-App, in der die Lehrkraft die verschiedenen Inhalte hineinladen, Markierungen auf die Inhalte setzen kann und und sehen kann, welche Schüler-Geräte aktuell verbunden sind.
+
+% Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in Berührung gekommen sind, sondern es gewohnt sind mit den ``klassischen'' Medien zu arbeiten, lag der Augenmerk bei der Entwicklung darauf, dass das benötigte technische Verständnis möglichst niedrig ist und auch Personen, die sich selbst als nicht technikaffin bezeichnen würden, keinerlei Probleme bei der Nutzung haben. Gleiches gilt selbstverständlich auch auf der Seite der Schüler. Da diese aber hauptsächlich passiv agieren, standen hier die Lehrkräfte im Mittelpunkt der Aufmerksamkeit.
 
 Grafik \ref{fig:architecture}
 
@@ -1100,22 +1105,21 @@ Grafik \ref{fig:architecture}
 \end{figure}
 
 \subsection{Lehrer-Applikation}
-Die Lehrer-Applikation besteht aus einer Electron-App, die in zwei logische Teile zerlegt ist. Das ist zum einen der main-Prozess, der es erlaubt Zugriffe auf das File-System des Rechners zu machen und für rechenaufwändige Hintergrundprozesse genutzt wird, und zum Anderen der render-Prozess. Der render-Prozess ist der Teil des Programms, das die Lehrkraft letztendlich auf ihrem Bildschirm sieht.
+Die Lehrer-Applikation besteht aus einer Electron-App, die in zwei logische Teile zerlegt ist. Das ist zum einen der main-Prozess, dieser startet die Applikation und läuft in node.js ohne sichtbares UI. Hier können weitere Hintergrundprozess gestartet werden. Zum Anderen gibt es den renderer-Prozess. Dieser verwendet Chromium und ist für die Darstellung des UIs verantwortlich, das die Lehrkraft letztendlich auf ihrem Bildschirm sieht.
 
-Die Lehrer-App enthält genau genommen zwei render-Prozesse: Die teacher-App, in der die Lehrkraft alle verbundenen Geräte sehen kann und verschiedene Inhalte hineinladen kann, und die student-App, die als iFrame in die teacher-App eingebunden ist und auf den Geräten der Schülern läuft.
+Die Lehrer-Applikation startet aus dem main-Prozess einen HTTP-Server. Über diesen wird die student-App und die Inhalte im lokalen Netzwerk zugänglich gemacht. Aus dem main-Prozess wird der renderer-Prozess gestartet, der das UI der teacher-App anzeigt. In diesem UI wird die student-App, die als iFrame eingebunden. So kann die Lehrkraft sehen was auf den Geräten der Schülern läuft.
 
-Die teacher-App enthält außerdem noch den QR-Code Generator, der in einem zweiten Fenster geladen wird.
+Die teacher-App enthält außerdem noch den QR-Code Generator, der in einem zweiten renderer-Prozess geladen wird.
 
-Um eine Liste der verbundenen Geräte zu halten und Veränderungen der Inhalte auf die Schüler-Geräte zu synchronisieren, startet die teacher-App einen Websocket-Server, mit dem sich alle Schüler-Geräte verbinden. 
+Um eine Liste der verbundenen Geräte zu halten und Veränderungen der Inhalte auf die Schüler-Geräte zu synchronisieren, wird ein WebSocket-Server gestartet, mit dem sich alle Schüler-Geräte verbinden. 
 
 \subsubsection{Verbundene Geräte}
-Wie in der Grafik zu sehen hält die teacher-App eine Liste mit allen verbundenen Geräte dieser Session. Sind die Geräte gerade aktiv, werden sie mit einem grünen Icon dargestellt, sind sie inaktiv, mit einem Roten.
+Wie in der Grafik zu sehen hält die teacher-App eine Liste mit allen verbundenen Geräte dieser Session. Sind die Geräte gerade aktiv, werden sie mit einem grünen Icon dargestellt, sind sie inaktiv, mit einem roten. Da das Laden der Inhalte je nach Größe auch über das lokale Netzwerk etwas dauern kann, wird der Indikator in gelb dargestellt, währen das Schüler-Gerät die Inhalte noch herunterlädt. Sobald der Inhalt bereit zum abspielen ist, wird der Indikator grün.
 
 Das soll der Lehrkraft erleichtern zu überprüfen, ob die Schüler den gezeigten Stoff verfolgen oder sich anderweitig beschäftigen.
 
-Haben die Schüler bereits einen Namen eingegeben, wird dieser in der Liste angezeigt. Ist dies nicht der Fall wird aus dem user-agent versucht möglichst genau zu schließen, um welches Gerät es sich handelt, sodass der Lehrer zumindest einschränken kann, um welchen Schüler bzw welche Schülerin es sich handeln könnte. 
+Haben die Schüler bereits einen Namen eingegeben, wird dieser in der Liste angezeigt. Ist dies nicht der Fall wird aus dem user-agent der WebSocket-Verbindung versucht möglichst genau zu schließen, um welches Gerät es sich handelt, sodass der Lehrer zumindest einschränken kann, um welchen Schüler bzw. welche Schülerin es sich handeln könnte. 
 
-NEU: Bei Modellen und Videos der loading-Status der einzelnen Geräte
 
 \bigskip
 
@@ -1125,24 +1129,24 @@ Mozilla/5.0 (iPhone; CPU iPhone OS 5\_0 like Mac OS X) AppleWebKit/534.46 (KHTML
 \end{framed}
 
 Daraus lässt sich schließen, dass es sich um eine iPhone handelt, welches Safari benutzt, um die Schüler-App zu laden. Die Oculus Geräte hingegen geben in ihrem User-Agent an, den Oculus Browser zu verwenden und sind so auch gut von den anderen verbundenen Geräten zu unterscheiden. Da aber hier nicht ersichtlich wird welches Oculus-Gerät es genau ist wird nur ``Oculus device'' angegeben und nicht genauer spezifiziert, ob es sich dabei um eine Go, Quest oder Rift handelt.
- %hier Grafik connected clients einfügen% 
+ % TODO hier Grafik connected clients einfügen% 
 
 \subsubsection{Hineinladen von Inhalten}
-Um Inhalte in VRClassroom hineinzuladen kann mit ``STRG'' + ``o'' beziehungsweise Cmd+o oder in der Menüleiste über ``Datei'' und ``Öffnen...'' der FileBrowser geöffnet werden, in dem dann die gewünschte Datei ausgewählt wird. Ist eine Datei ausgewählt wird sie sofort in die App geladen und auf allen verbundenen Geräten angezeigt.
-Wurde die VRClassroom App zum ersten Mal installiert wird ein Ordner ``.vrclassroom'' im Dateisystem angelegt, in den die verwendeten Dateien hineingeladen werden. Von dort aus werden sie dann auch für den Zugriff durch die verbundenen Schüler-Geräte freigegeben.
+Um Inhalte in VRClassroom hineinzuladen kann in der Menüleiste über ``Datei'' und ``Öffnen...'' die gewünschte Datei ausgewählt werden. Wird eine Datei geöffnet, wird sie sofort in die App geladen und auf allen verbundenen Geräten angezeigt.
+Wurde die VRClassroom App zum ersten Mal installiert wird ein Ordner ``.vrclassroom'' im Home-verzeichnis angelegt, in den die verwendeten Dateien hineingeladen werden. Von dort aus werden sie dann auch für den Zugriff durch die verbundenen Schüler-Geräte über den HTTP-Server freigegeben.
 
-Bereits früher verwendete Dateien sind unter ``Datei'' und ``Zuletzt geöffnet'' zu finden und können so bequem wieder verwendet werden ohne sie lange im Dateisystem suchen zu müssen. Neu geöffnete Dateien werden beim Öffnen in den ``.vrclassroom''-Ordner im Dateisystem geladen und sind ab diesem Moment auch in der Liste der bereits geöffneten Dateien zu finden.
+Bereits früher verwendete Dateien sind unter ``Datei'' und ``Zuletzt geöffnet'' zu finden und können so bequem wieder verwendet werden ohne sie lange im Dateisystem suchen zu müssen. Neu geöffnete Dateien werden beim Öffnen in den ``.vrclassroom''-Ordner im Dateisystem kopiert und sind ab diesem Moment auch in der Liste der bereits geöffneten Dateien zu finden.
 
-Drittens können auch noch die URLs von Google Streeview-Panoramen eingegeben werden, sodass dann allen verbundenen Geräten das verlinke Panorama angezeigt wird. Dazu muss ``Datei'' und ``StreetView...'' ausgewählt werden und in das Pop-Up die URL zum gewünschten Panorama eingegeben werden. Handelt es sich um eine korrekte URL wird dann das StreetView Bild geladen und angezeigt wie ein normales 360°-Foto. Für die Nutzer der Schüler-App ist kein Unterschied zu normalen 360°-Fotos erkennbar.
+Drittens können auch noch die URLs von Google StreeView-Panoramen eingegeben werden, sodass dann allen verbundenen Geräten das verlinke Panorama angezeigt wird. Dazu muss ``Datei'' und ``StreetView...'' ausgewählt werden und in das Pop-Up die URL zum gewünschten Panorama eingegeben werden. Handelt es sich um eine korrekte URL wird dann das StreetView Bild geladen und angezeigt wie ein normales 360°-Foto. Für die Nutzer der Schüler-App ist kein Unterschied zu normalen 360°-Fotos erkennbar. Das StreetView-Bild wird dabei aus dem Internet auf den Lehrer-Computer heruntergeladen und vor dort and die Schüler-Geräte verteilt.
  
-\subsubsection{Controls}
-Wie in Grafik \ref{fig:controls} zu sehen sind die Controls, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
+\subsubsection{Bedienelemente}
+Wie in Grafik \ref{fig:controls} zu sehen sind die Bedienelemente, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
 
-Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle unterscheiden sich die Bedienelemente und Funktionen, das Setzen einer Markierung ist allerdings bei allen Medientypen gegeben.
+Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle unterscheiden sich die Bedienelemente und Funktionen, das Setzen einer Markierung ist allerdings bei allen Medientypen möglich.
 
 \begin{figure}
   \includegraphics[width=0.9\linewidth]{images/controls-overlay.png}
-  \caption{Die Kontrollleiste als Overlay über den iFrame der React360-App.}
+  \caption{Die Bedienelemente als Overlay über den iFrame der React360-App.}
   \label{fig:controls}
 \end{figure}
 
@@ -1156,21 +1160,19 @@ Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle untersc
 	\label{fig:marker}
 \end{SCfigure}
 
-Soll ein Marker gesetzt werden, muss zuerst in den ``Markierung setzen''-Modus gewechselt werden, indem in der Control Bar auf ``Marker setzen'' geklickt wird. Danach kann an beliebiger Stelle eine Markierung gesetzt werden.
+Soll ein Marker gesetzt werden, muss zuerst in den Marker-Modus gewechselt werden. Dazu klickt man auf ``Marker setzen''. Danach kann an beliebiger Stelle in der Szene geklickt werden um einen Marker zu setzen.
 
-Um die 3D-Koordinaten des Markers zu bekommen wird mit Hilfe von Mouseposition und Fenstergröße ein Strahl berechnet, der aus der 2D-Koordinate der Mouseposition ausgeht. 
-Bei 360°-Fotos und -Videos wird die Entfernung zur Kamera auf einen festen Wert gesetzt, der so gewählt wurde, dass er gerade noch im Zylinder der Welt liegt. Mit der Entfernung zur Kamera lässt sich die 3D-Koordinate dann leicht berechnen.
+Um die 3D-Koordinaten des Markers zu bestimmen wird mit Hilfe der 2D-Klick-Koordinaten, der Fenstergröße, der Kameraposition und -richtung ein Strahl berechnet, der durch die Kameraposition und den Cursors geht. Der Marker muss auf diesem Strahl positioniert werden. Jedoch fehlt die Tiefeninformation.
+ 
+Bei 360°-Fotos und -Videos wird die Entfernung des Markers zur Kamera auf einen festen Wert gesetzt, der so gewählt wurde, dass er gerade noch im Zylinder der Welt liegt.
 
-Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Modells mit dem virtuellen Strahl berechnet werden. 
-(Soll das wirklich rein?) In React360 gibt es momentan keine Möglichkeit auf diese Weise auf die in der 3D-Welt platzierten 3D-Modelle zuzugreifen, sodass
-
-Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
+Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Modells mit dem virtuellen Strahl berechnet werden. Dazu wird getestet mit welchen (Teil-)Objekten der Szene sich der Strahl schneidet. Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
 
 Das verwendete Modell erinnert wie in Grafik \ref{fig:marker} zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
 
 
 
-\paragraph{Photo Controls}
+\paragraph{Fotos}
 Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Grafik \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
 
 \begin{figure}[h]
@@ -1180,12 +1182,12 @@ Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fo
 \end{figure}
 
 
-\paragraph{Video Controls}
+\paragraph{Videos}
 Wird ein Video gezeigt, hat die Lehrkraft mehrere unterschiedliche Funktionen in der Kontrollleiste: 
-Wie in Grafik \ref{fig:videocontrols} zu sehen sind die Elemente ähnlich wie bei bekannten Videoplayern wie Quicktime oder Netflix gehalten. Ganz links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
-Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezifische Button ist der Sound-Button, der im aktiven Zustand auf alle Geräten den Ton des Videos abspielt. Der Sound-Button ist standardmäßig deaktiviert. 
+Wie in Grafik \ref{fig:videocontrols} zu sehen ist links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
+Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezifische Button ist der Sound-Button, der im aktiven Zustand auf allen Geräten den Ton des Videos aktiviert. Der Sound-Button ist standardmäßig deaktiviert. 
 
-Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch zurückgesetzt.
+Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch entfernt.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/videocontrols.png}
@@ -1193,7 +1195,7 @@ Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie s
   \label{fig:videocontrols}
 \end{figure}
 
-\paragraph{Model Controls}
+\paragraph{3D-Modelle}
 Wie in Grafik \ref{fig:modelcontrols} zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
 
 Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, dass nur auf dem Modell eine Markierung gesetzt werden kann. Wird außerhalb des 3D-Modells geklickt, wird keine Markierung gesetzt.
@@ -1205,22 +1207,27 @@ Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, 
 \end{figure}
  
 \subsection{Kommunikation zwischen Lehrer-App und Schüler-App}
-Wie in Grafik XXX zu erkenne kommunizieren die Lehrer-App und die Schüler-App über eine Websocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl die Lehrer-App, die Schüler-App und ein Asset-Server gestartet. Über den Asset-Server sind die Inhalte erreichbar, die die Lehrer-App an die Schüler-App schickt.
+Wie in Grafik XXX zu erkennen kommunizieren die Lehrer-App und die Schüler-App über eine WebSocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl ein WebSocket-Server als auch ein HTTP-Server (Asset-Server) gestartet. Der HTTP-Server liefert die Inhalte so wie die Schüler-App selbst aus. Der WebSocket-Server wird zur Echtzeit-Kommuniktion zwischen Lehrer- und Schüler-App verwendet.
+
+Wenn die Schüler-App auf einem Gerät geladen wird, stellt sie die Verbindung zum WebSocket-Server her und meldet sich damit an. Als Antwort schickt die Lehrer-App den aktuellen Zustand. So wird sichergestellt, dass die Schüler-App alle Informationen hat, die verpasst hat, solange sie noch nicht verbunden war.
 
 Bei jeder inhaltlichen Veränderung in der Lehrer-App wird eine Nachricht an alle verbundenen Geräte geschickt, sodass diese dann die Anzeige aktualisieren können.
-Damit alle Geräte zu jedem Zeitpunkt über die gleichen Informationen verfügen und auch Geräte, die nach Beginn der Session hinzustoßen alle Information zur Anzeige haben, ist jede Nachricht in der Form wie in YYY zu sehen gestaltet.
+Damit alle Geräte zu jedem Zeitpunkt über die gleichen Informationen verfügen und auch Geräte, die nach Beginn der Session hinzustoßen alle Information zur Anzeige haben, enthält jede Nachricht alle Informationen zum aktuellen Zustand der App.
+
+% TODO Code snippet vom State einfügen, dann brauchst du auch die Felder nich einzeln auflisten
 
 Eine Nachricht enthält immer die Felder ``mediatype'', ``url'', ``markers'',``playing'',``playbackPosition'',``rotation'',``scaleFactor'' und``muted''.
-Das Feld ``mediatype'' kann die Werte ``photo'',``video'' und``model'' enthalten und ist dafür zuständig, dass die Schüler-App weiß, welcher Medientyp angezeigt wird und damit auch, welche Controls angezeigt werde sollen. 
-Im URL-Feld enthält die URL des aktuell anzuzeigenden Inhalts. Dieses Feld wird nur verändert, wenn ein neuer Medientyp hineingeladen wird. Geschieht dies wird auch das Array der ??marker''-Positionen zurückgesetzt. Das Array enthält die Positionen der Markierungen in Form von Tripeln innerhalb des Arrays.
 
-Die Felder ``playing'',``playbackPosition'' und ``muted'' werden nur beim Anzeigen von 360°-Videos verwendet. ``playing'' gibt an, ob das betreffende Video in diesem Moment abgespielt oder pausiert werden soll, ``playbackPosition'' gibt die Stelle im Video an, an der es abgespielt werden soll. Werden Videos abgespielt schickt die Lehrer-App jede Sekunde eine Nachricht mit der aktuellen Abspielposition an alle Geräte und diejenigen, bei denen die Abspielposition um mehr als eine Zeit von PPPPP versetzt ist, springen dann an die mitgeschickte Position, um von dort weiter abzuspielen.
+Das Feld ``mediatype'' kann die Werte ``photo'',``video'' und``model'' enthalten und ist dafür zuständig, dass die Schüler-App weiß, welcher Medientyp angezeigt wird. 
+Im URL-Feld enthält die URL des aktuell anzuzeigenden Inhalts. Dies sind lokale HTTP-URLs, die vom Asset-Server auf dem Lehrer-Computer gehostet werden. Dieses Feld wird nur verändert, wenn ein neuer Medientyp hineingeladen wird. Geschieht dies wird auch das Array der ``marker''-Positionen zurückgesetzt. Das Array enthält die Positionen der Markierungen in Form von Tripeln innerhalb des Arrays.
+
+Die Felder ``playing'',``playbackPosition'' und ``muted'' werden nur beim Anzeigen von 360°-Videos verwendet. ``playing'' gibt an, ob das betreffende Video in diesem Moment abgespielt oder pausiert werden soll, ``playbackPosition'' gibt die Stelle im Video an, an der es abgespielt werden soll. Werden Videos abgespielt schickt die Lehrer-App jede Sekunde eine Nachricht mit der aktuellen Abspielposition an alle Geräte. Falls die Abspielposition auf einem Gerät um mehr als eine Sekunde versetzt ist, springen dann an die mitgeschickte Position, um von dort weiter abzuspielen. So wird das Abspielen über die Geräte hinweg synchronisiert.
 Das ``muted''-Feld gibt an, ob der Ton des Videos an den Geräten abgespielt werden soll oder nicht.
 
-Nachrichten von Seite der Schüler-Geräte sind viel seltener als anders herum. Gibt der Schüler seinen Namen ein wird dieser als Nachricht an die Lehrer-App geschickt. Außerdem senden die Geräte eine Nachricht, wenn sich der visibility-Status ändern, also zum Beispiel der Browser geschlossen wird. Außerdem geben die Schüler-Geräte Rückmeldung an die Lehrer-App, solange sie Inhalte laden und wiederum, wenn sie die Inhalte fertig geladen beziehungsweise Videos genug vorgeladen haben. Das wird dann mit dem orangenen Status-Indikator neben dem Geräte-Namen in der Lehrer-App angezeigt. Wechselt hier die Farbe wieder auf grün, ist das Gerät bereit die Inhalte anzuzeigen.
+Nachrichten von Seite der Schüler-Geräte sind viel seltener als anders herum. Gibt der Schüler seinen Namen ein wird dieser als Nachricht an die Lehrer-App geschickt. Außerdem senden die Geräte eine Nachricht, wenn sich der visibility-Status ändern. Zum Beispiel, wenn der Browser geschlossen wird. Außerdem geben die Schüler-Geräte Rückmeldung an die Lehrer-App, solange sie Inhalte laden und wiederum, wenn sie die Inhalte fertig geladen beziehungsweise Videos genug vorgeladen haben. Das wird dann mit dem gelben Status-Indikator neben dem Geräte-Namen in der Lehrer-App angezeigt. Wechselt hier die Farbe wieder auf grün, ist das Gerät bereit die Inhalte anzuzeigen.
 
 \subsection{QR-Code Fenster}
-Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron App auf dem Lehrer-Computer gestartet wird. Es zeigt, wie in \ref{fig:qrcode} zu sehen, einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem die URL zu laden, auf der sie die Schüler-Applikation erreichen können. Der QR-Code wird dynamisch beim Öffnen der App generiert.
+Das QR-Code Fenster ist ein zweites Browserfenster, das aus dem main-Prozess der Electron-App auf dem Lehrer-Computer gestartet wird. Es zeigt, wie in \ref{fig:qrcode} zu sehen, einen QR-Code, den die SchülerInnen mit ihren Smartphones scannen können, um bequem die URL zu laden, auf der sie die Schüler-Applikation erreichen können. Der QR-Code wird dynamisch beim Öffnen der App aus der lokalen IP-Adresse des Computers generiert.
 
 Für Geräte, die keine Kamera haben oder wenn das Scannen des QR-Codes fehlschlägt, wird zudem unterhalb des QR-Codes die URL angezeigt, unter der die Schüler-Applikation zu erreichen ist. 
 
