@@ -3,36 +3,32 @@
 VRClassroom is a cross-plattform application for the usage of 360 content in education. It consists of two parts: the teacher app where the theacher can put the content they want to show their students and the students app.
 The students app is a React360 application which presents the content on the VR-Headsets to the students.
 
-![VRClassroom Teacher App](vronifuchsberger.github.com/masterarbeit/thesis/images/controls-overlay.png)
-![VRClassroom Student App](vronifuchsberger.github.com/masterarbeit/thesis/images/WebVR2.png)
+![VRClassroom Teacher App](https://raw.githubusercontent.com/vronifuchsberger/VRClassroom/master/thesis/images/controls-overlay.png)
+![VRClassroom Student App](https://raw.githubusercontent.com/vronifuchsberger/VRClassroom/master/thesis/images/WebVR2.png)
 
-Pre-compiled apps for all plattforms can be found as releases in this repo.
 
 ## Usage
 
+Pre-compiled apps for all plattforms can be found as releases in this repo.
+
+
+## Development 
 
 ### System requirements
-To use VRClassroom your computer needs at least:
-* Node 10
-* Electron 3
-* Yarn
+* node.js 10+
+* yarn
 
-### Development 
-1. Clone Repo
-2. Install third-pary libraries on all three internal apps (teacher app, student app, electron app)
-  ```yarn install``` in 'masterarbeit'-directory, 'masterarbeit/src/teacher'-directory und 'masterarbeit/src/student'-directory
-  
-  ```masterarbeit$ yarn install```
-  
-  ```teacher$ yarn install```
-  
-  ```student$ yarn install```
-  
-3. To start development servers execute yarn start in 'masterarbeit'-directory
+### Getting started
 
-```masterarbeit$ yarn start```
+1. Clone this repo
+2. To install third-pary libraries for all three internal apps (teacher app, student app, electron app) run 
+```
+yarn install
+cd src/teacher && yarn install
+cd src/student && yarn install
+```
+  
+3. To start development servers run `yarn start` in main directory
   
 ### Build App
-To build the VRClassroom app for all plattforms execute the build.sh-script in the 'masterarbeit'-directory
-
-```masterarbeit$ ./build.sh```
+To build release version of VRClassroom for all plattforms run  `./build.sh`
