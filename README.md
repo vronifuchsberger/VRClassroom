@@ -3,8 +3,8 @@
 VRClassroom is a cross-plattform application for the usage of 360 content in education. It consists of two parts: the teacher app where the theacher can put the content they want to show their students and the students app.
 The students app is a React360 application which presents the content on the VR-Headsets to the students.
 
-![VRClassroom Teacher App](vronifuchsberger.github.com/masterarbeit/thesis/images/controls-overlay.png)
-![VRClassroom Student App](vronifuchsberger.github.com/masterarbeit/thesis/images/WebVR2.png)
+![VRClassroom Teacher App](https://raw.githubusercontent.com/vronifuchsberger/VRClassroom/master/thesis/images/controls-overlay.png)
+![VRClassroom Student App](https://raw.githubusercontent.com/vronifuchsberger/VRClassroom/master/thesis/images/WebVR2.png)
 
 Pre-compiled apps for all plattforms can be found as releases in this repo.
 
