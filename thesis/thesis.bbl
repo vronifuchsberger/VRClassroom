@@ -67,21 +67,21 @@ J.-W. Lin, H.~Duh, D.~Parker, H.~Abi-Rached, and T.~Furness, ``{Effects of
 \bibitem{HTCCorporationViveFocus}
 \BIBentryALTinterwordspacing
 {HTC Corporation}, ``{Vive Focus}.'' [Online]. Available:
-  \url{https://www.vive.com/cn/product/vive-focus-en/{\%}0A}
+  \url{https://www.vive.com/cn/product/vive-focus-en/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Bastian2018}
 \BIBentryALTinterwordspacing
 M.~Bastian, ``{Lenovo Mirage Solo Test: Besser als Oculus Go?}'' 2018.
   [Online]. Available:
-  \url{https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/{\%}0A}
+  \url{https://vrodo.de/lenovo-mirage-solo-test-besser-als-oculus-go/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Bastian2018a}
 \BIBentryALTinterwordspacing
 ------, ``{Oculus Quest vs. Oculus Go Vergleich: Das sind die Unterschiede},''
   2018. [Online]. Available:
-  \url{https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/{\%}0A}
+  \url{https://vrodo.de/oculus-quest-vs-oculus-go-vergleich-das-sind-die-unterschiede/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Geiselhart2016}
@@ -89,6 +89,12 @@ F.~Geiselhart, M.~Rietzler, and E.~Rukzio, ``{EyeVR: low-cost VR eye-based
   interaction},'' \emph{Proceedings of the 2016 ACM International Joint
   Conference on Pervasive and Ubiquitous Computing Adjunct - UbiComp '16}, pp.
   277--280, 2016.
+
+\bibitem{AvantisSystemsLtd}
+\BIBentryALTinterwordspacing
+{Avantis Systems Ltd.}, ``{ClassVR}.'' [Online]. Available:
+  \url{http://www.classvr.com}
+\BIBentrySTDinterwordspacing
 
 \bibitem{GoogleWordlSense}
 \BIBentryALTinterwordspacing
@@ -101,6 +107,111 @@ Google, ``{WorldSense},'' 2018. [Online]. Available:
 B.~Lang, ``{Oculus Quest Hands-on and Tech Details},'' 2018. [Online].
   Available:
   \url{https://www.roadtovr.com/oculus-quest-hands-specs-tech-details-oculus-connect-5/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Hamilton2018}
+\BIBentryALTinterwordspacing
+I.~Hamilton, ``{5 Things We're Likely To See In 2019 VR Headsets},'' 2018.
+  [Online]. Available:
+  \url{https://uploadvr.com/2019-vr-headset-prediction/{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Davies2016}
+\BIBentryALTinterwordspacing
+A.~Davies, ``{Oculus Rift Vs. HTC Vive Vs. PlayStation VR},'' 2016. [Online].
+  Available:
+  \url{https://www.tomshardware.com/reviews/vive-rift-playstation-vr-comparison,4513-6.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{VRBound}
+\BIBentryALTinterwordspacing
+VRBound, ``{Oculus Rift}.'' [Online]. Available:
+  \url{https://www.vrbound.com/headsets/oculus/rift}
+\BIBentrySTDinterwordspacing
+
+\bibitem{FacebookTechnologiesLLCRift}
+\BIBentryALTinterwordspacing
+{Facebook Technologies LLC}, ``{Oculus Rift}.'' [Online]. Available:
+  \url{https://www.oculus.com/rift/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{HTCCorporationVive}
+\BIBentryALTinterwordspacing
+{HTC Corporation}, ``{Vive VR System}.'' [Online]. Available:
+  \url{https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD{\_}BwE}
+\BIBentrySTDinterwordspacing
+
+\bibitem{VRBoundPlaystationVR}
+\BIBentryALTinterwordspacing
+VRBound, ``{Sony Playstation VR}.'' [Online]. Available:
+  \url{https://www.vrbound.com/headsets/sony/playstation-vr{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SonyInteractiveEntertainmentEuropeLimitedpsvr}
+\BIBentryALTinterwordspacing
+{Sony Interactive Entertainment Europe Limited}, ``{Playstation VR im
+  Detail}.'' [Online]. Available:
+  \url{https://www.playstation.com/de-de/explore/playstation-vr/tech-specs/{\%}0A}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Tissler2018}
+\BIBentryALTinterwordspacing
+J.~Ti{\ss}ler, ``{Standalone VR-Headsets: Virtual Reality f{\"{u}}r alle},''
+  2018. [Online]. Available:
+  \url{https://upload-magazin.de/blog/25071-standalone-vr-headsets/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{VRBoundOculusGo}
+\BIBentryALTinterwordspacing
+VRBound, ``{Oculus Go}.'' [Online]. Available:
+  \url{https://www.vrbound.com/headsets/oculus/go}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Feltham2018}
+\BIBentryALTinterwordspacing
+J.~Feltham, ``{Oculus Quest Specs, Price, Release Date And Everything Else We
+  Know},'' 2018. [Online]. Available:
+  \url{https://uploadvr.com/oculus-quest-specs-price-release-date/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Lenovo}
+\BIBentryALTinterwordspacing
+Lenovo, ``{Mirage Solo with Daydream}.'' [Online]. Available:
+  \url{https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-mirage-solo/Mirage-Solo/p/ZZIRZRHVR01}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Robertson2018}
+\BIBentryALTinterwordspacing
+A.~Robertson, ``{LENOVO'S MIRAGE SOLO IS AN INNOVATIVE VR HEADSET, BUT MOST
+  PEOPLE SHOULDN'T BUY IT},'' 2018. [Online]. Available:
+  \url{https://www.theverge.com/2018/5/4/17318648/lenovo-mirage-solo-google-daydream-standalone-vr-headset-review}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Langley2018}
+\BIBentryALTinterwordspacing
+H.~Langley, ``{HTC Vive Focus VR headset arrives in US and UK, but there's a
+  better one coming},'' 2018. [Online]. Available:
+  \url{https://www.wareable.com/vr/htc-vive-focus-release-date-price-specs-5084}
+\BIBentrySTDinterwordspacing
+
+\bibitem{GoogleLLCCardboard}
+\BIBentryALTinterwordspacing
+{Google LLC}, ``{Google Cardboard}.'' [Online]. Available:
+  \url{https://store.google.com/product/google{\_}cardboard}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SamsungElectronicsGmbHGearVR}
+\BIBentryALTinterwordspacing
+{Samsung Electronics GmbH}, ``{Gear VR with Controller (SM-R324)}.'' [Online].
+  Available:
+  \url{https://www.samsung.com/de/wearables/gear-vr-r324/SM-R324NZAADBT/?cid=de{\_}ppc{\_}google{\_}im-wearables-gearvr-q3restructured{\_}20180720{\_}samsungvr-broad{\&}tmcampid=7{\&}tmad=c{\&}tmplaceref=c{\_}DE{\_}IMECOM{\_}Warm{\_}Brand{\_}GearVR{\_}Broad{\&}tmclickref=b{\_}{\%}2Bsamsung
+  {\%}2Bvr{\&}gclid=EAIaIQobChMIpLnFnuvC3wIVCKQYCh0XVweYEAAYASAAEgLilfD{\_}BwE}
+\BIBentrySTDinterwordspacing
+
+\bibitem{GoogleLLCDaydream}
+\BIBentryALTinterwordspacing
+{Google LLC}, ``{Alles zu Google Daydream View}.'' [Online]. Available:
+  \url{https://store.google.com/product/google{\_}daydream{\_}view{\_}specs}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Wolwort2018}
@@ -259,5 +370,10 @@ K.~Decker, ``{Auto-Play Policy Changes for macOS},'' 2017. [Online]. Available:
 B.~Jones and K.~Weidner, ``{WebVR in Chrome for Android mobile},'' 2017.
   [Online]. Available: \url{https://webvr.rocks/chrome{\_}for{\_}android}
 \BIBentrySTDinterwordspacing
+
+\bibitem{White2008}
+J.~W. White, ``{Examining Net Promoter Score (NPS) as an Effective Evaluation
+  Tool for Measuring Customer and Employee Satisfaction},'' Ph.D. dissertation,
+  Northcentral University Arizona, 2008.
 
 \end{thebibliography}
