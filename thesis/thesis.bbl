@@ -21,6 +21,56 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Stone2017}
+\BIBentryALTinterwordspacing
+W.~B. Stone, ``{Psychometric evaluation of the Simulator Sickness Questionnaire
+  as a measure of cybersickness},'' 2017. [Online]. Available:
+  \url{https://search.proquest.com/openview/c2d59f535cdea2e705131a3b052a1b05/1?pq-origsite=gscholar{\&}cbl=18750{\&}diss=y}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Juan2008}
+C.~Juan, F.~Beatrice, and J.~Cano, ``{An Augmented Reality system for learning
+  the interior of the human body},'' \emph{Proceedings - The 8th IEEE
+  International Conference on Advanced Learning Technologies, ICALT 2008}, pp.
+  186--188, 2008.
+
+\bibitem{Chou1997}
+C.~Chou, H.~L. Hsu, and Y.~U. Yao, ``{Construction of a Virtual Reality
+  Learning Environment for Teaching Structural Analysis},'' \emph{Computer
+  Applications in Engineering Education}, vol.~5, no.~4, pp. 223--230, 1997.
+
+\bibitem{Kerawalla2006}
+L.~Kerawalla, R.~Luckin, S.~Seljeflot, and A.~Woolard, ``{Making It Real
+  Exploring the Potential of Augmented Reality for Teaching Primary School
+  Science},'' 2006.
+
+\bibitem{Bun2015}
+P.~Bu{\'{n}}, F.~G{\'{o}}rski, R.~Wichniarek, W.~Kuczko, A.~Hamrol, and
+  P.~Zawadzki, ``{Application of Professional and Low-cost Head Mounted Devices
+  in Immersive Educational Application},'' \emph{Procedia Computer Science},
+  vol.~75, no. Vare, pp. 173--181, 2015.
+
+\bibitem{garris2002games}
+R.~Garris, R.~Ahlers, and J.~E. Driskell, ``Games, motivation, and learning: A
+  research and practice model,'' \emph{Simulation \& gaming}, vol.~33, no.~4,
+  pp. 441--467, 2002.
+
+\bibitem{ott2009contribution}
+M.~Ott and M.~Tavella, ``A contribution to the understanding of what makes
+  young students genuinely engaged in computer-based learning tasks,''
+  \emph{Procedia-Social and Behavioral Sciences}, vol.~1, no.~1, pp. 184--188,
+  2009.
+
+\bibitem{leite2010attempted}
+W.~L. Leite, M.~Svinicki, and Y.~Shi, ``Attempted validation of the scores of
+  the vark: Learning styles inventory with multitrait--multimethod confirmatory
+  factor analysis models,'' \emph{Educational and psychological measurement},
+  vol.~70, no.~2, pp. 323--339, 2010.
+
+\bibitem{Virvou1995}
+M.~Virvou and G.~Katsionis, ``{On the usability and likeability of virtual
+  reality games for education.pdf},'' pp. 1--22, 1995.
+
 \bibitem{Gans2013}
 R.~F. Gans, ``{Engineering dynamics: From the lagrangian to simulation},''
   \emph{Engineering Dynamics: From the Lagrangian to Simulation}, pp. 1--267,
@@ -47,13 +97,6 @@ M.~C. Potter, B.~Wyble, C.~E. Hagmann, and E.~S. McCourt, ``{Detecting Meaning
 \bibitem{davis2015humans}
 J.~Davis, Y.-H. Hsieh, and H.-C. Lee, ``Humans perceive flicker artifacts at
   500 hz,'' \emph{Scientific reports}, vol.~5, p. 7861, 2015.
-
-\bibitem{Stone2017}
-\BIBentryALTinterwordspacing
-W.~B. Stone, ``{Psychometric evaluation of the Simulator Sickness Questionnaire
-  as a measure of cybersickness},'' 2017. [Online]. Available:
-  \url{https://search.proquest.com/openview/c2d59f535cdea2e705131a3b052a1b05/1?pq-origsite=gscholar{\&}cbl=18750{\&}diss=y}
-\BIBentrySTDinterwordspacing
 
 \bibitem{Lin2002}
 \BIBentryALTinterwordspacing
