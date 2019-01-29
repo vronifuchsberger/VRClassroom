@@ -33,7 +33,7 @@
 \contentsline {subsubsection}{\numberline {3.0.2}Google Expeditions}{14}{subsubsection.3.0.2}
 \contentsline {subsubsection}{\numberline {3.0.3}DiscoveryVR}{14}{subsubsection.3.0.3}
 \contentsline {subsubsection}{\numberline {3.0.4}Unimersiv}{14}{subsubsection.3.0.4}
-\contentsline {section}{\numberline {4}Herausforderungen bei VR-Systemen}{15}{section.4}
+\contentsline {section}{\numberline {4}Herausforderungen}{15}{section.4}
 \contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{15}{subsection.4.1}
 \contentsline {paragraph}{Motion Sickness}{15}{section*.8}
 \contentsline {paragraph}{Simulator Sickness}{15}{section*.9}
@@ -80,7 +80,7 @@
 \contentsline {subsubsection}{\numberline {6.2.4}Three.js}{33}{subsubsection.6.2.4}
 \contentsline {subsubsection}{\numberline {6.2.5}PlayCanvas}{34}{subsubsection.6.2.5}
 \contentsline {subsection}{\numberline {6.3}Vergleich und Auswahl}{34}{subsection.6.3}
-\contentsline {section}{\numberline {7}Software Projekt: VRClassroom}{35}{section.7}
+\contentsline {section}{\numberline {7}VRClassroom}{35}{section.7}
 \contentsline {subsection}{\numberline {7.1}Nutzungsszenario und Anwendungsfokus}{35}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Anwender}{36}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Lehrer-Applikation}{36}{subsection.7.3}
@@ -110,7 +110,7 @@
 \contentsline {subsubsection}{\numberline {8.1.6}Demografie und pers\"onliche Angaben}{50}{subsubsection.8.1.6}
 \contentsline {subsubsection}{\numberline {8.1.7}Ergebnis und Schl\"usse aus der Evaluation}{50}{subsubsection.8.1.7}
 \contentsline {subsection}{\numberline {8.2}VRClassroom Studie in Schulen}{51}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{51}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{52}{subsubsection.8.2.1}
 \contentsline {section}{\numberline {9}Ausblick}{53}{section.9}
 \contentsline {subsection}{\numberline {9.1}Zukunft von VR}{53}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{53}{subsection.9.2}

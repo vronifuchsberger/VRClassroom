@@ -539,7 +539,7 @@ Außerdem werden auch Simulations-Anwendungen für Unternehmen angeboten. Eine die
 
 %_______________________________________________________________________________________________________________________
 \cleardoublepage % Neue rechte Seite anfangen
-\section{Herausforderungen bei VR-Systemen}
+\section[Herausforderungen]{Herausforderungen bei VR-Systemen}
 \label{sec:challenges} 
 In ihrem Artikel ``5 Major Challenges For The VR Industry'' aus dem März 2018 sieht Wolwort den Preis, fehlende Inhalte, fehlende Geschäftsmodelle, die unklaren Folgen für die Gesundheit der Nutzer und das Image als ``gimmick'' als Gründe dafür, dass VR bisher noch nicht den prophezeiten Durchbruch hat. \cite{Wolwort2018}
 
@@ -1140,7 +1140,7 @@ Die Entscheidung für React360 wurde getroffen da React als View-Framework sowohl
 
 
 \cleardoublepage
-\section{Software Projekt: VRClassroom}
+\section[VRClassroom]{Software Projekt: VRClassroom}
 Aufbauend auf den Erkenntnissen dieser Arbeit wurde im Rahmen dieser Arbeit VRClassroom entwickelt. VRClassroom ist ein System, das es Lehrkräften ermöglichen soll 360°-Fotos, -Videos und 3D-Modelle im Unterricht zeigen zu können. Die Schüler können die Inhalte synchronisiert auf VR-Headsets ansehen. Die Lehrkraft kann die Anzeige vom Computer aus auf allen Headsets steuern und trotzdem den Überblick in der Klasse behalten. 
 
 VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Schüler-App, die über den Browser der mobilen Geräte beziehungsweise VR-Headsets erreicht werden kann.
@@ -1190,7 +1190,6 @@ Das soll der Lehrkraft erleichtern zu überprüfen, ob die Schüler den gezeigten S
 
 Haben die Schüler bereits einen Namen eingegeben, wird dieser in der Liste angezeigt. Ist dies nicht der Fall wird aus dem user-agent der WebSocket-Verbindung versucht möglichst genau zu schließen, um welches Gerät es sich handelt, sodass der Lehrer zumindest einschränken kann, um welchen Schüler bzw. welche Schülerin es sich handeln könnte. 
 
-
 \bigskip
 
 Ein User-Agent kann zum Beispiel wie folgt aussehen: 
@@ -1238,8 +1237,6 @@ Bei 360°-Fotos und -Videos wird die Entfernung des Markers zur Kamera auf einen 
 Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Modells mit dem virtuellen Strahl berechnet werden. Dazu wird getestet mit welchen (Teil-)Objekten der Szene sich der Strahl schneidet. Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
 
 Das verwendete Modell erinnert wie in Grafik \ref{fig:marker} zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
-
-
 
 \paragraph{Fotos}
 Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Grafik \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
@@ -1367,11 +1364,13 @@ Im Anschluss wird die Datei geladen und angezeigt. Damit die Modelle zu erkennen
 Auf die ähnliche Weise werden die Marker gerendert, die von der Lehrkraft gesetzt werden können, wie bereits in ref{subsec:marker} beschrieben. Die Marker haben keine Punktlichtquelle, sondern nur ein Ambientlight. Sie werden zudem nicht an eine feste Position, sondern an die von der Lehrkraft ausgewählt Stelle in der VR-Szene gerendert und ihre Größe wird zudem in Abhängigkeit ihrer Entfernung zur Kamera skaliert.
 
 \subsubsection{WebVR Polyfill}
-WebVR ist eine Javascript-API, um Virtual Reality-Inhalte im Browser anzuzeigen. \cite{WebVR} 
+WebVR ist eine Javascript-API, um Virtual Reality-Anwendungen im Browser nutzen. \cite{WebVR} 
 
-Wie in Grafik \ref{fig:WebVRfig}a links zu sehen wird auf einer Web-App, die mit WebVR angesehen werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die WebVR-Ansicht geladen werden kann.
+WebVR stellt dazu wie bereits in \ref{subsec:WebVR} erklärt verschiedene Funktionen zur Verfügung, um auf VR-Headsets und Controller zuzugreifen. Da die VRClassroom App auf Schülerseite keine Controller verwendet, wird hauptsächlich die Funktion des Rendern der VR-App für zwei Linsen genutzt.
 
-Wie Grafik \ref{fig:WebVRfig}b zeigt teilt WebVR dafür den Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard auf. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen passen. Durch die Krümmung der Linsen wird daraus dann eine drei dimensionale 360°-Welt, in der der Nutzer sich umsehen kann.
+Wie in Grafik \ref{fig:WebVRfig}a links zu sehen wird auf einer Web-App, die mit WebVR genutzt werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die VR-Ansicht geladen werden kann.
+
+Wie Grafik \ref{fig:WebVRfig}b zeigt wird dafür der Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard aufgeteilt. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen des genutzten Headsets passen. Durch die Krümmung der Linsen wird daraus dann eine drei dimensionale 360°-Welt, in der der Nutzer sich umsehen kann.
 
 \begin{figure}[h!]
   \centering
@@ -1383,7 +1382,7 @@ Wie Grafik \ref{fig:WebVRfig}b zeigt teilt WebVR dafür den Bildschirm in zwei Bi
     \includegraphics[width=\linewidth]{images/WebVR2.png}
     \subcaption{VR-Szene mit WebVR Ansicht.}
   \end{subfigure}
-  \caption{VR-Szene mit und ohne WebVR Ansicht.}
+  \caption{WebVR Anwendung im nicht aktiven und aktiven VR-Modus.}
   \label{fig:WebVRfig}
 \end{figure}
 
@@ -1391,7 +1390,6 @@ Bisher ist weder in Chrome noch in Safari WebVR standardmäßig unterstützt. In Ch
 In Safari ist es bisher gar nicht möglich WebVR zu nutzen.
 
 Da aber VRClassroom auf allen mobilen Geräten funktionieren soll und möglichst auch keine Einstellungen auf der Nutzerseite benötigen soll, wurde ein Polyfill benutzt, um die WebVR Funktionen für die VRClassroom-App auf allen Geräten nutzen zu können. 
-Dafür 
 
 %______________________________________________________________________
 \cleardoublepage
@@ -1520,11 +1518,9 @@ Dabei sollen die Befragten auf einer Skala von 0 bis 10 angeben, wie wahrscheinl
 0 steht dabei für sehr unwahrscheinlich und 10 steht für extrem wahrscheinlich.
 Aus den Zahlenwerten kann dann ein Wert berechnen, der die Loyalität der Nutzer wiederspiegeln soll.
 
-Personen, die mit einem Wert von 0 bis 6 angeben gelten als Detraktoren, also Personen, die ihren Kollegen davon abraten würden das Produkt zu verwenden. Bei Werten von 7-8 gelten die Personen als Indifferente, die das Produkt nutzen, allerdings nicht positiv Anderen gegenüber davon berichten würden. Die dritte Gruppe sind die Promotoren, die auf die Frage mit 9 oder 10 geantwortet haben. Promotoren werden ihren Kollegen positiv von ihren Erfahrungen mit dem Produkt berichten und dadurch dafür sorgen, dass das Produkt neue Kunden gewinnt und bekannter wird.
-\cite{White2008}
-% TODO: Zahlenwerte überprüfen
+Personen, die mit einem Wert von 0 bis 6 angeben gelten als Detraktoren, also Personen, die ihren Kollegen davon abraten würden das Produkt zu verwenden. Bei Werten von 7-8 gelten die Personen als Indifferente, die das Produkt nutzen, allerdings weder positiv noch negativ Anderen gegenüber davon berichten würden. Die dritte Gruppe sind die Promotoren, die auf die Frage mit 9 oder 10 geantwortet haben. Promotoren werden ihren Kollegen positiv von ihren Erfahrungen mit dem Produkt berichten und dadurch dafür sorgen, dass das Produkt neue Kunden gewinnt und bekannter wird. Der NPS wird berechnet, indem die Prozentzahl der Detraktoren von der der Promotoren abgezogen wird. Daraus ergibt sich ein möglicher Wertebereich des Net Promoters Scores von {-100,+100}.\cite{White2008}
 
-In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Grafik \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom.
+In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Grafik \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom. Der berechnete Net Promoter Score von VRClassroom läge somit bei -45. 
 
 \subsubsection{Einschätzung der Zukunft von VR und VRClassroom}
 Trotz der insgesamt positiven Bewertungen von VRClassroom in der Studie zeigt Grafik \ref{fig:survey7}, dass nur 42\% glauben, dass Virtual Reality zukünftig eine große Rolle im Schulunterricht spielen wird.
@@ -1609,8 +1605,7 @@ Die Studie zeit allerdings auch, dass viele Lehrkräfte interessiert an VR sind, 
 
 Zukünftig ist damit zu rechnen, dass die VR-Headsets weiter im Preis fallen und gleichzeitig mehr Rechenleistung bekommen. Zudem zeigen die Ankündigungen, dass immer mehr Stand-alone Headsets auf den Markt kommen werden.
 
-Weiterhin könnte es sein, dass die Entwicklung der Headsets mit der Zeit wieder weg von Controllern und hin zu anderen Interaktionskonzepten gehen wird. Dabei kämen zum Beispiel das Tracken der Augenbewegungen wie es bei EyeVR passiert \cite{Geiselhart2016} oder die Nutzung von Freihandgesten wie es die ClassVR Headsets tun in Frage. \cite{}
-%TODO  ClassVR
+Weiterhin könnte es sein, dass die Entwicklung der Headsets mit der Zeit wieder weg von Controllern und hin zu anderen Interaktionskonzepten gehen wird. Dabei kämen zum Beispiel das Tracken der Augenbewegungen wie es bei EyeVR passiert \cite{Geiselhart2016} oder die Nutzung von Freihandgesten wie es die ClassVR Headsets tun in Frage. \cite{AvantisSystemsLtd}
 
 Eine weitere Veränderung ist die Wahrnehmung von Virtual Reality. Wie die Autorin von ``5 Major Challenges For The VR Industry'' beschreibt wird momentan VR von viele Menschen noch als Gimmick wahrgenommen. Diese Wahrnehmung wird sich aber zusehends ändern, wenn mehr Anwendungen abseits von Spielen auf den Markt kommen. \cite{Wolwort2018}
 
@@ -1953,6 +1948,8 @@ Nachfolgend werden die Fragen der Online-Umfrage zu VRClassroom aufgeführt. Die 
 \end{enumerate}
 
 \subsection*{Lizenzierung}
+
+\clearpage
 
 \section*{Inhalt der beigelegten CD}
 Die beigelegte CD enthält folgende Dateien:
