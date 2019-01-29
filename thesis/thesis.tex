@@ -270,22 +270,23 @@ Fast alle in dieser Arbeit untersuchten Geräte haben dabei den gleichen Prozesso
 \subsubsection{Eingabemethoden}
 Es zwei grundsätzliche Eingabemethoden für Virtual Reality, die momentan verwendet werden: Eingaben über einen oder mehrere externe Controller oder aber die Eingabe am Headset.
 
- % mit verschiedenen Buttons und einem ``Raycaster'' in der VR-Welt und das Auslösen von Touch-Events auf dem Display des VR-Headsets. 
-
 Eine einfache Methode für die Eingabe am Headset selbst ist bei Smartphone-gestützten Systemen das Auslösen von Touch-Eingaben auf dem Smartphone-Display. Ein Beispiel dafür sind Google Cardboards, die einen Auslöser am Gehäuse haben, der eine Art ``Arm'' auf das Display drückt. Einige Nachbauten des ursprünglichen Google Cardboards verwenden Magnete um Touch-Eingaben auf kapazitiven Touchscreens auszulösen.
 %TODO (Diese Technik noch genauer erläutern?)
-Egal mit welcher der beiden Techniken das Touch-Event ausgelöst wird, erfolgt das Touch-Event immer an der gleichen Stelle auf dem Display. Der Nutzer kann also keine bestimmte Stelle in der Szene auswählen. Deshalb wird bei dieser Eingabemetohde meist der Mittelpunkt der aktuellen Blickrichtung als Position oder Richtung des ausgelösten Events interpretiert.
+
+Egal mit welcher der beiden Techniken das Touch-Event ausgelöst wird, erfolgt das Touch-Event immer an der gleichen Stelle auf dem Display. Der Nutzer kann also keine bestimmte Stelle in der Szene auswählen. Deshalb wird bei dieser Eingabemethode meist der Mittelpunkt der aktuellen Blickrichtung als Position oder Richtung des ausgelösten Events interpretiert.
 
 Ganz ohne Eingabe am Touchscreen können Gaze-Events (engl. ``starren'') zur Eingabe verwendet werden. Reagiert ein Bereich in einer Szene auf Gaze-Events, so löst das Ereignis aus, wenn der Bereich für eine bestimmte Zeit ``angestarrt'' wird. Üblicherweise wird der Mittelpunkt des Blickfelds als Zeiger für Gaze-Event verwendet.
 
-Externe 3DoF-Controller bieten meist mehrere Buttons zur Eingabe und stellen einen Zeiger da, mit dem Bereiche in der Szene ausgewählt werden können. Üblicherweise ist der Ursprung des Zeigers an einem Ort fixiert. Über Beschleunigungssensoren wird die Richtung des Zeigers bestimmt, in der ein Strahl ausgesendet wird (``Raycaster'').
+Externe 3 DoF-Controller bieten meist mehrere Buttons zur Eingabe und stellen einen Zeiger da, mit dem Bereiche in der Szene ausgewählt werden können. Üblicherweise ist der Ursprung des Zeigers an einem Ort fixiert. Über Beschleunigungssensoren wird die Richtung des Zeigers bestimmt, in der ein Strahl ausgesendet wird (``Raycaster'').
 
-Bei 6 DoF-Controllern, wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3DoF-Controllern, ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
+Bei 6 DoF-Controllern, wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3 DoF-Controllern, ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
 
 Bisher setzen keine Systeme auf Spracheingabe. Eine Entwicklung in diese Richtung ist aber abzusehen, da die Eingabe sehr natürlich ist und dadurch die Zugänglichkeit zu VR-Systemen erhöht werden kann.
 
 In ihrer Arbeit haben Geiselhart et al. ``EyeVR'' entwickelt. Dazu haben sie eine Kamera in ein bestehendes VR-Headset eingebaut, die die Bewegungen der Augen registriert. Sie haben dazu eine Software entwickelt, die sowohl die Pupillenbewegungen als auch die Bewegungen des Lids registriert und als Input verarbeiten kann. 
  \cite{Geiselhart2016}
+ 
+ Außerdem gibt es Headsets, die einfache Handgesten aus dem Kamerabild als Eingabemethode nutzen. Ein Beispiel dafür sind die Headsets von ClassVR. \cite{AvantisSystemsLtd}
 
 \subsubsection{Positional Tracking}
 Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum oder die Veränderung der Position relativ zum Raum berechnet werden. Positional Tracking wird also generell nur von 6DoF-Headsets genutzt.
@@ -312,7 +313,7 @@ Bei allen Geräten, die in Tabelle \ref{tab:headsets3} aufgeführt sind, bezieht s
 Wie in \ref{sec:challenges} erläutert sieht die Autorin des Artikels ``5 Major Challenges For The VR Industry'' den Preis als eines der Hautprobleme, dass sich VR noch nicht weiter durchgesetzt hat.
 Da aber besonders die Smartphone-gestützten VR-Systeme sehr günstig zu bekommen sind, gilt dieses Argument eigentlich nicht wirklich.
 
-Trotzdem wird von Experten erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch die hochwertigen Lösungen erschwinglicher für alle Nutzergruppen werden. %TODO Quelle
+Trotzdem wird erwartet, dass die Preise für VR-System weiter sinken werden, sodass auch hochwertige Lösungen erschwinglicher für alle Nutzergruppen werden. \cite{Hamilton2018}
 
 Die Preise in den Tabellen \ref{tab:headsets1}, \ref{tab:headsets2} und \ref{tab:headsets3} sind in US-Dollar, wie sie auf dem amerikanischen Markt zu kaufen sind. Darin ist keine Umsatzsteuern enthalten.
 
@@ -333,25 +334,16 @@ HTC Vive & 6 DoF & 1080x1200  \newline 90Hz \newline 110° & SteamVR-Tracking Con
   ~\label{tab:headsets1}
 \end{table}
 
-% https://www.tomshardware.com/reviews/vive-rift-playstation-vr-comparison,4513-6.html
-% Trackingsysteme und Controller Vergleich
-
-% Vergleich: https://www.vrnerds.de/vr-brillen-vergleich/
-
-
 \subsubsection{Oculus Rift}
 Die Oculus Rift ist die erste von Oculus herausgebrachte VR-Brille. Sie wird durch einen Windows-Computer bespielt und wird durch zwei Kameras, die auf dem Schreibtisch um den Bildschirm des Computer platziert werden können, optisch getrackt. 
 
-Mit der Oculus Rift kommen zwei Oculus Touch Controller, diese haben jeweils zwei Action-Buttons, einen Menü-Button und einen Thumbstick sowie einen rückseitigen Button, der für den Zeigefinger gedacht ist. Die Buttons können erkennen, ob ein Finger aufliegt, während der Button aber noch nicht gedrückt wurde. Dies erlaubt neben dem Klicken der Buttons auch die Position der Finger zu bestimmen, und so zu erkennen, ob der Nutzer beispielsweise ein Faust bildet.
+Mit der Oculus Rift kommen zwei Oculus Touch Controller, diese haben jeweils zwei Action-Buttons, einen Menü-Button und einen Thumbstick sowie einen rückseitigen Button, der für den Zeigefinger gedacht ist. Die Buttons können erkennen, ob ein Finger aufliegt, während der Button aber noch nicht gedrückt wurde. Dies erlaubt neben dem Klicken der Buttons auch die Position der Finger zu bestimmen, und so zu erkennen, ob der Nutzer beispielsweise ein Faust bildet. \cite{Davies2016}
 
 Der Augenabstand (Inter-pupillary distance; IPD) ist verstellbar zwischen 58 und 72mm, der Linsendurchmesser liegt bei circa 50mm. 
 
 Die Oculus Rift ist mit bis zu 470g deutlich leichter als die beiden anderen Kabel-gebundenen VR-Brillen. Auch die Controller sind mit 160g merkbar leichter als die der HTC Vive.
 
-Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die Oculus Rift Brille, die Oculus Touch Controller und die zwei Sensoren benötigt. 
-
-% https://www.vrbound.com/headsets/oculus/rift
-% https://www.oculus.com/rift/
+Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die Oculus Rift Brille, die Oculus Touch Controller und die zwei Sensoren benötigt. \cite{VRBound} \cite{FacebookTechnologiesLLCRift}
 
 \subsubsection{HTC Vive}
 Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie haben die gleiche Auflösung und Bildwiederholungsrate von 90Hz, allein das Field of View ist mit 110° etwas weiter als bei anderen VR-Headsets. Im Vive-Headset lässt sich die Pupillendistanz und der Objektivabstand einstellen.
@@ -359,35 +351,24 @@ Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie hab
 Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die HTC Vive Brille, die HTC Vive Controller und die zwei Laser-Sensoren, genannt ``Lighthouses'' benötigt. Die Lighthouses müssen an diagonalen Enden des Raums überhalb des Aktionsbereich aufgestellt werden, was die initiale Installation etwas aufwändiger macht. Durch die Lasertechnologie in den Lighthouses ist das mögliche Spielfeld der HTC Vive deutlich größer als das der anderen beiden VR-Systeme.
 
 Um das Tracking einzustellen muss zu Beginn der ersten Nutzung das System kalibriert und der Spielbereich virtuell markiert werden.
-
 Die Controller haben ein klickbares Trackpad, Menü- und System-Buttons auf der Vorderseite, einen Abzugsknopf für den Zeigefinger auf der Rückseite und Greifknöpfe an den Seiten des Controllers.
+Die HTC Vive hat zusätzlich zu den Sensoren auch noch eine Kamera eingebaut, um gegebenenfalls im Weg stehende Gegenstände zu erkennen, um Unfälle zu verhindern.  \cite{Davies2016}
 
-Die HTC Vive hat zusätzlich zu den Sensoren auch noch eine Kamera eingebaut, um gegebenenfalls im Weg stehende Gegenstände zu erkennen, um Unfälle zu verhindern.
-
-Preislich liegt die Vive mit 499\$ am oberen Ende des Spektrums der VR-Headsets.
-
-% https://www.vive.com/de/product/?gclid=EAIaIQobChMIgvauiYfA3wIVBcYYCh3oUwkIEAAYASAAEgLADfD_BwE#vive-spec
+Preislich liegt die Vive mit 499\$ am oberen Ende des Spektrums der VR-Headsets. \cite{HTCCorporationVive}
 
 \subsubsection{Playstation VR}
 Die Playstation VR ist dafür entwickelt mit der Playstation 4 Konsole benutzt zu werden, sie wurde also spezielle für den Anwendungsfall des Gamings entwickelt. Sie unterstützt sogar das Spielen mit zwei Spielern, wobei ein Spieler die Playstation VR nutzt und der zweite Spieler das Bild auf dem Fernseher sieht. Beide nutzen die Playstation Move Controller.
 
-Die Controller haben die üblichen Buttons eines Playstation-Controllers und ihre Position im Raum wird getrackt.
+Die Controller haben die üblichen Buttons eines Playstation-Controllers und ihre Position im Raum wird mit der Playstation Camera getrackt.
 
 Wie in Tabelle \ref{tab:headsets1} zu sehen ist die Auflösung der Playstation VR deutlich geringer als die der anderen beiden Headsets. Dafür hat sie eine extrem hohe Bildwiederholrate von 120Hz, was gerade für schnelle Spiele einen Vorteil bietet. Allerdings ist sie mit 610g recht schwer, sodass ein langes Tragen nicht sehr angenehm ist.
 
-Zum Tracking der Position im Raum nutzt die Playstation VR die bereits existierende Playstation Camera. Darin sind 2 Kameras verbaut, die beide Tiefenwahrnehmung haben. Sie tracken optisch sowohl die Position des Headsets als auch die der Playstation Move Controller.
+Zum Tracking der Position im Raum nutzt die Playstation VR die bereits existierende Playstation Camera. Darin sind 2 Kameras verbaut, die beide Tiefenwahrnehmung haben. Sie tracken optisch sowohl die Position des Headsets als auch die der Playstation Move Controller.  \cite{Davies2016}
 
-Für ein vollständiges Setup wird ein Playstation 4 Konsole, die Playstation VR Brille, die Playstation Move Controller und die Playstation Camera benötigt. 
-
-% https://www.vrbound.com/headsets/sony/playstation-vr
-% https://www.playstation.com/de-de/explore/playstation-vr/tech-specs/
-
+Für ein vollständiges Setup wird ein Playstation 4 Konsole, die Playstation VR Brille, die Playstation Move Controller und die Playstation Camera benötigt. \cite{VRBoundPlaystationVR} \cite{SonyInteractiveEntertainmentEuropeLimitedpsvr}
 
 \subsection{Stand-alone VR-Hardware}
 Die zweite Gruppe sind die Stand-alone Hardware-Systeme wie etwa die Oculus Go, Oculus Quest oder Google Daydream. Es handelt sich hierbei um vollumfängliche Systeme, die ohne weiteres Equipment auskommen und auch keinen Computer benötigen. Da sie mit einem Akku betrieben werden, ist die Betriebsdauer allerdings eingeschränkt und auch die Rechenleistung ist deutlich geringer als die der Computer-gestützten Systeme.
-
-% https://upload-magazin.de/blog/25071-standalone-vr-headsets/
-% Vergleich: https://www.vrnerds.de/vr-brillen-vergleich/
 
 \begin{table}[]
 \begin{tabular}{p{0.14\linewidth}|p{0.08\linewidth}|p{0.14\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.1\linewidth}|p{0.08\linewidth}}
@@ -397,7 +378,7 @@ Oculus Quest & 6 DoF & 1600x1440 \newline OLED \newline 72Hz \newline 100° & Ocu
 Lenovo Mirage Solo & 6 DoF &1280x1440 \newline OLED \newline 75Hz \newline 110° & Daydream Motion Controller & Inside-out  & 645g & 349,99\$ \\
 HTC Vive Focus & 6 DoF & 1440x1600 \newline 75Hz \newline 110° & Ultrasonic 6 DoF Controller & Inside-out & 670g & 599\$
 \end{tabular}
-  \caption{Vergleich der Stand-alone VR-Headsets.}
+  \caption{Vergleich der Stand-alone VR-Headsets. \cite{Tißler2018}}
   ~\label{tab:headsets2}
 \end{table}
 
@@ -414,9 +395,7 @@ Die Oculus go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass
 
 Eine Akkuladung hält je nach Nutzung zwischen 2 und 2,5 Stunden, wobei die Ladezeit mit fast 3 Stunden relativ lange ist.
 
-Da es sich bei der Oculus Go um ein 3DoF-Headset handelt, unterstützt sie kein Positional Tracking, sondern nur orientational Tracking über die eingebauten Sensoren.
-
-% https://www.vrbound.com/headsets/oculus/go
+Da es sich bei der Oculus Go um ein 3DoF-Headset handelt, unterstützt sie kein Positional Tracking, sondern nur orientational Tracking über die eingebauten Sensoren.  \cite{Tißler2018} \cite{VRBoundOculusGo}
 
 \subsubsection{Oculus Quest}
 Die Oculus Quest ist noch nicht auf dem Markt, sondern für Frühling 2019 angekündigt. Einige Informationen zu dem Headset sind jedoch schon bekannt.
@@ -428,18 +407,15 @@ Die Oculus Quest soll mit einem OLED-Display mit einer Auflösung von 1600x1440 p
 
 Die mitgelieferten Oculus-Touch-Controller sind denen der Oculus Rift sehr ähnlich. Jedoch befindet sich der Ring mit dem die Controller getrackt werden nun oberhalb, damit er von den Kameras im Headset gesehen werden kann. Sie können alle Bewegungen im Raum erkennen und auch, ob die Buttons mit den Fingern berührt werden.
 
-Das Gesamtgewicht der Oculus Quest ist noch nicht bekannt, soll aber etwa 100g schwerer als das Rift-Headset sein und läge damit dann bei 570g. Auch die Akkulaufzeit der Oculus Quest wurde noch nicht herausgegeben.
-% https://uploadvr.com/oculus-quest-specs-price-release-date/
+Das Gesamtgewicht der Oculus Quest ist noch nicht bekannt, soll aber etwa 100g schwerer als das Rift-Headset sein und läge damit dann bei 570g. Auch die Akkulaufzeit der Oculus Quest wurde noch nicht herausgegeben. \cite{Feltham2018}
 
 \subsubsection{Lenovo Mirage Solo}
 Die Lenovo Mirage Solo liegt bei einem Preis von 350\$. Sie ist ebenfalls ein 6DoF-Headsets, der mitgelieferte Daydream Motion Controller kann allerdings nur drei Freiheitsgrade. Auch die Mirage Solo nutzt inside-out-Tracking für die Positionsbestimmung im Raum. Dafür sind in das Display vorne zwei Kameras integriert. Berichten zufolge ist der nutzbare Spielbereich, der mit dem von Google entwickelten WorldSense getrackt wird, nur etwa einen Quadratmeter groß, sodass nur wenig Bewegung möglich ist.
 
-Die Controller sind die gleichen, die Google für das Daydream-View-Headset verwendet. Zudem sind keine Lautsprecher eingebaut. Mit 645g ist die Mirage Solo das schwerste VR-Headset, das momentan auf dem Markt ist.
-% https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-mirage-solo/Mirage-Solo/p/ZZIRZRHVR01
+Die Controller sind die gleichen, die Google für das Daydream-View-Headset verwendet. Zudem sind keine Lautsprecher eingebaut. Mit 645g ist die Mirage Solo das schwerste VR-Headset, das momentan auf dem Markt ist. \cite{Lenovo}
 
 Lenovo gibt die Akkulaufzeit mir 2,5 Stunden an, die bei Tests wohl sogar auf 3 Stunden ausgedehnt werden konnte.
-Auf der Mirage Solo läuft Google Daydream, über das auch Apps geladen werden können. Im Vergleich zum Oculus Store sind dort Adi Robertson zufolge noch deutlich weniger und auch weniger elaborierte Titel zu finden.
-% https://www.theverge.com/2018/5/4/17318648/lenovo-mirage-solo-google-daydream-standalone-vr-headset-review
+Auf der Mirage Solo läuft Google Daydream, über das auch Apps geladen werden können. Im Vergleich zum Oculus Store sind dort Adi Robertson zufolge noch deutlich weniger und auch weniger elaborierte Titel zu finden. \cite{Robertson2018}
 
 \subsubsection{HTC Vive Focus}
 Bisher ist die HTC Vive Focus nur China auf dem Markt, allerdings wurde Ende 2018 angekündigt, dass sie demnächst auch in Europa und den USA verkauft werden wird. Mit ihrem Preis von 599\$ ist sie die mit deutlichem Abstand teuerste Stand-alone VR-Brille.
@@ -448,11 +424,9 @@ Wie die Oculus Quest hat sie eine Auflösung von 1440x1600 pro Auge und eine Bild
 Die Controller der Vive Focus haben nur 3DoF. Sie haben ein Trackpad, einen Trigger für den Zeigefinger und zwei Buttons auf der Oberseite. Sie erinnert formmäßig an eine Fernbedienung.
 
 Wie die Mirage Solo nutzt die Vive Focus zwei ins Headset verbaute Kameras für ein Inside-Out Tracking mit einem Spielbereich von 1,5mx1,5m. 
-Der Linsenabstand kann mechanisch eingestellt werden, bei größeren Brillen ist der Platz in der Brille allerdings etwas knapp.
+Der Linsenabstand kann mechanisch eingestellt werden, bei größeren Brillen ist der Platz in der VR-Brille allerdings etwas knapp.
 
-Sie hat eine Laufzeit von 3 Stunden. Die Anzahl der verfügbaren Anwendungen ist noch gering.
-% https://www.vive.com/cn/product/vive-focus-en/
-% https://www.wareable.com/vr/htc-vive-focus-release-date-price-specs-5084
+Sie hat eine Laufzeit von 3 Stunden. Die Anzahl der verfügbaren Anwendungen ist noch gering im Vergleich zu den Anwendungen der Oculus Geräte. \cite{HTCCorporationViveFocus} \cite{Langley2018}
 
 \subsection{Smartphone gestützte VR-Hardware}
 Die dritte Gruppe bilden die Smartphone-gestützten VR-Systeme. Damit sind alle Systeme gemeint, bei denen das Smartphone genutzt wird, um die VR-Inhalte zu zeigen.
@@ -470,18 +444,15 @@ Google Cardboard & 3 DoF &  90° & Hebel, der Touch-Event auf Display auslöst & 9
 \end{table}
 
 \subsubsection{Google Cardboard}
-% Google Cardboard: https://store.google.com/product/google_cardboard
 In das Google Cardboard können Smartphones mit Displaygrößen zwischen 4 und 6 Zoll eingelegt werden. Um die Google Cardboard App zu nutzen, müssen die Geräten dann mindestens Android 4.1 oder iOS 8.0 haben.
 
 Es kann kein Controller verbunden werden. Es kann lediglich mit einem Hebel ein Touch-Event auf dem Display ausgelöst werden. In der Google Cardboard App wieder die Interaktion beispielsweise so ausgelöst, dass der Mittelpunkt des Displays ``geklickt'' wird, wenn das Touch-Event ausgelöst wird. So sind einfache Eingaben möglich. 
 
 Das Field of View der Google Cardboards kann je nach eingelegtem Smartphone bis zu 90° breit sein.
 
-Durch die einfache Konstruktion und den günstigen Preis ist das Google Cardboard weit verbreitet. Zudem gibt es davon diverse Arten von Nachbauten, die teilweise statt dem Hebel, der das Touch-Event auslöst, schwache Magneten an der Seite des Cardboards bewegen um so Touch-Events auszulösen.
+Durch die einfache Konstruktion und den günstigen Preis ist das Google Cardboard weit verbreitet. Zudem gibt es davon diverse Arten von Nachbauten, die teilweise statt dem Hebel, der das Touch-Event auslöst, schwache Magneten an der Seite des Cardboards bewegen um so Touch-Events auszulösen. \cite{GoogleLLCCardboard}
 
 \subsubsection{Samsung Gear VR}
-% Samsung Gear VR: https://www.samsung.com/de/wearables/gear-vr-r324/SM-R324NZAADBT/?cid=de_ppc_google_im-wearables-gearvr-q3restructured_20180720_samsungvr-broad&tmcampid=7&tmad=c&tmplaceref=c_DE_IMECOM_Warm_Brand_GearVR_Broad&tmclickref=b_%2Bsamsung%20%2Bvr&gclid=EAIaIQobChMIpLnFnuvC3wIVCKQYCh0XVweYEAAYASAAEgLilfD_BwE
-
 Die Samsung Gear VR Brille funktioniert nur mit den Galaxy Geräten ab Version 6 oder neuer und benötigt mindestens Android 5. Die Geräte werden auf dem USB-Stecker der Brille gesteckt, um so eine Verbindung herzustellen.
 Wird ein Gerät zum ersten Mal verbunden werden Anweisungen angezeigt, die Oculus App herunterzuladen und einen Account zu erstellen beziehungsweise zu verbinden. Im Anschluss wird beim erneuten Verbinden mit dem Gerät die Oculus-App geöffnet um dort dann VR-Apps zu nutzen.
 
@@ -491,29 +462,18 @@ Im die Samsung Gear VR kommt mit einem Controller, der ein Touchpad und ``Zurück
 
 Die Gear VR ist nicht geeignet mit Brille genutzt zu werden. Dafür kann mit einem Rad an der Oberseite der Fokus eingestellt werden, sodass sie von Nutzern mit Sehschwächen trotzdem getragen werden kann.
 
-Mit einem Preis von knapp 130\$ ist die GearVR die teuerste der drei Smartphone-gestützten VR-Brillen und schon nahe am Preis einer Oculus Go, die ohne ein extra Smartphone auskommt. Außerdem ist sie mit 345g ohne eingelegtem Smartphone eines der schwersten Headsets.
+Mit einem Preis von knapp 130\$ ist die GearVR die teuerste der drei Smartphone-gestützten VR-Brillen und schon nahe am Preis einer Oculus Go, die ohne ein extra Smartphone auskommt. Außerdem ist sie mit 345g ohne eingelegtem Smartphone eines der schwersten Headsets. \cite{SamsungElectronicsGmbHGearVR}
 
 \subsubsection{Google Daydream View}
-% Google Daydream View: https://store.google.com/product/google_daydream_view_specs
 Das Google Daydream View Headset funktioniert ebenfalls nicht mit allen Smartphones, sondern nur Android-Smartphones: das Google Pixel 2 und 3, das Galaxy 8 und 9, das Zenfone AR von Asos und das LG V30 werden auf der Hersteller-Webseite als besonders geeignet aufgeführt. Grundsätzlich muss ein Gerät die Google Daydream App installiert haben innerhalb derer dann VR Apps gesucht und mit dem Controller verbunden und interagiert werden kann. 
 
 Google Daydream View kann den aktuellen Bildschirminhalt auf einen Chromecast streamen, sodass andere sehen können, was gerade passiert.
 
 Der Controller hat oben ein Touchpad, sowie einen Apps- und Home-Button. An der linken Seite sind zwei Lautstärketasten platziert. Da allerdings Daydream View selbst keine Lautsprecher hat werden damit die integrierten Smartphone Lautsprecher beziehungsweise die verbundenen Kopfhörer gesteuert.
 
-Das Band mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am hinteren Ende den Controller einstecken kann, sodass er nicht verloren gehen kann.
+Das Band mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am hinteren Ende den Controller einstecken kann, sodass er nicht verloren gehen kann. \cite{GoogleLLCDaydream}
 
 % ---------------------------------------------------------------------------------------------------------------------------
-%% Wohin hiermit?! - Vielleicht zu Geräten?
-% \subsection{Eingabemethoden in VR}
-% Controller
-% Voice Control
-% EyeVR GazeInput
-% Gesteninput
-
-% ---------------------------------------------------------------------------------------------------------------------------
-
-
 \cleardoublepage % Neue rechte Seite anfangen
 
 \section{VR-Systeme im Bildungsbereich}
@@ -1215,21 +1175,6 @@ Bei den Lehrkräfte verhält es sich ähnlich: Sie kommen aus verschiedensten Fachr
 
 Dementsprechend lag der Fokus bei der Entwicklung besonders darauf, dass die Bedienung intuitiv und einfach ist. Außerdem soll den Lehrkräften mit der Anzeige der verbundenen Geräte eine Möglichkeit an die Hand gegeben werden, zu sehen, ob die Schüler-Geräte verbunden sind und alle Inhalte dargestellt werden. Bewusst wurde das System so entworfen, dass die Lehrkräfte keine VR-Brille tragen, damit sie einen Überblick im Klassenzimmer behalten können und trotzdem sehen können, was die Schüler angezeigt bekommen.
 
-% \subsection{Grundstruktur}
-% TODO: das ist einfach nur das gleiche wie im Absatz drüber "Anwender", ich würde es einfach weglassen
-
-% Das VRClassroom System besteht aus zwei verschiedenen Applikationen: Zum einem der Schüler-App, die auf den VR-Systemen läuft mit denen die Schüler sehen können, was der Lehrer ihnen präsentiert, und die Lehrer-App, in der die Lehrkraft die verschiedenen Inhalte hineinladen, Markierungen auf die Inhalte setzen kann und und sehen kann, welche Schüler-Geräte aktuell verbunden sind.
-
-% Da viele Lehrer in ihrer Ausbildung oft nicht mit vielen neuen Technologien in Berührung gekommen sind, sondern es gewohnt sind mit den ``klassischen'' Medien zu arbeiten, lag der Augenmerk bei der Entwicklung darauf, dass das benötigte technische Verständnis möglichst niedrig ist und auch Personen, die sich selbst als nicht technikaffin bezeichnen würden, keinerlei Probleme bei der Nutzung haben. Gleiches gilt selbstverständlich auch auf der Seite der Schüler. Da diese aber hauptsächlich passiv agieren, standen hier die Lehrkräfte im Mittelpunkt der Aufmerksamkeit.
-
-Grafik \ref{fig:architecture}
-
-\begin{figure}[ht]
-  \includegraphics[width=\textwidth]{images/architecture1.eps}
- \caption{Aufbau des VRClassroom Systems.}
-  \label{fig:architecture}
-\end{figure}
-
 \subsection{Lehrer-Applikation}
 Die Lehrer-Applikation besteht aus einer Electron-App, die in zwei logische Teile zerlegt ist. Das ist zum einen der main-Prozess, dieser startet die Applikation und läuft in node.js ohne sichtbares UI. Hier können weitere Hintergrundprozess gestartet werden. Zum Anderen gibt es den renderer-Prozess. Dieser verwendet Chromium und ist für die Darstellung des UIs verantwortlich, das die Lehrkraft letztendlich auf ihrem Bildschirm sieht.
 
@@ -1332,8 +1277,13 @@ Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, 
 \end{figure}
  
 \subsection{Kommunikation zwischen Lehrer-App und Schüler-App}
-% TODO: Grafik Kommunikation
-Wie in Grafik XXX zu erkennen kommunizieren die Lehrer-App und die Schüler-App über eine WebSocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl ein WebSocket-Server als auch ein HTTP-Server (Asset-Server) gestartet. Der HTTP-Server liefert die Inhalte so wie die Schüler-App selbst aus. Der WebSocket-Server wird zur Echtzeit-Kommuniktion zwischen Lehrer- und Schüler-App verwendet.
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/architecture1.eps}
+ \caption{Aufbau des VRClassroom Systems.}
+  \label{fig:architecture}
+\end{figure}
+
+Wie in Grafik \ref{fig:architecture} zu erkennen kommunizieren die Lehrer-App und die Schüler-App über eine WebSocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl ein WebSocket-Server als auch ein HTTP-Server (Asset-Server) gestartet. Der HTTP-Server liefert die Inhalte so wie die Schüler-App selbst aus. Der WebSocket-Server wird zur Echtzeit-Kommunikation zwischen Lehrer- und Schüler-App verwendet.
 
 Wenn die Schüler-App auf einem Gerät geladen wird, stellt sie die Verbindung zum WebSocket-Server her und meldet sich damit an. Als Antwort schickt die Lehrer-App den aktuellen Zustand. So wird sichergestellt, dass die Schüler-App alle Informationen hat, die verpasst hat, solange sie noch nicht verbunden war.
 
@@ -1378,8 +1328,6 @@ Grafik \ref{fig:react360}
  \caption{Struktur der React360 App von VRClassroom.}
   \label{fig:react360}
 \end{figure}
-
-%% Screenshot VRClassroom App?
 
 \subsubsection{Eingabe des Namens}
 Läd ein Gerät zum ersten Mal die VRClassroom-App wird dem Nutzer neben der Begrüßung, die immer angezeigt wird bevor Inhalte hineingeladen werden, eine Tastatur im VR-Raum angezeigt. Damit können die Schüler ihren Namen eingeben, der dann in der Liste der verbundenen Geräte angezeigt wird. Wird ein Smartphone als VR-Headset genutzt, muss die Tastatur mittels der Toucheingabe auf dem Display gemacht werden, bevor die WebVR Ansicht geladen wird. VR-Headsets, die einen Controller haben, können den Namen mit dem Controller auf der Tastatur tippen. 
@@ -1450,7 +1398,7 @@ Dafür
 \cleardoublepage
 
 \section{Nutzerstudie und Evaluation}
-Um das entwickelte VRClassroom-System zu evaluieren wurden zwei verschiedene Umfragen geplant. Eine qunatitative Online-Befragung, bei der die Teilnehmer ein Video ansehen und anschließend Fragen beantworten, und eine qualitative Feldstudie, bei der Lehrkräfte VRClassroom mit ihrer Klasse ausprobieren und im Anschluss Feedback geben.
+Um das entwickelte VRClassroom-System zu evaluieren wurden zwei verschiedene Umfragen geplant. Eine quantitative Online-Befragung, bei der die Teilnehmer ein Video ansehen und anschließend Fragen beantworten, und eine qualitative Feldstudie, bei der Lehrkräfte VRClassroom mit ihrer Klasse ausprobieren und im Anschluss Feedback geben.
 
 \subsection{Online-Umfrage}
 \label{subsec:evaluation}
@@ -1487,7 +1435,7 @@ Falls kein Internetzugang im Klassenzimmer zur Verfügung stehen kann mit einem W
 Ein weiterer Kritikpunkt an VRClassroom ist, dass es keine fest integrierten Inhalte hat. Einige Lehrkräfte wünschen sich ein System, das bereits passende Inhalte mitbringt, die dann speziell dafür angepasst sind und auch den Ansprüchen für den Unterricht entsprechen. 
 Da VRClassroom als offenes System entwickelt wurde, können beliebige Inhalte verwendet werden. Sowohl selbsterstellte oder Inhalte von anderen Produzenten. Sollte VRClassroom in der Zukunft weiterentwickelt werden, könnte ein Geschäftsmodell darin bestehen, passende Inhalte für den Schulunterricht zu erstellen.
 
-Zudem wurde kritisiert, dass Google Cardboards nicht mit einer Brille genutzt werden können. Einige standalone-Headsets ermöglichen die Nutzung für Brillenträger, wie oben beschrieben. Diese Limitierung ist eine Hardware-Limitierung lässt sich softwareseitig in VRClassroom nicht lösen.
+Zudem wurde kritisiert, dass Google Cardboards nicht mit einer Brille genutzt werden können. Einige standalone-Headsets ermöglichen die Nutzung für Brillenträger, wie oben beschrieben. Diese Limitierung ist eine Hardware-Limitierung und lässt sich softwareseitig in VRClassroom nicht lösen.
 
 \bigskip
 
@@ -1507,18 +1455,9 @@ Zudem wünschten sich die Teilnehmer eine Funktion, um überwachen zu können, dass
 
 Ein weiterer Funktionswunsch war die schnelle Skalierung der 3D-Modelle auf Realgröße, um den Schülern einen guten Eindruck zu vermitteln, wie das Objekt in echt aussieht. Darauf wird im folgenden in \ref{subsec:modelscaling} eingegangen.
 
-
-% überhaupt reinnehmen?
-% gewünschte Inhalte:
-%- Mathematik: Vektoren, Ebenen und Schnitte von Körpern
-%- Kernkraftwerk und andere Einrichtungen, die man nicht besuchen kann im Rahmen einer Exkursion
-%- Menge an Modellen, auch mit didaktischer Erläuterung
-%- Körper, Organe, biologische Prozesse
-%- Moleküle, chemische Reaktionen auf Teilchenebene
-%- NuT
-%- Kunst: Architketur
-
 Einige Teilnehmer forderten eine Schulung für Lehrkräfte zum Umgang mit Virtual Reality und mehr Betreuungspersonal für die Technik in der Schule. Die Lehrkräfte wünschen sind für den Unterricht nutzbare Inhalte. Am besten wäre eine Plattform für Lehrinhalte für Virtual Reality oder die Möglichkeit Themenpakete zu lizensieren.
+
+Themengebiete, die sich die befragten Lehrkräfte für Virtual Reality Anwendungen wünschen würden umfassten viele naturwissenschaftliche Inhalte. Besonders 3D-Modelle wurden vorgeschlagen: Die Teilnehmer nannten: Inhalte, die Vektoren, Ebenen und Schnitte von mathematischen Körpern zeigen, Touren und Bilder von Kernkraftwerken oder anderen Orten, die nicht im Rahmen einer Exkursion besucht werden können, Körper, Organe und biologische sowie chemische Prozesse, Moleküle und architektonische Modelle.
 
 \subsubsection{Medien in VRClassroom}
 Grafik \ref{fig:survey2} zeigt die Meinung der Befragten zu den verschiedenen Medientypen die in VRClassroom unterstützt werden. 360°-Videos wurden dabei deutlich schlechter bewertet als Fotos und 3D-Modelle. Ein Drittel der Befragten schätzten dabei die Nutzung von 360°-Videos in VRClassroom als nicht hilfreich zur Vermittlung von Lehrstoff ein. Mit 87\% Zustimmung schnitten die 3D-Modelle nach Einschätzung der befragten Lehrkräfte am Besten ab, um Lehrinhalte zu vermitteln.
@@ -1583,9 +1522,8 @@ Dabei sollen die Befragten auf einer Skala von 0 bis 10 angeben, wie wahrscheinl
 Aus den Zahlenwerten kann dann ein Wert berechnen, der die Loyalität der Nutzer wiederspiegeln soll.
 
 Personen, die mit einem Wert von 0 bis 6 angeben gelten als Detraktoren, also Personen, die ihren Kollegen davon abraten würden das Produkt zu verwenden. Bei Werten von 7-8 gelten die Personen als Indifferente, die das Produkt nutzen, allerdings nicht positiv Anderen gegenüber davon berichten würden. Die dritte Gruppe sind die Promotoren, die auf die Frage mit 9 oder 10 geantwortet haben. Promotoren werden ihren Kollegen positiv von ihren Erfahrungen mit dem Produkt berichten und dadurch dafür sorgen, dass das Produkt neue Kunden gewinnt und bekannter wird.
-
-
-% TODO Quelle!
+\cite{White2008}
+% TODO: Zahlenwerte überprüfen
 
 In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Grafik \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom.
 
@@ -1672,9 +1610,8 @@ Die Studie zeit allerdings auch, dass viele Lehrkräfte interessiert an VR sind, 
 
 Zukünftig ist damit zu rechnen, dass die VR-Headsets weiter im Preis fallen und gleichzeitig mehr Rechenleistung bekommen. Zudem zeigen die Ankündigungen, dass immer mehr Stand-alone Headsets auf den Markt kommen werden.
 
-Weiterhin könnte es sein, dass die Entwicklung der Headsets mit der Zeit wieder weg von Controllern und hin zu anderen Interaktionskonzepten gehen wird. Dabei kämen zum Beispiel das Tracken der Augenbewegungen wie es bei EyeVR passiert oder die Nutzung von Freihandgesten wie es die ClassVR Headsets tun in Frage.
-% EyeVR Paper
-% ClassVR
+Weiterhin könnte es sein, dass die Entwicklung der Headsets mit der Zeit wieder weg von Controllern und hin zu anderen Interaktionskonzepten gehen wird. Dabei kämen zum Beispiel das Tracken der Augenbewegungen wie es bei EyeVR passiert \cite{Geiselhart2016} oder die Nutzung von Freihandgesten wie es die ClassVR Headsets tun in Frage. \cite{}
+%TODO  ClassVR
 
 Eine weitere Veränderung ist die Wahrnehmung von Virtual Reality. Wie die Autorin von ``5 Major Challenges For The VR Industry'' beschreibt wird momentan VR von viele Menschen noch als Gimmick wahrgenommen. Diese Wahrnehmung wird sich aber zusehends ändern, wenn mehr Anwendungen abseits von Spielen auf den Markt kommen. \cite{Wolwort2018}
 
