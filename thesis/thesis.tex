@@ -91,7 +91,7 @@ Weiterhin geht die Arbeit auf verschiedenen Inhaltstypen für VR-Systeme ein, wel
 
 Anschließend wurde basierend auf den zuvor erörterten Anforderungen ``VRClassroom'' entwickelt. Eine Software die Lehrkräfte im Unterricht nutzen können, um 360°-Inhalte zu präsentieren. Das System besteht aus zwei Komponenten: Die Lehrkraft kann an einem Computer Inhalte laden, die dann in einer Web-App auf VR-Brillen der Schüler gezeigt werden. Die Lehrkräfte führen dabei das komplette VR-Erlebnis für die Schüler und können 360°-Fotos und -Videos laden und Markierungen darauf setzen. Das Video wird bei allen Schülern synchron abgespielt und kann von der Lehrkraft pausiert werden. Außerdem können 3D-Modelle in die App geladen werden, die die Lehrkraft skalieren und drehen kann und an interessanten Stellen Markierungen setzen. Um zu sehen, welche Geräte verbunden sind, wird in der Lehrkraft ein Liste mit allen verbundenen Geräten und einem Aktivitätsindikator angezeigt. 
 
-Anschließend wurde eine Online-Befragung mit Lehrkräften durchgeführt um die entwickelte Software zu evaluieren. Den Teilnehmern wurde ein Video gezeigt, das die Nutzung von VRClassroom erklärt und anschließend ein Fragebogen vorgelegt. Die Mehrheit der Teilnehmer war dem System gegenüber sehr aufgeschlossen und konnte sich gut vorstellen VRClassroom zukünftig im Unterricht zu einzusetzen, um 360°-Inhalte zu zeigen.
+Anschließend wurde eine Online-Befragung mit Lehrkräften durchgeführt, um die entwickelte Software zu evaluieren. Den Teilnehmern wurde ein Video gezeigt, das die Nutzung von VRClassroom erklärt und anschließend ein Fragebogen vorgelegt. Die Mehrheit der Teilnehmer war dem System gegenüber sehr aufgeschlossen und konnte sich gut vorstellen VRClassroom zukünftig im Unterricht zu einzusetzen, um 360°-Inhalte zu zeigen.
 
 Abschließend wird diskutiert wie Zukunft von Virtual Reality im Schulunterricht aussehen könnte. Dazu werden auch mögliche Weiterentwicklungen von VRClassroom besprochen.
 
@@ -201,7 +201,7 @@ In Kapitel 6 wird auf die im Rahmen dieser Arbeit entwickelte Software ``VRClass
 Anschließend an die Entwicklung wurde VRClassroom mittels einer Umfrage unter Lehrkräften evaluiert. Die Befragung beinhaltet sowohl die Bewertung von VRClassroom und seinen Funktionen, als auch die Einschätzung der Teilnehmer zum generellen Einsatz von Virtual Reality im Unterricht und die Bereitschaft der Lehrkräfte VR-Programme einzusetzen.
 Die Mehrheit der befragten Lehrkräfte zeigte sich interessiert daran VR-Anwendungen im Unterricht zu nutzen und können sich auch vorstellen VRClassroom einzusetzen.
 
-Abschließend wird ein Blick in die Zukunft von Virtual Reality im Allgemeinden und von VRClassroom im Speziellen geworfen. Dabei wird sowohl auf aktuell bestehende Probleme, als auf potentielle Weiterentwicklungen der Software eingegangen.
+Abschließend wird ein Blick in die Zukunft von Virtual Reality im Allgemeinden und von VRClassroom im Speziellen geworfen. Dabei wird sowohl auf aktuell bestehende Probleme, als auf potenzielle Weiterentwicklungen der Software eingegangen.
 
 %______________________________________________________________________
 
@@ -221,7 +221,7 @@ Das Konzept der Freiheitsgrade oder Degrees of Freedom, kurz DoF, entspringt urs
 
 Freiheitsgrade werden oft auch genutzt um die Bewegungen von maritimen Fahrzeugen zu benennen: Die Bewegung in x-Richtung wird ``surge'' genannt, in y-Richtung ``sway'' und in z-Richtung ``heave''. Die Rotation um die x-Achse heißt ``roll'', um die y-Achse ``pitch'' und um die z-Achse ``yaw''. Diese Bezeichnungen beziehen sich dabei auf ein Schiff, das in x-Richtung ausgerichtet ist. \cite{Fossen1995}
 
-Wie in Abbildung \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Erkennung von Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet. Kann es zusätzlich die Bewegungen im Raum messen ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also ``positional tracking'' des Nutzers benötigt. 
+Wie in Abbildung \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Erkennung von Rotationsbewegungen um die drei Achsen wird es als ein 3 DoF-System bezeichnet. Kann es zusätzlich die Bewegungen im Raum messen ist es ein 6 DoF-System. Um ein 6 DoF VR-Gerät zu entwickeln, wird also ``positional tracking'' des Nutzers benötigt. 
 
 \begin{figure}[ht]
   \centering
@@ -247,10 +247,9 @@ Andere Forschungen zeigen allerdings auch, dass kleinere Veränderungen mit bis z
 Die aktuellen VR-Headsets sind mit Bildwiederholraten zwischen 60Hz und 120Hz noch deutlich davon entfernt. Allerdings ist zu vermuten, dass keine 500Hz notwendig werden, da die Studie mit hochfrequent flackernden Lichtern durchgeführt wurde, was in den meisten Situationen nicht der Realität entspricht.
  \cite{davis2015humans}
 
-Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.  \cite{Stone2017}
+Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.  \cite{Lin2002}
 Aktuelle Headsets sind mit einem Sichtfeld von 100°-110° allerdings noch etwas von der Abbildung des vollen Sichtfelds entfernt. 
-Augenabstand IPD. %TODO
-Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen. \cite{Lin2002}
+Wie aber Lin et al. ebenso in ihrer Studie bemerkten, hat ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment). Zusätzlich fanden sie heraus, dass das Field of View  mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen. \cite{Lin2002}
 
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, das mit höherer Rechenleistung aufwändigere VR-Szenen in höherer Qualität dargestellt werden können. Bessere Display-Auflösung, Bildwiederholungsrate und Field of View benötigen eine höhere Rechenleistung um die Bildinhalte zu generieren. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten Geräten in diesen Kategorien konkurrieren.
@@ -279,7 +278,7 @@ In ihrer Arbeit haben Geiselhart et al. ``EyeVR'' entwickelt. Dazu haben sie ein
  Außerdem gibt es Headsets, die einfache Handgesten aus dem Kamerabild als Eingabemethode nutzen. Ein Beispiel dafür sind die Headsets von ClassVR. \cite{AvantisSystemsLtd}
 
 \subsubsection{Positional Tracking}
-Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum oder die Veränderung der Position relativ zum Raum berechnet werden. Positional Tracking wird also generell nur von 6DoF-Headsets genutzt.
+Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum oder die Veränderung der Position relativ zum Raum berechnet werden. Positional Tracking wird also generell nur von 6 DoF-Headsets genutzt.
 
 Momentan gibt es dazu zwei verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum bestimmen. Die Computer-gestützten VR-Headsets nutzen alle diese Technik, sie wird outside-in-Tracking genannt.  \cite{Stone2017}
 
@@ -289,7 +288,7 @@ Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Goog
 Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht. Diese bestimmen die Position im Raum anhand von Objekten im Raum, die von den Kameras erkannt werden. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller bestimmen, sodass auch diese sechs Degrees of Freedom unterstützen. \cite{Lang2018}
 
 \subsubsection{Gewicht}
-Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen. Allerdings ist bei den neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen. Dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
+Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 645g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen. Allerdings ist bei den neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen. Dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
 
 Die Playstation VR hat ein kleines Gegengewicht im Bügel, sodass sich das Gewicht etwas besser verteilt.
 
@@ -370,7 +369,7 @@ HTC Vive Focus & 6 DoF & 1440x1600 \newline 75Hz \newline 110° & Ultrasonic 6 Do
 \end{table}
 
 \subsubsection{Oculus Go}
-Mit ihrem Preis von knapp 200\$ ist die Oculus Go mit Abstand das günstigste VR-Headset. Sie kommt mit einem kleinen 3DoF Controller, der ein klickbares Touchfeld, einen Button für den Zeigefinger, sowie einen kleinen ``Zurück''- und ``Oculus''-Button.
+Mit ihrem Preis von knapp 200\$ ist die Oculus Go mit Abstand das günstigste VR-Headset. Sie kommt mit einem kleinen 3 DoF Controller, der ein klickbares Touchfeld, einen Button für den Zeigefinger, sowie einen kleinen ``Zurück''- und ``Oculus''-Button.
 
 Die Oculus Go hat pro Auge ein Display von 1280x1440 Pixeln mit einer Refreshrate von 60 bis 72Hz und einem Field of View von 100°.
 
@@ -382,7 +381,7 @@ Die Oculus Go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass
 
 Eine Akkuladung hält je nach Nutzung zwischen 2 und 2,5 Stunden, wobei die Ladezeit mit fast 3 Stunden relativ lange ist.
 
-Da es sich bei der Oculus Go um ein 3DoF-Headset handelt, unterstützt sie kein Positional Tracking, sondern nur orientational Tracking über die eingebauten Sensoren.  \cite{Tissler2018} \cite{VRBoundOculusGo}
+Da es sich bei der Oculus Go um ein 3 DoF-Headset handelt, unterstützt sie kein Positional Tracking, sondern nur orientational Tracking über die eingebauten Sensoren.  \cite{Tissler2018} \cite{VRBoundOculusGo}
 
 \subsubsection{Oculus Quest}
 Die Oculus Quest ist noch nicht auf dem Markt, sondern für Frühling 2019 angekündigt. Einige Informationen zu dem Headset sind jedoch schon bekannt.
@@ -397,7 +396,7 @@ Die mitgelieferten Oculus-Touch-Controller sind denen der Oculus Rift sehr ähnli
 Das Gesamtgewicht der Oculus Quest ist noch nicht bekannt, soll aber etwa 100g schwerer als das Rift-Headset sein und läge damit dann bei 570g. Auch die Akkulaufzeit der Oculus Quest wurde noch nicht herausgegeben. \cite{Feltham2018}
 
 \subsubsection{Lenovo Mirage Solo}
-Die Lenovo Mirage Solo liegt bei einem Preis von 350\$. Sie ist ebenfalls ein 6DoF-Headsets, der mitgelieferte Daydream Motion Controller kann allerdings nur drei Freiheitsgrade. Auch die Mirage Solo nutzt inside-out-Tracking für die Positionsbestimmung im Raum. Dafür sind in das Display vorne zwei Kameras integriert. Berichten zufolge ist der nutzbare Spielbereich, der mit dem von Google entwickelten WorldSense getrackt wird, nur etwa einen Quadratmeter groß, sodass nur wenig Bewegung möglich ist.
+Die Lenovo Mirage Solo liegt bei einem Preis von 350\$. Sie ist ebenfalls ein 6 DoF-Headsets, der mitgelieferte Daydream Motion Controller kann allerdings nur drei Freiheitsgrade. Auch die Mirage Solo nutzt inside-out-Tracking für die Positionsbestimmung im Raum. Dafür sind in das Display vorne zwei Kameras integriert. Berichten zufolge ist der nutzbare Spielbereich, der mit dem von Google entwickelten WorldSense getrackt wird, nur etwa einen Quadratmeter groß, sodass nur wenig Bewegung möglich ist.
 
 Die Controller sind die gleichen, die Google für das Daydream-View-Headset verwendet. Zudem sind keine Lautsprecher eingebaut. Mit 645g ist die Mirage Solo das schwerste VR-Headset, das momentan auf dem Markt ist. \cite{Lenovo}
 
@@ -408,7 +407,7 @@ Auf der Mirage Solo läuft Google Daydream, über das auch Apps geladen werden kön
 Bisher ist die HTC Vive Focus nur China auf dem Markt, allerdings wurde Ende 2018 angekündigt, dass sie demnächst auch in Europa und den USA verkauft werden wird. Mit ihrem Preis von 599\$ ist sie die mit deutlichem Abstand teuerste Stand-alone VR-Brille.
 Wie die Oculus Quest hat sie eine Auflösung von 1440x1600 pro Auge und eine Bildfrequenz von 75Hz und einem Field of View von 110°. Sie ist sich also insgesamt sehr ähnlich zur Oculus Quest.
 
-Die Controller der Vive Focus haben nur 3DoF. Sie haben ein Trackpad, einen Trigger für den Zeigefinger und zwei Buttons auf der Oberseite. Sie erinnert formmäßig an eine Fernbedienung.
+Die Controller der Vive Focus haben nur 3 DoF. Sie haben ein Trackpad, einen Trigger für den Zeigefinger und zwei Buttons auf der Oberseite. Sie erinnert formmäßig an eine Fernbedienung.
 
 Wie die Mirage Solo nutzt die Vive Focus zwei ins Headset verbaute Kameras für ein Inside-Out Tracking mit einem Spielbereich von 1,5mx1,5m. 
 Der Linsenabstand kann mechanisch eingestellt werden, bei größeren Brillen ist der Platz in der VR-Brille allerdings etwas knapp.
@@ -491,7 +490,7 @@ Hinzu kommt der Abo-Preis von 299£ für das ClassVR Portal, mit dem die Geräte ge
 Die Lehrkraft kann eine Playlist mit den verfügbaren Inhalten anlegen, die dann auf die Schüler-Headsets geladen wird. Zudem können auch eigene 360°-Fotos und -Videos hochgeladen werden.
 Es können 360°-Fotos und -Videos sowie 3D-Modelle angesehen werden. 3D-Modelle werden mit Karten aktiviert, auf denen ein Code ist, der dann das Anzeigen der Modelle aktiviert, sobald die Kamera ihn erkennt. Die Modelle werden dann in Augmented Reality dargestellt. Die 3D-Modelle sind relativ simple Modelle mit wenigen Polygonen, sodass sie schnell geladen werden können. Sie werden in einer festen Größe angezeigt und können nicht skaliert werden.
 Sind die Inhalte auf die Geräte geladen, kann die Lehrkraft sehen, welche Geräte verbunden sind. Außerdem kann in Echtzeit verfolgt werden, was die Schüler in diesem Moment sehen und ein Punkt gesetzt werden, auf den die Aufmerksamkeit der Schüler gelenkt wird. Die Geräte senden zudem einen Livestream ihres Bildausschnitts an das ClassVR-System, das der Lehrkraft zusätzliche Kontrolle gibt. 
-Die Kommunikation zwischen dem Rechner der Lehrkraft und den ClassVR-Headsets läuft über das Internet. Damit die großen Datenmengen der 360°-Inhalte übertragen werden können müssen sowohl das lokale WLAN als auch die Internetverbindung der Schule entsprechend ausgelegt sein. \cite{classVR}
+Die Kommunikation zwischen dem Rechner der Lehrkraft und den ClassVR-Headsets läuft über das Internet. Damit die großen Datenmengen der 360°-Inhalte übertragen werden können müssen sowohl das lokale WLAN als auch die Internetverbindung der Schule entsprechend ausgelegt sein. \cite{AvantisSystemsLtd}
 
 \subsection{Google Expeditions}
 Google Expeditions ist eine kostenfreie App, die es für die Smartphone gestützten VR-Headsets entwickelt wurde.
@@ -1031,7 +1030,7 @@ Three.js wird standardmäßig mit dem WebGL-Renderer gerendert, bietet aber auch a
 
 Um VR-Apps mit Three.js zu bauen, muss zuerst WebVR eingebunden werden. Dann kann ein WebVR Button hinzugefügt werden, der dann die VR-Ansicht startet. Zudem muss der Animations-Loop angepasst werden. Für VR-Apps muss statt der ``requestAnimationFrame''-Funktion die ``setAnimationLoop''-Funktion genutzt werden.
 
-Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind mehrere Schritte erforderlich. Zuerst muss mit THREE.BoxGeometry(1,1,1) eine Rechteckige Form und mit THREE.MeshBasicMaterial({color: 0x00ff00})ein Material erzeugt werden. Danach wird der Würfel erzeugt in dem das geometrische Objekt und das Material mit THREE.Mesh( geometry, material ) zusammengefügt werden. Zuletzt muss der erzeugte Würfel der Szene hinzugefügt werden. Damit ist Three.js eine sehr low-levelige Möglichkeit VR-Apps zu entwickeln. Dadurch stehen viele Möglichkeiten offen, es ist jedoch deutlich aufwändiger einfache VR-Szenen zu bauen. Andere VR-Frameworks wie A-Frame oder React360 nutzen im Hintergrund Three.js und bieten den Entwicklern einfache Funktionen, um Objekte in die VR-Szene zu setzen. \cite{Three.js}
+Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind mehrere Schritte erforderlich. Zuerst muss mit THREE.BoxGeometry(1,1,1) eine Rechteckige Form und mit THREE.MeshBasicMaterial({color: 0x00ff00}) ein Material erzeugt werden. Danach wird der Würfel erzeugt in dem das geometrische Objekt und das Material mit THREE.Mesh(geometry, material) zusammengefügt werden. Zuletzt muss der erzeugte Würfel der Szene hinzugefügt werden. Damit ist Three.js eine sehr low-levelige Möglichkeit VR-Apps zu entwickeln. Dadurch stehen viele Möglichkeiten offen, es ist jedoch deutlich aufwändiger einfache VR-Szenen zu bauen. Andere VR-Frameworks wie A-Frame oder React360 nutzen im Hintergrund Three.js und bieten den Entwicklern einfache Funktionen, um Objekte in die VR-Szene zu setzen. \cite{Three.js}
 
 \subsubsection{PlayCanvas}
 
@@ -1399,19 +1398,20 @@ Wie Abbildung \ref{fig:survey3} zu zeigt, korrelieren die Einschätzungen zu Mark
 Anschließend wurden die Lehrkräfte dazu befragt für welche Fächergruppen VRClassroom einen Mehrwert bringen könnte.
 Die Fächer wurden zu Gruppen zusammengefasst, um die Studie möglichst unabhängig von Schultypen zu machen.
 
+Für die Fächergruppe der naturwissenschaftlichen Fächer wurde VRClassroom mit 89\% Zustimmung als sinnvoll erachtet. Ebenfalls hohe Zustimmungswerte gab es für die gesellschaftswissenschaftlichen Fächer und Kunst/Musik (siehe \ref{fig:survey4}).
+
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey4.eps}
  \caption{Mehrwert von VRClassroom für verschiedene Fächergruppen.}
   \label{fig:survey4}
 \end{figure}
 
-Für die Fächergruppe der naturwissenschaftlichen Fächer wurde VRClassroom mit 89\% Zustimmung als sinnvoll erachtet. Ebenfalls hohe Zustimmungswerte gab es für die gesellschaftswissenschaftlichen Fächer und Kunst/Musik (siehe \ref{fig:survey4}).
-
 Viele Teilnehmer antworteten in der Folgefrage nach Lehrstoff, den sie sich gut vorstellen können, dass sie besonders geschichtliche Themen sowie Plastiken und architektonische Modelle neben den naturwissenschaftlichen Inhalten sähen. Zu diesen zählen: Chemikalische Experimente, physikalische Kräfte, Moleküle und geometrische Körper.
 
 Interessant war zudem der Vorschlag Bewegungsabläufe aus dem Sportunterricht im Vorfeld in VR zu besprechen, damit die Schüler besser verstehen, wie der optimale Ablauf ist.
 
 Viele Teilnehmer glauben, dass im Sprachunterricht VRClassroom keinen Mehrwert bringt.
+
 \bigskip
 
 In Frage 18 wurde abgefragt, welche Klassenstufen für die Nutzung von VRClassroom geeignet sind. 59\% der Studienteilnehmer halten Grundschüler für noch nicht geeignet. Erst an Schulen der Sekundarstufe wird die Software als geeignet eingestuft. Dabei steigen die Zustimmungszahlen mit dem Alter der Schüler von 73\% bei der Unterstufe, über 82\% bei der Mittelstufe auf 89\% in der Oberstufe. Lediglich für Erwachsene sinkt sie wieder leicht auf 88\%.
@@ -1427,12 +1427,6 @@ Abbildung \ref{fig:survey5} zeigt die genauen Prozentwerte zu diesem gut erkennb
 
 \subsubsection{Net Promotor Score}
 
-\begin{figure}[ht]
-  \includegraphics[width=\textwidth]{images/survey6.eps}
- \caption{Net Promotor Score von VRClassrooms.}
-  \label{fig:survey6}
-\end{figure}
-
 Der Net Promotor Score, kurz NPS, ist ein verbreitetes Erhebungssystem um die Zufriedenheit und Loyalität der Nutzer eines Produkts zu erheben.
 
 Dabei sollen die Befragten auf einer Skala von 0 bis 10 angeben, wie wahrscheinlich sie das Produkt an einen Kollegen weiterempfehlen würden.
@@ -1441,17 +1435,23 @@ Aus den Zahlenwerten kann dann ein Wert berechnen, der die Loyalität der Nutzer 
 
 Personen, die mit einem Wert von 0 bis 6 angeben gelten als Detraktoren, also Personen, die ihren Kollegen davon abraten würden das Produkt zu verwenden. Bei Werten von 7-8 gelten die Personen als Indifferente, die das Produkt nutzen, allerdings weder positiv noch negativ Anderen gegenüber davon berichten würden. Die dritte Gruppe sind die Promotoren, die auf die Frage mit 9 oder 10 geantwortet haben. Promotoren werden ihren Kollegen positiv von ihren Erfahrungen mit dem Produkt berichten und dadurch dafür sorgen, dass das Produkt neue Kunden gewinnt und bekannter wird. Der NPS wird berechnet, indem die Prozentzahl der Detraktoren von der der Promotoren abgezogen wird. Daraus ergibt sich ein möglicher Wertebereich des Net Promoters Scores von {-100,+100}.\cite{White2008}
 
+\begin{figure}[ht]
+  \includegraphics[width=\textwidth]{images/survey6.eps}
+ \caption{Net Promotor Score von VRClassrooms.}
+  \label{fig:survey6}
+\end{figure}
+
 In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Abbildung \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom. Der berechnete Net Promoter Score von VRClassroom läge somit bei -45. 
 
 \subsubsection{Einschätzung der Zukunft von VR und VRClassroom}
-Trotz der insgesamt positiven Bewertungen von VRClassroom in der Studie zeigt Abbildung \ref{fig:survey7}, dass nur 42\% glauben, dass Virtual Reality zukünftig eine große Rolle im Schulunterricht spielen wird.
-Trotzdem können sich 65\% vorstellen VRClassroom in ihrem Unterricht zu verwenden.
-
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey7.eps}
  \caption{Einschätzungen zur Zukunft von VR und VRClassroom.}
   \label{fig:survey7}
 \end{figure}
+
+Trotz der insgesamt positiven Bewertungen von VRClassroom in der Studie zeigt Abbildung \ref{fig:survey7}, dass nur 42\% glauben, dass Virtual Reality zukünftig eine große Rolle im Schulunterricht spielen wird.
+Trotzdem können sich 65\% vorstellen VRClassroom in ihrem Unterricht zu verwenden.
 
 Abbildung \ref{fig:survey8} zeigt, dass die meisten Lehrkräfte VRClassroom nur sporadisch einsetzen würden und nur wenige monatlich oder öfter darauf zurückgreifen würden. 
 
