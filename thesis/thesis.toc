@@ -18,15 +18,15 @@
 \contentsline {subsection}{\numberline {2.2}Computer-gest\"utzte VR-Hardware}{8}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Oculus Rift}{8}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}HTC Vive}{9}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{9}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3}Playstation VR}{10}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}Stand-alone VR-Hardware}{10}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Oculus Go}{10}{subsubsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.2}Oculus Quest}{11}{subsubsection.2.3.2}
 \contentsline {subsubsection}{\numberline {2.3.3}Lenovo Mirage Solo}{11}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{11}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4}HTC Vive Focus}{12}{subsubsection.2.3.4}
 \contentsline {subsection}{\numberline {2.4}Smartphone gest\"utzte VR-Hardware}{12}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Google Cardboard}{12}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{12}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{13}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{13}{subsubsection.2.4.3}
 \contentsline {section}{\numberline {3}VR-Systeme im Bildungsbereich}{15}{section.3}
 \contentsline {subsection}{\numberline {3.1}ClassVR}{15}{subsection.3.1}
@@ -47,7 +47,7 @@
 \contentsline {subsubsection}{\numberline {5.1.4}Rectilinear-Projektion}{23}{subsubsection.5.1.4}
 \contentsline {subsubsection}{\numberline {5.1.5}Stereographische Projektion}{24}{subsubsection.5.1.5}
 \contentsline {subsubsection}{\numberline {5.1.6}Pannini/ Vedutismo-Projektion}{24}{subsubsection.5.1.6}
-\contentsline {subsubsection}{\numberline {5.1.7}Equi-Angular Cubemap (EAC)}{24}{subsubsection.5.1.7}
+\contentsline {subsubsection}{\numberline {5.1.7}Equi-Angular Cubemap (EAC)}{25}{subsubsection.5.1.7}
 \contentsline {subsubsection}{\numberline {5.1.8}Fish-Eye Projektion}{25}{subsubsection.5.1.8}
 \contentsline {subsection}{\numberline {5.2}360\IeC {\textdegree }-Fotos}{25}{subsection.5.2}
 \contentsline {subsubsection}{\numberline {5.2.1}Quellen f\"ur 360\IeC {\textdegree }-Fotos}{26}{subsubsection.5.2.1}
@@ -88,37 +88,37 @@
 \contentsline {subsubsection}{\numberline {7.3.2}Hineinladen von Inhalten}{39}{subsubsection.7.3.2}
 \contentsline {subsubsection}{\numberline {7.3.3}Bedienelemente}{39}{subsubsection.7.3.3}
 \contentsline {paragraph}{Marker}{39}{figure.caption.24}
-\contentsline {paragraph}{Fotos}{41}{section*.25}
-\contentsline {paragraph}{Videos}{41}{section*.27}
+\contentsline {paragraph}{Fotos}{40}{section*.25}
+\contentsline {paragraph}{Videos}{40}{section*.27}
 \contentsline {paragraph}{3D-Modelle}{41}{section*.29}
 \contentsline {subsection}{\numberline {7.4}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{42}{subsection.7.4}
 \contentsline {subsection}{\numberline {7.5}QR-Code Fenster}{43}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}Sch\"uler-App}{43}{subsection.7.6}
-\contentsline {subsubsection}{\numberline {7.6.1}Eingabe des Namens}{43}{subsubsection.7.6.1}
-\contentsline {subsubsection}{\numberline {7.6.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{44}{subsubsection.7.6.2}
-\contentsline {subsubsection}{\numberline {7.6.3}Abspielen von 360\IeC {\textdegree }-Videos}{44}{subsubsection.7.6.3}
+\contentsline {subsubsection}{\numberline {7.6.1}Eingabe des Namens}{44}{subsubsection.7.6.1}
+\contentsline {subsubsection}{\numberline {7.6.2}Anzeigen von 360\IeC {\textdegree }-Fotos}{45}{subsubsection.7.6.2}
+\contentsline {subsubsection}{\numberline {7.6.3}Abspielen von 360\IeC {\textdegree }-Videos}{45}{subsubsection.7.6.3}
 \contentsline {subsubsection}{\numberline {7.6.4}Abspielen von Ton in Videos}{45}{subsubsection.7.6.4}
-\contentsline {subsubsection}{\numberline {7.6.5}Anzeigen von 3D-Modellen}{45}{subsubsection.7.6.5}
+\contentsline {subsubsection}{\numberline {7.6.5}Anzeigen von 3D-Modellen}{46}{subsubsection.7.6.5}
 \contentsline {subsubsection}{\numberline {7.6.6}Cardboard VRDisplay}{46}{subsubsection.7.6.6}
-\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{47}{section.8}
-\contentsline {subsection}{\numberline {8.1}Online-Umfrage}{47}{subsection.8.1}
-\contentsline {subsubsection}{\numberline {8.1.1}Gesamteindruck VRClassroom}{47}{subsubsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.2}Medien in VRClassroom}{49}{subsubsection.8.1.2}
-\contentsline {subsubsection}{\numberline {8.1.3}Alters- und F\"achergruppen f\"ur VRClassroom}{49}{subsubsection.8.1.3}
-\contentsline {subsubsection}{\numberline {8.1.4}Net Promotor Score}{51}{subsubsection.8.1.4}
-\contentsline {subsubsection}{\numberline {8.1.5}Einsch\"atzung der Zukunft von VR und VRClassroom}{51}{subsubsection.8.1.5}
-\contentsline {subsubsection}{\numberline {8.1.6}Demografie und pers\"onliche Angaben}{52}{subsubsection.8.1.6}
-\contentsline {subsubsection}{\numberline {8.1.7}Ergebnis und Schl\"usse aus der Evaluation}{52}{subsubsection.8.1.7}
-\contentsline {subsection}{\numberline {8.2}VRClassroom Studie in Schulen}{53}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{54}{subsubsection.8.2.1}
-\contentsline {section}{\numberline {9}Ausblick}{55}{section.9}
-\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{55}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{55}{subsection.9.2}
-\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{55}{subsubsection.9.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{56}{subsubsection.9.2.2}
-\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{56}{subsection.9.3}
-\contentsline {subsubsection}{\numberline {9.3.1}Online-Verbindung statt lokalem Netzwerk}{56}{subsubsection.9.3.1}
-\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{57}{subsubsection.9.3.2}
-\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{57}{subsubsection.9.3.3}
-\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{57}{subsubsection.9.3.4}
-\contentsline {subsection}{\numberline {9.4}Fazit}{58}{subsection.9.4}
+\contentsline {section}{\numberline {8}Nutzerstudie und Evaluation}{49}{section.8}
+\contentsline {subsection}{\numberline {8.1}Online-Umfrage}{49}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Gesamteindruck VRClassroom}{49}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Medien in VRClassroom}{51}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}Alters- und F\"achergruppen f\"ur VRClassroom}{51}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}Net Promotor Score}{53}{subsubsection.8.1.4}
+\contentsline {subsubsection}{\numberline {8.1.5}Einsch\"atzung der Zukunft von VR und VRClassroom}{53}{subsubsection.8.1.5}
+\contentsline {subsubsection}{\numberline {8.1.6}Demografie und pers\"onliche Angaben}{54}{subsubsection.8.1.6}
+\contentsline {subsubsection}{\numberline {8.1.7}Ergebnis und Schl\"usse aus der Evaluation}{54}{subsubsection.8.1.7}
+\contentsline {subsection}{\numberline {8.2}VRClassroom Studie in Schulen}{55}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Freigabe Kulturministerium}{56}{subsubsection.8.2.1}
+\contentsline {section}{\numberline {9}Ausblick}{57}{section.9}
+\contentsline {subsection}{\numberline {9.1}Zukunft von VR}{57}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Probleme von VRClassroom}{57}{subsection.9.2}
+\contentsline {subsubsection}{\numberline {9.2.1}Anzeigen gro\IeC {\ss }er Dateien}{57}{subsubsection.9.2.1}
+\contentsline {subsubsection}{\numberline {9.2.2}Synchronisierung}{58}{subsubsection.9.2.2}
+\contentsline {subsection}{\numberline {9.3}M\"ogliche Weiterentwicklungen an VRClassroom}{58}{subsection.9.3}
+\contentsline {subsubsection}{\numberline {9.3.1}Online-Verbindung statt lokalem Netzwerk}{58}{subsubsection.9.3.1}
+\contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{59}{subsubsection.9.3.2}
+\contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{59}{subsubsection.9.3.3}
+\contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{59}{subsubsection.9.3.4}
+\contentsline {subsection}{\numberline {9.4}Fazit}{60}{subsection.9.4}

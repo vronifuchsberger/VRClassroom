@@ -26,6 +26,7 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{sidecap}
+\usepackage{listings}
 
 \usepackage{fancyhdr} % Positionierung der Seitenzahlen
 \fancyhead[LE,RO,LO,RE]{}
@@ -220,7 +221,7 @@ Das Konzept der Freiheitsgrade oder Degrees of Freedom, kurz DoF, entspringt urs
 
 Freiheitsgrade werden oft auch genutzt um die Bewegungen von maritimen Fahrzeugen zu benennen: Die Bewegung in x-Richtung wird ``surge'' genannt, in y-Richtung ``sway'' und in z-Richtung ``heave''. Die Rotation um die x-Achse heißt ``roll'', um die y-Achse ``pitch'' und um die z-Achse ``yaw''. Diese Bezeichnungen beziehen sich dabei auf ein Schiff, das in x-Richtung ausgerichtet ist. \cite{Fossen1995}
 
-Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Erkennung von Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet. Kann es zusätzlich die Bewegungen im Raum messen ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also ``positional tracking'' des Nutzers benötigt. 
+Wie in Abbildung \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Headsets aus diesen Definitionen abgeleitet. Unterstützt ein System nur die Erkennung von Rotationsbewegungen um die drei Achsen wird es als ein 3DoF-System bezeichnet. Kann es zusätzlich die Bewegungen im Raum messen ist es ein 6DoF-System. Um ein 6DoF VR-Gerät zu entwickeln, wird also ``positional tracking'' des Nutzers benötigt. 
 
 \begin{figure}[ht]
   \centering
@@ -233,7 +234,7 @@ Wie in Grafik \ref{fig:dof} zu erkennen, sind die Degrees of Freedom für VR-Head
 Bei Displays von VR-Headsets gibt es zwei grundsätzliche Ansätze: Ein durchgängiges Display, das das Bild für beide Augen darstellt oder zwei kleinere unabhängige Displays. 
 Auf ein einzelnes großes Display setzt eigentlich nur Sony mit ihrer Playstation VR, alle anderen Hersteller von VR-Headsets, die fest integrierte Displays haben, arbeiten mit getrennten Displays für die beiden Augen.
 
-Bei Smartphone-gestützten VR-Headsets hängt die Größe des Displays, sowie die Auflösung und damit auch das Sichtfeld (``Field of View'') vom eingelegten Smartphone ab. Da in aktuellen Smartphones sehr hochaufgelöste Displays eingebaut werden, stehen diese den festintegrierten Displays nicht oder nur minimal nach. Nutzt man beispielsweise ein Galaxy S9+ hat man ein Display mit 2960x1440 Pixel Auflösung und 530ppi (pixel per inch), was einer Auflösung von 1480x1440 pro Auge entspricht. Es ist damit höher aufgelöst als alle fest eingebauten Displays (abgesehen von der Oculus Quest, die erst im Laufe des Jahres auf den Markt kommen soll).
+Bei Smartphone-gestützten VR-Headsets hängt die Größe des Displays, sowie die Auflösung und damit auch das Sichtfeld (``Field of View'') vom eingelegten Smartphone ab. Da in aktuellen Smartphones sehr hochaufgelöste Displays eingebaut werden, stehen diese den festintegrierten Displays nicht oder nur minimal nach. Nutzt man beispielsweise ein Galaxy S9+ hat man ein Display mit 2960x1440 Pixel Auflösung und 529ppi (pixel per inch), was einer Auflösung von 1480x1440 pro Auge entspricht. \cite{SAMSUNGELECTRONICSCO} Es ist damit höher aufgelöst als alle fest eingebauten Displays (abgesehen von der Oculus Quest, die erst im Laufe des Jahres auf den Markt kommen soll).
 
 In den Tabellen \ref{tab:headsets1} und \ref{tab:headsets2} sind die Angaben zur Auflösung der Displays als Auflösung pro Auge zu verstehen.
 
@@ -249,23 +250,18 @@ Die aktuellen VR-Headsets sind mit Bildwiederholraten zwischen 60Hz und 120Hz no
 Wie Lin et al. in ``Effects of field of view on presence, enjoyment, memory, and simulator sickness in a virtual environment'' ausführen haben Menschen ein aus beiden Augen zusammengesetztes Sichtfeld von 180°. Ein weiteres Sichtfeld als 180° wäre also nicht sinnvoll, da es nicht mehr wahrnehmbar wäre.  \cite{Stone2017}
 Aktuelle Headsets sind mit einem Sichtfeld von 100°-110° allerdings noch etwas von der Abbildung des vollen Sichtfelds entfernt. 
 Augenabstand IPD. %TODO
-Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen.
- \cite{Lin2002}
+Wie aber Lin et al. ebenso bemerkten sie jedoch in ihrer Studie, dass ein weiteres Field of View als 140° kaum noch positivere Effekte im Bezug auf Immersionsgefühl und Spaß (Enjoyment) hatten. Zusätzlich fanden sie heraus, dass das field of view mit dem Auftreten von Cybersickness korreliert. Je weiter also das Field of View ist, desto mehr litten die Studienteilnehmer an den Symptomen. \cite{Lin2002}
 
 \subsubsection{Rechenleistung}
 Generell lässt sich sagen, das mit höherer Rechenleistung aufwändigere VR-Szenen in höherer Qualität dargestellt werden können. Bessere Display-Auflösung, Bildwiederholungsrate und Field of View benötigen eine höhere Rechenleistung um die Bildinhalte zu generieren. Deshalb können (zumindest momentan) stand-alone Geräte und Smartphone-gestützte Geräte nicht mit den Computer-gestützten Geräten in diesen Kategorien konkurrieren.
 Da die Rechenleistung bei Computer- und Smartphone-gestützten VR-Headsets allerdings vom benutzen Rechner beziehungsweise Smartphone abhängt, ist die Rechenleistung nur bei den stand-alone Geräten ein Merkmal, das berücksichtigt werden kann.
 
-Fast alle in dieser Arbeit untersuchten Geräte haben dabei den gleichen Prozessor verbaut. Während alle anderen Geräte einen Qualcomm Snapdragon 835 nutzen, hat lediglich die Oculus Go hat einen Qualcomm Snapdragon 821 verbaut. Damit sind die anderen Geräte nominell etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go.
-\cite{HTCCorporationViveFocus}
-\cite{Bastian2018}
-\cite{Bastian2018a}
+Fast alle in dieser Arbeit untersuchten Geräte haben dabei den gleichen Prozessor verbaut. Während alle anderen Geräte einen Qualcomm Snapdragon 835 nutzen, hat lediglich die Oculus Go hat einen Qualcomm Snapdragon 821 verbaut. Damit sind die anderen Geräte nominell etwa 30\% schneller und verbrauchen dabei ungefähr 40\% weniger Energie als die Oculus Go. \cite{HTCCorporationViveFocus} \cite{Bastian2018} \cite{Bastian2018a}
 
 \subsubsection{Eingabemethoden}
 Es zwei grundsätzliche Eingabemethoden für Virtual Reality, die momentan verwendet werden: Eingaben über einen oder mehrere externe Controller oder aber die Eingabe am Headset.
 
 Eine einfache Methode für die Eingabe am Headset selbst ist bei Smartphone-gestützten Systemen das Auslösen von Touch-Eingaben auf dem Smartphone-Display. Ein Beispiel dafür sind Google Cardboards, die einen Auslöser am Gehäuse haben, der eine Art ``Arm'' auf das Display drückt. Einige Nachbauten des ursprünglichen Google Cardboards verwenden Magnete um Touch-Eingaben auf kapazitiven Touchscreens auszulösen.
-%TODO (Diese Technik noch genauer erläutern?)
 
 Egal mit welcher der beiden Techniken das Touch-Event ausgelöst wird, erfolgt das Touch-Event immer an der gleichen Stelle auf dem Display. Der Nutzer kann also keine bestimmte Stelle in der Szene auswählen. Deshalb wird bei dieser Eingabemethode meist der Mittelpunkt der aktuellen Blickrichtung als Position oder Richtung des ausgelösten Events interpretiert.
 
@@ -273,7 +269,7 @@ Ganz ohne Eingabe am Touchscreen können Gaze-Events (engl. ``starren'') zur Eing
 
 Externe 3 DoF-Controller bieten meist mehrere Buttons zur Eingabe und stellen einen Zeiger da, mit dem Bereiche in der Szene ausgewählt werden können. Üblicherweise ist der Ursprung des Zeigers an einem Ort fixiert. Über Beschleunigungssensoren wird die Richtung des Zeigers bestimmt, in der ein Strahl ausgesendet wird (``Raycaster'').
 
-Bei 6 DoF-Controllern, wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3 DoF-Controllern, ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
+Bei 6 DoF-Controllern wird deren Position im Raum durch Positional-Tracking-Systeme bestimmt. Anders als bei 3 DoF-Controllern ist damit die Position des Controllers nicht fixiert, sondern kann im Raum verändert werden.
 
 Bisher setzen keine Systeme auf Spracheingabe. Eine Entwicklung in diese Richtung ist aber abzusehen, da die Eingabe sehr natürlich ist und dadurch die Zugänglichkeit zu VR-Systemen erhöht werden kann.
 
@@ -288,11 +284,9 @@ Um sechs Freiheitsgrade für VR-Headsets zu bestimmen, muss die Position im Raum 
 Momentan gibt es dazu zwei verschiedene Ansätze: Die eine Möglichkeit ist es Tracker im Raum aufzustellen, die dann die Position des Headsets und gegebenenfalls der Controller im Raum bestimmen. Die Computer-gestützten VR-Headsets nutzen alle diese Technik, sie wird outside-in-Tracking genannt.  \cite{Stone2017}
 
 Die zweite Möglichkeit ist das inside-out-Tracking. Für das inside-out-Tracking müssen keinerlei Sensoren im Raum platziert werden. Es werden nur Sensoren verwendet, die in das Headset integriert sind.  \cite{Stone2017}
-Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google. Es verwendet in das Headset integrierten Kameras zur Bestimmung der Position nutzt.
- \cite{GoogleWordlSense}
+Dafür nutzt die Lenovo Mirage Solo beispielsweise das WorldSense-System von Google. Es verwendet in das Headset integrierten Kameras zur Bestimmung der Position nutzt. \cite{GoogleWordlSense}
 
-Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht. Diese bestimmen die Position im Raum anhand von Objekten im Raum, die von den Kameras erkannt werden. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller bestimmen, sodass auch diese sechs Degrees of Freedom unterstützen.
- \cite{Lang2018}
+Die Oculus Quest dagegen soll mit dem von Facebook selbst entwickelten ``Insight''-Tracking kommen. Dafür sind vier Kameras an den vorderen vier Ecken des Displays angebracht. Diese bestimmen die Position im Raum anhand von Objekten im Raum, die von den Kameras erkannt werden. Das Insight-Tracking soll zusätzlich auch die Position der beiden Controller bestimmen, sodass auch diese sechs Degrees of Freedom unterstützen. \cite{Lang2018}
 
 \subsubsection{Gewicht}
 Die Spanne zwischen den Gewichten der einzelnen Virtual Reality-Headsets reicht von 610g im Maximum zu nur knapp 100g im Minimum. Die Entwicklung der Geräte geht zu leichteren Modellen. Allerdings ist bei den neu vorgestellten Modellen, die ohne Kabel funktionieren wiederum das Gewicht des Akkus ein neues Problem. Die Hersteller versuchen das doch noch recht hohe Gewicht durch gute Riemensysteme auszugleichen. Dennoch kann das Gewicht bei längerer Nutzung unangenehm sein.
@@ -340,7 +334,7 @@ Die Oculus Rift ist mit bis zu 470g deutlich leichter als die beiden anderen Kab
 Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die Oculus Rift Brille, die Oculus Touch Controller und die zwei Sensoren benötigt. \cite{VRBound} \cite{FacebookTechnologiesLLCRift}
 
 \subsubsection{HTC Vive}
-Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie haben die gleiche Auflösung und Bildwiederholungsrate von 90Hz, allein das Field of View ist mit 110° etwas weiter als bei anderen VR-Headsets. Im Vive-Headset lässt sich die Pupillendistanz und der Objektivabstand einstellen.
+Die HTC Vive hat ein sehr ähnliches Display verbaut wie die Oculus Rift. Sie haben die gleiche Auflösung und Bildwiederholungsrate von 90Hz, allein das Field of View ist mit 110° etwas weiter als bei anderen VR-Headsets. Im Vive-Headset lässt sich die Pupillendistanz und der Objektivabstand (Focal length) einstellen.
 
 Für ein vollständiges Setup wird ein Windows-Rechner (mit Bildschirm, Mouse und Keyboard), die HTC Vive Brille, die HTC Vive Controller und die zwei Laser-Sensoren, genannt ``Lighthouses'' benötigt. Die Lighthouses müssen an diagonalen Enden des Raums überhalb des Aktionsbereich aufgestellt werden, was die initiale Installation etwas aufwändiger macht. Durch die Lasertechnologie in den Lighthouses ist das mögliche Spielfeld der HTC Vive deutlich größer als das der anderen beiden VR-Systeme.
 
@@ -384,7 +378,7 @@ Sie erkennt durch einen kleinen Sensor am inneren der Brille, ob sie aufgesetzt 
 Sie bietet die Möglichkeit für Nutzer mit Sehschwächen an die Sehstärke angepasste Linsen auf die festeingebauten Linsen zu setzen, sodass die eigene Brille nicht benötigt wird. Diese müssen aber separat erworben werden.
 Der Linsenabstand kann an der Oculus Go nicht individuell eingestellt werden und ist auf 64mm festgelegt.
 
-Die Oculus go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass man trotzdem noch Umgebungsgeräusche hören kann und nicht abgeschottet wird.
+Die Oculus Go kommt mit eingebauten Lautsprecher, die so positioniert sind, dass man trotzdem noch Umgebungsgeräusche hören kann und nicht abgeschottet wird.
 
 Eine Akkuladung hält je nach Nutzung zwischen 2 und 2,5 Stunden, wobei die Ladezeit mit fast 3 Stunden relativ lange ist.
 
@@ -471,19 +465,15 @@ Das Band mit dem die Brille am Kopf befestigt wird ist so gestaltet, dass man am
 
 \section{VR-Systeme im Bildungsbereich}
 \label{sec:VReducation}
-
-% Hier kommen noch mehr Sachen aus den Papern rein?
-% Paper: Virtual reality for collaborative e-learning 2008
-
 Virtual Reality wird in immer mehr verschiedenen Lebensbereichen eingesetzt und inzwischen gibt es neben den klassischen Simulatoren für Industriemaschinen und Flugobjekten auch verschiedene Ansätze von VR-Systemen im Bildungsbereich.
 
-Merchant et al. schließen in ihrer Arbeit in 2014, dass Lernen mit Virtual Reality bessere Lernergebnisse produziert als Lernen ohne VR. Sie sehen damit die finanzielle und zeitliche Investition der Einführung von VR-Systemen als sinnvoll an.
-% Paper: Computers & Education Effectiveness of virtual reality-based instruction on students ? learning outcomes in K-12 and higher education : A meta-analysis
+Merchant et al. schließen in ihrer Arbeit in 2014, dass Lernen mit Virtual Reality bessere Lernergebnisse produziert als Lernen ohne VR. Sie sehen damit die finanzielle und zeitliche Investition der Einführung von VR-Systemen als sinnvoll an. \cite{Merchant2014}
 
 Im folgenden Kapitel werden drei dieser Systeme besprochen, die besonders interessant für den Einsatz im Unterricht sind.
 
 In der Forschung wurden schon seit langer Zeit Systeme entwickelt, mit denen versucht wurde Behinderungen und psychische Störungen von Kindern und Jugendlichen zu verstehen und zu behandeln. Beispiele dafür sind:
-Hier noch die Beispiele einfügen %TODO
+
+Dazu zählt die Arbeit von Parsons et al \cite{Parsons2007}, in der die Aufmerksamkeitsperformance von Kindern mit ADHS in einem virtuellen Klassenzimmer mit standardisierten Methoden verglichen wird, die Entwicklung eines Lerntools für autistische Kinder von Strickland et al.  \cite{Strickland1996} und ``State-of-the-art of Virtual Reality technologies for children on the autism spectrum'' von Parsons und Cobb in 2011. \cite{Parsons2011}
 
 
 \subsection{ClassVR}
@@ -495,17 +485,13 @@ Die ClassVR Headsets können sowohl für VR, als auch AR genutzt werden. Die Heads
 Die Geräte haben keinen Controller, sondern werden mit einfachen einhändigen Gesten und Kopfbewegungen gesteuert. Außerdem kann auch die Kontrolle durch die Lehrkraft übernommen werden, sodass alle verbundenen Geräte die Inhalte anzeigen, die die Lehrkraft auswählt.
 Interessant an ClassVR ist, dass die Headsets in Boxen gekauft werden, in denen sie gelagert und gleichzeitig geladen werden können. Außerdem bietet die Firma auch fertige Inhaltssets an, die dann mit den Headsets genutzt werden können. Momentan sind die Inhalte aber ausschließlich für den britischen Markt ausgelegt, an dortige Lernpläne angepasst und nur in englischer Sprache erhältlich.
 
-Ein Set aus acht Headsets in einem Koffer, in dem die Geräte geladen werden können, gibt es ab 2249£. Für einen Satz für eine Klasse mit 24 Kindern liegt der Preis also bei 6747£, was etwa einem Preis von 7650 Euro entspricht. Alternativ kann auch ein Schrank mit 30 Headsets erworben werden, dieser liegt preislich bei 7500£. 
-Hinzu kommt der Abo-Preis von 299£ für das ClassVR Portal, mit dem die Geräte gesteuert und Inhalte ausgewählt werden können.
-% https://www.lgfl.net/learning-resources/summary-page/classvr-pricing.aspx
-% http://www.inclusive.co.uk/inclusive-classvr
+Ein Set aus acht Headsets in einem Koffer, in dem die Geräte geladen werden können, gibt es ab 2249£. Für einen Satz für eine Klasse mit 24 Kindern liegt der Preis also bei 6747£, was etwa einem Preis von 7650 Euro entspricht. Alternativ kann auch ein Schrank mit 30 Headsets erworben werden, dieser liegt preislich bei 7500£. \cite{LondonGridforLearning}
+Hinzu kommt der Abo-Preis von 299£ für das ClassVR Portal, mit dem die Geräte gesteuert und Inhalte ausgewählt werden können.  \cite{InclusiveTechnologyLtd}
 
 Die Lehrkraft kann eine Playlist mit den verfügbaren Inhalten anlegen, die dann auf die Schüler-Headsets geladen wird. Zudem können auch eigene 360°-Fotos und -Videos hochgeladen werden.
 Es können 360°-Fotos und -Videos sowie 3D-Modelle angesehen werden. 3D-Modelle werden mit Karten aktiviert, auf denen ein Code ist, der dann das Anzeigen der Modelle aktiviert, sobald die Kamera ihn erkennt. Die Modelle werden dann in Augmented Reality dargestellt. Die 3D-Modelle sind relativ simple Modelle mit wenigen Polygonen, sodass sie schnell geladen werden können. Sie werden in einer festen Größe angezeigt und können nicht skaliert werden.
 Sind die Inhalte auf die Geräte geladen, kann die Lehrkraft sehen, welche Geräte verbunden sind. Außerdem kann in Echtzeit verfolgt werden, was die Schüler in diesem Moment sehen und ein Punkt gesetzt werden, auf den die Aufmerksamkeit der Schüler gelenkt wird. Die Geräte senden zudem einen Livestream ihres Bildausschnitts an das ClassVR-System, das der Lehrkraft zusätzliche Kontrolle gibt. 
-Die Kommunikation zwischen dem Rechner der Lehrkraft und den ClassVR-Headsets läuft über das Internet. Damit die großen Datenmengen der 360°-Inhalte übertragen werden können müssen sowohl das lokale WLAN als auch die Internetverbindung der Schule entsprechend ausgelegt sein.
-
-% http://www.classvr.com
+Die Kommunikation zwischen dem Rechner der Lehrkraft und den ClassVR-Headsets läuft über das Internet. Damit die großen Datenmengen der 360°-Inhalte übertragen werden können müssen sowohl das lokale WLAN als auch die Internetverbindung der Schule entsprechend ausgelegt sein. \cite{classVR}
 
 \subsection{Google Expeditions}
 Google Expeditions ist eine kostenfreie App, die es für die Smartphone gestützten VR-Headsets entwickelt wurde.
@@ -514,22 +500,18 @@ Sie kann einzeln genutzt werden oder im Unterricht. Wird sie im Unterricht genut
 Es gibt VR-Touren, die aus 360°Foto-Strecken oder -Videos bestehen und AR-Touren, bei denen die Nutzer 3D-Modelle im Raum begutachten können. Um die Modelle zu zeigen müssen dafür spezielle Marker ausgedruckt werden, die im Kamerabild erkannt werden.
 
 Wird eine Tour geleitet, kann der Tourleiter Markierungen setzen, auf die die Teilnehmer der Tour dann durch Pfeile in ihrem Bild hingewiesen werden. 
-Momentan gibt es mehr als 900 verschiedene Expeditionen, die kostenlos genutzt werden können. Zudem können auch selbst Touren erstellt werden.
-% https://edu.google.com/products/vr-ar/
+Momentan gibt es mehr als 900 verschiedene Expeditionen, die kostenlos genutzt werden können. Zudem können auch selbst Touren erstellt werden. \cite{GoogleLLCexpeditions}
 
 \subsection{DiscoveryVR}
-% https://www.discoveryvr.com
 Die Discovery VR App ist eine Entwicklung des Discovery Channels, in der die Nutzer hochqualitative 360°-Videos ansehen können. Die App ist auf allen VR Plattformen kostenlos verfügbar.
 
-Sie ist keine App, die speziell für die Nutzung in der Schule entwickelt wurde. Die verfügbaren Inhalte bieten sich aber für den Einsatz im Unterricht an. Die Videos haben dabei entweder eine englische Audiospur oder sind ohne Erzählstimme.
+Sie ist keine App, die speziell für die Nutzung in der Schule entwickelt wurde. Die verfügbaren Inhalte bieten sich aber für den Einsatz im Unterricht an. Die Videos haben dabei entweder eine englische Audiospur oder sind ohne Erzählerstimme. \cite{DiscoveryCommunications}
 
 
 \subsection{Unimersiv}
-Unimersiv ist eine App, die es für GearVR und Oculus Rift gibt. Innerhalb der App können unterschiedliche VR-Anwedungen genutzt werden. Beispielsweise kann die internationale Raumstation (ISS) erkundet werden. Im Moment sind neun verschiedene VR-Anwendungen auf der Plattform vorhanden. Schulen können für einmalig 49\$ pro Headset eine Lizenz erwerben, in der alle verfügbaren Inhalte enthalten sind und auch alle neuen Entwicklungen kostenlos geladen werden können.
+Unimersiv ist eine App, die es für GearVR und Oculus Rift gibt. Innerhalb der App können unterschiedliche VR-Anwendungen genutzt werden. Beispielsweise kann die internationale Raumstation (ISS) erkundet werden. Im Moment sind neun verschiedene VR-Anwendungen auf der Plattform vorhanden. Schulen können für einmalig 49\$ pro Headset eine Lizenz erwerben, in der alle verfügbaren Inhalte enthalten sind und auch alle neuen Entwicklungen kostenlos geladen werden können.
 
-Außerdem werden auch Simulations-Anwendungen für Unternehmen angeboten. Eine dieser Apps erlaubt es beispielsweise den Mitarbeitern einer Firma die Steuerung von Staplern in einem sicheren Rahmen zu erlernen.
-% https://unimersiv.com
-
+Außerdem werden auch Simulations-Anwendungen für Unternehmen angeboten. Eine dieser Apps erlaubt es beispielsweise den Mitarbeitern einer Firma die Steuerung von Staplern in einem sicheren Rahmen zu erlernen. \cite{UNIMERSIV}
 
 %_______________________________________________________________________________________________________________________
 \cleardoublepage % Neue rechte Seite anfangen
@@ -540,10 +522,8 @@ In ihrem Artikel ``5 Major Challenges For The VR Industry'' aus dem März 2018 si
 Wie bereits in \ref{subsec:price} diskutiert ist der Preis, seitdem es Smartphone-gestützte VR-Headsets gibt, ein deutlich kleineres Problem, wenn die Kosten für das Smartphone selbst nicht mit gerechnet werden. Aber auch stand-alone Einsteiger-Headsets wie die Oculus Go erlauben einen günstigeren Einstieg in die Thematik.
 
 Der zweite Problempunkt der fehlenden Inhalte ist nach wie vor akut: Abseits von Spielen gibt es nach wie vor wenig Anwendungen, die für VR-Headsets entwickelt wurden. Besonders im Bildungsbereich sieht die Autorin eine Zukunft mit Virtual Reality-Apps, die eine komplett andere Wahrnehmung der Inhalte bieten. 
-Besonders bei Simulator-Trainings wird bereits seit längerer Zeit auf VR gesetzt (QUELLE), diese sind aber meist nicht auf konventionellen VR-Headsets nutzbar. Eine neuere Applikation für VR in der Bildung sind Google Expeditions, wie in \ref{sec:VReducation} genauer erläutert. %TODO
-Neben Inhalten können aber auch soziale Nutzungen von VR interessant sein. ``Facebook Spaces'' beispielsweise, erlaubt den Nutzern sich mit Freunden auszutauschen, Fotos zu teilen, Videotelefonate zu führen und zusammen in VR zu malen. Ebenso ist eine soziale Nutzung auch im professionellen Kontext denkbar, beispielsweise für virtuelle Meetingräume.
-
-% Quelle: https://www.facebook.com/spaces
+Besonders bei Simulator-Trainings wird bereits seit längerer Zeit auf VR gesetzt \cite{furness1978visually}, diese sind aber meist nicht auf konventionellen VR-Headsets nutzbar. Eine neuere Applikation für VR in der Bildung sind Google Expeditions, wie in \ref{sec:VReducation} genauer erläutert. 
+Neben Inhalten können aber auch soziale Nutzungen von VR interessant sein. ``Facebook Spaces'' beispielsweise, erlaubt den Nutzern sich mit Freunden auszutauschen, Fotos zu teilen, Videotelefonate zu führen und zusammen in VR zu malen. Ebenso ist eine soziale Nutzung auch im professionellen Kontext denkbar, beispielsweise für virtuelle Meetingräume. \cite{FacebookTechnologiesLLCspaces}
 
 Drittens sieht Wolfort das fehlen von Geschäftsmodellen, mit denen Unternehmen rentabel VR-Software anbieten können. Das Problem wird noch dadurch verschärft, dass es keinen technologischen Standard gibt, sodass native Anwendungen für mehrere Plattformen einzeln entwickelt werden müssen. Standards wie WebVR können hierfür eine wichtige Rolle spielen.
 Für die im Rahmen dieser Arbeit entwickelte Software VRClassroom, könnte ein das anbieten von Inhalten für den Unterricht ein Geschäftsmodell sein, ähnlich zu Lehrfilmen oder -büchern.
@@ -589,8 +569,7 @@ Einen weiteren Ansatz zur Lösung des Problems der Cybersickness hat Eric Bear, d
 Fast alle Hersteller geben in ihren Nutzungsbedingungen oder Sicherheitsanweisungen ein Mindestalter für die Benutzung ihrer VR-Systeme an. Wie in Tabelle~\ref{tab:tableage} zu sehen, sind sich die Hersteller sehr einig, dass VR-Headsets nicht für kleine Kinder geeignet sind und frühestens für Jugendliche in Frage kommen.
 \bigskip
 
-Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht. ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben.
-  ~\cite{FacebookTechnologiesLLC2018}
+Oculus weist konkret darauf hin, dass eine Nutzung ihrer Geräte unter 13 Jahren ihren Nutzungsbedingungen widerspricht. ``The Services are intended solely for users who are aged 13 or older. Any registration for, or use of, the Services by anyone under the age of 13 is unauthorised, unlicensed and in breach of these Terms.'' Es werden allerdings keine genauen Gründe für diese Altersrestriktion angegeben. \cite{FacebookTechnologiesLLC2018}
 
 Samsung geht dabei noch einen Schritt weiter und warnt vor einer Nutzung unter 13 Jahren, da sich jüngere Kinder in einer ``critical period in visual development''  ~\cite{SAMSUNG} befinden. Zudem sollen auch Kinder über 13 Jahren nur unter Aufsicht einer erwachsenen Person die Gear VR benutzen und dabei darauf achten regelmäßig Pausen zu machen. Eine lange Nutzung soll generell vermieden werden und die Kinder sollen während und nach der Nutzung beobachtet werden, ob sich ihre Fähigkeiten in der Hand-Augen-Koordination, Balance oder Multi-Tasking verschlechtern.
 
@@ -612,7 +591,8 @@ Banks sieht als Gefahren lediglich die gleichen, die auch für Erwachsene bestehe
 
 \bigskip
 
-Momentan gibt es keine veröffentlichten Forschungsarbeiten zu den Gefahren für Kinder bei der Nutzung von VR-Brillen, dagegen sind viele Arbeiten zu finden, die VR-Systeme in der Therapie von verhaltensauffälligen, lernverzögerten oder behinderten Kindern erfolgreich einsetzen. Es gibt beispielsweise Arbeiten, die .... (HIER NOCH GUTE BEISPIELE RAUSSUCHEN) %TODO
+Momentan gibt es keine veröffentlichten Forschungsarbeiten zu den Gefahren für Kinder bei der Nutzung von VR-Brillen, dagegen sind viele Arbeiten zu finden, die VR-Systeme in der Therapie von verhaltensauffälligen, lernverzögerten oder behinderten Kindern erfolgreich einsetzen. 
+Beispiele für solche Systeme wurden bereits in \ref{sec:VReducation} besprochen.
 
 
 \begin{table}[]
@@ -648,75 +628,65 @@ Im Folgenden werden die bekanntesten und am weitesten in der 360°-Szene verbreit
 Die Abbildungen zeigen das Ergebnis der Projektion einer Kugel, bei der die Längen- und Breitengrade alle 10° durch eine Linie dargestellt werden.
 
 \subsubsection{Equirectangulare Projektion}
-Verbildlichen kann man die Projektion etwa damit, dass eine Kugel in einem Zylinder sitzt, der den gleichen Durchmesser wie Kugel hat und dann die Pole nach außen zieht, bis die Kugel die Form des Zylinders angenommen hat.
-
-Bei der equirectangularen Projektion werden die Gradzahlen von Längen- und Breitengrade auf die x und y-Werte in einem Gitternetz projiziert. Ein Bildpunkt an (53°/ 90°) wird dann im projizierten Bild an (53,100) dargestellt. Es wird keine zusätzliche Skalierung oder Transformation vorgenommen.
-Dadurch werden Äquator-nahe Bildbereiche wenig verzerrt und die Pol-nahen Regionen extrem in horizontaler Richtung verzerrt, sodass die Pole der Kugel auf die Breite des Äquators ausgedehnt werden. 
-Vertikale Linien bleiben unverzerrt erhalten, horizontale Linien werden bis auf den Äquator immer verzerrrt dargestellt. Dadurch bleiben zudem keine Winkel erhalten.
-
-Die equirectangulare Projektion hat dadurch den Nachteil, dass die Bildelemente am Äquator eine deutlich geringere Auflösung hat als die Bildbereiche an den Polen, was meist diejenigen sind, die interessanter für den Betrachter sind. Außerdem ist durch die starke Verzerrung das Bild an den Rändern schwer zu erkennen.
-
-Trotz diesen Nachteilen ist die equirectangulare Projektion die am weitesten verbreitete Projektion in der 360°-Szene.
-
-Die Online-Video-Plattform Vimeo nutzt für 360°-Videos die equirectangular Projektion und auch Youtube hat bis 2017 diese Projektion benutzt bis sie auf ihren eigens entwickelten Standard EAC gewechselt haben.
-% https://vimeo.com/blog/post/terms-you-need-to-know-to-create-360-video
-% https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
-
-Grafik \ref{fig:projection-equirectengular}
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-equirectengular.eps}
- \caption{.}
+ \caption{Die equirectangulare Projektion einer Kugel.}
   \label{fig:projection-equirectengular}
 \end{figure}
 
+Verbildlichen kann man die Projektion etwa damit, dass eine Kugel in einem Zylinder sitzt, der den gleichen Durchmesser wie Kugel hat und dann die Pole nach außen zieht, bis die Kugel die Form des Zylinders angenommen hat.
+
+Bei der equirectangularen Projektion werden die Gradzahlen von Längen- und Breitengrade auf die x und y-Werte in einem Gitternetz projiziert. Ein Bildpunkt an (53°/ 90°) wird dann im projizierten Bild an (53,100) dargestellt. Es wird keine zusätzliche Skalierung oder Transformation vorgenommen, wie in Abbildung \ref{fig:projection-equirectengular} zu sehen ist.
+Dadurch werden Äquator-nahe Bildbereiche wenig verzerrt und die Pol-nahen Regionen extrem in horizontaler Richtung verzerrt, sodass die Pole der Kugel auf die Breite des Äquators ausgedehnt werden. 
+Vertikale Linien bleiben unverzerrt erhalten, horizontale Linien werden bis auf den Äquator immer verzerrt dargestellt. Dadurch bleiben zudem keine Winkel erhalten.
+
+Die equirectangulare Projektion hat dadurch den Nachteil, dass die Bildelemente am Äquator eine deutlich geringere Auflösung hat als die Bildbereiche an den Polen, was meist diejenigen sind, die interessanter für den Betrachter sind. Außerdem ist durch die starke Verzerrung das Bild an den Rändern schwer zu erkennen.
+
+Trotz diesen Nachteilen ist die equirectangulare Projektion die am weitesten verbreitete Projektion in der 360°-Szene, was vermutlich auf die einfache Berechnung der Projektion zurückzuführen ist.
+
+Die Online-Video-Plattform Vimeo nutzt für 360°-Videos die equirectangular Projektion \cite{VimeoInc} und auch Youtube hat bis 2017 diese Projektion benutzt bis sie auf ihren eigens entwickelten Standard EAC gewechselt haben. \cite{Wheeler2017}
+
+
 \subsubsection{Zylindrische Projektion}
-Die zylindrische Projektion hat einen ähnlichen Ansatz wie die Equirectangulare. Auch hier kann man sich die Kugel in einem stehen Zylinder vorstellen, der die Kugel am Äquator berührt. Dann wird die Oberfläche der Kugel aus dem Mittelpunkt auf den Zylinder projiziert. Dadurch bleiben vertikale Linien und der Äquator unverzerrt, alle anderen Linien werden allerdings verzerrt. 
+Die zylindrische Projektion hat einen ähnlichen Ansatz wie die Equirectangulare. Auch hier kann man sich die Kugel in einem stehen Zylinder vorstellen, der die Kugel am Äquator berührt. Dann wird die Oberfläche der Kugel aus dem Mittelpunkt auf den Zylinder projiziert. Dadurch bleiben vertikale Linien und der Äquator unverzerrt, alle anderen Linien werden allerdings verzerrt. (Abbildung \ref{fig:projection-cylindric})
 
 Durch diese Projektion werden Bildbereiche die Nahe den Polen extrem in vertikaler Richtung verzerrt, sodass sie viel größer erscheinen, als sie eigentlich sind. Daher ist ein vertikales Field of View, das höher als 120° ist, für zylindrische Projektion nicht zu empfehlen. Die Pole werden ins unendliche projiziert, deshalb kann diese Projektion keine komplette Kugel abbilden.
-
-Grafik \ref{fig:projection-cylindric}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-cylindric.eps}
- \caption{.}
+ \caption{Die zylindrische Projektion einer Kugel.}
   \label{fig:projection-cylindric}
 \end{figure}
 
 \subsubsection{Mercator-Projektion}
-Die Mercator-Projektion ist die wohl berühmteste Projektion für Landkarten, die seit ihrer Entwicklung 1569 für Weltkarten genutzt wird und auch heute noch besonders in der Nautik eine große Rolle spielt. 
-
-Eine Mercator-Projektion sieht ähnlich wie eine zylindrische Projektion aus, die Berechnung ist aber ungleich viel komplexer. Der große Vorteil einer Mercator-Projektion ist, dass sie winkelttreu ist. So kann eine Route zwischen zwei Punkten gezeichnet werden und die Gradzahl, die sich auf der Karte abläsen lässt stimmt mit dem tatsächlichen Winkel überein. Dadurch bewirkte die Mercator-Projektion einen Durchbruch in der Kartografie und Seefahrt. Auch heute sind viele Karten noch in der Mercator-Projektion abgebildet.
-
-Problematisch an dieser Projektion ist wie auch bei der zylindrischen Projektion die extreme Verzerrung von Bereichen, die weit vom Äquator entfernt sind. Sie kann auch keine komplette 180° Vertikal-Projektion produzieren, sondern nur bis etwa 85° nördlich und südlich, und deckt damit einen Bereich von 170° an. Diese extreme Verzerrung führt beispielsweise dazu, dass auf Weltkarten Grönland oft größer als der ganze afrikanische Kontinent wirkt, obwohl es in der Realität nur etwa einem Vierzehntel der Fläche entspricht.
-
-Varianten der Mercator-Projektion sind bis heute der de-facto Standard für digitale Karten. Auch Google Maps hat lange eine Abwandlung der Mercator Projektion, die so genannte ``Web Mercator Projection'' verwendet. Im August 2018 haben sie jedoch ihren Wechsel zu einer Kugeldarstellung angekündigt. Bisher ist diese neue 3D Globe Ansicht allerdings nur auf dem Desktop ausgerollt und nicht in den mobilen Apps zu sehen.
-% https://twitter.com/googlemaps/status/1025130620471656449?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1025130620471656449&ref_url=http%3A%2F%2Fgeoawesomeness.com%2Fthe-earth-is-not-flat-google-maps-confirms-with-globe-mode%2F
-
-Grafik \ref{fig:projection-mercator}
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-mercartor.eps}
- \caption{.}
+ \caption{Die Mercator-Projektion einer Kugel.}
   \label{fig:projection-mercator}
 \end{figure}
- 
+
+Die Mercator-Projektion ist die wohl berühmteste Projektion für Landkarten, die seit ihrer Entwicklung 1569 für Weltkarten genutzt wird und auch heute noch besonders in der Nautik eine große Rolle spielt. 
+
+Wie in Abbildung \ref{fig:projection-mercator} zu sehen sieht eine Mercator-Projektion ähnlich wie eine zylindrische Projektion aus, die Berechnung ist aber ungleich viel komplexer. Der große Vorteil einer Mercator-Projektion ist, dass sie winkelttreu ist. So kann eine Route zwischen zwei Punkten gezeichnet werden und die Gradzahl, die sich auf der Karte abläsen lässt stimmt mit dem tatsächlichen Winkel überein. Dadurch bewirkte die Mercator-Projektion einen Durchbruch in der Kartografie und Seefahrt. Auch heute sind viele Karten noch in der Mercator-Projektion abgebildet.
+
+Problematisch an dieser Projektion ist wie auch bei der zylindrischen Projektion die extreme Verzerrung von Bereichen, die weit vom Äquator entfernt sind. Sie kann auch keine komplette 180° Vertikal-Projektion produzieren, sondern nur bis etwa 85° nördlich und südlich, und deckt damit einen Bereich von 170° an. Diese extreme Verzerrung führt beispielsweise dazu, dass auf Weltkarten Grönland oft größer als der ganze afrikanische Kontinent wirkt, obwohl es in der Realität nur etwa einem Vierzehntel der Fläche entspricht.
+
+Varianten der Mercator-Projektion sind bis heute der de-facto Standard für digitale Karten. Auch Google Maps hat lange eine Abwandlung der Mercator Projektion, die so genannte ``Web Mercator Projection'' verwendet. Im August 2018 haben sie jedoch ihren Wechsel zu einer Kugeldarstellung angekündigt. Bisher ist diese neue 3D Globe Ansicht allerdings nur auf dem Desktop ausgerollt und nicht in den mobilen Apps zu sehen. \cite{GoogleLLC2018maps}
+
 \subsubsection{Rectilinear-Projektion}
-Die Rectilinear-Projektion ist anders als die vorigen Projektionen keine zylindrische Projektion. Sie lässt sich verbildlichen indem man eine Kugel auf eine Fläche legt und einen Teil der Kugel vom Mittelpunkt der Kugel auf die Ebene projiziert. Ein einzelnes rectilienares Bild stellt also kein komplettes 360°-Panorama dar. Um ein komplettes Panorama zu erhalten werden dann einfach mehrere rectilineare Projektionen zusammen gesetzt.
+Die Rectilinear-Projektion ist anders als die vorigen Projektionen keine zylindrische Projektion. Sie lässt sich verbildlichen indem man eine Kugel auf eine Fläche legt und einen Teil der Kugel vom Mittelpunkt der Kugel auf die Ebene projiziert. Ein einzelnes rectilineares Bild stellt also kein komplettes 360°-Panorama dar. Um ein komplettes Panorama zu erhalten werden dann einfach mehrere rectilineare Projektionen zusammen gesetzt.
 
-Ein großer Vorteil dieser Projektion liegt darin, dass gerade Linien erhalten bleiben. Eine starke Verzerrung in dieser Projektion ist in den Ecken des Bildes zu finden und wird umso stärker, je weiter das Field of View ist. Will man ein möglichst unverzerrtes Panorama, sollten mehrere rectilienare Bilder mit einem kleineren Field of View zusammengesetzt werden.
+Ein großer Vorteil dieser Projektion liegt darin, dass gerade Linien erhalten bleiben. Eine starke Verzerrung in dieser Projektion ist in den Ecken des Bildes zu finden und wird umso stärker, je weiter das Field of View ist. Will man ein möglichst unverzerrtes Panorama, sollten mehrere rectilineare Bilder mit einem kleineren Field of View zusammengesetzt werden.
 
-Bekannt unter dem Begriff Cubemap-Projektion oder Skybox aus der Gaming-Szene ist die Kombination von sechs rectilinearer Bilder, die wie die Seiten eines Würfels angeordnet sind. Ein bekanntes Beispiel, bei dem Cubemap-Bilder verwendet werden, sind die Google StreetView-Panoramas. 
-
-Grafik \ref{fig:projection-cubemap}
+Bekannt unter dem Begriff Cubemap-Projektion oder Skybox aus der Gaming-Szene ist die Kombination von sechs rectilinearer Bilder, die wie die Seiten eines Würfels angeordnet sind. Eine solche Cubemap wird in Abbildung \ref{fig:projection-cubemap} dargestellt. Ein bekanntes Beispiel, bei dem Cubemap-Bilder verwendet werden, sind die Google StreetView-Panoramas. 
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-cubemap.eps}
- \caption{.}
+ \caption{Die Cupemap einer Kugel zusammengesetzt aus sechs rectilinearen Teilprojektionen der Kugel.}
   \label{fig:projection-cubemap}
 \end{figure}
 
@@ -725,97 +695,73 @@ Die Stereographische Projektion hat den gleichen Ansatz wie die rectilineare Pro
 
 Auch mit der stereographischen Projektion ist keine volles 360°-Panorama möglich, sondern nur bis etwa 330°. Empfehlenswert ist es allerdings ein Panorama aus drei 120°-Projektionen zusammenzusetzen. 
 
-Stereographische Projektionen erzeugen immer ein Rundes Bild, das einer Fish-Eye Projektion ähnlich sieht.
-
-Grafik \ref{fig:projection-stereographic}
+Stereographische Projektionen erzeugen immer ein Rundes Bild, das einer Fish-Eye Projektion ähnlich sieht, wie Abbildung \ref{fig:projection-stereographic} zeigt.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-stereographic.eps}
- \caption{.}
+ \caption{Die stereographische Projektion einer Kugel zeigt bis zu 330° der Kugel.}
   \label{fig:projection-stereographic}
 \end{figure}
 
 \subsubsection{Pannini/ Vedutismo-Projektion}
 Die Vedutismo- oder Pannini-Projektion ist ebenfalls eine zylindrische Projektion und hat damit dem Vorteil, dass alle vertikalen Linien unverzerrt bleiben. Mit dieser Projektion werden jedoch zusätzlich auch noch alle Linien, die durch das Projektionszentrum gehen ebenfalls als gerade Linien dargestellt. Die Perspektive mit einem zentralen Fluchtpunkt wird dadurch also für einen weiten Blickwinkel möglich.
 
-Die Pannini-Projektion lässt sich als eine rectilineare Projektion einer Kugel auf einen Zylinder vorstellen. Das Projektionszentrum kann dabei überall auf der Sichtachse liegen mit der Distanz d zur Zylinder-Achse. Ist d also d=0, wird eine normale rectilineare Projektion erzielt, geht d gegen unendlich entsteht eine zylindrische Projektion. Durch die Variation von d werden jeweils unterschiedliche Projektion erreicht. 
+Die Pannini-Projektion lässt sich als eine rectilineare Projektion einer Kugel auf einen Zylinder vorstellen. Das Projektionszentrum kann dabei überall auf der Sichtachse liegen mit der Distanz d zur Zylinder-Achse. Ist d also d=0, wird eine normale rectilineare Projektion erzielt, geht d gegen unendlich entsteht eine zylindrische Projektion. Durch die Variation von d werden jeweils unterschiedliche Projektion erreicht. Die Konstruktion einer Pannini-Projektion wird in \ref{fig:projection-pannini} abgebildet.
 Die Pannini-Projektion entspricht dabei d=1.
-
-Eine einzelne Pannini-Projektion ist allerdings für maximal 150° in beiden Richtungen möglich, sodass ein volles Panorama wiederum durch mehrere Bilder zusammengesetzt werden muss, ähnlich zur rectilinearen Projektion.
-
-Grafik \ref{fig:projection-pannini}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-pannini.eps}
- \caption{.}
+ \caption{Die Konstruktion einer Pannini-Projektion.}
   \label{fig:projection-pannini}
 \end{figure}
+
+Eine einzelne Pannini-Projektion ist allerdings für maximal 150° in beiden Richtungen möglich, sodass ein volles Panorama wiederum durch mehrere Bilder zusammengesetzt werden muss, ähnlich zur rectilinearen Projektion.
 
 \subsubsection{Equi-Angular Cubemap (EAC)}
 Wie bereits erwähnt hat YouTube vor einigen Jahren ihren eigenen Standard für 360°-Bildprojektionen Equi-Angular Cubemap entwickelt. Der Name Cubemap verrät bereits, dass auch dieses Bild wieder aus mehreren Projektionen zusammengesetzt wird. Hierbei werden allerdings die einzelnen Projektionen nicht aus rectilinearen Projektionen zusammengesetzt.
 
-Die Teile der EAC-Cubemap sind sehr ähnlich wir rectilineare Projektionen mit dem Unterschied, dass Bildabschnitte in Äquatornähe genauso hoch aufgelöst werden wie Bildbereiche nahe den Polen. Die Pixeldichte bleibt also an allen Bildbereichen gleich, sodass alle Bereiche des 360°-Bildes eine gleiche Auflösung haben. Letztendlich führt das dann zu einer besseren Videoqualität mit gleicher Auflösung.
-
-% https://blog.google/products/google-ar-vr/bringing-pixels-front-and-center-vr-video/
-% Quelle:  https://youtube-eng.googleblog.com/2017/03/improving-vr-videos.html
-
-Grafik \ref{fig:projection-eac}
+Die Teile der EAC-Cubemap sind sehr ähnlich wir rectilineare Projektionen mit dem Unterschied, dass Bildabschnitte in Äquatornähe genauso hoch aufgelöst werden wie Bildbereiche nahe den Polen. Die Pixeldichte bleibt also an allen Bildbereichen gleich, sodass alle Bereiche des 360°-Bildes eine gleiche Auflösung haben. Letztendlich führt das dann zu einer besseren Videoqualität mit gleicher Auflösung. Abbildung \ref{fig:projection-eac} zeigt die Unterschiede in der Auflösung bei einer normalen Cubemap und einer Equi-Angularen Cubemap. \cite{Brown2017}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth]{images/projection-eac.eps}
- \caption{.}
+ \caption{Vergleich einer rectilinearen und einer equi-angularen Cubemap (EAC).}
   \label{fig:projection-eac}
 \end{figure}
 
 
 \subsubsection{Fish-Eye Projektion}
-Die Fish-Eye Projektion lässt sich wie die Spiegelung in einer Silberkugel vorstellen. Sie kann eine Szene mit bis zu 180° in beiden Dimensionen darstellen und erzeugt damit ein rundes Bild. Bildbereiche nahe dem Zentrum werden vergrößert dargestellt, während Bildbereiche nahe den Rändern stark verzerrt werden. Die Fish-Eye Projektion ist meist nicht als End-Projektion sondern eher als Speicherformat von 360°-Kameras zu finden, das dann noch weiter verarbeitet wird.
-% https://www.cambridgeincolour.com/tutorials/image-projections.htm
+Die Fish-Eye Projektion lässt sich wie die Spiegelung in einer Silberkugel vorstellen. Sie kann eine Szene mit bis zu 180° in beiden Dimensionen darstellen und erzeugt damit ein rundes Bild. Bildbereiche nahe dem Zentrum werden vergrößert dargestellt, während Bildbereiche nahe den Rändern stark verzerrt werden. Die Fish-Eye Projektion ist meist nicht als End-Projektion sondern eher als Speicherformat von 360°-Kameras zu finden, das dann noch weiter verarbeitet wird. \cite{CambridgeinColour}
 
-Viele 360° Kameras, wie zum Beispiel auch die Rico Theta haben zwei Linsen, die jeweils ein 180°-Fish-Eye-Panorama erzeugen. Diese können dann in der Nachbearbeitung zu vollen 360°-Panoramas in einer anderen Projektion umgerechnet werden. Eine volles Panorama ist mit einer Fish-Eye Projektion nicht darstellbar und auch das zusammensetzen mehrerer Fish-Eye Panoramen wie bei rectilinearen Projektionen ist nicht möglich.
-% https://theta360.com/en/about/theta/technology.html
+Viele 360° Kameras, wie zum Beispiel auch die Rico Theta haben zwei Linsen, die jeweils ein 180°-Fish-Eye-Panorama erzeugen. Diese können dann in der Nachbearbeitung zu vollen 360°-Panoramas in einer anderen Projektion umgerechnet werden. Eine volles Panorama ist mit einer Fish-Eye Projektion nicht darstellbar und auch das zusammensetzen mehrerer Fish-Eye Panoramen wie bei rectilinearen Projektionen ist nicht möglich. \cite{RicohCompanyLtd}
 
 \subsection{360°-Fotos}
 Bei 360°-Fotos handelt es sich um Bilddateien, die wenn sie mit Programmen angesehen werden, die 360°-Inhalte korrekt anzeigen können, ein volles Panorama um den Nutzer bilden, in dem er sich dann umsehen kann. 
 
-Die wahrscheinlich bekanntesten Anwendungen, die 360°-Bilder anzeigen sind Google StreetView und 360°-Fotos auf Facebook, die der Nutzer einfach durch bewegen des Smartphones erkunden kann.
-% TODO (Quellen!)
+Die wahrscheinlich bekanntesten Anwendungen, die 360°-Bilder anzeigen sind Google StreetView \cite{GoogleLLCphotos} und 360°-Fotos auf Facebook \cite{FacebookTechnologiesLLCphotos}, die der Nutzer einfach durch bewegen des Smartphones erkunden kann.
 
 \subsubsection{Quellen für 360°-Fotos}
 Es gibt bisher keine Plattform, die sich darauf spezialisiert hat 360°-Fotos, die in der Lehre genutzt werden können, anzubieten. 
 
 Die verbreiteten Anbieter für Archivbilder wie zum Beispiel Shutterstock oder iStockPhoto bieten zwar bereits 360°-Fotos an, aber die meisten dieser Archivbilder zeigen keine relevanten Inhalte, sondern nur eine schöne Landschaft oder einen Raum. Sie sind also für zur Nutzung im Unterricht nicht geeignet. Zudem sind diese Bilder oft teuer oder mit einem Abo beim jeweiligen Anbieter verbunden.
 
-Die aktuell beste Quelle für 360°-Fotos ist die Foto-Sharing-Plattform Flickr, auf der die Urheber das Herunterladen ihrer Bilder erlauben und auch die Nutzungslizenz dafür angeben können. Eine Suche nach ``equirectangular'' und der Creative Commons Lizenz ist dort einfach möglich und man wird schnell fündig. 
-Flickr hat zudem die Funktionalität die equirectigularen 360°-Fotos richtig darzustellen, sodass die Nutzer sich im Bild umsehen können, indem sie den Viewport verschieben.
+Die aktuell beste Quelle für 360°-Fotos ist die Foto-Sharing-Plattform Flickr, auf der die Urheber das Herunterladen ihrer Bilder erlauben und auch die Nutzungslizenz dafür angeben können. Eine Suche nach ``equirectangular'' und der Creative Commons Lizenz ist dort einfach möglich und man wird schnell fündig.\cite{Flickr}
+Flickr hat zudem die Funktionalität die equirectingularen 360°-Fotos richtig darzustellen, sodass die Nutzer sich im Bild umsehen können, indem sie den Viewport verschieben.
 
-Ein engagierter Lehrer hat sogar eine Gruppe gegründet, die speziell dafür gedacht ist, dass Lehrkräfte aus aller Welt ihre 360°-Fotos teilen können, damit Andere sie auch in ihrem Unterricht nutzen können.
+Ein engagierter Lehrer hat sogar eine Gruppe gegründet, die speziell dafür gedacht ist, dass Lehrkräfte aus aller Welt ihre 360°-Fotos teilen können, damit Andere sie auch in ihrem Unterricht nutzen können. \cite{Flickrgroup}
 
-% Flickr-Group: https://www.flickr.com/groups/360images4schools/
-% Flickr Search equirectangluar + Creative Commons: % https://www.flickr.com/search/?text=equirectangular&license=2%2C3%2C4%2C5%2C6%2C9
-
-Eine weitere Möglichkeit an 360°-Fotos zu kommen, die größtenteils ebenfalls von Hobby-Fotografen stammen, ist die Google Photo Sphere Community, eine Gruppe auf Google Plus. Allerdings ist hier der Download nicht immer erlaubt und die Rechte für die Bilder auch nicht immer angegeben.
-% Google Photo Sphere Community: https://plus.google.com/communities/115970110085205516914/stream/abbc1e71-8239-4ab0-9de3-3f6429e7681f
+Eine weitere Möglichkeit an 360°-Fotos zu kommen, die größtenteils ebenfalls von Hobby-Fotografen stammen, ist die Google Photo Sphere Community, eine Gruppe auf Google Plus. Allerdings ist hier der Download nicht immer erlaubt und die Rechte für die Bilder auch nicht immer angegeben. \cite{GoogleLLCphotosphere}
 
 Außerdem gibt es noch die Möglichkeit 360°-Fotos bei 360cities oder Airpano zu lizensieren. 
-360cities ist eine Plattform auf der professionelle 360°-Fotographen ihre Panoramen hochladen und zum Verkauf anbieten können. Dabei handelt es sich oft um sehr gute Bilder, es ist aber relativ teuer, sodass sich das für die Lizenzierung für eine einzelne Lehrkraft nicht wirklich anbietet.
+360cities ist eine Plattform auf der professionelle 360°-Fotographen ihre Panoramen hochladen und zum Verkauf anbieten können. Dabei handelt es sich oft um sehr gute Bilder, es ist aber relativ teuer, sodass sich das für die Lizenzierung für eine einzelne Lehrkraft nicht wirklich anbietet. \cite{360Citiess.r.o}
 
-Airpano bietet speziell Bilder von Orten auf der Welt an wie zum Beispiel Städten oder geschichtlichen Orten aus der Luftperspektive an. Die Lizenzierung dieser Bilder ist mit ca. 1000 Euro pro Jahr teuer, sodass die Nutzung im Unterricht schwierig ist.
-
-% www.360cities.net
-% https://www.airpano.com
+Airpano bietet speziell Bilder von Orten auf der Welt an wie zum Beispiel Städten oder geschichtlichen Orten aus der Luftperspektive an. Die Lizenzierung dieser Bilder ist mit ca. 1000 Euro pro Jahr teuer, sodass die Nutzung im Unterricht schwierig ist. \cite{AirPano}
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Fotos}
 Es gibt grundlegend zwei verschiedene Arten 360°-Bilder zu erstellen: Eine einfache Möglichkeit, ist die Verwendung einer 360°-Kamera wie zum Beispiel der Vuze 360, 360 Rize, Rico Theta, Samsung Gear 360, oder Panono 360 Kamera. Diese Kameras haben mehrere Linsen und Sensoren eingebaut und generieren aus den Einzelbildern ein fertiges 360°-Foto, das dann direkt weiterverwendet werden kann.
 
-% https://vuze.camera/vr-software/
-% https://www.360rize.com/vr/
-% https://theta360.com/de/
-% https://www.samsung.com/de/wearables/gear-360-r210/
-% https://www.panono.com/en/home/
 
 Die zweite Möglichkeit ist mehrere normale Kameras auf ein Rig, also ein Stativ für mehrere Kameras, zu installieren. Jede Kamera deckt dabei einen anderen Bildabschnitt ab und die Bilder werden nachträglich manuell zusammengesetzt. 
 Den Vorgang des Zusammensetzens der Bilder nennt man Stitching. 
@@ -826,17 +772,14 @@ Erstellt man 360°-Fotos durch zusammenstitchen mehrerer ``normaler'' Kamerabilde
 360°-Bilder, die direkt von einer 360°-Kamera kommen, haben bereits die passenden Metadaten und sie müssen nicht manuell hinzugefügt werden.
 Die Metadaten können auf verschiedene Art und Weisen zu den Fotos hinzugefügt werden, unter anderem mit Photoshop oder mit dem ExifMetaLrPlugin für Lightroom. 
 In den Metadaten sind ist gespeichert, welche Software zum Stitching verwendet wurde, welche Dimensionen das Bild hat, was die Ausgangsblickrichtung ist und natürlich welche Projektion das Panorama hat. 
-Zusätzlich können dort auch noch die Koordinaten, an denen das Bild aufgenommen wurde, der Urheber, das Copyright und einige andere Informationen gespeichert sein, die jedoch nicht spezifisch für 360°-Bilder sind.
-
-% https://www.panotwins.de/technical/how-to-add-mandatory-photo-sphere-meta-data-to-an-equirectangular-image/
+Zusätzlich können dort auch noch die Koordinaten, an denen das Bild aufgenommen wurde, der Urheber, das Copyright und einige andere Informationen gespeichert sein, die jedoch nicht spezifisch für 360°-Bilder sind. \cite{Panotwin2014}
 
 \subsection{360°-Videos}
-In seinem Artikel ``360 Videos und ihre Zukunft: eine Prognose'' im filmpuls-Magazin, einem Fachmagazin für Filmemacher, erklärt der Autor Kristian Widmer, dass die größte Herausforderung für die Produktion von guten 360°-Filmen ist, dass komplett eigene Erzählkonzepte entwickelt werden müssen, da die aus dem klassischen Filmformat nicht anwendbar sind. Außerdem können viele Tricks und Praktiken nicht angewandt werden, weil es keine unsichtbaren Bereiche um die Kamera gibt.
+In seinem Artikel ``360 Videos und ihre Zukunft: eine Prognose'' im filmpuls-Magazin, einem Fachmagazin für Filmemacher, erklärt der Autor Kristian Widmer, dass die größte Herausforderung für die Produktion von guten 360°-Filmen ist, dass komplett eigene Erzählkonzepte entwickelt werden müssen, da die aus dem klassischen Filmformat nicht anwendbar sind. Außerdem können viele Tricks und Praktiken nicht angewandt werden, weil es keine unsichtbaren Bereiche um die Kamera gibt. 
 
 Seiner Meinung nach sollten 360°-Filme so angelegt werden, dass der Zuschauer dazu ermuntert wird die Szene zu erkunden und dazu auch 3D-Sound integriert werden sollte, um zu suggerieren wo im Panorama gerade interessanter Inhalt zu sehen ist.
 
-Die großen Videoplattformen Vimeo und YouTube haben seit einigen Jahren die Funktion 360°-Videos abzuspielen und bieten auch Möglichkeiten die Filme in VR-Headsets zu sehen. Widmer kritisiert hier allerdings die Qualität der Filme und die Tatsache, dass oft nur Stereo-Sound in dem Filme verwendet wird.
-% https://filmpuls.info/360-videos-zukunft/
+Die großen Videoplattformen Vimeo und YouTube haben seit einigen Jahren die Funktion 360°-Videos abzuspielen und bieten auch Möglichkeiten die Filme in VR-Headsets zu sehen. Widmer kritisiert hier allerdings die Qualität der Filme und die Tatsache, dass oft nur Stereo-Sound in dem Filme verwendet wird. \cite{Widmer}
 
 Allerdings sind erst durch die Angebote von YouTube und Vimeo 360°-Filme und ihre Möglichkeiten weiter in das Bewusstsein der breiten Masse gekommen.
 
@@ -848,21 +791,16 @@ Da bei YouTube immer ersichtlich ist, wer der Urheber des Videos ist, besteht hi
 
 Auch bei Facebook gibt es 360°-Videos. Wie bei fast allen anderen Videoplattformen sind sie auch hier nicht zum Download freigegeben. Sie sind mit der Facebook App auf den mobilen Geräten, der Facebook 360 App im Oculus Store und im Browser anzusehen. Im VR-Modus mit Bildern für jedes Auge einzeln kann man die Videos allerdings nur in der Facebook 360 App ansehen.
 
-Die BBC hat eine App veröffentlicht, die exklusiv VR-Inhalte für ihre Leser bereitstellt und speziell für die Nutzung mit dem Google Cardboard entwickelt wurde. Darin zeigen sie von gefilmten 360°-Reportage bis hin zu 360°-Animationsfilmen Geschichten, die speziell für das 360°-Medium entwickelt wurden.
-% https://www.theguardian.com/technology/ng-interactive/2016/nov/10/virtual-reality-by-the-guardian
+Der Guardian hat eine App veröffentlicht, die exklusiv VR-Inhalte für ihre Leser bereitstellt und speziell für die Nutzung mit dem Google Cardboard entwickelt wurde. Darin zeigen sie von gefilmten 360°-Reportage bis hin zu 360°-Animationsfilmen Geschichten, die speziell für das 360°-Medium entwickelt wurden. \cite{TheGuardian}
 
 Auch die New York Times hat einige Beiträge seit 2016 in 360°. Die Videos können im Browser oder in der New York Times-App angesehen werden. Der Player unterstützt allerdings keine VR-Headsets, die Smartphones können also nur genutzt werden um sich in der Szene umzusehen indem sie in der Hand gehalten und bewegt werden.
-Ein Download ist auch hier nicht vorgesehen.
-% https://www.nytimes.com/2016/11/01/nytnow/the-daily-360-videos.html
+Ein Download ist auch hier nicht vorgesehen. \cite{TheTimesNewYorkCompany}
 
-Eine schöne Quelle deutschsprachiger 360°-Videos gibt es vom ZDF, leider sind diese allerdings ebenfalls nicht zum Herunterladen, sondern nur über die ZDF VR-App, die es für Android, iOS und GearVR gibt, oder im Browser betrachtbar ist.
-% https://vr.zdf.de
+Eine schöne Quelle deutschsprachiger 360°-Videos gibt es vom ZDF, leider sind diese allerdings ebenfalls nicht zum Herunterladen, sondern nur über die ZDF VR-App, die es für Android, iOS und GearVR gibt, oder im Browser betrachtbar ist. \cite{ZDF}
 
-Lizenzierbare 360°-Videos gibt es wie auch Fotos bei 360cities und Airpano. Diese sind aber eher gedacht um in Filme eingebaut zu werden, als einzeln verwendet zu werden. Sie sind vergleichbar zu Archivaufnahmen und damit meist nicht im Bildungsbereich sinnvoll verwendbar.
-% www.360cities.net und https://www.airpano.com
+Lizenzierbare 360°-Videos gibt es wie auch Fotos bei 360cities und Airpano. Diese sind aber eher gedacht um in Filme eingebaut zu werden, als einzeln verwendet zu werden. Sie sind vergleichbar zu Archivaufnahmen und damit meist nicht im Bildungsbereich sinnvoll verwendbar. \cite{360Citiess.r.o}\cite{AirPano}
 
-In die gleiche Kategorie fallen dabei die Videos von Videoblocks.com, die ebenfalls einige schöne 360°-Videos haben, die aber keinen wirklichen Inhalt haben, sondern eher als Bildmaterial für die Weiterverarbeitung gedacht sind. Alle drei Anbieter sind zudem nicht besonders günstig.
-% https://de.videoblocks.com/videos/footage/360-files
+In die gleiche Kategorie fallen dabei die Videos von Videoblocks.com, die ebenfalls einige schöne 360°-Videos haben, die aber keinen wirklichen Inhalt haben, sondern eher als Bildmaterial für die Weiterverarbeitung gedacht sind. Alle drei Anbieter sind zudem nicht besonders günstig. \cite{Storyblocks}
 
 \subsubsection{Erstellung und Bearbeitung von 360°-Videos}
 360°-Videos können wie 360°-Fotos entweder mit 360°-Kameras gefilmt werden oder aus Filmen von mehreren Kameras zusammengesetzt werden.
@@ -907,12 +845,7 @@ Beispiele für Channel-basierte spatial Audio sind Dolby Atmos und Auro 3D.
 
 Objektbasiertes spatial Audio besteht aus einer Soundszene und einfach Soundobjekten. Diese Soundobjekte haben alle eigene Metadaten in denen unter anderem ihre Position, Lautstärke, Richtung und Gedämpftheit gespeichert sind. Die Soundszene kann dann mit den verschiedensten Abspiel-Setups genutzt werden, da sie keine festgelegte Konfiguration braucht. Dafür ist es deutlich aufwändiger objektbasiertes spatial audio in Realtime zu berechnen. Inzwischen wird objektbasiertes spatial audio immer beliebter, da die aufwändige Berechnung ein zunehmend geringeres Problem darstellt.
 
-Das transform domain-based spatial audio wird auch als Ambisonics bezeichnet und beruht auf den zuvor beschriebenen Lage der Tonquellen. Da die Richtungen nicht direkt in Kanälen abgespeichert werden wie beim Channel-basierten spatial audio, kann auch hier ein variables Abspielsystem verwendet werden.
-
-% Paper: Spatial Audio Reproduction with Primary Ambient Extraction
-
-% https://flypaper.soundfly.com/produce/wtf-vr-and-spatial-audio-mixing-360-audio/
-% sehr guter Artikel, aber Information bisher alle aus dem Paper
+Das transform domain-based spatial audio wird auch als Ambisonics bezeichnet und beruht auf den zuvor beschriebenen Lage der Tonquellen. Da die Richtungen nicht direkt in Kanälen abgespeichert werden wie beim Channel-basierten spatial audio, kann auch hier ein variables Abspielsystem verwendet werden. \cite{He2017}
 
 \subsubsection{Quellen für Spatial-Audio-Dateien}
 360° Videos auf YouTube können bereits mit spatial Audio hochgeladen werden. Hier könnten die Audiospuren als 3D-Sounddateien heruntergeladen werden. Eine Plattform für den Vertrieb von Spatial-Audio-Dateien gibt es allerdings nicht.
@@ -921,12 +854,8 @@ Das transform domain-based spatial audio wird auch als Ambisonics bezeichnet und
 Um Channel-basierten spatial audio content zu erstellen werden acht Kanäle benötigt. Pro Achse (Vorne/Hinten, Links/Rechts, Oben/Unten) wird ein Stereo-Signal erzeugt. Hinzu kommt noch ein Stereo-Signal für den Teil der Töne, die aus keiner Richtung kommen, sondern direkt auf dem Zentrum sitzen. Das sind dann meistens Inhalte wie eine Hintergrundmusik.
 
 Es gibt verschiedene Werkzeuge, um Spatial Audio Dateien zu erzeugen. Viele Audiosoftwareprodukte haben zudem Plugins für 3D Audio. Beispiele für kostenfreie Programme sind die Spatial Workstation von Facebook oder das Ambisonic Toolkit für Reaper.
-% https://facebook360.fb.com/spatial-workstation/
-% http://www.ambisonictoolkit.net
 
-In der Entwicklung von VR-Anwendungen wird der 3D-Sound meist dadurch erzeugt, dass Sound-Quellen direkt als Objekte in den virtuellen 3D-Raum platziert werden. Die eingebundenen Audiodateien sind dabei dann nur normale Mono- oder Stereodateien.
-% https://developers.google.com/vr/ios/spatial-audio
-%https://facebook.github.io/react-360/docs/audio.html
+In der Entwicklung von VR-Anwendungen wird der 3D-Sound meist dadurch erzeugt, dass Sound-Quellen direkt als Objekte in den virtuellen 3D-Raum platziert werden. Die eingebundenen Audiodateien sind dabei dann nur normale Mono- oder Stereodateien. \cite{GoogleLLCspatialaudio} \cite{React360audio}
 
 \subsection{Virtual Reality Spiele und Anwendungen}
 Die Kombination aus den vorigen Inhalten ergibt VR-Anwendungen und Spiele. Inzwischen ist die Auswahl an verschiedenen Anwendungen stark gewachsen und tut das auch weiterhin. Der größte Anteil an VR-Programmen sind weiterhin Spiele.
@@ -958,11 +887,10 @@ Zusätzlich können auch Textelemente eingefügt werden, um dem Betrachter weitere 
 \subsection{3D 360°}
 Um ein 3D-Bild zu erzeugen müssen zwei leicht verschobene Bilder angezeigt werden, die um den Augenabstand eines Menschen horizontal verschoben sind. Dies erzeug im Gehirn die Tiefenwahrnehmung. Soll also ein 3D-Bild oder Video produziert werden, werden zwei Kameras horizontal versetzt auf ein Stativ montiert und und dadurch ein Bild pro Auge produziert.
 
-Wird ein 360°-Bild erstellt nimmt eine Kamera oder ein Rig mit mehreren Kameras wie in Grafik \ref{fig:3d-360} links zu sehen ein Bild der kompletten Umgebung auf, in dem sich dann der Betrachter umsehen kann.
+Wird ein 360°-Bild erstellt nimmt eine Kamera oder ein Rig mit mehreren Kameras wie in Abbildung \ref{fig:3d-360} links zu sehen ein Bild der kompletten Umgebung auf, in dem sich dann der Betrachter umsehen kann.
 Würde man nun also einfach zwei 360°-Bilder um den Augenabstand versetzt aufnehmen hätte man das Problem, dass nur in einem Blickwinkel die Position der Kameras zueinander korrekt ist, sodass ein 3D Bild entsteht. Ist der Betrachter um 90° gedreht, befinden sich die Kameras nicht mehr nebeneinander sondern hintereinander, sodass es keine Parallaxenverschiebung mehr gibt. Deshalb ist dieses Verfahren nicht für 3D-360°-Aufnahmen geeignet.
 
-Für 360°-Fotos können die zwei Kameras mit gleicher Blickrichtung auf ein drehbares Rig montiert werden, sodass jede Kamera aus den Fotos, die sie gemacht hat ein 360° Bild errechnet. Da allerdings durch die Drehung nicht durchgehend aufgenommen werden kann ist diese Technik nur für die Produktion von Fotos geeignet.
-% Paper: Bourke: Synthetic stereoscopic panoramic images
+Für 360°-Fotos können die zwei Kameras mit gleicher Blickrichtung auf ein drehbares Rig montiert werden, sodass jede Kamera aus den Fotos, die sie gemacht hat ein 360° Bild errechnet. Da allerdings durch die Drehung nicht durchgehend aufgenommen werden kann ist diese Technik nur für die Produktion von Fotos geeignet. \cite{bourke2006synthetic}
 
 Grundsätzlich gibt es zwei Ansätze, wie 3D-360°-Videos produziert werden können. Für beide braucht man einen Aufbau von mindestens acht Kameras, um ein brauchbares Bild zu erzeugen.
 Die erste Möglichkeit ist ein Rig-Aufbau wie in \ref{fig:3d-360} mittig zu sehen. Es besteht aus acht Kameras, von denen jeweils zwei parallel zueinander ausgerichtet sind und die Paare wiederum jeweils 90° zueinander ausgerichtet sind.
@@ -970,17 +898,13 @@ Werden nun jeweils die Bilder der linken Kameras und die der rechten Kameras zus
 Dieser Aufbau funktioniert gut, wenn der Betrachter in eine der vier Richtungen schaut, in die die Kameras zeigen. Dazwischen verschiebt sich der Augenabstand jedoch, sodass hier Bildbereiche entstehen, die wiederum nicht korrekt in 3D dargestellt werden.
 Das Verändern des Augenabstands kann dazu führen, dass die Nutzer schneller Symptome von Cybersickness erleben.
 
-Eine zweite Möglichkeit die acht Kameras zu nutzen ist in \ref{fig:3d-360} rechts dargestellt. Die acht Kameras werden sternförmig mit jeweils einer Rotation von 45° zueinander auf das Rig montiert. Um daraus das korrekte 3D-360°-Bild zu bekommen, werden die Kamerabilder jeweils in einen rechten und einen linken Bildbereich aufgeteilt. Dann werden alle linken Bildbereiche zum Bild für das linke Auge zusammengestitcht und alle rechten Bildbereiche zum Bild für das rechte Auge. Dies minimiert die Veränderung des Augenabstands innerhalb des Bilds.
+Eine zweite Möglichkeit die acht Kameras zu nutzen ist in \ref{fig:3d-360} rechts dargestellt. Die acht Kameras werden sternförmig mit jeweils einer Rotation von 45° zueinander auf das Rig montiert. Um daraus das korrekte 3D-360°-Bild zu bekommen, werden die Kamerabilder jeweils in einen rechten und einen linken Bildbereich aufgeteilt. Dann werden alle linken Bildbereiche zum Bild für das linke Auge zusammengestitcht und alle rechten Bildbereiche zum Bild für das rechte Auge. Dies minimiert die Veränderung des Augenabstands innerhalb des Bilds. \cite{Peleg2001}
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/3d-360.eps}
   \caption{Aufbau von 360° Rigs.}
   \label{fig:3d-360}
 \end{figure}
-
-
-% https://www.youtube.com/watch?v=0OKBjkhdnOc
-% Paper: Omnistereo: Panoramic stereo imaging
 
 
 \subsection{360°-Inhalte in React360}
@@ -1039,8 +963,7 @@ Die in Unity entwickelten Anwendungen können für viele verschiedene Plattformen 
 
 Unity ist für private und selbstständige Entwickler kostenlos, wenn sie unter 100.000\$ pro Jahr mit ihren Anwendungen verdienen kostenlos und für Unternehmen liegt der Preis bei 125\$ pro Entwickler.
 
-Neben der Anwendungsentwicklung können mit Unity auch 360°-Filme produziert werden. Dazu können 360°-Clips hineingeladen werden, Overlays, Objekte oder Animationen eingefügt werden und sogar Logik für Nutzerinteraktion eingebunden werden. Unity unterstützt dafür auch die Nutzung von Ambisonic Audioquellen.
-% unity3d.com
+Neben der Anwendungsentwicklung können mit Unity auch 360°-Filme produziert werden. Dazu können 360°-Clips hineingeladen werden, Overlays, Objekte oder Animationen eingefügt werden und sogar Logik für Nutzerinteraktion eingebunden werden. Unity unterstützt dafür auch die Nutzung von Ambisonic Audioquellen. \cite{UnityTechnologies}
 
 \subsubsection{Unreal Engine}
 \label{subsec:unreal}
@@ -1055,15 +978,13 @@ Für die Entwicklung von VR Anwendungen bietet die Unreal Engine die Möglichkeit 
 \subsection{WebVR - VR im Browser}
 \label{subsec:webvr}
 
-% Quelle: https://immersive-web.github.io/webvr/spec/1.1/
-
 WebVR ist eine API, die es ermöglicht VR-Geräte und deren Sensoren über Webapps zu verwenden.
-Die ursprüngliche WebVR API wird zukünftig durch die WebXR API ersetzt werden, die neben Virtual Reality-Geräten auch Augmented Reality- und Mixed Reality-Geräte unterstützt.
+Die ursprüngliche WebVR API wird zukünftig durch die WebXR API ersetzt werden, die neben Virtual Reality-Geräten auch Augmented Reality- und Mixed Reality-Geräte unterstützt. \cite{WebVRimmersive}
 Da sich die WebXR-API noch in der Entwicklung befindet, wird in dieser Arbeit die WebVR-API verwendet. 
 
 Die WebVR-API erlaubt Zugriff auf mit dem Browser verbundene VR-Displays. Eine Webseite oder Webapp kann so Inhalte auf VR-Headsets darstellen. Die WebVR-API übernimmt dann die korrekte, auf das entsprechende Headset abgestimmte Darstellung der Inhalte. Das ermöglicht Webanwendungen unabhängig vom einzelnen Headset des Nutzers zu entwickeln und Darstellungsdetails dem Browser und Betriebssystem zu überlassen.
 
-Die WebVR-API ist in folgenden Browsern unterstützt:
+Die WebVR-API ist in folgenden Browsern unterstützt: \cite{Deveria}
 \begin{itemize}
 \item Microsoft Edge: ab Version 15
 \item Google Chrome Desktop: ab Version 57, hinter einem Flag
@@ -1073,10 +994,7 @@ Die WebVR-API ist in folgenden Browsern unterstützt:
 \item Oculus Browser: ja
 \end{itemize}
 
-% Quelle: https://caniuse.com/#feat=webvr
-
-In Browsern, die die WebVR-API nicht implementieren, kann die Unterstützung mit einem sogenannten Polyfill nachgerüstet werden. Ein Polyfill ist ein JavaScript, das von einer Webseite ausgeführt wird um fehlende APIs in Browsern dynamisch nachzurüsten. Dabei ahmen Polyfills die Funktion der API nach, damit sich der Browser so verhält, als wäre die API verfügbar. Oft haben Polyfills dadurch eine schlechtere Performance als die native Implementierung der Browser-Hersteller. Für WebVR gibt es ein offizielles Polyfill der Immersive Web Working Group des W3Cs, die auch für die Entwicklung des Standards zuständig ist. In Browsern, die die WebVR-API bereits unterstützen, wird das Polyfill ignoriert und die native Implementierung verwendet.
-% Quelle: https://github.com/immersive-web/webvr-polyfill
+In Browsern, die die WebVR-API nicht implementieren, kann die Unterstützung mit einem sogenannten Polyfill nachgerüstet werden. Ein Polyfill ist ein JavaScript, das von einer Webseite ausgeführt wird um fehlende APIs in Browsern dynamisch nachzurüsten. Dabei ahmen Polyfills die Funktion der API nach, damit sich der Browser so verhält, als wäre die API verfügbar. Oft haben Polyfills dadurch eine schlechtere Performance als die native Implementierung der Browser-Hersteller. Für WebVR gibt es ein offizielles Polyfill der Immersive Web Working Group des W3Cs, die auch für die Entwicklung des Standards zuständig ist. In Browsern, die die WebVR-API bereits unterstützen, wird das Polyfill ignoriert und die native Implementierung verwendet. \cite{WebVRPolyfill}
 
 \subsubsection{Verwendung der WebVR-API} 
 Per JavaScript kann von der Webseite mit navigator.getVRDisplays() die Liste aller verbundenen VR-Displays abgefragt werden. Im Regelfall kann davon ausgegangen werden, das an einem Gerät nur ein VR-Display verbunden ist. Mit display.requestPresent() kann dann angefragt werden Inhalte auf diesem Display darzustellen. Die Inhalte werden dann in display.requestAnimationFrame gerendert. Diese Funktion wird mit der Bildwiederholrate des verbundenen VR-Displays aufgerufen.
@@ -1086,13 +1004,13 @@ Die WebVR-API liefert Informationen über das Display, etwa ob dieses positional 
 Die direkte Verwendung der WebVR-API ist allerdings für die Entwicklung von VR-Anwendungen umständlich. Deshalb werden üblicherweise Frameworks verwendet, die die Darstellung mittels WebVR-API übernehmen, sodass der Entwickler sich nicht um das eigentlich Rendern der Szene kümmern muss. Zwei verbreitete VR-Frameworks werden im Nachfolgenden behandelt.
 
 \subsubsection{A-Frame}
-% https://aframe.io/docs/0.8.0/introduction/
 A-Frame ist ein Framework, das ursprünglich von Mozilla entwickelt wurde, mit dem Virtual Reality und Augmented Reality Apps entwickelt werden können.
 
 A-Frame basiert auf HTML, ist aber trotzdem ein Komponenten-basiertes Framework, das eine erweiterbare deklarative Struktur zur Nutzung von Three.js bietet. Es kommt bereits mit vielen Core Komponenten, diese können aber selbstverständlich durch eigene Komponenten erweitert werden.
 Es kann VR-Apps mit bis zu 90 FPS bauen und kommt mit einem visuellen 3D Inspector, der es einfach macht die VR-Szene zu überblicken.
 
-Mit A-Frame können auch Apps entwickelt werden, die positional Tracking nutzen, also sechs Freiheitsgrade haben. Zudem werden die Controller der VR-Headsets unterstützt.
+Mit A-Frame können auch Apps entwickelt werden, die positional Tracking nutzen, also sechs Freiheitsgrade haben. Zudem werden die Controller der VR-Headsets unterstützt. \cite{Mozilla}
+
 \subsubsection{React360}
 React360 nutzt ebenso wie A-Frame Three.js für einen Teil des Renderings. React360 ist wie A-Frame komponenten-basiert und kommt mit einigen Core-Components, die durch eigene Komponenten erweitert werden können.
 Um eine fertige React360-App zu bundeln wird Node.js genutzt.
@@ -1100,23 +1018,20 @@ Um eine fertige React360-App zu bundeln wird Node.js genutzt.
 React360 bietet mit der React 360 CLI Die Möglichkeit mit dem ``react-360 init ProjectName'' Kommando im Terminal den initialen Code für das VR-Projekt zu generieren. Es wird das ProjectName-Projekt erzeugt, das direkt in der nötigen Software-Struktur mit allen Libraries erstellt wird. Auch die Development Server werden hier direkt mitgeliefert.
 
 Eine App besteht grundsätzlich erstmal aus drei Dateien. Das sind die index.html-Datei, in der der Javascript-Code eingebunden wird, die index.js-Datei, in der der eigentliche React360-Code ist, und die client.js, die die Runtime für die React360 App bildet. 
-Die HTML-Datei wird nur dazu genutzt, den Javascript-Code einzubinden. 
+Die HTML-Datei wird nur dazu genutzt, den JavaScript-Code einzubinden. 
 In der client.js wird der React360 Code in den DOM eingebunden. Hier werden auch die Komponenten auf Locations oder Surfaces gemounted.
 
-React360 baut auf React Native auf. Es werden zum Beispiel das Konzept der Stylesheets übernommen, die ein einfaches Styling der Komponenten erlauben, das dem Styling bei HTML sehr ähnlich sieht, und nutzt zum App Bundling ebenfalls den Metro Bundler.
-% https://facebook.github.io/react-360/docs/what-is.html
+React360 baut auf React Native auf. Es werden zum Beispiel das Konzept der Stylesheets übernommen, die ein einfaches Styling der Komponenten erlauben, das dem Styling bei HTML sehr ähnlich sieht, und nutzt zum App Bundling ebenfalls den Metro Bundler. \cite{FacebookTechnologiesLLCreact360}
 
 
 \subsubsection{Three.js}
-Three.js ist ein Javascript Framework mit dem 3D Szene erstellt werden können. Um Objekte in die Szene zu setzen müssen sie dem Document Object Tree hinzugefügt werden. Auch die Kamera muss als Objekt manuell hinzugefügt werden und ein Field of View, das Seitenverhältnis und die ``near'' und ``far''-Werte mit übergeben werden. Diese Werte bezeichnen den Bereich der z-Werte, der gerendert wird. Liegt ein Objekt außerhalb dieses Intervalls, ist es nicht in der Szene zu sehen.
+Three.js ist ein JavaScript Framework mit dem 3D Szene erstellt werden können. Um Objekte in die Szene zu setzen müssen sie dem Document Object Tree hinzugefügt werden. Auch die Kamera muss als Objekt manuell hinzugefügt werden und ein Field of View, das Seitenverhältnis und die ``near'' und ``far''-Werte mit übergeben werden. Diese Werte bezeichnen den Bereich der z-Werte, der gerendert wird. Liegt ein Objekt außerhalb dieses Intervalls, ist es nicht in der Szene zu sehen.
 
 Three.js wird standardmäßig mit dem WebGL-Renderer gerendert, bietet aber auch andere Renderer als Fallback für inkompatible Browser.
 
 Um VR-Apps mit Three.js zu bauen, muss zuerst WebVR eingebunden werden. Dann kann ein WebVR Button hinzugefügt werden, der dann die VR-Ansicht startet. Zudem muss der Animations-Loop angepasst werden. Für VR-Apps muss statt der ``requestAnimationFrame''-Funktion die ``setAnimationLoop''-Funktion genutzt werden.
 
-Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind mehrere Schritte erforderlich. Zuerst muss mit THREE.BoxGeometry(1,1,1) eine Rechteckige Form und mit THREE.MeshBasicMaterial({color: 0x00ff00})ein Material erzeugt werden. Danach wird der Würfel erzeugt in dem das geometrische Objekt und das Material mit THREE.Mesh( geometry, material ) zusammengefügt werden. Zuletzt muss der erzeugte Würfel der Szene hinzugefügt werden. Damit ist Three.js eine sehr low-levelige Möglichkeit VR-Apps zu entwickeln. Dadurch stehen viele Möglichkeiten offen, es ist jedoch deutlich aufwändiger einfache VR-Szenen zu bauen. Andere VR-Frameworks wie A-Frame oder React360 nutzen im Hintergrund Three.js und bieten den Entwicklern einfache Funktionen, um Objekte in die VR-Szene zu setzen.
-
-% https://threejs.org/docs/#manual/en/introduction/Creating-a-scene
+Soll ein Objekt wie zum Beispiel ein Würfel in die Szene gesetzt werden, sind mehrere Schritte erforderlich. Zuerst muss mit THREE.BoxGeometry(1,1,1) eine Rechteckige Form und mit THREE.MeshBasicMaterial({color: 0x00ff00})ein Material erzeugt werden. Danach wird der Würfel erzeugt in dem das geometrische Objekt und das Material mit THREE.Mesh( geometry, material ) zusammengefügt werden. Zuletzt muss der erzeugte Würfel der Szene hinzugefügt werden. Damit ist Three.js eine sehr low-levelige Möglichkeit VR-Apps zu entwickeln. Dadurch stehen viele Möglichkeiten offen, es ist jedoch deutlich aufwändiger einfache VR-Szenen zu bauen. Andere VR-Frameworks wie A-Frame oder React360 nutzen im Hintergrund Three.js und bieten den Entwicklern einfache Funktionen, um Objekte in die VR-Szene zu setzen. \cite{Three.js}
 
 \subsubsection{PlayCanvas}
 
@@ -1141,7 +1056,7 @@ VRClassroom bietet dafür die Lehrer-App, die auf einem Rechner läuft und die Sch
 
 Die Lehrer-App ist eine Electron-App und damit für Windows, macOS und Linux verwendbar. Sie verwendet React.js für das Interface und startet den Server von dem aus die Schüler-App geladen wird. Die Schüler-App ist eine React360-Applikation. Der Code von VRClassroom ist also komplett in JavaScript geschrieben, nur unterschieden durch die verschiedenen Frameworks Node.js, React.js, React360. Im Anschluss an diese Arbeit wird VRClassroom unter einer open-source-Lizenz veröffentlicht. Entwickler können dadurch alle Teile der Codebasis verstehen ohne sich in mehrere Programmiersprachen einarbeiten zu müssen.
 
-Grafik \ref{fig:electron}
+Abbildung \ref{fig:electron} zeigt die Struktur von Electron-Apps.
 
 \begin{figure}[ht]
   \centering
@@ -1178,7 +1093,7 @@ Die teacher-App enthält außerdem noch den QR-Code Generator, der in einem zweite
 Um eine Liste der verbundenen Geräte zu halten und Veränderungen der Inhalte auf die Schüler-Geräte zu synchronisieren, wird ein WebSocket-Server gestartet, mit dem sich alle Schüler-Geräte verbinden. 
 
 \subsubsection{Verbundene Geräte}
-Wie in der Grafik zu sehen hält die teacher-App eine Liste mit allen verbundenen Geräte dieser Session. Sind die Geräte gerade aktiv, werden sie mit einem grünen Icon dargestellt, sind sie inaktiv, mit einem roten. Da das Laden der Inhalte je nach Größe auch über das lokale Netzwerk etwas dauern kann, wird der Indikator in gelb dargestellt, währen das Schüler-Gerät die Inhalte noch herunterlädt. Sobald der Inhalt bereit zum abspielen ist, wird der Indikator grün.
+Wie in der Abbildung zu sehen hält die teacher-App eine Liste mit allen verbundenen Geräte dieser Session. Sind die Geräte gerade aktiv, werden sie mit einem grünen Icon dargestellt, sind sie inaktiv, mit einem roten. Da das Laden der Inhalte je nach Größe auch über das lokale Netzwerk etwas dauern kann, wird der Indikator in gelb dargestellt, währen das Schüler-Gerät die Inhalte noch herunterlädt. Sobald der Inhalt bereit zum abspielen ist, wird der Indikator grün.
 
 Das soll der Lehrkraft erleichtern zu überprüfen, ob die Schüler den gezeigten Stoff verfolgen oder sich anderweitig beschäftigen.
 
@@ -1202,7 +1117,7 @@ Bereits früher verwendete Dateien sind unter ``Datei'' und ``Zuletzt geöffnet'' 
 Drittens können auch noch die URLs von Google StreeView-Panoramen eingegeben werden, sodass dann allen verbundenen Geräten das verlinke Panorama angezeigt wird. Dazu muss ``Datei'' und ``StreetView...'' ausgewählt werden und in das Pop-Up die URL zum gewünschten Panorama eingegeben werden. Handelt es sich um eine korrekte URL wird dann das StreetView Bild geladen und angezeigt wie ein normales 360°-Foto. Für die Nutzer der Schüler-App ist kein Unterschied zu normalen 360°-Fotos erkennbar. Das StreetView-Bild wird dabei aus dem Internet auf den Lehrer-Computer heruntergeladen und vor dort and die Schüler-Geräte verteilt.
  
 \subsubsection{Bedienelemente}
-Wie in Grafik \ref{fig:controls} zu sehen sind die Bedienelemente, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
+Wie in Abbildung \ref{fig:controls} zu sehen sind die Bedienelemente, mit denen Aktionen des aktuell geladenen Inhalts ausgelöst werden können durch einen Overlay über dem iFrame der React360-App dargestellt. 
 
 Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle unterscheiden sich die Bedienelemente und Funktionen, das Setzen einer Markierung ist allerdings bei allen Medientypen möglich.
 
@@ -1215,12 +1130,14 @@ Für jeden der drei Typen an Inhalten, 360°-Fotos, -Videos und 3D-Modelle untersc
 \paragraph{Marker}
 \label{subsec:marker}
 
-\begin{SCfigure}
-  \centering
+
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=\linewidth]{images/marker.png}
   \caption{Die leuchtende Farbe und das Drehen der Marker erhöht die Erkennbarkeit.}
-  		\includegraphics[width=0.4\textwidth]{images/marker.png}
-	\label{fig:marker}
-\end{SCfigure}
+  \label{fig:marker}
+\end{figure}
 
 Soll ein Marker gesetzt werden, muss zuerst in den Marker-Modus gewechselt werden. Dazu klickt man auf ``Marker setzen''. Danach kann an beliebiger Stelle in der Szene geklickt werden um einen Marker zu setzen.
 
@@ -1230,10 +1147,10 @@ Bei 360°-Fotos und -Videos wird die Entfernung des Markers zur Kamera auf einen 
 
 Um Markierungen auf 3D-Modellen setzen zu können muss ein Schnittpunkt des 3D-Modells mit dem virtuellen Strahl berechnet werden. Dazu wird getestet mit welchen (Teil-)Objekten der Szene sich der Strahl schneidet. Ist der Schnittpunkt des Strahls mit dem 3D-Modell berechnet, wird derjenige Schnittpunkt als Koordinate verwendet, der am nächsten zur Kamera ist. An dieser Stelle wird dann der Marker platziert. Zudem werden die Marker invers zur Nähe zur Kameraposition skaliert, sodass sie immer in der gleichen Größe dargestellt werden, egal wo am Modell sie gesetzt sind.
 
-Das verwendete Modell erinnert wie in Grafik \ref{fig:marker} zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
+Das verwendete Modell erinnert wie in Abbildung \ref{fig:marker} zu sehen an Stecknadeln, sodass Nutzern die Bedeutung direkt verständlich ist. Um die Markierungen leichter erkennbar zu machen sind sie in einer leuchtenden Farbe und drehen sich, sodass die Aufmerksamkeit direkt auf die markierte Stelle gelenkt wird.
 
 \paragraph{Fotos}
-Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Grafik \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
+Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fotos und die Buttons zum Setzen von Markierungen, die wie bereits beschrieben bei allen Medientypen gegeben sind. Abbildung \ref{fig:photocontrols} zeigt die Kontrollleiste für 360°-Fotos.
 
 \begin{figure}[h]
   \includegraphics[width=\linewidth]{images/photocontrols.png}
@@ -1244,7 +1161,7 @@ Ist ein Foto geladen beinhaltet die Kontrollzeile nur den Dateinamen des 360°-Fo
 
 \paragraph{Videos}
 Wird ein Video gezeigt, hat die Lehrkraft mehrere unterschiedliche Funktionen in der Kontrollleiste: 
-Wie in Grafik \ref{fig:videocontrols} zu sehen ist links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
+Wie in Abbildung \ref{fig:videocontrols} zu sehen ist links ein kombinierter Play/Pause-Button, der für alle verbundenen Geräte synchronisiert das Abspielen beziehungsweise Pausieren des Videos auslöst, daneben die aktuelle Abspielzeit, gefolgt von einem Slider, der grafisch die aktuelle Position im Video darstellt. Außerdem kann mit dem Slider zu anderen Zeitpunkten im Video gesprungen werden.
 Rechts daneben wird die Gesamtdauer des Videos angezeigt. Der letzte Video-spezifische Button ist der Sound-Button, der im aktiven Zustand auf allen Geräten den Ton des Videos aktiviert. Der Sound-Button ist standardmäßig deaktiviert. 
 
 Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie sind während dem Abspielen des Videos deaktiviert und können nur genutzt werden, wenn das Video pausiert ist. Wird das Video dann wieder weiter abgespielt, werden alle gesetzten Markierungen automatisch entfernt.
@@ -1256,7 +1173,7 @@ Zudem sind wiederum die Buttons für das Setzen von Markierungen vorhanden. Sie s
 \end{figure}
 
 \paragraph{3D-Modelle}
-Wie in Grafik \ref{fig:modelcontrols} zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
+Wie in Abbildung \ref{fig:modelcontrols} zu sehen ist auch in der Kontrollleiste bei 3D-Modellen ein Slider vorhanden. Dieser kann sowohl zum Drehen des Modells als auch zum Skalieren benutzt werden. Dazu sind links vom Slider die Buttons ``Drehen'' und ``Skalieren'' mit denen zwischen den zwei Funktionalitäten des Sliders gewechselt werden kann. Der aktive Modus wird durch die blaue Farbe dargestellt.
 
 Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, dass nur auf dem Modell eine Markierung gesetzt werden kann. Wird außerhalb des 3D-Modells geklickt, wird keine Markierung gesetzt.
 
@@ -1273,21 +1190,34 @@ Auch auf 3D-Modellen können Markierungen gesetzt werden. Dabei ist zu beachten, 
   \label{fig:architecture}
 \end{figure}
 
-Wie in Grafik \ref{fig:architecture} zu erkennen kommunizieren die Lehrer-App und die Schüler-App über eine WebSocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl ein WebSocket-Server als auch ein HTTP-Server (Asset-Server) gestartet. Der HTTP-Server liefert die Inhalte so wie die Schüler-App selbst aus. Der WebSocket-Server wird zur Echtzeit-Kommunikation zwischen Lehrer- und Schüler-App verwendet.
+Wie in Abbildung \ref{fig:architecture} zu erkennen kommunizieren die Lehrer-App und die Schüler-App über eine WebSocket-Verbindung. Beim Start der VRClassroom-App auf dem Computer der Lehrkraft werden sowohl ein WebSocket-Server als auch ein HTTP-Server (Asset-Server) gestartet. Der HTTP-Server liefert die Inhalte so wie die Schüler-App selbst aus. Der WebSocket-Server wird zur Echtzeit-Kommunikation zwischen Lehrer- und Schüler-App verwendet.
 
 Wenn die Schüler-App auf einem Gerät geladen wird, stellt sie die Verbindung zum WebSocket-Server her und meldet sich damit an. Als Antwort schickt die Lehrer-App den aktuellen Zustand. So wird sichergestellt, dass die Schüler-App alle Informationen hat, die verpasst hat, solange sie noch nicht verbunden war.
 
 Bei jeder inhaltlichen Veränderung in der Lehrer-App wird eine Nachricht an alle verbundenen Geräte geschickt, sodass diese dann die Anzeige aktualisieren können.
 Damit alle Geräte zu jedem Zeitpunkt über die gleichen Informationen verfügen und auch Geräte, die nach Beginn der Session hinzustoßen alle Information zur Anzeige haben, enthält jede Nachricht alle Informationen zum aktuellen Zustand der App.
 
-% TODO Code snippet vom State einfügen, dann brauchst du auch die Felder nich einzeln auflisten
+Eine Nachricht ist immer wie folgt aufgebaut:
 
-Eine Nachricht enthält immer die Felder ``mediatype'', ``url'', ``markers'',``playing'',``playbackPosition'',``rotation'',``scaleFactor'' und``muted''.
+\begin{lstlisting}
+{ 
+mediatype: 'video',
+  url: 'myUrl',
+  markers: [(3,5,3)],
+  playing: false,
+  playbackPosition: 0,
+  rotation: 0,
+  scaleFactor: 1,
+  muted: true, 
+  }
+\end{lstlisting}
 
-Das Feld ``mediatype'' kann die Werte ``photo'',``video'' und``model'' enthalten und ist dafür zuständig, dass die Schüler-App weiß, welcher Medientyp angezeigt wird. 
+Im Beispiel ist ein Videofile in die VRClassroom-App geladen worden, dass momentan pausiert ist und der Ton deaktiviert ist. Die aktuelle Abspielposition ist 00:00 und es ist ein Marker an der Position (3,5,3) gesetzt.
+
+Das Feld ``mediatype'' kann die Werte ``photo'', ``video'' und ``model'' enthalten und ist dafür zuständig, dass die Schüler-App weiß, welcher Medientyp angezeigt wird. 
 Im URL-Feld enthält die URL des aktuell anzuzeigenden Inhalts. Dies sind lokale HTTP-URLs, die vom Asset-Server auf dem Lehrer-Computer gehostet werden. Dieses Feld wird nur verändert, wenn ein neuer Medientyp hineingeladen wird. Geschieht dies wird auch das Array der ``marker''-Positionen zurückgesetzt. Das Array enthält die Positionen der Markierungen in Form von Tripeln innerhalb des Arrays.
 
-Die Felder ``playing'',``playbackPosition'' und ``muted'' werden nur beim Anzeigen von 360°-Videos verwendet. ``playing'' gibt an, ob das betreffende Video in diesem Moment abgespielt oder pausiert werden soll, ``playbackPosition'' gibt die Stelle im Video an, an der es abgespielt werden soll. Werden Videos abgespielt schickt die Lehrer-App jede Sekunde eine Nachricht mit der aktuellen Abspielposition an alle Geräte. Falls die Abspielposition auf einem Gerät um mehr als eine Sekunde versetzt ist, springen dann an die mitgeschickte Position, um von dort weiter abzuspielen. So wird das Abspielen über die Geräte hinweg synchronisiert.
+Die Felder ``playing'', ``playbackPosition'' und ``muted'' werden nur beim Anzeigen von 360°-Videos verwendet. ``playing'' gibt an, ob das betreffende Video in diesem Moment abgespielt oder pausiert werden soll, ``playbackPosition'' gibt die Stelle im Video an, an der es abgespielt werden soll. Werden Videos abgespielt schickt die Lehrer-App jede Sekunde eine Nachricht mit der aktuellen Abspielposition an alle Geräte. Falls die Abspielposition auf einem Gerät um mehr als eine Sekunde versetzt ist, springen dann an die mitgeschickte Position, um von dort weiter abzuspielen. So wird das Abspielen über die Geräte hinweg synchronisiert.
 Das ``muted''-Feld gibt an, ob der Ton des Videos an den Geräten abgespielt werden soll oder nicht.
 
 Nachrichten von Seite der Schüler-Geräte sind viel seltener als anders herum. Gibt der Schüler seinen Namen ein wird dieser als Nachricht an die Lehrer-App geschickt. Außerdem senden die Geräte eine Nachricht, wenn sich der visibility-Status ändern. Zum Beispiel, wenn der Browser geschlossen wird. Außerdem geben die Schüler-Geräte Rückmeldung an die Lehrer-App, solange sie Inhalte laden und wiederum, wenn sie die Inhalte fertig geladen beziehungsweise Videos genug vorgeladen haben. Das wird dann mit dem gelben Status-Indikator neben dem Geräte-Namen in der Lehrer-App angezeigt. Wechselt hier die Farbe wieder auf grün, ist das Gerät bereit die Inhalte anzuzeigen.
@@ -1311,7 +1241,7 @@ In der VRClassroom App nehmen die Schüler eine passive Rolle ein und können selb
 
 Die WebApp für die Schüler ist eine React360-App, sie stellt eine 3D-Welt da, in deren Mitte sich die Kamera, also der Viewport der Geräte, befindet. Sie stellt die in der Lehrer-App hineingeladenen 360°-Fotos und Videos in einer Kugel um den Viewport da, sodass die Nutzer sich in alle Richtungen umsehen können. 3D-Modelle werden in kurzer Entfernung vor dem Viewport angezeigt, als befänden sich sich im Raum vor der Person.
 
-Grafik \ref{fig:react360}
+Abbildung \ref{fig:react360} zeigt die Software-Struktur der React360 App von VRClassroom.
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/react360.eps}
@@ -1361,10 +1291,9 @@ Die Nutzung der Schüler-App soll darauf optimiert werden auf Smartphones verwend
 
 Ist im Anzeigenden Browser die WebVR-API nicht verfügbar oder kein ``VRDisplay'' verbunden, kann der Inhalt trotzdem direkt im Browser gesehen werden. Er wird dann in ein HTML-Canvas gerendert. Auch wenn ein Smartphone die WebVR-API unterstützt, hat es normalerweise kein verbundenes VRDisplay. \cite{WebVR} 
 
-Von der Immersive Web Working Group des W3Cs gibt es eine Implementierung eines virtuellen VRDisplays: cardboard-vr-display meldet an der WebVR-API verbundenes VRDisplay an. Wenn in einem Browser ein VRDisplay verbunden ist, wird wie in Grafik \ref{fig:WebVRfig}a links zu sehen ein Button in der unteren rechten Ecke des Fensters angezeigt, mit dem dann die VR-Ansicht geladen werden kann.
-% TODO QUELLE: https://github.com/immersive-web/cardboard-vr-display
+Von der Immersive Web Working Group des W3Cs gibt es eine Implementierung eines virtuellen VRDisplays: cardboard-vr-display meldet an der WebVR-API verbundenes VRDisplay an. Wenn in einem Browser ein VRDisplay verbunden ist, wird wie in Abbildung \ref{fig:WebVRfig}a links zu sehen ein Button in der unteren rechten Ecke des Fensters angezeigt, mit dem dann die VR-Ansicht geladen werden kann.\cite{Jsntell}
 
-Wird der Button gedrückt übernimmt WebVR die Darstellung und sendet die Inhalte an der virtuell erzeugte cardboard-vr-display. Wie Grafik \ref{fig:WebVRfig}b zeigt wird dafür der Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard aufgeteilt. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen des genutzten Headsets passen. 
+Wird der Button gedrückt übernimmt WebVR die Darstellung und sendet die Inhalte an der virtuell erzeugte cardboard-vr-display. Wie Abbildung \ref{fig:WebVRfig}b zeigt wird dafür der Bildschirm in zwei Bilder für die Linsen in einem VR-Headset wie zum Beispiel dem Google Cardboard aufgeteilt. Die zwei Bilder sind dabei nicht Bildschirm-füllend, sondern in einer annähernd ovalen Form, die von einem schwarzen Rand umgeben wird, sodass sie gut auf die Linsen des genutzten Headsets passen. 
 
 
 \begin{figure}[h!]
@@ -1398,13 +1327,13 @@ Der Fragebogen ist dem Appendix dieser Arbeit angehängt.
 
 Die Fragen wurden als Aussagen formuliert, zu denen mit Hilfe einer unzentrierten Likert-Skala die Zustimmung zur jeweiligen Aussage angegeben werden konnte. Es wurde eine unzentrierte Skala verwendet um zu aussagekräftigeren Antworten zu ermuntern.
 
-Insgesamt haben 59 Personen an der Umfrage teilgenommen, allerdings wurden nicht alle Fragen von allen Teilnehmer beantwortet, da die Beantwortung der einzelnen Fragen optional war. Die Prozentangaben aus den Grafiken beziehen sich dabei immer auf die abgegebenen Antworten für die jeweilige Frage.
+Insgesamt haben 59 Personen an der Umfrage teilgenommen, allerdings wurden nicht alle Fragen von allen Teilnehmer beantwortet, da die Beantwortung der einzelnen Fragen optional war. Die Prozentangaben aus den Abbildungen beziehen sich dabei immer auf die abgegebenen Antworten für die jeweilige Frage.
 
 Die Umfrage war an Lehrkräfte aller Schulen und Altersgruppen gerichtet, um eine möglichst diverse Meinungsbasis zu erhalten.
 
 \subsubsection{Gesamteindruck VRClassroom}
 Allgemein waren Antworten der Studienteilnehmer positiv. 83\% der Teilnehmer gaben an, dass sie VRClassroom als intuitiv und leicht bedienbar bewerten würden. 
-Besonders überzeugt waren sie von der Wirkung auf die Schüler. Grafik \ref{fig:survey1} zeigt, dass eine große Mehrheit von 92\% der Meinung ist, dass die Schüler am Einsatz von VRClassroom im Unterricht Spaß hätte. Auch für sich selbst erwarten 78\%, dass sie Spaß bei der Nutzung hätten. 66\% sind zudem der Meinung, dass VRClassroom dazu beitragen würde, dass ihre Schüler drei dimensionale Inhalte besser verstehen würden als ohne.
+Besonders überzeugt waren sie von der Wirkung auf die Schüler. Abbildung \ref{fig:survey1} zeigt, dass eine große Mehrheit von 92\% der Meinung ist, dass die Schüler am Einsatz von VRClassroom im Unterricht Spaß hätte. Auch für sich selbst erwarten 78\%, dass sie Spaß bei der Nutzung hätten. 66\% sind zudem der Meinung, dass VRClassroom dazu beitragen würde, dass ihre Schüler drei dimensionale Inhalte besser verstehen würden als ohne.
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey1.eps}
@@ -1449,7 +1378,7 @@ Einige Teilnehmer forderten eine Schulung für Lehrkräfte zum Umgang mit Virtual 
 Themengebiete, die sich die befragten Lehrkräfte für Virtual Reality Anwendungen wünschen würden umfassten viele naturwissenschaftliche Inhalte. Besonders 3D-Modelle wurden vorgeschlagen: Die Teilnehmer nannten: Inhalte, die Vektoren, Ebenen und Schnitte von mathematischen Körpern zeigen, Touren und Bilder von Kernkraftwerken oder anderen Orten, die nicht im Rahmen einer Exkursion besucht werden können, Körper, Organe und biologische sowie chemische Prozesse, Moleküle und architektonische Modelle.
 
 \subsubsection{Medien in VRClassroom}
-Grafik \ref{fig:survey2} zeigt die Meinung der Befragten zu den verschiedenen Medientypen die in VRClassroom unterstützt werden. 360°-Videos wurden dabei deutlich schlechter bewertet als Fotos und 3D-Modelle. Ein Drittel der Befragten schätzten dabei die Nutzung von 360°-Videos in VRClassroom als nicht hilfreich zur Vermittlung von Lehrstoff ein. Mit 87\% Zustimmung schnitten die 3D-Modelle nach Einschätzung der befragten Lehrkräfte am Besten ab, um Lehrinhalte zu vermitteln.
+Abbildung \ref{fig:survey2} zeigt die Meinung der Befragten zu den verschiedenen Medientypen die in VRClassroom unterstützt werden. 360°-Videos wurden dabei deutlich schlechter bewertet als Fotos und 3D-Modelle. Ein Drittel der Befragten schätzten dabei die Nutzung von 360°-Videos in VRClassroom als nicht hilfreich zur Vermittlung von Lehrstoff ein. Mit 87\% Zustimmung schnitten die 3D-Modelle nach Einschätzung der befragten Lehrkräfte am Besten ab, um Lehrinhalte zu vermitteln.
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey2.eps}
@@ -1457,7 +1386,7 @@ Grafik \ref{fig:survey2} zeigt die Meinung der Befragten zu den verschiedenen Me
   \label{fig:survey2}
 \end{figure}
 
-Wie Grafik \ref{fig:survey3} zu zeigt, korrelieren die Einschätzungen zu Markern auf den unterschiedlichen Medientypen mit den Meinungen zu den Medientypen selbst: 82\% stuften Marker auf 360°-Fotos als hilfreich ein, auf 360°-Videos waren es nur 61\% und bei den 3D-Modellen waren es 83\%.
+Wie Abbildung \ref{fig:survey3} zu zeigt, korrelieren die Einschätzungen zu Markern auf den unterschiedlichen Medientypen mit den Meinungen zu den Medientypen selbst: 82\% stuften Marker auf 360°-Fotos als hilfreich ein, auf 360°-Videos waren es nur 61\% und bei den 3D-Modellen waren es 83\%.
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey3.eps}
@@ -1487,7 +1416,7 @@ Viele Teilnehmer glauben, dass im Sprachunterricht VRClassroom keinen Mehrwert b
 
 In Frage 18 wurde abgefragt, welche Klassenstufen für die Nutzung von VRClassroom geeignet sind. 59\% der Studienteilnehmer halten Grundschüler für noch nicht geeignet. Erst an Schulen der Sekundarstufe wird die Software als geeignet eingestuft. Dabei steigen die Zustimmungszahlen mit dem Alter der Schüler von 73\% bei der Unterstufe, über 82\% bei der Mittelstufe auf 89\% in der Oberstufe. Lediglich für Erwachsene sinkt sie wieder leicht auf 88\%.
 
-Grafik \ref{fig:survey5} zeigt die genauen Prozentwerte zu diesem gut erkennbaren Trend.
+Abbildung \ref{fig:survey5} zeigt die genauen Prozentwerte zu diesem gut erkennbaren Trend.
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey5.eps}
@@ -1512,10 +1441,10 @@ Aus den Zahlenwerten kann dann ein Wert berechnen, der die Loyalität der Nutzer 
 
 Personen, die mit einem Wert von 0 bis 6 angeben gelten als Detraktoren, also Personen, die ihren Kollegen davon abraten würden das Produkt zu verwenden. Bei Werten von 7-8 gelten die Personen als Indifferente, die das Produkt nutzen, allerdings weder positiv noch negativ Anderen gegenüber davon berichten würden. Die dritte Gruppe sind die Promotoren, die auf die Frage mit 9 oder 10 geantwortet haben. Promotoren werden ihren Kollegen positiv von ihren Erfahrungen mit dem Produkt berichten und dadurch dafür sorgen, dass das Produkt neue Kunden gewinnt und bekannter wird. Der NPS wird berechnet, indem die Prozentzahl der Detraktoren von der der Promotoren abgezogen wird. Daraus ergibt sich ein möglicher Wertebereich des Net Promoters Scores von {-100,+100}.\cite{White2008}
 
-In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Grafik \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom. Der berechnete Net Promoter Score von VRClassroom läge somit bei -45. 
+In der Studie zeigte sich, dass 58\% der Teilnehmer Detraktoren wären, 29\% sind indifferent und nur 13\% sind von VRClassroom überzeugt und würden auch ihre Kollegen ermuntern, die Software auszuprobieren. Abbildung \ref{fig:survey6} veranschaulicht den NPS der Online-Evaluation von VRClassroom. Der berechnete Net Promoter Score von VRClassroom läge somit bei -45. 
 
 \subsubsection{Einschätzung der Zukunft von VR und VRClassroom}
-Trotz der insgesamt positiven Bewertungen von VRClassroom in der Studie zeigt Grafik \ref{fig:survey7}, dass nur 42\% glauben, dass Virtual Reality zukünftig eine große Rolle im Schulunterricht spielen wird.
+Trotz der insgesamt positiven Bewertungen von VRClassroom in der Studie zeigt Abbildung \ref{fig:survey7}, dass nur 42\% glauben, dass Virtual Reality zukünftig eine große Rolle im Schulunterricht spielen wird.
 Trotzdem können sich 65\% vorstellen VRClassroom in ihrem Unterricht zu verwenden.
 
 \begin{figure}[ht]
@@ -1524,7 +1453,7 @@ Trotzdem können sich 65\% vorstellen VRClassroom in ihrem Unterricht zu verwende
   \label{fig:survey7}
 \end{figure}
 
-Grafik \ref{fig:survey8} zeigt, dass die meisten Lehrkräfte VRClassroom nur sporadisch einsetzen würden und nur wenige monatlich oder öfter darauf zurückgreifen würden. 
+Abbildung \ref{fig:survey8} zeigt, dass die meisten Lehrkräfte VRClassroom nur sporadisch einsetzen würden und nur wenige monatlich oder öfter darauf zurückgreifen würden. 
 
 \begin{figure}[ht]
   \includegraphics[width=\textwidth]{images/survey8.eps}
@@ -1551,7 +1480,7 @@ Insgesamt war die Teilnehmermenge in allen Aspekten sehr ausgewogen: Beim Geschl
   \label{fig:survey9}
 \end{figure}
 
-Die überwiegende Mehrheit mit 86\% bezeichnet sich selbst als technikaffin, wie Grafik \ref{fig:survey9} zeigt. Allerdings haben nur 46\% der Teilnehmer schon einmal eine VR-Brille ausprobiert.
+Die überwiegende Mehrheit mit 86\% bezeichnet sich selbst als technikaffin, wie Abbildung \ref{fig:survey9} zeigt. Allerdings haben nur 46\% der Teilnehmer schon einmal eine VR-Brille ausprobiert.
 
 Die Frage nach der Schulart zeigt, dass Lehrkräfte für alle Altersgruppen und Schularten von Grundschulkindern bis Erwachsenen Schülern an Berufs- oder Fachoberschulen teilgenommen haben. 
 
@@ -1585,8 +1514,7 @@ Leider wurde der Antrag vom Kultusministeriums nie beantwortet, sodass die gesam
 \cleardoublepage
 
 \section{Ausblick}
-%TODO
-Allen Prognosen nach wird Rolle von VR (Quelle dazu?) in den kommenden Jahren weiter wachsen, von Ausbildung, Beruf bis zur Freizeit, wird es immer mehr VR-Geräte und auch Anwendungen geben. 
+Vorraussichtlich wird die Rolle von VR in den kommenden Jahren weiter wachsen, von Ausbildung, Beruf bis zur Freizeit, wird es immer mehr VR-Geräte und auch Anwendungen geben. 
 Im Bildungsbereich zeigt VRClassroom jetzt eine Möglichkeit für Lehrkräfte ohne großen finanziellen Aufwand und ohne viel Vorwissen zu benötigen, VR-Inhalte in ihrem Unterricht zu nutzen. Im Folgenden wird darauf eingegangen, wie die Zukunft von Virtual Reality aussehen kann, beziehungsweise was an nächsten Entwicklungsstufen passieren muss, damit VR den prognostizierten Durchbruch auch haben wird.
 Außerdem werden bestehende Probleme von VRClassroom besprochen und wie das System in der Zukunft weiterentwickelt werden könnte.
 
@@ -1637,6 +1565,7 @@ Ein weiteres Argument für die aktuelle Implementierung ist das schon zuvor in \r
 Ist kein lokales WLAN in der Schule verfügbar, oder das Schul-WLAN lässt keine Verbindungen zwischen einzelnen Geräten zu, könnte für die Verwendung von VRClassroom ein eigener WLAN-Access-Point aufgestellt werden, der für die Anwendung vorkonfiguriert ist. Die Kosten hierfür sind gering. Einzig die StreetView-Funktion fällt weg, wenn der Lehrer-PC nicht auf das Internet zugreifen kann.
 
 \subsubsection{Skalierung von 3D-Modellen auf echte Größe}
+\label{subsec:modelscaling} 
 Um den Schülern die tatsächliche Größe von betrachteten Modellen zu vermitteln, könnte eine Funktion in der Lehrer-App eingefügt werden, die die 3D-Modelle auf Realgröße skaliert. Dazu müsste für die verwendeten 3D-Modelle diese Information vorliegen, was nur sehr selten der Fall ist, da diese Funktion in den meisten Szenarien nicht benötigt wird.
 
 Dazu ist auch eine Anpassung an VRClassroom notwendig. Verkleinern der Modelle ist jetzt schon problemlos möglich. Problematisch wird die Skalierung aber wenn das Modell deutlich größer dargestellt wird als der Betrachter. Dabei kann es passieren das Teile des Modells nicht mehr vollständig angezeigt und abgeschnitten werden, da sie aus der  Szene herausragen. Außerdem bräuchten Modelle, damit eine große Darstellung gut aussieht auch einen entsprechen hohen Detailgrad, der wie oben beschrieben Probleme bereiten kann.

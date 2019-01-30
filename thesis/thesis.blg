@@ -8,53 +8,60 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: literature.bib
+Warning--I didn't find a database entry for "classVR"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty journal in Stone2017
 Warning--empty journal in Kerawalla2006
 Warning--empty journal in Virvou1995
+Warning--empty journal in Strickland1996
+Warning--empty journal in Parsons2011
+Warning--empty journal in He2017
+Warning--empty author in WebVRPolyfill
+Warning--empty journal in WebVRPolyfill
+Warning--empty year in WebVRPolyfill
 
 Done.
-You've used 65 entries,
+You've used 107 entries,
             4087 wiz_defined-function locations,
-            1161 strings with 17384 characters,
-and the built_in function-call counts, 29689 in all, are:
-= -- 2326
-> -- 513
-< -- 117
-+ -- 269
-- -- 102
-* -- 1213
-:= -- 5119
-add.period$ -- 130
-call.type$ -- 65
-change.case$ -- 65
-chr.to.int$ -- 267
-cite$ -- 68
-duplicate$ -- 2337
-empty$ -- 2649
-format.name$ -- 118
-if$ -- 6612
+            1363 strings with 23255 characters,
+and the built_in function-call counts, 46860 in all, are:
+= -- 3600
+> -- 766
+< -- 172
++ -- 404
+- -- 153
+* -- 1877
+:= -- 8085
+add.period$ -- 215
+call.type$ -- 107
+change.case$ -- 107
+chr.to.int$ -- 393
+cite$ -- 116
+duplicate$ -- 3743
+empty$ -- 4295
+format.name$ -- 173
+if$ -- 10421
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 487
-newline$ -- 316
-num.names$ -- 65
-pop$ -- 1437
+int.to.str$ -- 107
+missing$ -- 789
+newline$ -- 512
+num.names$ -- 104
+pop$ -- 2384
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2241
+skip$ -- 3524
 stack$ -- 0
-substring$ -- 693
-swap$ -- 1487
-text.length$ -- 28
+substring$ -- 1029
+swap$ -- 2304
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 65
-warning$ -- 3
-while$ -- 114
-width$ -- 67
-write$ -- 643
-(There were 3 warnings)
+type$ -- 107
+warning$ -- 9
+while$ -- 177
+width$ -- 110
+write$ -- 1028
+(There were 10 warnings)
