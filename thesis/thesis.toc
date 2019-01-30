@@ -29,15 +29,15 @@
 \contentsline {subsubsection}{\numberline {2.4.2}Samsung Gear VR}{12}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Google Daydream View}{13}{subsubsection.2.4.3}
 \contentsline {section}{\numberline {3}VR-Systeme im Bildungsbereich}{15}{section.3}
-\contentsline {subsubsection}{\numberline {3.0.1}ClassVR}{15}{subsubsection.3.0.1}
-\contentsline {subsubsection}{\numberline {3.0.2}Google Expeditions}{16}{subsubsection.3.0.2}
-\contentsline {subsubsection}{\numberline {3.0.3}DiscoveryVR}{16}{subsubsection.3.0.3}
-\contentsline {subsubsection}{\numberline {3.0.4}Unimersiv}{16}{subsubsection.3.0.4}
+\contentsline {subsection}{\numberline {3.1}ClassVR}{15}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Google Expeditions}{16}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}DiscoveryVR}{16}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Unimersiv}{16}{subsection.3.4}
 \contentsline {section}{\numberline {4}Herausforderungen}{17}{section.4}
 \contentsline {subsection}{\numberline {4.1}Virtual Reality Sickness}{17}{subsection.4.1}
-\contentsline {paragraph}{Motion Sickness}{17}{section*.8}
-\contentsline {paragraph}{Simulator Sickness}{17}{section*.9}
-\contentsline {paragraph}{Virtual-Reality-Sickness und Cybersickness}{18}{section*.10}
+\contentsline {paragraph}{Motion Sickness}{17}{section*.9}
+\contentsline {paragraph}{Simulator Sickness}{17}{section*.10}
+\contentsline {paragraph}{Virtual-Reality-Sickness und Cybersickness}{18}{section*.11}
 \contentsline {subsection}{\numberline {4.2}Mindestalter zur Nutzung von VR-Systemen}{18}{subsection.4.2}
 \contentsline {section}{\numberline {5}360\IeC {\textdegree }-Inhalte}{21}{section.5}
 \contentsline {subsection}{\numberline {5.1}Projektionen von 360\IeC {\textdegree }-Fotos und -Videos}{21}{subsection.5.1}
@@ -87,10 +87,10 @@
 \contentsline {subsubsection}{\numberline {7.3.1}Verbundene Ger\"ate}{38}{subsubsection.7.3.1}
 \contentsline {subsubsection}{\numberline {7.3.2}Hineinladen von Inhalten}{39}{subsubsection.7.3.2}
 \contentsline {subsubsection}{\numberline {7.3.3}Bedienelemente}{39}{subsubsection.7.3.3}
-\contentsline {paragraph}{Marker}{39}{figure.caption.23}
-\contentsline {paragraph}{Fotos}{41}{section*.24}
-\contentsline {paragraph}{Videos}{41}{section*.26}
-\contentsline {paragraph}{3D-Modelle}{41}{section*.28}
+\contentsline {paragraph}{Marker}{39}{figure.caption.24}
+\contentsline {paragraph}{Fotos}{41}{section*.25}
+\contentsline {paragraph}{Videos}{41}{section*.27}
+\contentsline {paragraph}{3D-Modelle}{41}{section*.29}
 \contentsline {subsection}{\numberline {7.4}Kommunikation zwischen Lehrer-App und Sch\"uler-App}{42}{subsection.7.4}
 \contentsline {subsection}{\numberline {7.5}QR-Code Fenster}{43}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}Sch\"uler-App}{43}{subsection.7.6}
@@ -121,3 +121,4 @@
 \contentsline {subsubsection}{\numberline {9.3.2}Skalierung von 3D-Modellen auf echte Gr\"o\IeC {\ss }e}{57}{subsubsection.9.3.2}
 \contentsline {subsubsection}{\numberline {9.3.3}Navigation von 3D-Modellen aus Sch\"uler-App}{57}{subsubsection.9.3.3}
 \contentsline {subsubsection}{\numberline {9.3.4}Ausfragemodus: Ausgew\"ahlter Sch\"uler setzt Markierung}{57}{subsubsection.9.3.4}
+\contentsline {subsection}{\numberline {9.4}Fazit}{58}{subsection.9.4}

@@ -108,6 +108,10 @@ The final chapters discusses the future of virtual reality in education and poss
 \selectlanguage{ngerman}
 \clearpage
 
+\subsection*{Lizenzierung}
+Diese Arbeit ist unter einer Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC BY-SA 4.0) Lizenz veröffentlicht.
+Der Quellcode zum Softwareprojekt VRClassroom steht unter der GNU General Public License v3.0.
+
 \vfill % Sorgt dafür, dass das Folgende an das Seitenende rutscht
 
 \noindent Ich erkläre hiermit, dass ich die vorliegende Arbeit
@@ -482,7 +486,7 @@ In der Forschung wurden schon seit langer Zeit Systeme entwickelt, mit denen ver
 Hier noch die Beispiele einfügen %TODO
 
 
-\subsubsection{ClassVR}
+\subsection{ClassVR}
 Ein Beispiel für ein VR-System im Bildungsbereich, das einen ganz ähnlich Ansatz wie das im Rahmen dieser Arbeit entwickelte System verfolgt, ist ClassVR. 
 
 ClassVR benötigt allerdings die ClassVR-Headsets und kann nicht mit anderen Geräten benutzt werden. Zudem wird ein Einrichtungsservice auf der Webseite angeboten.
@@ -503,7 +507,7 @@ Die Kommunikation zwischen dem Rechner der Lehrkraft und den ClassVR-Headsets lä
 
 % http://www.classvr.com
 
-\subsubsection{Google Expeditions}
+\subsection{Google Expeditions}
 Google Expeditions ist eine kostenfreie App, die es für die Smartphone gestützten VR-Headsets entwickelt wurde.
 Sie kann einzeln genutzt werden oder im Unterricht. Wird sie im Unterricht genutzt, kann die Lehrkraft eine Guided Tour starten, in die sich dann die Schüler einklinken können. Dazu müssen sie im gleichen Netzwerk sein, in dem das Smartphone der Lehrkraft ist.
 
@@ -513,14 +517,14 @@ Wird eine Tour geleitet, kann der Tourleiter Markierungen setzen, auf die die Te
 Momentan gibt es mehr als 900 verschiedene Expeditionen, die kostenlos genutzt werden können. Zudem können auch selbst Touren erstellt werden.
 % https://edu.google.com/products/vr-ar/
 
-\subsubsection{DiscoveryVR}
+\subsection{DiscoveryVR}
 % https://www.discoveryvr.com
 Die Discovery VR App ist eine Entwicklung des Discovery Channels, in der die Nutzer hochqualitative 360°-Videos ansehen können. Die App ist auf allen VR Plattformen kostenlos verfügbar.
 
 Sie ist keine App, die speziell für die Nutzung in der Schule entwickelt wurde. Die verfügbaren Inhalte bieten sich aber für den Einsatz im Unterricht an. Die Videos haben dabei entweder eine englische Audiospur oder sind ohne Erzählstimme.
 
 
-\subsubsection{Unimersiv}
+\subsection{Unimersiv}
 Unimersiv ist eine App, die es für GearVR und Oculus Rift gibt. Innerhalb der App können unterschiedliche VR-Anwedungen genutzt werden. Beispielsweise kann die internationale Raumstation (ISS) erkundet werden. Im Moment sind neun verschiedene VR-Anwendungen auf der Plattform vorhanden. Schulen können für einmalig 49\$ pro Headset eine Lizenz erwerben, in der alle verfügbaren Inhalte enthalten sind und auch alle neuen Entwicklungen kostenlos geladen werden können.
 
 Außerdem werden auch Simulations-Anwendungen für Unternehmen angeboten. Eine dieser Apps erlaubt es beispielsweise den Mitarbeitern einer Firma die Steuerung von Staplern in einem sicheren Rahmen zu erlernen.
@@ -1320,8 +1324,6 @@ Läd ein Gerät zum ersten Mal die VRClassroom-App wird dem Nutzer neben der Begrü
 
 Damit die Schüler nicht jedes Mal wieder ihren Namen eingeben müssen, wird der eingegebene Name im Browser des Schüler-Gerätes gespeichert und beim erneuten Laden der VRClassroom Applikation direkt wieder an die Lehrer-App übermittelt.
 
-%% Screenshot VRClassroom App mit Tastatur + Greeting
-
 \subsubsection{Anzeigen von 360°-Fotos}
 Um 360°-Fotos in der 3D-Szene anzuzeigen lädt die React360-App das Foto von dem Link, den die Teacher-App geschickt hat und setzt sobald das gesamte Foto geladen wurde das Bild als Hintergrund der Szene. Gleichzeitig wird bei erfolgreichem Ladens des Fotos eine Nachricht an die Teacher-App geschickt, um dem Status des Geräts von ``loading'' wieder auf ``active'' zu setzen.
 Das 360°-Bild wird dazu von innen an die Kugel in der die React360-Szene ist projiziert und ergibt so durch seine equirectangulare Projektion ein unverzerrtes 360°-Bild.
@@ -1356,7 +1358,7 @@ Auf die ähnliche Weise werden die Marker gerendert, die von der Lehrkraft gesetz
 \subsubsection{WebVR Polyfill}
 WebVR ist eine Javascript-API, um Virtual Reality-Anwendungen im Browser nutzen. \cite{WebVR} 
 
-WebVR stellt dazu wie bereits in \ref{subsec:WebVR} erklärt verschiedene Funktionen zur Verfügung, um auf VR-Headsets und Controller zuzugreifen. Da die VRClassroom App auf Schülerseite keine Controller verwendet, wird hauptsächlich die Funktion des Rendern der VR-App für zwei Linsen genutzt.
+WebVR stellt dazu wie bereits in \ref{subsec:webvr} erklärt verschiedene Funktionen zur Verfügung, um auf VR-Headsets und Controller zuzugreifen. Da die VRClassroom App auf Schülerseite keine Controller verwendet, wird hauptsächlich die Funktion des Rendern der VR-App für zwei Linsen genutzt.
 
 Wie in Grafik \ref{fig:WebVRfig}a links zu sehen wird auf einer Web-App, die mit WebVR genutzt werden kann ein Icon in der unteren rechten Ecke des Fensters zu angezeigt, mit dem dann die VR-Ansicht geladen werden kann.
 
@@ -1653,6 +1655,17 @@ Da die Markierungen auch in der Lehrer-App über das iFrame mit der Schüler-App g
 
 Momentan können Schüler nicht beeinflussen wie sie 3D-Modelle sehen, sondern nur den von der Lehrkraft ausgewählten Blickwinkel. Um auch auf 3D-Modellen sinnvoll Markierungen setzen zu können wäre es dann auch sehr sinnvoll den Schülern die Möglichkeit zu geben den Blickwinkel des 3D-Modells zu verändern. 
 
+\subsection{Fazit}
+Virtual Reality wird nicht nur die Informatik in den nächsten Jahren beschäftigen. Neben den technischen Herausforderungen, die es zu lösen gilt, kann diese Technologie einen großen gesellschaftlichen Einfluss haben. Allerdings stehen wir hier noch ganz am Anfang und es bleibt abzusehen, wie die neuen technischen Möglichkeiten genutzt werden können, um die Gesellschaft voranzubringen und neue Wege der Wahrnehmung und Kommunikation zu ermöglichen.
+
+VRClassroom ist angetreten um Virtual Reality in den Bildungsbereich zu bringen. Hier hat diese Technologie das Potenzial neue Wege des Lernens zu ermöglichen. Wie auch in den Gesprächen mit den Lehrkräften deutlich wurde, ist die Rolle der Lehrkraft aber essentiell für eine gute Ausbildung. Die Technik soll hierbei nur ein neues Werkzeug bieten. Für einen effektiven Einsatz der Technologie werden Lehrer benötigt, die die Kapazitäten haben sind sich mit innovativen Techniken auseinander zu setzen und dafür offen sind.
+
+Neben einer guten technischen Lösung braucht es vor Allem gut aufbereitete Inhalte, deren Lizenz die Nutzung für den Unterricht ermöglicht. Die Produktion solcher Inhalte ist aufwändig und teuer, weshalb es im Moment noch wenige Inhalte gibt. Neue Hard- und Software-Systeme machen hier aber große Fortschritte die Produktion von Inhalten zu vereinfachen.
+
+Es ist mit Sicherheit davon auszugehen, dass der Fortschritt auf Seiten der Headsets durch die Hersteller weiter schnell voranschreitet, so dass technische Limitierungen zunehmend weniger werden. Dadurch kann die Technik letztendlich billiger einem großen Publikum zur Verfügung stehen. Wichtig ist hier aber, dass die Schulen die finanziellen Mittel haben, ihre Infrastruktur zeitgemäß auszubauen und damit die Grundlage für eine digitale Bildungszukunft zu legen. Nur wenn die notwendige Infrastruktur in den Schulen zur Verfügung steht, können Zukunftstechnologien eingesetzt werden.
+
+Als kostenlose Software bietet VRClassroom einen Lösungsansatz, der darauf ausgelegt ist, Schulen einen einfachen Einstieg zu ermöglichen, auch wenn keine gute digitale Infrastruktur vorhanden ist. VRClassroom ist sicherlich nur ein kleiner Anfang. Es ist aber als open-source-Software veröffentlicht, damit weitere Forschung und Entwicklung darauf aufbauen kann.
+
 %______________________________________________________________________
 
 \cleardoublepage
@@ -1794,7 +1807,7 @@ Nachfolgend werden die Fragen der Online-Umfrage zu VRClassroom aufgeführt. Die 
 \item Ich stimme überhaupt nicht zu
 \end{itemize}
 
-\subsection*{Lizenzierung}
+
 
 \clearpage
 
@@ -1809,7 +1822,7 @@ Die beigelegte CD enthält folgende Dateien:
 \item Ergebnisse der Online-Umfrage
 \end{itemize}
 
-Das Github-Repository, in dem der Sourcecode von VRClassroom, die für MacOS, Linux und Windows kompilierten VRClassroom Apps sowie die Thesis sind ist zudem unter \mbox{https://github.com/vronifuchsberger/masterarbeit } erreichbar.
+Das Github-Repository, in dem der Sourcecode von VRClassroom, die für MacOS, Linux und Windows kompilierten VRClassroom Apps sowie die Thesis sind ist zudem unter \mbox{https://github.com/vronifuchsberger/VRClassroom} erreichbar.
 Das für die Umfragen produzierte Video zu VRClassroom ist auf Youtube unter \mbox{https://youtu.be/b60PQ3bqjk0} zu erreichen.
 
 %______________________________________________________________________
