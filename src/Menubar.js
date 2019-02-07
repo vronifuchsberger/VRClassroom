@@ -44,7 +44,7 @@ function getMenu(win, assetDir) {
                   ],
                 },
               ],
-              properties: ['openFile', 'openDirectory'],
+              properties: ['openFile'],
             },
             filePaths => {
               if (!filePaths || filePaths.length === 0) {
