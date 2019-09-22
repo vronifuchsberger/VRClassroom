@@ -11,22 +11,22 @@
   },
   "dependencies": {
     "metro-bundler": "^0.22.1",
-    "prop-types": "^15.6.2",
-    "react": "16.3.2",
+    "prop-types": "^15.7.2",
+    "react": "16.9.0",
     "react-360": "git://github.com/facebook/react-360.git#partner-dev-latest-react-360",
     "react-360-keyboard": "^1.0.2",
     "react-360-web": "git://github.com/facebook/react-360.git#partner-dev-latest-react-360-web",
-    "react-native": "0.55.4",
-    "react-websocket": "^2.0.0",
-    "three": "^0.87.0",
+    "react-native": "0.60.5",
+    "react-websocket": "^2.0.2",
+    "three": "^0.108.0",
     "webgl-ui": "git://github.com/facebook/react-360.git#partner-dev-latest-webgl-ui"
   },
   "devDependencies": {
-    "babel-jest": "^19.0.0",
-    "babel-preset-react-native": "^1.9.1",
-    "jest": "^19.0.2",
-    "react-devtools": "^2.5.2",
-    "react-test-renderer": "16.0.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-react-native": "^4.0.1",
+    "jest": "^24.9.0",
+    "react-devtools": "^4.1.0",
+    "react-test-renderer": "16.9.0",
     "xopen": "1.0.0"
   },
   "jest": {
