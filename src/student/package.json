@@ -18,7 +18,7 @@
     "react-360-web": "git://github.com/facebook/react-360.git#partner-dev-latest-react-360-web",
     "react-native": "0.60.5",
     "react-websocket": "^2.0.2",
-    "three": "^0.108.0",
+    "three": "^0.125.0",
     "webgl-ui": "git://github.com/facebook/react-360.git#partner-dev-latest-webgl-ui"
   },
   "devDependencies": {
